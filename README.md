@@ -5,6 +5,7 @@ work in progress
 done so far:
   
   * about_python.md
+  * about.md
 
 ---
 
