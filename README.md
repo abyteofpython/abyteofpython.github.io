@@ -6,6 +6,7 @@ done so far:
   
   * about_python.md
   * about.md
+  * basic.md
 
 ---
 
