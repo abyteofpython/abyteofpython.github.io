@@ -1,204 +1,212 @@
-# Basics
+# Основи
 
-Just printing `hello world` is not enough, is it? You want to do more than that - you want to take some input, manipulate it and get something out of it. We can achieve this in Python using constants and variables, and we'll learn some other concepts as well in this chapter.
+Просто надрукувати `Привіт, Світ!` недостатньо, чи не так? Ви хочете зробити більше, ніж це – ви хочете ввести щось у програму, обробити та отримати щось на виході. Ми можемо досягти цього в Python за допомогою констант і змінних, і ми також вивчимо деякі інші концепції в цьому розділі.
 
-## Comments
+## Коментарі
 
-_Comments_ are any text to the right of the `#` symbol and is mainly useful as notes for the reader of the program.
+_Коментарі_ – це будь-який текст,що пишеться після символу `#` і в основному корисний як примітки для читача програми.
 
-For example:
+Наприклад:
 
 ```python
-print('hello world') # Note that print is a function
+print('Привіт, Світ!') # Зауважте, що print — це функція
 ```
 
-or:
+або:
 
 ```python
-# Note that print is a function
-print('hello world')
+# Зауважте, що print — це функція
+print('Привіт, Світ!')
 ```
 
-Use as many useful comments as you can in your program to:
+Використовуйте якомога більше корисних коментарів у своїй програмі, щоб пояснювати:
 
-- explain assumptions
-- explain important decisions
-- explain important details
-- explain problems you're trying to solve
-- explain problems you're trying to overcome in your program, etc.
+- припущення;
+- важливі рішення;
+- важливі деталі;
+- проблеми, які ви намагаєтеся вирішити;
+- проблеми, які ви намагаєтеся подолати у своїй програмі тощо.
 
-[*Code tells you how, comments should tell you why*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
+[*Код програми підкаже вам, ЯК, а коментарі мають розповісти вам, ЧОМУ*](http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html).
 
-This is useful for readers of your program so that they can easily understand what the program is doing. Remember, that person can be yourself after six months!
+Це корисно для читачів вашої програми, щоб вони могли легко зрозуміти, що робить програма. Пам'ятайте, що такою людиною можете виявитися ви самі
+через півроку!
 
-## Literal Constants
+## Літеральні константи
 
-An example of a literal constant is a number like `5`, `1.23`, or a string like `'This is a string'` or `"It's a string!"`.
+Прикладом літеральної константи є числа, такі як `5`, `1,23`, або рядок, як-от ``Це є рядок`` або `"Це рядок!»`.
+Вони називаються літеральними, тому що вони _буквальні_ - ви використовуєте їхнє значення буквально.Число `2` завжди представляє саме себе і нічого іншого - це _константа_, оскільки ії значення не можна змінити. Отже, усі вони називаються літеральними константами.
 
-It is called a literal because it is _literal_ - you use its value literally. The number `2` always represents itself and nothing else - it is a _constant_ because its value cannot be changed. Hence, all these are referred to as literal constants.
+## Числа
 
-## Numbers
+Числа в основному бувають двох типів - цілі("integers") і з рухомою комою ("floating point numbers" (or "floats" for short)).
 
-Numbers are mainly of two types - integers and floats.
+Прикладом цілого числа ("integer") може служити "2", яке є цілим числом.
 
-An example of an integer is `2` which is just a whole number.
+Прикладами чисел з рухомою комою можуть бути `3.23` і `52.3E-4`. Позначення E показує ступеня числа 10. У цьому випадку "52,3E-4" означає "52,3 * 10^-4^".
 
-Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E-4`. The `E` notation indicates powers of 10. In this case, `52.3E-4` means `52.3 * 10^-4^`.
+РІЗНИЦЯ між поняттями «Рухома кома» та «Рухома крапка»*(від перекладача).
+Оскільки в деяких, переважно в  Америці та англомовних країнах при запису чисел ціла частина відділяється від дробової крапкою (Decimal Point), то в термінології цих країн фігурує назва «рухома крапка» (англ. floating point).
+В Европейських країнах,як і в Україні, ціла частина числа від дробової традиційно відділяється комою (Decimal Comma), то для позначення того ж поняття історично використовується термін «рухома кома» (англ. floating comma), проте в літературі та технічній документації можна зустріти обидва варіанти. 
+У програмуванні Python використовується при позначені числа з рухомою комою _крапка_.
 
-> **Note for Experienced Programmers**
-> 
-> There is no separate `long` type. The `int` type can be an integer of any size.
+> **Примітка для досвідчених програмістів**
+>
+> На відміну від інших мов програмування (наприклад, C, Java тощо), число _int_ на мові Python не має верхньої межі.
 
-## Strings
+## Pядки
 
-A string is a _sequence_ of _characters_. Strings are basically just a bunch of words.
+Рядок — це послідовність символів. Найчастіше рядки - це просто набір слів.
 
-You will be using strings in almost every Python program that you write, so pay attention to the following part.
+Ви будете використовувати рядки майже в кожній програмі на мові Python, яку пишете, тому зверніть увагу на наступну частину.
 
-### Single Quote
+### Одинарні лапки
 
-You can specify strings using single quotes such as `'Quote me on this'`.
+Ви можете вказати рядки, використовуючи одинарні лапки, наприклад `'Фраза в лапках'`.
 
-All white space i.e. spaces and tabs, within the quotes, are preserved as-is.
+Усі пробіли та знаки табуляції, зберігаються як є.
 
-### Double Quotes
+### Подвійні лапки
 
-Strings in double quotes work exactly the same way as strings in single quotes. An example is `"What's your name?"`.
+Рядки в подвійних лапках працюють точно так само, як рядки в одинарних лапках. Приклад: `"Як тебе звуть?"`.
 
-### Triple Quotes {#triple-quotes}
+### Потрійні лапки 
 
-You can specify multi-line strings using triple quotes - (`"""` or `'''`). You can use single quotes and double quotes freely within the triple quotes. An example is:
+Ви можете вказати багаторядкові рядки, використовуючи потрійні лапки - (`"""` або `'''`). Ви можете вільно використовувати одинарні та подвійні лапки в потрійних лапках. Приклад:
 
 ```python
-'''This is a multi-line string. This is the first line.
-This is the second line.
-"What's your name?," I asked.
-He said "Bond, James Bond."
+'''Це багаторядковий рядок.Це перший рядок.
+Це другий рядок.
+«Як тебе звати?», — запитав я.
+Він сказав «Бонд, Джеймс Бонд».
 '''
 ```
 
-### Strings Are Immutable
+### Рядки незмінні
 
-This means that once you have created a string, you cannot change it. Although this might seem like
-a bad thing, it really isn't. We will see why this is not a limitation in the various programs that
-we see later on.
+Це означає, що коли ви створили рядок, ви не можете його змінити. На перший погляд це може показатися недоліком, насправді це не так. Пізніше,на прикладі різних програм,ми побачимо, чому це не є обмеженням.
 
-> **Note for C/C++ Programmers**
+> **Примітка для програмістів C/C++**
 > 
-> There is no separate `char` data type in Python. There is no real need for it and I am sure you won't miss it.
+> У Python немає окремого типу даних `char`. У цьому немає справжньої потреби, і я впевнений, що ви не нудьгуватимете за ним.
 
 <!-- -->
 
-> **Note for Perl/PHP Programmers**
+> **Примітка для програмістів Perl/PHP**
 > 
-> Remember that single-quoted strings and double-quoted strings are the same - they do not differ in any way.
+> Пам’ятайте, що рядки в одинарних лапках і рядки в подвійних лапках однакові – вони нічим не відрізняються.
 
-### The format method
+### Метод форматування ("The format method")
 
-Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
+Іноді нам може знадобитися побудувати рядки на основі будь-яких даних. Ось де корисний метод `format()`.
 
-Save the following lines as a file `str_format.py`:
+Завантажуйте наступні рядки як файл `str_format.py`:
+(Примітка від перекладача:
+1.пунктуація,як двокрапка,апостроф,плюс тощо, не можно використовувати у змінних (variables), тільки підкреслення "_" 
+2.`Swaroop` - Swarrop Chitlur - aвтор книги ("Bite of Python"– «Укус Пітона») 
 
 ```python
-age = 20
-name = 'Swaroop'
+вік = 20
+ім_я = 'Swaroop'
 
-print('{0} was {1} years old when he wrote this book'.format(name, age))
-print('Why is {0} playing with that python?'.format(name))
+print('{0} було {1} років, коли він написав цю книгу'.format(ім_я, вік))
+print('Чому {0} грає з цим Рython?'.format(ім_я))
 ```
 
-Output:
+Висновок:
 
 ```
 $ python str_format.py
-Swaroop was 20 years old when he wrote this book
-Why is Swaroop playing with that python?
+Swaroop було 20 років, коли він написав цю книгу.
+Чому Swaroop грає з цим Рython?
 ```
 
-**How It Works**
+**Як це працює**
 
-A string can use certain specifications and subsequently, the `format` method can be called to substitute those specifications with corresponding arguments to the `format` method.
+Рядок може використовувати певні позначення, і згодом можна викликати метод `format`, щоб замінити ці позначення відповідними аргументами в метод `format`.
 
-Observe the first usage where we use `{0}` and this corresponds to the variable `name` which is the first argument to the format method. Similarly, the second specification is `{1}` corresponding to `age` which is the second argument to the format method. Note that Python starts counting from 0 which means that first position is at index 0, second position is at index 1, and so on.
+Зверніть увагу на перший випадок, коли ми використовуємо `{0}`, і це відповідає змінній `ім_я`, яка є першим аргументом методу format. Подібним чином другe позначення — це `{1}`, що відповідає змінній `вік`, яка є другим аргументом методу format. Зверніть увагу, що Python починає відлік з 0, що означає, що перша позиція знаходиться в індексі 0, друга позиція в індексі 1 і так далі.
 
-Notice that we could have achieved the same using string concatenation:
+Зверніть увагу, що ми могли б досягти того ж, використовуючи об'єднання рядків:
 
 ```python
-name + ' is ' + str(age) + ' years old'
+ім_я + ' є ' + str(вік) + ' років'
+```
+але це набагато гірше та більше схильне до помилок. По-друге, перетворення в рядок буде виконано автоматично за допомогою методу `format` на відміну від явного перетворення в нашому прикладі. По-третє, використовуючи метод `format`, ми можемо змінити повідомлення, не торкаючись використовуваних
+змінних, і навпаки.
+
+Також зауважте, що числа є необов’язковими, тому ви також можете записати так:
+
+```python
+вік = 20
+ім_я = 'Swaroop'
+
+print('{} було {} років, коли він написав цю книгу'.format(ім_я, вік))
+print('Чому {} грає з цим  Python?'.format(ім_я))
 ```
 
-but that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+та отримати такий самий результат, як і раніше.
 
-Also note that the numbers are optional, so you could have also written as:
+Ми також можемо назвати параметри (де вік,ім_я є параметрами):
 
 ```python
-age = 20
-name = 'Swaroop'
+вік = 20
+ім_я = 'Swaroop'
 
-print('{} was {} years old when he wrote this book'.format(name, age))
-print('Why is {} playing with that python?'.format(name))
+print('{ім_я} було {вік} років, коли він написав цю книгу'.format(ім_я=ім_я, вік=вік))
+print('Чому {ім_я} грає з цим Рython?'.format(ім_я=ім_я))
 ```
 
-which will give the same exact output as the previous program.
+та отримати такий самий результат, як і раніше.
 
-We can also name the parameters:
+Python 3.6 introduced a shorter way to do named parameters, called "f-strings": 
+Python 3.6 представив коротший спосіб створення іменованих параметрів, який називається «f-strings»:
 
 ```python
-age = 20
-name = 'Swaroop'
+вік = 20
+ім_я = 'Swaroop'
 
-print('{name} was {age} years old when he wrote this book'.format(name=name, age=age))
-print('Why is {name} playing with that python?'.format(name=name))
+print(f'{ім_я} було {вік} років, коли він написав цю книгу')  # зверніть увагу на 'f' перед рядком
+print(f'Чому {ім_я} грає з цим Рython?')  # зверніть увагу на 'f' перед рядком
 ```
 
-which will give the same exact output as the previous program.
+та отримати такий самий результат, як і раніше.
 
-Python 3.6 introduced a shorter way to do named parameters, called "f-strings":
-
-```python
-age = 20
-name = 'Swaroop'
-
-print(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string
-print(f'Why is {name} playing with that python?')  # notice the 'f' before the string
-```
-
-which will give the same exact output as the previous program.
-
-What Python does in the `format` method is that it substitutes each argument value into the place of the specification. There can be more detailed specifications such as:
+Те, що Python робить у методі `format`, полягає в тому, що він поміщає значення кожного аргументу(більш детальніше пояснення про аргументи та параметри пізніше) в зазначене місце. Можуть бути більш детальні позначення, такі як (для отримання додаткової інформації дивіться документацію https://docs.python.org/3/library/string.html#formatspec):
 
 ```python
-# decimal (.) precision of 3 for float '0.333'
+# десяткове число (.) з точністю в 3 знаки для числа з рухомою комою '0.333'
 print('{0:.3f}'.format(1.0/3))
-# fill with underscores (_) with the text centered
-# (^) to 11 width '___hello___'
-print('{0:_^11}'.format('hello'))
-# keyword-based 'Swaroop wrote A Byte of Python'
-print('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))
+# заповнити підкресленнями (_) з центруванням тексту
+# (^) по ширині 11: '___привіт___'
+print('{0:_^11}'.format('привіт'))
+# на основі ключових слів 'Swaroop написав «Укус Пітона»'
+print('{ім_я} написав {книга}'.format(ім_я='Swaroop', книга='Укус Пітона'))
 ```
 
-Output:
+Висновок:
 
 ```
 0.333
-___hello___
-Swaroop wrote A Byte of Python
+___привіт___
+Swaroop написав Укус Пітона
+
 ```
 
-Since we are discussing formatting, note that `print` always ends with an invisible "new line" character (`\n`) so that repeated calls to `print` will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should `end` with a blank:
+Оскільки ми обговорюємо форматування, зауважте, що `print` завжди закінчується невидимим символом «нового рядка» (`\n`), тому повторні виклики `print` будуть виводитися з нового рядка.Фактично print() виводить вказане значення,а після цього переводить курсор на наступний рядок.  Щоб запобігти друку  символу нового рядка, ви можете вказати, що він повинен закінчуватися без пробілів:
 
 ```python
 print('a', end='')
 print('b', end='')
 ```
 
-Output is:
+Висновок:
 
 ```
 ab
 ```
 
-Or you can `end` with a space:
+Або ви можете завершити `пробілом`:
 
 ```python
 print('a', end=' ')
@@ -206,239 +214,296 @@ print('b', end=' ')
 print('c')
 ```
 
-Output is:
+Висновок:
 
 ```
 a b c
 ```
 
-### Escape Sequences
+### Escape Sequences (екранована послідовность,символ \ (зворотній слеш))
 
-Suppose, you want to have a string which contains a single quote (`'`), how will you specify this string? For example, the string is `"What's your name?"`. You cannot specify `'What's your name?'` because Python will be confused as to where the string starts and ends. So, you will have to specify that this single quote does not indicate the end of the string. This can be done with the help of what is called an _escape sequence_. You specify the single quote as `\'` : notice the backslash. Now, you can specify the string as `'What\'s your name?'`.
+Припустімо, ви хочете мати рядок, який містить одинарну лапку (`'`), як ви вкажете цей рядок? Наприклад, рядок є`"Як Ваше ім'я?"`. Ви не можете вказати `'Як Ваше ім'я?'` тому що Python заплутається щодо того, де починається і де закінчується рядок. Отже, вам доведеться вказати, що ця одинарна лапка не вказує на кінець рядка. Це можна зробити за допомогою так званої _escape sequence_("_екранована послідовность_"). Ви вказуєте одинарну лапку як `\'`: зверніть увагу на зворотній слеш. Тепер ви можете вказати рядок як`'Як Ваше ім\'я?'`.
 
-Another way of specifying this specific string would be `"What's your name?"` i.e. using double quotes. Similarly, you have to use an escape sequence for using a double quote itself in a double quoted string. Also, you have to indicate the backslash itself using the escape sequence `\\`.
-
-What if you wanted to specify a two-line string? One way is to use a triple-quoted string as shown [previously](#triple-quotes) or you can use an escape sequence for the newline character - `\n` to indicate the start of a new line. An example is:
+Іншим способом вказати цей конкретний рядок буде `"Як Ваше ім'я?"`, тобто використовуючи подвійні лапки.Подібним чином, ви повинні використовувати escape sequence("екрановану послідовность",символ \ (зворотній слеш)) для позначення подвійних лапок всередині рядку з подвійними лапками.Приклад від перекладача:
 
 ```python
-'This is the first line\nThis is the second line'
+# цей варіант не працює, оскільки подвійні лапки знаходяться всередині рядка подвійних лапок:
+print("Мова програмування "Python" займає у моєму серці важливе місце.")
+
+# цей варіант спрацює, оскільки подвійні лапки навколо слова Python екрановані:
+print("Мова програмування\"Python\" займає у моєму серці важливе місце." )
 ```
 
-Another useful escape sequence to know is the tab: `\t`. There are many more escape sequences but I have mentioned only the most useful ones here.
-
-One thing to note is that in a string, a single backslash at the end of the line indicates that the string is continued in the next line, but no newline is added. For example:
+Ви також можете вказати подвійний зворотній слеш за допомогою escape sequence `\\`.
+Also, you have to indicate the backslash itself using the escape sequence `\\`.
+Приклад від перекладача:
 
 ```python
-"This is the first sentence. \
-This is the second sentence."
+#  \n — це екранована послідовність для нового рядка
+#  \f — form feed - йде на один рядок нижче
+# це речення буде виводитися у два рядки,але з нюансами:
+print("мої фотографії збережено на  диску c:\new_pictures\foto.jpg")
+
+# Висновок:
+мої фотографії збережено на  диску c:
+ew_pictures
+           oto.jpg
+ 
+# щоб надрукувати речення правильно, треба використати подвійний зворотній слеш:
+print("мої фотографії збережено на  диску c:\\new_picture\\foto.jpg")
+# Висновок:
+мої фотографії збережено на  диску c:\new_picture\foto.jpg
+
 ```
 
-is equivalent to
+Що, якби ви хотіли вказати дворядковий рядок? Одним із способів є використання рядка в потрійних лапках, як показано [раніше] (#Потрійні лапки) або ви можете використати escape sequence("екрановану послідовность")) для символу нового рядка - `\n`, щоб вказати початок нового рядка. Наприклад:  
 
 ```python
-"This is the first sentence. This is the second sentence."
+'Це перший рядок\nЦе другий рядок'
 ```
+Висновок:
 
-### Raw String
+```
+Це перший рядок
+Це другий рядок
+```
+Приклад від перекладача
+``` python
+# з потрійними лапками
+вірш1 = """я можу бути програмістом 
+і мова Python потрібна звісно."""
+print(вірш1)
+# з екранованої послідовностю \n
+вірш2 = "я можу бути програмістом\nі мова Python потрібна звісно."
+print(вірш2)
 
-If you need to specify some strings where no special processing such as escape sequences are handled, then what you need is to specify a _raw_ string by prefixing `r` or `R` to the string. An example is:
+# Висновок:
+я можу бути програмістом
+і мова Python потрібна звісно.
+```
+Ще одна корисна  escape sequence ("екрановану послідовность"), про яку слід знати, це послідовність символів:`\t`(розглядається як один символ табуляції ). Існує ще багато   escape sequences, але я згадав тут лише найкорисніші.
+
+
+Варто зауважити, що зворотній слеш в кінці рядка означає, що рядок продовжується в наступному рядку, але новий рядок не додається. Наприклад:
 
 ```python
-r"Newlines are indicated by \n"
+"Це перше речення. \
+Це друге речення."
 ```
 
-> **Note for Regular Expression Users**
+еквівалентно
+
+```python
+"Це перше речення. Це друге речення."
+```
+
+### Raw String ("необроблений рядок")
+
+Якщо вам потрібно вказати деякі рядки, де не обробляються  спеціальні символи, наприклад escape sequences ("екранована послідовность"), тоді вам потрібно вказати _raw_string ("_необроблений_рядок"), додавши до рядка префікс `r` або `R`.Необроблений рядок Python розглядає символ зворотної похилої риски (\) як буквальний символ.Наприклад:
+
+```python
+r"Нові рядки позначаються \n"
+```
+
+> **Примітка для користувачів  Regular Expression User(регулярного виразу)** 
 > 
-> Always use raw strings when dealing with regular expressions. Otherwise, a lot of backwhacking may be required. For example, backreferences can be referred to as `'\\1'` or `r'\1'`.
+>Завжди використовуйте raw strings ("необроблені рядки")під час роботи з регулярними виразами. Інакше може знадобитися чимало зворотних слешей. 
+Наприклад, абревіатуру з регулярними виразами в Python можна знайти за допомогою  `'\\1'` or `r'\1'` (на відміну роботи з Python, пошук  абревіатуру з регулярними виразами в інших системах виконується символом `\1`)
 
-## Variable
+## Змінні
 
-Using just literal constants can soon become boring - we need some way of storing any information and manipulate them as well. This is where _variables_ come into the picture. Variables are exactly what the name implies - their value can vary, i.e., you can store anything using a variable. Variables are just parts of your computer's memory where you store some information. Unlike literal constants, you need some method of accessing these variables and hence you give them names.
+Використання лише літеральниха констант незабаром може набриднути — нам потрібен якийсь спосіб зберігання будь-якої інформації та маніпулювання нею. Ось тут і з’являються _змінні_. Змінні — це саме те, що випливає з назви — їхнє значення може змінюватися, тобто ви можете зберігати будь-що за допомогою змінної. Змінні — це лише частини пам’яті комп’ютера, де зберігається деяка інформація. На відміну від літеральних констант, вам потрібен певний метод доступу до цих змінних і, отже, ви даєте їм імена.
 
-## Identifier Naming
+## Іменування ідентифікатора
 
-Variables are examples of identifiers. _Identifiers_ are names given to identify _something_. There are some rules you have to follow for naming identifiers:
+Змінні є прикладами ідентифікаторів. _Ідентифікатори_ — це імена, надані для ідентифікації _чогось_ для його позначення. Існують деякі правила, яких слід дотримуватися для ідентифікаторів імен:
 
-- The first character of the identifier must be a letter of the alphabet (uppercase ASCII or lowercase ASCII or Unicode character) or an underscore (`_`).
-- The rest of the identifier name can consist of letters (uppercase ASCII or lowercase ASCII or Unicode character), underscores (`_`) or digits (0-9).
-- Identifier names are case-sensitive. For example, `myname` and `myName` are _not_ the same. Note the lowercase `n` in the former and the uppercase `N` in the latter.
-- Examples of _valid_ identifier names are `i`, `name_2_3`. Examples of _invalid_ identifier names are `2things`, `this is spaced out`, `my-name` and `>a1b2_c3`.
+- Першим символом ідентифікатора має бути літера алфавіту (символ ASCII в
+верхньому(великі літери) або нижньому(малі літери) регістрі, або символ Unicode), а також знак підкреслення(`_`).
+- Решта назви ідентифікатора може складатися з літер (символ ASCII в
+верхньому або нижньому регістрі, або символ Unicode),знак підкреслення (`_`) або цифр (0-9).
+- Імена ідентифікаторів чутливі до регістру. Наприклад, `myname` і `myName` _не_ те саме. Зверніть увагу на `n`у нижньому регістрі у першому випадку та на `N` у верхньому регістрі у другому випадку.
+- Прикладами _допустимих_ імен ідентифікаторів є `i`, `name_2_3`. Прикладами _неприпустимих_ імен ідентифікаторів є `2things`, `this is spaced out`, `my-name` і `>a1b2_c3`.
 
-## Data Types
+## Типи даних
 
-Variables can hold values of different types called _data types_. The basic types are numbers and strings, which we have already discussed. In later chapters, we will see how to create our own types using [classes](./oop.md#classes).
+Змінні можуть містити значення різних типів, які називаються _типами даних_.Основними типами є числа та рядки, які ми вже обговорювали. У наступних розділах ми побачимо, як створювати власні типи за допомогою [класів](./oop.md#classes).
 
-## Object
+## Об'єкт
 
-Remember, Python refers to anything used in a program as an _object_.  This is meant in the generic sense. Instead of saying "the _something_"', we say "the _object_".
+Пам’ятайте, Python називає все, що використовується в програмі, _об’єктом_.Це мається на увазі в загальному значенні. Замість того, щоб говорити "_щось_"', ми говоримо "_об'єкт_".
 
-> **Note for Object Oriented Programming users**:
+> **Примітка для користувачів об’єктно-орієнтованого програмування**:
 >
-> Python is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.
+> Python сильно об’єктно-орієнтований у тому сенсі, що все є об’єктом, включаючи числа, рядки та функції.
 
-We will now see how to use variables along with literal constants. Save the following example and run the program.
+Тепер ми побачимо, як використовувати змінні разом із літеральними константами. Збережіть наступний приклад і запустіть програму.
 
-## How to write Python programs
+## Як писати програми на Python
 
-Henceforth, the standard procedure to save and run a Python program is as follows:
+Відтепер стандартна процедура збереження та запуску програми Python така:
 
 ### For PyCharm
 
-1. Open [PyCharm](./first_steps.md#pycharm).
-2. Create new file with the filename mentioned.
-3. Type the program code given in the example.
-4. Right-click and run the current file.
+1. Відкрийте [PyCharm](./first_steps.md#pycharm).
+2. Створіть новий файл з назвою файлу.
+3. Введіть програмний код, наведений у прикладі.
+4. Клацніть правою кнопкою миші та запустіть поточний файл.
 
-NOTE: Whenever you have to provide [command line arguments](./modules.md#modules), click on `Run` -> `Edit Configurations` and type the arguments in the `Script parameters:` section and click the `OK` button:
+ПРИМІТКА. Щоразу, коли вам потрібно надати [command line arguments ("аргументи командного рядка")](./modules.md#modules), натисніть кнопку`Run` -> `Edit Configurations`, введіть аргументи в розділ `Script parameters:` і натисніть кнопку `OK`:
 
-![PyCharm command line arguments](./img/pycharm_command_line_arguments.png)
+![PyCharm command line arguments("Аргументи командного рядка PyCharm)](./img/pycharm_command_line_arguments.png)
 
-### For other editors
+### Для інших редакторів
 
-1. Open your editor of choice.
-2. Type the program code given in the example.
-3. Save it as a file with the filename mentioned.
-4. Run the interpreter with the command `python program.py` to run the program.
+1. Відкрийте вибраний редактор.
+2. Введіть програмний код, наведений у прикладі.
+3. Збережіть його як файл з назвою файлу.
+4. Запустіть інтерпретатор командою `python program.py`, щоб запустити програму.
 
-### Example: Using Variables And Literal Constants
+### Приклад: використання змінних і літеральних констант
 
-Type and run the following program:
+Введіть і запустіть таку програму:
 
 ```python
-# Filename : var.py
+# Ім'я файлу : var.py
 i = 5
 print(i)
 i = i + 1
 print(i)
 
-s = '''This is a multi-line string.
-This is the second line.'''
+s = '''Це багаторядковий рядок.
+Це другий рядок.'''
 print(s)
 ```
 
-Output:
+Висновок:
 
 ```
 5
 6
-This is a multi-line string.
-This is the second line.
+Це багаторядковий рядок.
+Це другий рядок.
 ```
 
-**How It Works**
+**Як це працює**
 
-Here's how this program works. First, we assign the literal constant value `5` to the variable `i` using the assignment operator (`=`). This line is called a statement because it states that something should be done and in this case, we connect the variable name `i` to the value `5`. Next, we print the value of `i` using the `print` statement which, unsurprisingly, just prints the value of the variable to the screen.
+Ось як працює ця програма. Спочатку ми привласнюємо значення константи `5` змінній `i` за допомогою оператора присвоювання (`=`).Цей рядок називається statement("*")
+("інструкція рoботи для комп'ютера"
+вираз і=5 має три частини:
+1. "і" - назва змінної;
+2. "=" - оператор присвоювання;
+3. "5" - літеральна констатнта;
+Ці частини не працюють поодинці,але разом вони створюють інструкцію рoботи для комп'ютера. Така інструкція,яку комп'ютер може зрозуміти називається "statement"),
+оскільки в ньому зазначено, що потрібно щось зробити, і в цьому випадку ми з’єднуємо назву змінної `i` зі значенням `5`.Далі ми друкуємо значення `i` за допомогою функції `print`, яка, як не дивно, просто виводить значення змінної на екран.
 
-Then we add `1` to the value stored in `i` and store it back. We then print it and expectedly, we get the value `6`.
+Потім ми додаємо «1» до значення, збереженого в «i», і зберігаємо його там. Потім ми друкуємо його і, як очікується, отримуємо значення "6".
 
-Similarly, we assign the literal string to the variable `s` and then print it.
+Similarly, we assign the literal string to the variable `s` and then print it.Подібним чином ми присвоюємо строкову константу змінній `s`, а потім друкуємо його.
 
-> **Note for static language programmers**
+> **Примітка для програмістів статичної мови**
 > 
-> Variables are used by just assigning them a value. No declaration or data type definition is needed/used.
+> Змінні використовуються простим наданням їм значень. Ніякого попередньоного оголошення або визначення типу даних не потрібно/застосовується.
 
-## Logical And Physical Line
+## Логічні та фізичні рядки
 
-A physical line is what you _see_ when you write the program. A logical line is what _Python sees_ as a single statement. Python implicitly assumes that each _physical line_ corresponds to a _logical line_.
+Фізична лінія - це те, що ви _бачите_, коли пишете програму. Логічний рядок — це те, що _Python сприймає_ як "a single statement" ("одну інструкцію "). Python неявно припускає, що кожен _фізичний рядок_ відповідає _логічному рядку_.
 
-An example of a logical line is a statement like `print('hello world')` - if this was on a line by itself (as you see it in an editor), then this also corresponds to a physical line.
+Прикладом логічного рядка є statement `print('Привіт, Світ!')`- якщо воно в одному рядку(як ви бачите це в редакторі), то цей рядок також відповідає фізичному рядку.
 
-Implicitly, Python encourages the use of a single statement per line which makes code more readable.
+Неявно Python заохочує використання одного statement на рядок, що робить код більш читабельним.
 
-If you want to specify more than one logical line on a single physical line, then you have to explicitly specify this using a semicolon (`;`) which indicates the end of a logical line/statement. For example:
+Якщо ви хочете вказати більше ніж один логічний рядок в одному фізичному рядку, ви повинні явно вказати це за допомогою крапки з комою (`;`), яка вказує на кінець логічного рядка/statement. Наприклад:
 
 ```python
 i = 5
 print(i)
 ```
 
-is effectively same as
+те саме, що
 
 ```python
 i = 5;
 print(i);
 ```
-
-which is also same as
+і те саме може бути записано у вигляді
 
 ```python
 i = 5; print(i);
 ```
-
-and same as
+або
 
 ```python
 i = 5; print(i)
 ```
 
-However, I *strongly recommend* that you stick to *writing a maximum of a single logical line on each single physical line*. The idea is that you should never use the semicolon. In fact, I have _never_ used or even seen a semicolon in a Python program.
+Однак я *настійно рекомендую* вам дотримуватися *написання максимум одного логічного рядка в кожному фізичному рядку*. Ідея полягає в тому, що ви можете обійтися без крапки з комою. Фактично, я _ніколи_ не використовував і навіть не бачив крапку з комою в програмі Python.
 
-There is one kind of situation where this concept is really useful: if you have a long line of code, you can break it into multiple physical lines by using the backslash. This is referred to as _explicit line joining_:
+
+Існує одна ситуація, коли ця концепція дійсно корисна: якщо у вас є довгий рядок коду, ви можете розбити його на кілька фізичних рядків, використовуючи зворотній слеш. Це називається _явним з’єднанням рядків_:
 
 ```python
-s = 'This is a string. \
-This continues the string.'
+s = 'Це рядок. \
+Цей рядок продовжується.'
 print(s)
 ```
 
-Output:
+Висновок:
 
 ```
-This is a string. This continues the string.
+Це рядок. Цей рядок продовжується.
 ```
 
-Similarly,
+Аналогічно,
 
 ```python
 i = \
 5
 ```
 
-is the same as
+те саме, що
 
 ```python
 i = 5
 ```
 
-Sometimes, there is an implicit assumption where you don't need to use a backslash. This is the case where the logical line has a starting parentheses, starting square brackets or a starting curly braces but not an ending one. This is called *implicit line joining*. You can see this in action when we write programs using [list](./data_structures.md#lists) in later chapters.
+Іноді існує неявне припущення, що вам не потрібно використовувати зворотній слеш. Це випадок, коли в логічному рядку є відкриваюча кругла, квадратна або фігурна дужка, але немає закриваючої . Це називається *неявним з’єднанням ліній*. Ви можете побачити це в дії, коли ми пишемо програми за допомогою [list](./data_structures.md#lists) у наступних розділах.
 
-## Indentation
+## Bідступи (Indentation)
+Пробіли ("Whitespace")важливі в Python. Точніше *пробіл на початку рядка важливий*. Це називається _відступом_(_indentation_). Передні відступи (пробіли та табуляції) на початку логічного рядка використовуються для визначення рівня відступу логічного рядка, який, у свою чергу, використовується для групування statement.
 
-Whitespace is important in Python. Actually, *whitespace at the beginning of the line is important*. This is called _indentation_. Leading whitespace (spaces and tabs) at the beginning of the logical line is used to determine the indentation level of the logical line, which in turn is used to determine the grouping of statements.
+Це означає, що statement, які йдуть разом, _повинні_ мати однаковий відступ. Кожен такий набір речень називається *блоком*. У наступних розділах ми побачимо приклади важливості блоків.
 
-This means that statements which go together _must_ have the same indentation. Each such set of statements is called a *block*. We will see examples of how blocks are important in later chapters.
-
-One thing you should remember is that wrong indentation can give rise to errors. For example:
+Пам’ятайте, що неправильний відступ може спричинити помилки. Наприклад:
 
 ```python
 i = 5
-# Error below! Notice a single space at the start of the line
- print('Value is', i)
-print('I repeat, the value is', i)
+# Помилка нижче! Зверніть увагу на один пробіл на початку рядка
+ print('Значення є', i)
+print('Я повторюю, значення є', i)
 ```
 
-When you run this, you get the following error:
+Коли ви запускаєте це, ви отримуєте таку помилку:
 
 ```
   File "whitespace.py", line 3
-    print('Value is', i)
+    print('Значення є', i) # Помилка! Пробіл на початку рядка
     ^
 IndentationError: unexpected indent
 ```
 
-Notice that there is a single space at the beginning of the second line. The error indicated by Python tells us that the syntax of the program is invalid i.e. the program was not properly written. What this means to you is that _you cannot arbitrarily start new blocks of statements_ (except for the default main block which you have been using all along, of course). Cases where you can use new blocks will be detailed in later chapters such as the [control flow](./control_flow.md#control_flow).
+Зверніть увагу, що на початку другого рядка є один пробіл. Помилка, відображена в Python, повідомляє нам, що синтаксис програми невірний, тобто програму було написано неправильно.Для вас це означає те, що _ви не можете довільно починати нові блоки statement_ ​​(за винятком головного блоку за замовчуванням, який ви використовували протягом всієї програми, звичайно). Випадки, коли ви можете використовувати нові блоки, будуть детально описані в наступних розділах, наприклад  [control flow](./control_flow.md#control_flow).
 
-> **How to indent**
+> **Як зробити відступ**
 > 
-> Use four spaces for indentation. This is the official Python language recommendation. Good editors will automatically do this for you. Make sure you use a consistent number of spaces for indentation, otherwise your program will not run or will have unexpected behavior.
+> Використовуйте чотири пробіли для відступу. Це офіційна рекомендація щодо мови Python.Хороші редактори автоматично зроблять це за вас.Переконайтеся, що ви використовуєте однакову кількість пробілів для відступів, інакше ваша програма не працюватиме або матиме неочікувану поведінку.
 
 <!-- -->
 
-> **Note to static language programmers**
+> **Примітка для програмістів статичної мови програмування**
 > 
-> Python will always use indentation for blocks and will never use braces. Run `from __future__ import braces` to learn more.
+> Python завжди використовуватиме відступи для блоків і ніколи не використовуватиме дужки. Запустіть `from __future__ import braces`, щоб дізнатися більше.
 
-## Summary
+## Резюме
 
-Now that we have gone through many nitty-gritty details, we can move on to more interesting stuff such as control flow statements. Be sure to become comfortable with what you have read in this chapter.
-
+Тепер, коли ми пройшли через багато дрібних деталей, ми можемо перейти до більш цікавих речей, таких як оператори потоку керування. Переконайтеся, що ви зрозуміли те, що ви прочитали в цьому розділі.
