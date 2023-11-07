@@ -1,14 +1,14 @@
-# Operators and Expressions {#op-exp}
+# Оператори та вирази (англ. "Operators and Expressions")
 
-Most statements (logical lines) that you write will contain _expressions_. A simple example of an expression is `2 + 3`. An expression can be broken down into operators and operands.
+Більшість statements (логічних рядків), які ви пишете, міститимуть _вирази_. Простим прикладом виразу є `2 + 3`. Вираз можна розбити на оператори та операнди.
 
-_Operators_ are functionality that do something and can be represented by symbols such as `+` or by special keywords. Operators require some data to operate on and such data is called _operands_. In this case, `2` and `3` are the operands.
+_Оператори_ — це певний функціонал, який виконує певні дії та який може бути представлений такими символами, як наприклад «+», або спеціальними ключовими словами. Операторам потрібні деякі дані для роботи, і такі дані називаються _операндами_. У цьому випадку "2" і "3" є операндами.
 
-## Operators
+## Оператори (англ."Operators")
 
-We will briefly take a look at the operators and their usage.
+Ми коротко розглянемо операторів та їх використання.
 
-Note that you can evaluate the expressions given in the examples using the interpreter interactively. For example, to test the expression `2 + 3`, use the interactive Python interpreter prompt:
+Зверніть увагу, що ви можете обчислити вирази, наведені в прикладах, використовуючи інтерпретатор інтерактивно. Наприклад, щоб перевірити вираз `2 + 3`, скористайтесь інтерактивним командним рядком інтерпретатора Python:
 
 ```python
 >>> 2 + 3
@@ -18,187 +18,188 @@ Note that you can evaluate the expressions given in the examples using the inter
 >>>
 ```
 
-Here is a quick overview of the available operators:
+Ось короткий огляд доступних операторів:
 
-- `+` (plus)
-    - Adds two objects
-    - `3 + 5` gives `8`. `'a' + 'b'` gives `'ab'`.
+- `+`  (Додавання) ( англ."plus")
+    - Підсумовує два об'єкта
+    - `3 + 5` дорівнює `8`. `'a' + 'b'` дорівнює `'ab'`.
 
-- `-` (minus)
-    - Gives the subtraction of one number from the other; if the first operand is absent it is assumed to be zero.
-    - `-5.2` gives a negative number and `50 - 24` gives `26`.
+- `-` (Віднімання) ( англ."minus")
+    - Дає віднімання одного числа від іншого; якщо перший операнд відсутній, він вважається нульовим.
+    - `-5.2` дасть негативне число, а `50 - 24` дасть `26`.
 
-- `*` (multiply)
-    - Gives the multiplication of the two numbers or returns the string repeated that many times.
-    - `2 * 3` gives `6`. `'la' * 3` gives `'lalala'`.
+- `*` (Mноження) (англ. "multiply")
+    - Видає множення двох чисел або повертає рядок, що повторюється задане число разів.
+    - `2 * 3` дорівнює `6`. `'la' * 3` дорівнює `'lalala'`.
 
-- `**` (power)
-    - Returns x to the power of y
-    - `3 ** 4` gives `81` (i.e. `3 * 3 * 3 * 3`)
+- `**` (Піднесення до степеня)(англ."power")
+    - Повертає число х,зведене в ступінь y
+    - `3 ** 4` дорівнює `81` (тобто `3 * 3 * 3 * 3`)
 
-- `/` (divide)
-    - Divide x by y
-    - `13 / 3` gives `4.333333333333333`
+- `/` (Ділення) (англ. "divide")
+    - Ділить x на y
+    - `13 / 3` дорівнює `4.333333333333333`
 
-- `//` (divide and floor)
-    - Divide x by y and round the answer _down_ to the nearest integer value. Note that if one of the values is a float, you'll get back a float.
-    - `13 // 3` gives `4`
-    - `-13 // 3` gives `-5`
-    - `9//1.81` gives `4.0`
+- `//` (Цілочисельний поділ) (англ. "divide and floor")
+    - Розділіть x на y та округліть відповідь _вниз_ до найближчого цілого значення. Зауважте, що якщо одне зі значень є числом з плаваючою комою, ви отримаєте значення з плаваючою комою.
+    - `13 // 3`  дорівнює `4`
+    - `-13 // 3` дорівнює `-5`
+    - `9//1.81`  дорівнює `4.0`
 
-- `%` (modulo)
-    - Returns the remainder of the division
-    - `13 % 3` gives `1`. `-25.5 % 2.25` gives `1.5`.
+- `%` (Поділ по модулю) (англ. "modulo")
+    - Повертає залишок від ділення
+    - `13 % 3` дорівнює `1`. `-25.5 % 2.25` дорівнює `1.5`.
 
-- `<<` (left shift)
-    - Shifts the bits of the number to the left by the number of bits specified. (Each number is represented in memory by bits or binary digits i.e. 0 and 1)
-    - `2 << 2` gives `8`. `2` is represented by `10` in bits.
-    - Left shifting by 2 bits gives `1000` which represents the decimal `8`.
+- `<<` (оператори зсуву вліво на задану кількість біт)(англ."left shift")
+    - Зсуває біти числа вліво на задане число позицій. (Кожне число представлено в пам’яті бітами або двійковими цифрами, тобто 0 і 1)
+    - `2 << 2` дорівнює `8`. У двійковій системи числення `2` представляє собою`10`.
+    - Зрушення вліво на 2 біта дає «1000», що у десятковій системи числення означає 8.
+- `>>` (оператори зсуву вправо на задану кількість біт)(англ."right shift")
+    - Зсуває біти числа вправо на задане число позицій.
+    - `11 >> 1` дорівнює `5`.
+    - У двійковій системи числення  `11` представлено в бітах як `1011` яке при зсуві вправо на 1 біт дорівнює `101` і яке є десятковим `5`.
 
-- `>>` (right shift)
-    - Shifts the bits of the number to the right by the number of bits specified.
-    - `11 >> 1` gives `5`.
-    - `11` is represented in bits by `1011` which when right shifted by 1 bit gives `101`which is the decimal `5`.
-
-- `&` (bit-wise AND)
-    - Bit-wise AND of the numbers: if both bits are `1`, the result is `1`. Otherwise, it's `0`.
-    - `5 & 3` gives `1` (`0101 & 0011` gives `0001`)
+- `&` (побітове І)(англ."bit-wise AND")
+    - Побітова операція І над числами: якщо обидва біти дорівнюють `1`, то результат дорівнює `1`. В іншому випадку це `0`.
+    - `5 & 3` дорівнює `1` (`0101 & 0011` дорівнює `0001`)
     
-- `|` (bit-wise OR)
-    - Bitwise OR of the numbers: if both bits are `0`, the result is `0`. Otherwise, it's `1`. 
-    - `5 | 3` gives `7` (`0101 | 0011` gives `0111`)
+- `|` (побітове АБО)(англ."bit-wise OR")
+    - Побітова операція АБО
+над числами: якщо обидва біти дорівнюють `0`, результат `0`.  В іншому випадку це `1`. 
+    - `5 | 3` дорівнює `7` (`0101 | 0011` дорівнює `0111`)
     
-- `^` (bit-wise XOR) 
-    - Bitwise XOR of the numbers: if both bits (`1 or 0`) are the same, the result is `0`. Otherwise, it's `1`.
-    - `5 ^ 3` gives `6` (`O101 ^ 0011` gives `0110`)
+- `^` (бітове виключне АБО)(англ."bit-wise XOR") 
+    - Побітова операція виключне АБО над числами: якщо обидва біти (`1 або 0`) однакові, результат дорівнює `0`.  В іншому випадку це `1`. 
+    - `5 ^ 3` дорівнює `6` (`O101 ^ 0011` дорівнює `0110`)
 
-- `~` (bit-wise invert)
-    - The bit-wise inversion of x is -(x+1)
-    - `~5` gives `-6`. More details at http://stackoverflow.com/a/11810203
+- `~`(побітове НЕ) (англ."bit-wise invert")
+    - Побітова операція НЕ для числа x відповідає -(x+1)
+    - `~5` дорівнює `-6`. Детальніше на  http://stackoverflow.com/a/11810203
 
-- `<` (less than)
-    - Returns whether x is less than y. All comparison operators return `True` or `False`. Note the capitalization of these names.
-    - `5 < 3` gives `False` and `3 < 5` gives `True`.
-    - Comparisons can be chained arbitrarily: `3 < 5 < 7` gives `True`.
+- `<` (менше ніж) (англ."less than")
+    - Визначає чи вірно те, що x менше за y. Усі оператори порівняння повертають`True` або `False`. Зверніть увагу на написання цих імен з великої літери.
+    - `5 < 3` дорівнює `False`, а `3 < 5` дорівнює `True`.
+    - Можна складати довільні ланцюжки: `3 < 5 < 7` дає `True`.
 
-- `>` (greater than)
-    - Returns whether x is greater than y
-    - `5 > 3` returns `True`. If both operands are numbers, they are first converted to a common type. Otherwise, it always returns `False`.
+- `>` (Більше ніж)(англ."greater than")
+    - Визначає чи вірно те, що x більше за y
+    - `5 > 3` повертає `True`. Якщо обидва операнди є числами, вони спочатку перетворюються на однаковий  тип. В іншому випадку завжди повертається `False`.
 
-- `<=` (less than or equal to)
-    - Returns whether x is less than or equal to y
-    - `x = 3; y = 6; x <= y` returns `True`
+- `<=` (менше або дорівнює) (англ."less than or equal to")
+    - Визначає чи вірно те, що x менше або дорівнює y
+    - `x = 3; y = 6; x <= y` повертає `True`
 
-- `>=` (greater than or equal to)
-    - Returns whether x is greater than or equal to y
-    - `x = 4; y = 3; x >= 3` returns `True`
+- `>=` (більше або дорівнює)(англ."greater than or equal to")
+    - Визначає чи вірно те, що x більше або дорівнює y
+    - `x = 4; y = 3; x >= 3` повертає `True`
 
-- `==` (equal to)
-    - Compares if the objects are equal
-    - `x = 2; y = 2; x == y` returns `True`
-    - `x = 'str'; y = 'stR'; x == y` returns `False`
-    - `x = 'str'; y = 'str'; x == y` returns `True`
+- `==` (дорівнює) (англ."equal to")
+    - Порівнює, чи однакові об'єкти
+    - `x = 2; y = 2; x == y` повертає`True`
+    - `x = 'str'; y = 'stR'; x == y` повертає `False`
+    - `x = 'str'; y = 'str'; x == y` повертає `True`
 
-- `!=` (not equal to)
-    - Compares if the objects are not equal
-    - `x = 2; y = 3; x != y` returns `True`
+- `!=` (не дорівнює) (англ."not equal to")
+    - Порівнює, якщо об'єкти не рівні
+    - `x = 2; y = 3; x != y` повертає `True`
 
-- `not` (boolean NOT)
-    - If x is `True`, it returns `False`. If x is `False`, it returns `True`.
-    - `x = True; not x` returns `False`.
+- `not` (логічне НЕ)(англ."boolean NOT")
+    - Якщо x дорівнює `True`, оператор поверне `False`. Якщо ж x дорівнює `False`, отримаємо `True`.
+    - `x = True; not x` повертає `False`.
 
-- `and` (boolean AND)
-    - `x and y` returns `False` if x is `False`, else it returns evaluation of y
-    - `x = False; y = True; x and y` returns `False` since x is False. In this case, Python will not evaluate y since it knows that the left hand side of the 'and' expression is `False` which implies that the whole expression will be `False` irrespective of the other values. This is called short-circuit evaluation.
+- `and` (логічне І) (англ."boolean AND")
+    - `x and y` повертає `False`,якщо x дорівнює `False`,в протилежному випадку повертає значення y
+    - `x = False; y = True; x and y` повертає `False` оскільки x є False. У цьому випадку Python не обчислюватиме y, оскільки він знає, що ліва частина виразу «and» має значення «False», що означає, що весь вираз буде «False» незалежно від інших значень.Це називається скороченою оцінкою булевих (логічних) виразів (англ. "short-circuit evaluation").
 
-- `or` (boolean OR)
-    - If x is `True`, it returns True, else it returns evaluation of y
-    - `x = True; y = False; x or y` returns `True`. Short-circuit evaluation applies here as well.
+- `or` (логічне АБО)(англ."boolean OR")
+    - Якщо x дорівнює  `True`, він повертає True, в протилежному випадку отримаємо значення y
+    - `x = True; y = False; x or y` повертає `True`.Тут також застосовується скорочена оцінка  виразів.
 
-## Shortcut for math operation and assignment
+## Короткий запис математичних  операцій та привласнення
 
-It is common to run a math operation on a variable and then assign the result of the operation back to the variable, hence there is a shortcut for such expressions:
+Зазвичай виконується математична операція над змінною, а потім привласнюється результат цієї операції тій самій змінній, отже, для таких виразів існує скорочення:
 
 ```python
 a = 2
 a = a * 3
 ```
 
-can be written as:
+можна записати як:
 
 ```python
 a = 2
 a *= 3
 ```
 
-Notice that `var = var operation expression` becomes `var operation= expression`.
+Зверніть увагу, що вирази виду  `var = var operation expression`("змінна = змінна операція
+вираз") стає `var operation= expression`("змінна операція = вираз").
 
-## Evaluation Order
+## Порядок обчислення (англ. "evaluation Order")
 
-If you had an expression such as `2 + 3 * 4`, is the addition done first or the multiplication? Our high school maths tells us that the multiplication should be done first. This means that the multiplication operator has higher precedence than the addition operator.
+Якщо у вас є такий вираз, як «2 + 3 * 4», спочатку виконується додавання чи множення? Шкільний курс математики говорить нам, що спочатку потрібно виконати множення. Це означає, що оператор множення має вищий пріоритет, ніж оператор додавання.
 
-The following table gives the precedence table for Python, from the lowest precedence (least binding) to the highest precedence (most binding). This means that in a given expression, Python will first evaluate the operators and expressions lower in the table before the ones listed higher in the table.
+У наcтупній таблиці нижче  наведено пріоритет операторів Python, починаючи з самого найнижчого пріоритету (найслабше зв'язування, англ."least binding") до найвищого пріоритету (найсильніше зв'язування,англ."most binding").Це означає, що у будь-якому вираженні Python спочатку оцінить оператори та вирази, розташовані нижче в таблиці, а потім ті, що перераховані вище в таблиці.
 
-The following table, taken from the [Python reference manual](http://docs.python.org/3/reference/expressions.html#operator-precedence), is provided for the sake of completeness. It is far better to use parentheses to group operators and operands appropriately in order to explicitly specify the precedence. This makes the program more readable. See [Changing the Order of Evaluation](#changing-order-of-evaluation) below for details.
+Для повноти опису наведено наступну таблицю, взяту з [Посібника  мови Python (англ.""Python reference manual)](http://docs.python.org/3/reference/expressions.html#operator-precedence). Набагато краще використовувати  дужки для відповідного групування операторів і операндів, щоб явно вказати порядок обчислення виразів. Це робить програму більш читабельною. Див. [Зміна порядку оцінювання (англ. "Changing the Order of Evaluation")](#changing-order-of-evaluation) нижче для отримання додаткової інформації.
 
-- `lambda` : Lambda Expression
-- `if - else` : Conditional expression
-- `or` : Boolean OR
-- `and` : Boolean AND
-- `not x` : Boolean NOT
-- `in, not in, is, is not, <, <=, >, >=, !=, ==` : Comparisons, including membership tests and identity tests
-- `|` : Bitwise OR
-- `^` : Bitwise XOR
-- `&` : Bitwise AND
-- `<<, >>` : Shifts
-- `+, -` : Addition and subtraction
-- `*, /, //, %` : Multiplication, Division, Floor Division and Remainder
-- `+x, -x, ~x` : Positive, Negative, bitwise NOT
-- `**` : Exponentiation
-- `x[index], x[index:index], x(arguments...), x.attribute` : Subscription, slicing, call, attribute reference
-- `(expressions...), [expressions...], {key: value...}, {expressions...}` : Binding or tuple display, list display, dictionary display, set display
+- `lambda` : Лямбда-вираз (англ."Lambda Expression")
+- `if - else`: Умовний вираз (англ."Conditional expression")
+- `or` : Логічне АБО (англ."Boolean OR")
+- `and` : Логічне І (англ."Boolean AND")
+- `not x` : Логічне НЕ (англ."Boolean NOT")
+- `in, not in, is, is not, <, <=, >, >=, !=, ==` : Порівняння, включаючи тести на приналежність і тести на тотожність
+- `|` : Побітне АБО (англ."Bitwise OR")
+- `^` : Побітне ВИКЛЮЧНО АБО (англ."Bitwise XOR")
+- `&` : Побітне I (англ."Bitwise AND")
+- `<<, >>` : Зміщеня (англ."Shifts")
+- `+, -` : Додавання і віднімання(англ."Addition and subtraction")
+- `*, /, //, %` : Множення, ділення, цілочисельне ділення та залишок від ділення (англ."Multiplication", "Division", "Floor Division" and "Remainder")
+- `+x, -x, ~x` : Позитивне, негативне, побітове НЕ (англ."Positive", "Negative", "bitwise NOT")
+- `**` : (Піднесення до степеня)(англ. " Exponentiation")
+- `x[index], x[index:index], x(arguments...), x.attribute` : Звернення за індексом,зріз,виклик функції, посилання на атрибут (англ."Subscription", "slicing", "call", "attribute reference") 
+- `(expressions,..), [expressions,..], {key: value,..}, {expressions...}` : Зв’язка або кортеж,список,словник,множина (англ."Binding or tuple display, "list display", "dictionary display", "set display")
 
-The operators which we have not already come across will be explained in later chapters.
+Оператори, які ми ще не зустрічали, будуть пояснені в наступних розділах.
 
-Operators with the _same precedence_ are listed in the same row in the above table. For example, `+` and `-` have the same precedence.
+Оператори з _однаковим пріоритетом_ містяться в одному рядку у наведеній вище таблиці. Наприклад, «+» і «-» мають однаковий пріоритет.
 
-## Changing the Order Of Evaluation {#changing-order-of-evaluation}
+## Зміна порядку обчислення {англ."Changing the Order Of Evaluation"}
 
-To make the expressions more readable, we can use parentheses. For example, `2 + (3 * 4)` is definitely easier to understand than `2 + 3 * 4` which requires knowledge of the operator precedences. As with everything else, the parentheses should be used reasonably (do not overdo it) and should not be redundant, as in `(2 + (3 * 4))`.
+Щоб зробити вирази більш зрозумілими, ми можемо використовувати круглі дужки.Наприклад, `2 + (3 * 4)` легше зрозуміти, ніж `2 + 3 * 4`, яке вимагає знання пріоритетів операторів. Як і в усьому іншому, дужки слід використовувати розумно (не перестарайтеся) і вони не повинні бути зайвими, як у `(2 + (3 * 4))`.
 
-There is an additional advantage to using parentheses - it helps us to change the order of evaluation. For example, if you want addition to be evaluated before multiplication in an expression, then you can write something like `(2 + 3) * 4`.
+Є додаткова перевага використання круглих дужок - це допомагає нам змінити порядок обчислення.  Наприклад, якщо ви хочете, щоб додавання обчислювалося перед множенням у виразі, ви можете написати щось на зразок `(2 + 3) * 4`.
 
-## Associativity
+## Асоціативність
 
-Operators are usually associated from left to right. This means that operators with the same precedence are evaluated in a left to right manner. For example, `2 + 3 + 4` is evaluated as `(2 + 3) + 4`.
+Оператори зазвичай обробляються зліва направо. Це означає, що оператори з однаковим пріоритетом обчислюються зліва направо. Наприклад, "2 + 3 + 4" обчислюється як "(2 + 3) + 4".
 
-## Expressions
+## Вирази (англ. "Expressions")
 
-Example (save as `expression.py`):
+Приклад (зберегти як `expression.py`):
 
 ```python
-length = 5
-breadth = 2
+довжина = 5
+ширина = 2
 
-area = length * breadth
-print('Area is', area)
-print('Perimeter is', 2 * (length + breadth))
+площа = довжина * ширина
+print('Площа дорівнює', площа)
+print('Периметр дорівнює', 2 * (довжина + ширина))
 ```
 
-Output:
+Висновок:
 
 ```
 $ python expression.py
-Area is 10
-Perimeter is 14
+Площа дорівнює 10
+Периметр дорівнює 14
 ```
 
-**How It Works**
+**Як це працює**
 
-The length and breadth of the rectangle are stored in variables by the same name. We use these to calculate the area and perimeter of the rectangle with the help of expressions. We store the result of the expression `length * breadth` in the variable `area` and then print it using the `print` function. In the second case, we directly use the value of the expression `2 * (length + breadth)` in the print function.
+Довжина і ширина прямокутника зберігаються в однойменних змінних(довжина та ширина) відповідно.  Ми використовуємо їх для обчислення площі та периметра прямокутника за допомогою виразів. Ми зберігаємо результат виразу `довжина * ширина` у змінній `площа`, а потім друкуємо його за допомогою функції `print`. У другому випадку ми безпосередньо використовуємо значення виразу `2 * (довжина + ширина)` у функції друку.
 
-Also, notice how Python _pretty-prints_ the output. Even though we have not specified a space between `'Area is'` and the variable `area`, Python puts it for us so that we get a clean nice output and the program is much more readable this way (since we don't need to worry about spacing in the strings we use for output). This is an example of how Python makes life easy for the programmer.
+Також зверніть увагу на те, як Python _"гарно друкує"_  результат.Навіть незважаючи на те, що ми не вказали пробіл у кінці речення у лапках `'Площа дорівнює'`, Python розміщує його для нас, щоб ми отримали чистий гарний результат, і програма стала набагато читабельнішою таким чином (оскільки  не потрібно турбуватися про пробіли в рядках, які ми використовуємо для виведення(друку)). Це приклад того, як Python полегшує життя програміста.
 
-## Summary
+##  Резюме
 
-We have seen how to use operators, operands and expressions - these are the basic building blocks of any program. Next, we will see how to make use of these in our programs using statements.
+Ми побачили, як використовувати оператори, операнди та вирази - це основні будівельні блоки будь-якої програми. Далі ми побачимо, як використовувати їх у наших програмах за допомогою statements (операторів).
