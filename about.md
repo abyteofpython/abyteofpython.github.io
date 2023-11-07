@@ -32,7 +32,7 @@ Linux, але вже шосту версію чернетки я писав на
 
 Для десятої чернетки я перейшов до написання у форматі Markdown + [GitBook](https://www.gitbook.com), використовуючи [редактор Spacemacs](http://spacemacs.org).
 
-Nov 2020: Since Gitbook abandoned their open source software, migrated to [Honkit, a community-maintained fork of Gitbook legacy](https://github.com/honkit/honkit).Листопад 2020: оскільки Gitbook відмовився від свого програмного забезпечення з відкритим кодом, перейшов на [Honkit, a community-maintained fork of Gitbook legacy] (https://github.com/honkit/honkit).
+Листопад 2020: оскільки Gitbook відмовився від свого програмного забезпечення з відкритим кодом, перейшов на [Honkit, a community-maintained fork of Gitbook legacy] (https://github.com/honkit/honkit).
 
 ## Про автора
 
