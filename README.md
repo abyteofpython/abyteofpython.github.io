@@ -2,6 +2,10 @@
 
 work in progress
 
+The translated version of "A byte of Python" can be found at this site:
+
+ * <https://spielend-programmieren.at/uk/pages/a_byte_of_python.uk/>
+
 done so far:
   
   * about_python.md
