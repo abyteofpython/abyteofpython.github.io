@@ -1,166 +1,446 @@
-# Control Flow {#control-flow}
+# Функції 
 
-In the programs we have seen till now, there has always been a series of statements faithfully executed by Python in exact top-down order. What if you wanted to change the flow of how it works? For example, you want the program to take some decisions and do different things depending on different situations, such as printing 'Good Morning' or 'Good Evening' depending on the time of the day?
+Функції — є багаторазовими фрагментами програми. Вони дозволяють вам дати назву блоку рядків коду, щоб згодом запускати цей блок, використовуючи вказане ім’я будь-де у вашій програмі та будь-яку кількість разів. Це називається *викликом* функції. Ми вже використовували багато вбудованих функцій, таких як `len` і `range`.
 
-As you might have guessed, this is achieved using control flow statements. There are three control flow statements in Python - `if`, `for` and `while`.
+Концепція функції є, ймовірно, *найважливішим* будівельним блоком будь-якого нетривіального програмного забезпечення (на будь-якій мові програмування), тому ми розглянемо різні аспекти функцій у цій главі.
 
-## The `if` statement
+Функції визначаються за допомогою ключового слова `def`. Для того щоб створити функцію потрібно розмістити ключове слово def перед ідентифікатором функції (її ім’ям), потім вказати пару дужок всередині яких можуть міститися імена змінних,поставити в кінці рядка двокрапку, яка закінчує рядок. Далі йде блок рядків коду, які є частиною цієї функції. Приклад покаже, що це насправді дуже просто:
+Приклад (зберегти як `function1.py`):
 
-The `if` statement is used to check a condition: *if* the condition is true, we run a block of statements (called the _if-block_), *else* we process another block of statements (called the _else-block_). The *else* clause is optional.
-
-Example (save as `if.py`):
-
-<!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
-<pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/if.txt" %}</code></pre>
-
-**How It Works**
-
-In this program, we take guesses from the user and check if it is the number that we have. We set the variable `number` to any integer we want, say `23`. Then, we take the user's guess using the `input()` function. Functions are just reusable pieces of programs. We'll read more about them in the [next chapter](./functions.md#functions).
-
-We supply a string to the built-in `input` function which prints it to the screen and waits for input from the user. Once we enter something and press kbd:[enter] key, the `input()` function returns what we entered, as a string. We then convert this string to an integer using `int` and then store it in the variable `guess`. Actually, the `int` is a class but all you need to know right now is that you can use it to convert a string to an integer (assuming the string contains a valid integer in the text).
-
-Next, we compare the guess of the user with the number we have chosen. If they are equal, we print a success message. Notice that we use indentation levels to tell Python which statements belong to which block. This is why indentation is so important in Python. I hope you are sticking to the "consistent indentation" rule. Are you?
-
-Notice how the `if` statement contains a colon at the end - we are indicating to Python that a block of statements follows.
-
-Then, we check if the guess is less than the number, and if so, we inform the user that they must guess a little higher than that. What we have used here is the `elif` clause which actually combines two related `if else-if else` statements into one combined `if-elif-else` statement. This makes the program easier and reduces the amount of indentation required.
-
-The `elif` and `else` statements must also have a colon at the end of the logical line followed by their corresponding block of statements (with proper indentation, of course)
-
-You can have another `if` statement inside the if-block of an `if` statement and so on - this is called a nested `if` statement.
-
-Remember that the `elif` and `else` parts are optional. A minimal valid `if` statement is:
+<pre><code>{% include "./programs/function1.txt" %}</code></pre>-->
 
 ```python
-if True:
-    print('Yes, it is true')
+def скажи_привіт():
+    # блок, що належить функції
+    print('привіт, Світ!')
+# Кінець функції
+
+скажи_привіт()  # виклик функції
+скажи_привіт()  # ще один виклик функції
+```
+Висновок: 
+```
+$ python function1.py
+привіт, Світ!
+привіт, Світ!
 ```
 
-After Python has finished executing the complete `if` statement along with the associated `elif` and `else` clauses, it moves on to the next statement in the block containing the `if` statement. In this case, it is the main block (where execution of the program starts), and the next statement is the `print('Done')` statement. After this, Python sees the ends of the program and simply finishes up.
+**Як це працює**
 
-Even though this is a very simple program, I have been pointing out a lot of things that you should notice. All these are pretty straightforward (and surprisingly simple for those of you from C/C++ backgrounds). You will need to become aware of all these things initially, but after some practice you will become comfortable with them, and it will all feel 'natural' to you.
+Ми визначаємо функцію під назвою `скажи_привіт` використовуючи синтаксис, описаний вище. Ця функція не приймає параметрів і, отже, немає змінних, оголошених у дужках. Параметри функції – це деякі вхіднi дані, які ми можемо передати функції, щоб отримати відповідний їм результат.
+Зверніть увагу, що ми можемо викликати ту саму функцію двічі, що означає, що нам не потрібно писати той самий код знову.
 
-> **Note for C/C++ Programmers**
-> 
-> There is no `switch` statement in Python. You can use an `if..elif..else` statement to do the same thing (and in some cases, use a [dictionary](./data_structures.md#dictionary) to do it quickly)
+## Параметри функції
 
-## The while Statement
+Функції можуть приймати параметри, тобто деякі значення, що передаються функції,щоб вона щось *зробила* з ними. Ці параметри схожі на змінні, за винятком того, що значення цих змінних вказуються при виклику функції, та під час роботи функції їм вже надано їх значення.
 
-The `while` statement allows you to repeatedly execute a block of statements as long as a condition is true. A `while` statement is an example of what is called a *looping* statement. A `while` statement can have an optional `else` clause.
+Параметри вказуються в парі круглих дужок при визначенні функції, розділені символом
+коми. Коли ми викликаємо функцію, ми надаємо значення таким же чином. Зверніть увагу на термінологію: імена, наведені при визначенні функції, називаються *параметрами*, тоді як значення,які ви передаєте в функцію при її виклику, - називаються *аргументами*.
 
-Example (save as `while.py`):
+Приклад (зберегти як `function_param.py`):
 
-<pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/while.txt" %}</code></pre>
-
-**How It Works**
-
-In this program, we are still playing the guessing game, but the advantage is that the user is allowed to keep guessing until he guesses correctly - there is no need to repeatedly run the program for each guess, as we have done in the previous section. This aptly demonstrates the use of the `while` statement.
-
-We move the `input` and `if` statements to inside the `while` loop and set the variable `running` to `True` before the while loop. First, we check if the variable `running` is `True` and then proceed to execute the corresponding *while-block*. After this block is executed, the condition is again checked which in this case is the `running` variable. If it is true, we execute the while-block again, else we continue to execute the optional else-block and then continue to the next statement.
-
-The `else` block is executed when the `while` loop condition becomes `False` - this may even be the first time that the condition is checked. If there is an `else` clause for a `while` loop, it is always executed unless you break out of the loop with a `break` statement.
-
-The `True` and `False` are called Boolean types and you can consider them to be equivalent to the value `1` and `0` respectively.
-
-> **Note for C/C++ Programmers**
-> 
-> Remember that you can have an `else` clause for the `while` loop.
-
-## The `for` loop
-
-The `for..in` statement is another looping statement which *iterates* over a sequence of objects i.e. go through each item in a sequence. We will see more about [sequences](./data_structures.md#sequence) in detail in later chapters. What you need to know right now is that a sequence is just an ordered collection of items.
-
-Example (save as `for.py`):
-
-<pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/for.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_param.txt" %}</code></pre>-->
+```python
+def print_max(a, b):
+    if a > b:
+        print(a, 'є максимальним')
+    elif a == b:
+        print(a, 'дорівнює', b)
+    else:
+        print(b, 'є максимальним')
 
-**How It Works**
+# пряма передача значень
+print_max(3, 4)
 
-In this program, we are printing a *sequence* of numbers. We generate this sequence of numbers using the built-in `range` function.
-
-What we do here is supply it two numbers and `range` returns a sequence of numbers starting from the first number and up to the second number. For example, `range(1,5)` gives the sequence `[1, 2, 3, 4]`. By default, `range` takes a step count of 1. If we supply a third number to `range`, then that becomes the step count. For example, `range(1,5,2)` gives `[1,3]`. Remember that the range extends *up to* the second number i.e. it does *not* include the second number.
-
-Note that `range()` generates only one number at a time, if you want the full list of numbers, call `list()` on the `range()`, for example, `list(range(5))` will result in `[0, 1, 2, 3, 4]`. Lists are explained in the [data structures chapter](./data_structures.md#data-structures).
-
-The `for` loop then iterates over this range - `for i in range(1,5)` is equivalent to `for i in [1, 2, 3, 4]` which is like assigning each number (or object) in the sequence to i, one at a time, and then executing the block of statements for each value of `i`.  In this case, we just print the value in the block of statements.
-
-Remember that the `else` part is optional. When included, it is always executed once after the `for` loop is over unless a [break](#break-statement) statement is encountered.
-
-Remember that the `for..in` loop works for any sequence. Here, we have a list of numbers generated by the built-in `range` function, but in general we can use any kind of sequence of any kind of objects! We will explore this idea in detail in later chapters.
-
-> **Note for C/C++/Java/C# Programmers**
-> 
-> The Python `for` loop is radically different from the C/C++ `for` loop. C# programmers will note that the `for` loop in Python is similar to the `foreach` loop in C#. Java programmers will note that the same is similar to `for (int i : IntArray)` in Java 1.5.
-> 
-> In C/C++, if you want to write `for (int i = 0; i < 5; i++)`, then in Python you write just `for i in range(0,5)`. As you can see, the `for` loop is simpler, more expressive and less error prone in Python.
-
-## The break Statement {#break-statement}
-
-The `break` statement is used to *break* out of a loop statement i.e. stop the execution of a looping statement, even if the loop condition has not become `False` or the sequence of items has not been completely iterated over.
-
-An important note is that if you *break* out of a `for` or `while` loop, any corresponding loop `else` block is **not** executed.
-
-Example (save as `break.py`):
-
-<pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/break.txt" %}</code></pre>
-
-**How It Works**
-
-In this program, we repeatedly take the user's input and print the length of each input each
-time. We are providing a special condition to stop the program by checking if the user input is
-`'quit'`. We stop the program by *breaking* out of the loop and reach the end of the program.
-
-The length of the input string can be found out using the built-in `len` function.
-
-Remember that the `break` statement can be used with the `for` loop as well.
-
-**Swaroop's Poetic Python**
-
-The input I have used here is a mini poem I have written:
-
+x = 5
+y = 7
+# передача змінних як аргументи
+print_max(x, y)
 ```
-Programming is fun
-When the work is done
-if you wanna make your work also fun:
-    use Python!
+Висновок: 
+```
+$ python function_param.py
+4 є максимальним
+7 є максимальним
 ```
 
-## The `continue` Statement {#continue-statement}
+**Як це працює**
 
-The `continue` statement is used to tell Python to skip the rest of the statements in the current loop block and to *continue* to the next iteration of the loop.
+Тут ми визначаємо функцію з назвою `print_max`,яка використовує два параметри з назвою `a` і `b`. Ми знаходимо більше число за допомогою простого  блоку  `if..else`, а потім друкуємо більше число.
 
-Example (save as `continue.py`):
+Коли ми вперше викликаємо функцію `print_max`, ми безпосередньо передаємо числа як аргументи. У другому випадку ми викликаємо функцію зі змінними в якості аргументів. `print_max(x, y)` призначає значення аргумента `x` параметру `a`, а значення аргумента `y` - параметру `b`. Функція `print_max` працює однаково в обох випадках.
 
-<pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
+Приклад від перекладача:
+(зберегти як `function_param1.py`):
+```python
+def ноутбук(текст="привіт ",кількість=2):
+	print(текст*кількість)
+
+ноутбук() # виклик функції без аргументів (використовуються аргументи за замовчуванням)
+ноутбук("Toshiba ") #виклик функції лише з одним аргументом (аргументом за замовчуванням
+#використовується для другого параметра)
+ноутбук("Lenovo ", 8) # виклик функції з обома аргументами
+```
+Висновок: 
+```
+$ function_param1.py
+привіт привіт 
+Toshiba Toshiba 
+Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo
+```
+де:
+1. у рядку коду " def ноутбук(текст="привіт ",кількість=2):" -
+_текст_ та _кількість_ є параметрами;
+2. у рядку коду  "ноутбук("Toshiba ")", "ноутбук("Lenovo ", 8)" - _Toshiba_, _Lenovo_, _8_ є аргументами.
+
+## Локальні змінні
+
+При оголошенні змінних всередині визначення функції, вони жодним чином не пов’язані з іншими змінними з такими ж іменами, які використовуються поза функцією, тобто імена змінних є *локальними* для функції. Це називається  *областю видимості* змінної. Область видимості всіх змінних обмежена блоком, де вони оголошені, починаючи з точки визначення імені.
+
+Приклад (зберегти як `function_local.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/continue.txt" %}</code></pre>
+<pre><code>{% include "./programs/function_local.txt" %}</code></pre>-->
+```python
+x = 50
 
-**How It Works**
 
-In this program, we accept input from the user, but we process the input string only if it is at least 3 characters long. So, we use the built-in `len` function to get the length and if the length is less than 3, we skip the rest of the statements in the block by using the `continue` statement. Otherwise, the rest of the statements in the loop are executed, doing any kind of processing we want to do here.
+def func(x):
+    print('x дорівнює', x)
+    x = 2
+    print('Заміна локального x на',x)
 
-Note that the `continue` statement works with the `for` loop as well.
 
-## Summary
+func(x)
+print('x як і раніше', x)
+```
+Висновок: 
+```
+$ python function_local.py
+x дорівнює 50
+Заміна локального x на 2
+x як і раніше 50
+```
 
-We have seen how to use the three control flow statements - `if`, `while` and `for` along with their associated `break` and `continue` statements. These are some of the most commonly used parts of Python and hence, becoming comfortable with them is essential.
+**Як це працює**
 
-Next, we will see how to create and use functions.
+Коли ми вперше друкуємо  *значення*,наданого імені *x*, у першому рядку тіла  функції (`print('x дорівнює', x)`), Python використовує значення параметра, оголошене в основному блоці над визначенням функції(x = 50).
+
+Далі ми присвоюємо `x` значення `2`. Лише в межах функції `x` тепер має значення `2`. У глобальній області `x` все ще має значення `50`. Ім’я  `x` є локальним для нашої функції. Отже, коли ми змінюємо значення `x` у функції, `x` визначене в основному блоці, залишається незмінним.
+
+За допомогою останнього виклика функції `print` , ми відображаємо значення  `x`, яке  вказане в основному блоці, тим самим підтверджуючи, що воно не змінилося при локальному привласненні значення раніше викликаної функції.
+
+## `Global` оператор (англ. "The `global` statement")
+
+Щоб призначити деяке значення змінної, визначеної на вищому рівні програми (тобто не в якійсь області видимості, як функції або класи), необхідно повідомити Python, що ії ім’я не є локальним, а є `глобальним`. Ми робимо це за допомогою оператора `global`. Неможливо призначити значення змінній, визначеній поза функцією, без оператора `global`.
+
+Можна використовувати вже існуючі значення змінних, визначених поза межами функції (за умови, що всередині функції не було оголошено змінної з таким жe ім'ям).
+Однак це не заохочується, і цього слід уникати, оскільки читачеві програми стає незрозуміло, де знаходиться визначення цієї змінної. Використання оператора `global` дає зрозуміти, що змінна визначена в самому зовнішньому блоці.
+
+Приклад (зберегти як `function_global.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_global.txt" %}</code></pre>-->
+```python
+x = 50
+
+
+def func():
+    global x
+
+    print('x дорівнює', x)
+    x = 2
+    print('Глобальний x змінено на', x)
+
+
+func()
+print('Значення x є', x)
+```
+Висновок: 
+```
+$ python function_global.py
+x дорівнює 50
+Глобальний x змінено на 2
+Значення x є 2
+```
+
+**Як це працює**
+
+Оператор `global` використовується для оголошення того, що `x` є глобальною змінною, отже, коли ми присвоюємо значення `x` всередині функції, ця зміна позначиться на значенні змінної x в
+основному блоці програми.
+
+Ви можете вказати більше однієї глобальної змінної за допомогою того самого оператора `global`, наприклад: `global x, y, z`.
+
+## Значення аргументів за замовчуванням (англ."Default Argument Values")
+
+Для деяких функцій ви можете зробити деякі параметри *необов’язковими* та використовувати значення за замовчуванням на випадок, якщо користувач не хоче надавати для них значення. Це робиться за допомогою значень аргументів за замовчуванням. Ви можете вказати значення аргументів за замовчуванням, додавши до назви параметра у визначенні функції оператор присвоєння (`=`), для подальших значень за замовчуванням.
+
+Зауважте, що значення аргументу за замовчуванням має бути константою. Точніше, значення аргументу за замовчуванням має бути незмінним (англ."immutable")- це детально пояснюється в наступних розділах. Наразі просто запам’ятайте це.
+
+Приклад (зберегти як `function_default.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_default.txt" %}</code></pre>-->
+
+```python
+def висловлювання(повідомлення, кількість=1):
+    print(повідомлення * кількість)
+
+висловлювання('Привіт')
+висловлювання('Світ', 5)
+```
+Висновок: 
+```
+$ python function_default.py
+Привіт
+СвітСвітСвітСвітСвіт
+```
+**Як це працює**
+
+Функція під назвою `висловлювання` використовується для друку рядка стільки разів, скільки вказано. Якщо ми не надаємо значення, то за замовчуванням рядок друкується лише один раз. Ми досягаємо цього, вказуючи значення аргументу за замовчуванням `1` для параметра `кількість`.
+
+Під час першого виклика функції `висловлювання` ми вказуємо лише рядок ('Привіт'), і він друкує рядок один раз. Під час другого виклика функції `висловлювання` ми вказуємо і рядок('Привіт'), і аргумент `5`, вказуючи, що ми хочемо *промовити* повідомлення рядка 5 разів.
+
+> *Важливо*
+> 
+> Значення за замовчуванням  можуть мати лише параметри, що знаходяться в кінці списку параметрів.
+> Таким чином, у списку параметрів функції параметр зі значенням за замовчуванням не може передувати параметру без
+> значення за замовчуванням.
+> 
+> Це пов’язано з тим, що значення призначаються параметрам за позицією. Наприклад, `def func(a,
+> b=5)` є дійсним, але `def func(a=5, b)` є *недійсним*.
+
+##  Аргументи ключових слів ( англ."Keyword Arguments")
+
+Якщо у вас є функції з багатьма параметрами, і ви хочете вказати при виклику функції лише деякі з них, тоді ви можете надати значення таким параметрам, назвавши їх - це називається *аргументи ключового слова* - у цьому випадку  для передачі аргументів функції використовується ім'я (ключ) замість позиції (як було досі).
+
+Є дві переваги такого підходу: ​​одна полягає в тому, що використовувати функцію легше, оскільки нам не потрібно турбуватися про порядок аргументів. По-друге, ми можемо надавати значення лише тим параметрам, яким ми хочемо, за умови, що інші параметри мають значення аргументів за замовчуванням.
+
+Приклад (зберегти як `function_keyword.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>-->
+
+```python
+def func(a, b=5, c=10):
+    print('a дорівнює', a, ' b дорівнює', b, ' c дорівнює', c)
+
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+```
+Висновок: 
+```
+$ python function_keyword.py
+a дорівнює 3, b дорівнює 7, c дорівнює 10
+a дорівнює 25, b дорівнює 5, c дорівнює 24
+a дорівнює 100, b дорівнює 5, c дорівнює 50
+```
+**Як це працює**
+
+Функція з назвою `func` має один параметр без значення за замовчуванням, а потім два параметри зі значеннями за замовчуванням.
+
+Під час першого виклику, `func(3, 7)`, параметр `a` отримує значення `3`, параметр `b` отримує значення `7`, а `c` отримує значення за умовчанням `10`.
+
+При другому виклику `func(25, c=24)` змінна `a` отримує значення 25 через позицію аргументу. Тоді параметр `c` отримує значення `24` завдяки іменуванню, тобто ключовим аргументам. Змінна "b" отримує  значення  за замовчуванням,рівне "5".
+
+У третьому випадку використання `func(c=50, a=100)` ми використовуємо ключові аргументи для всіх вказаних значень. Зверніть увагу, що ми вказуємо значення для параметра `c` перед значенням `a`, хоча `a` визначено перед `c` у визначенні функції.
+
+## Довільна кількість аргументів ( англ."VarArgs parameters" or "variable number of Arguments")
+
+Іноді вам може знадобитися визначити функцію, яка може приймати _будь-яку_ кількість параметрів, тобто **змінну**кількість **аргументів**, цього можна досягти за допомогою зірочок (збережіть як `function_varargs.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>-->
+```python
+ def підсумок(a=5, *номера, **телефонна_книга):
+    print('a', a)
+    
+    #прохід по всіх елементах кортежу
+    for один_елемент in номера:
+        print('один_елемент', один_елемент)
+        
+    #прохід по всіх елементах словника  
+    for перша_частина, друга_частина in телефонна_книга.items():
+        print(перша_частина,друга_частина)
+
+підсумок(10,1,2,3,Джек=1123,Джон=2231,Інге=1560)
+```
+Висновок: 
+```
+$ python function_varargs.py
+a 10
+один_елемент 1
+один_елемент 2
+один_елемент 3
+Джек 1123
+Джон 2231
+Інге 1560
+
+```
+приклад англійською:
+```python
+def total(a=5, *numbers, **phonebook):
+    print('a', a)
+    
+    #iterate through all the items in tuple
+    for single_item in numbers:
+        print('single_item', single_item)
+        
+    #iterate through all the items in dictionary    
+    for first_part, second_part in phonebook.items():
+        print(first_part,second_part)
+
+total(10,1,2,3,Jack=1123,John=2231,Inge=1560)
+```
+Output:
+```
+$ python function_varargs.py
+a 10
+single_item 1
+single_item 2
+single_item 3
+Jack 1123
+John 2231
+Inge 1560
+```
+**Як це працює**
+
+Коли ми оголошуємо параметр із зірочкою, наприклад `*param`, тоді всі позиційні аргументи від цієї позиції і до кінця збираються в кортеж під назвою 'param'.
+
+Подібним чином, коли ми оголошуємо параметр із подвійною зірочкою, наприклад `**param`, тоді всі аргументи ключового слова від цієї позиції і до кінця збираються як словник під назвою 'param'.
+
+Ми досліджуватимемо кортежі та словники в [пізнішій главі](./data_structures.md#data-structures).
+
+
+## Оператор "return" (англ."the `return` statement")
+
+Оператор `return` використовується для *повернення* з функції, тобто для припинення її роботи та виходу з неї. За бажання ми також можемо *повернути значення* з функції.
+
+Приклад (зберегти як `function_return.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_return.txt" %}</code></pre>-->
+```python
+def максимум(x, y):
+    if x > y:
+        return x
+    elif x == y:
+        return 'Числа рівні'
+    else:
+        return y
+
+print(максимум(2, 3))
+```
+Output:
+```
+$ python function_return.py
+3
+```
+
+**Як це працює**
+
+Функція `максимум` повертає максимальний з двох параметрів, які в
+даному випадку передаються їй під час виклику. Вона  використовує блок if..else для визначення найбільшого числа, а потім *повертає*  це число.
+
+Зауважте, що оператор `return` без значення еквівалентний виразу `return None`. `None` — це спеціальний тип даних у Python, який представляє ніщо. Наприклад, він використовується, щоб вказати, що змінна не має значення, якщо вона має значення «None».
+
+Кожна функція неявно містить оператор `return None` в кінці, якщо ви не написали власний оператор `return`. Ви можете побачити це, запустивши `print(some_function())`, де функція `some_function` не використовує оператор `return` у явному вигляді, наприклад:
+
+```python
+def some_function():
+    pass
+```
+
+Оператор `pass` використовується в Python для позначення порожнього блоку команд.
+
+> ПОРАДА: Існує вбудована функція під назвою `max`, яка вже реалізує функцію 'знайти максимум', тому використовуйте цю вбудовану функцію, коли це можливо.
+
+
+## Рядки документації (англ." DocStrings")
+
+У Python є чудова функція під назвою *рядки документації*, яку зазвичай називають коротшою назвою *DocStrings*. DocStrings є важливим інструментом, який вам слід використовувати, оскільки він допомагає краще документувати програму та полегшує її розуміння. Дивовижно, але ми навіть можемо отримати рядок документації, скажімо, з функції, коли програма фактично запущена!
+
+Приклад (зберегти як `function_docstring.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>-->
+```python
+def print_max(x, y):
+    '''Виводить максимальне із двох чисел.
+
+    Ці два значення мають бути цілими числами.'''
+    # конвертувати в цілі числа, якщо можливо
+    x = int(x)
+    y = int(y)
+
+    if x > y:
+        print(x, 'найбільше')
+    else:
+        print(y, 'найбільше')
+
+print_max(3, 5)
+print(print_max.__doc__)
+```
+Output:
+```
+$ python function_docstring.py
+5 найбільше
+Виводить максимальне із двох чисел.
+
+    Ці два значення мають бути цілими числами.
+```
+**Як це працює**
+
+Рядок у першому логічному рядку функції є *рядком документації* для цієї функції. Зверніть увагу, що DocStrings також застосовуються до [модулів](./modules.md#modules) та [класів](./oop.md#oop), про які ми дізнаємося у відповідних розділах.
+
+Існує домовленість щодо написання рядків документації —  Їх прийнято розміщувати в багаторядковий рядок, де перший рядок починається з великої літери та закінчується крапкою. Потім другий рядок залишається порожнім, а потім іде детальне пояснення, починаючи з третього рядка. Вам *настійно рекомендовано* дотримуватися цієї домовленості для всіх ваших рядків документації зі всіма вашими нетривіальними функціями.
+
+Ми можемо отримати доступ до рядка документації функції `print_max` за допомогою атрибута цієї функції(тобто імені, що належить їй)`__doc__` (зверніть увагу на *подвійне підкреслення*). Просто пам’ятайте, що Python розглядає *все* як об’єкт, включаючи функції. Ми дізнаємося більше про об’єкти в розділі про [класи](./oop.md#oop).
+
+Якщо ви використовували функцію `help()` в Python, то ви вже бачили використання рядків документації! Ця функція просто зчитує атрибут `__doc__` відповідної функції та акуратно виводить його на екран.Ви можете перевірити її на розглянутій
+вище функції: просто увімкніть `help(print_max)` у текст програми. Не забудьте натиснути клавішу `q`, щоб вийти з `довідки`.
+
+Так само автоматизовані інструменти можуть отримувати документацію з вашої програми. Тому я *настійно рекомендую* використовувати рядки документів для будь-якої нетривіальної функції, яку ви пишете. Команда `pydoc`, яка постачається з пакетом Python, працює подібно до `help()`, використовуючи рядки документації.
+
+Приклад для «автоматизованих інструментів» від перекладача:
+ Редактор коду «Visual Studio Code» може зрозуміти, що таке рядок документації (рядок 2) функції, і відобразити його в маленькому полі над курсором, коли ім’я функції вводиться (рядок 8 ) (див. знімок екрана нижче):
+
+![docstring.png](docstring.png)
+*Screenshot of Visual Studio Code displaying a docstring*
+
+
+## Резюме
+
+Ми розглянули доволі багато аспектів функцій, але зауважте, що ми ще не охопили всі їх аспекти. Однак ми вже розглянули більшість того, що ви будете використовувати щодо функцій Python щодня.
+
+Далі ми побачимо, як використовувати та створювати модулі Python.
