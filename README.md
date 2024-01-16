@@ -12,6 +12,8 @@ done so far:
   * about.md
   * basic.md
   * op_ex.md
+  * control_flow.md
+  * functions.md
 
 ---
 
