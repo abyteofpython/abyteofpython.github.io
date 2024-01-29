@@ -15,6 +15,7 @@ done so far:
   * control_flow.md
   * functions.md
   * readme.md
+  * dedication.md
 
 ---
 
