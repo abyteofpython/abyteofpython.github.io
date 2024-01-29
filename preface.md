@@ -1,23 +1,24 @@
-# Preface
+# Передмова
 
-Python is probably one of the few programming languages which is both simple and powerful. This is good for beginners as well as for experts, and more importantly, is fun to program with. This book aims to help you learn this wonderful language and show how to get things done quickly and painlessly - in effect 'The Anti-venom to your programming problems'.
+Python, ймовірно, одна з небагатьох мов програмування, яка одночасно є простою та потужною. Це добре як для початківців, так і для експертів, і, що важливіше,на Python цікаво програмувати. Ця книга має на меті допомогти вам вивчити цю чудову мову та показати, як виконувати завдання швидко й безболісно — фактично «Протиотрута до ваших проблем програмування»
 
-## Who This Book Is For
+## Для кого ця книга
 
-This book serves as a guide or tutorial to the Python programming language. It is mainly targeted at newbies. It is useful for experienced programmers as well.
+Ця книга служить провідником або посібником з мови програмування Python. В основному вона орієнтована на новачків. Проте вона також корисна для досвідчених програмістів.
 
-The aim is that if all you know about computers is how to save text files, then you can learn Python from this book. If you have previous programming experience, then you can also learn Python from this book.
+Автор задумав цю книгу так, щоб вивчити Python по ній зміг будь-хто, хто вміє хоча
+б зберігати текстові файли, втім, і досвід програмування не перешкода.
 
-If you do have previous programming experience, you will be interested in the differences between Python and your favorite programming language - I have highlighted many such differences. A little warning though, Python is soon going to become your favorite programming language!
+Якщо у вас усе-таки є попередній досвід програмування, вас зацікавлять відмінності між Python і вашою улюбленою мовою програмування – я виділив багато таких відмінностей. Невелике застереження, незабаром Python стане вашою улюбленою мовою програмування!
 
-## Official Website
+## Офіційний веб-сайт
 
-The official website of the book is {{ book.officialUrl }} where you can read the whole book online, download the latest versions of the book, [buy a printed hard copy]({{ book.buyBookUrl }}) and also send me feedback.
+Офіційний веб-сайт книги https://python.swaroopch.com , де ви можете прочитати всю книгу онлайн, завантажити останні версії книги,  [купити друковану копію]( https://www.swaroopch.com/buybook/), а також надіслати мені відгук.
 
-## Something To Think About
+## Щось для роздумів
 
-> There are two ways of constructing a software design: one way is to make it so simple that there are obviously no deficiencies; the other is to make it so complicated that there are no obvious deficiencies. -- C. A. R. Hoare
+> Існує два способи побудови дизайну програмного забезпечення: один спосіб полягає в тому, щоб зробити його настільки простим, щоб вочевидь не було недоліків; інший — зробити його настільки складним, щоб не було очевидних недоліків. -- C. A. R. Hoare
 
 <!-- -->
 
-> Success in life is a matter not so much of talent and opportunity as of concentration and perseverance. -- C. W. Wendte
+> Успіх у житті залежить не стільки від таланту та можливостей, скільки від концентрації та наполегливості.  -- C. W. Wendte
