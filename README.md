@@ -17,6 +17,7 @@ done so far:
   * readme.md
   * dedication.md
   * preface.md
+  * modules.md
 
 ---
 
