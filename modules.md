@@ -1,212 +1,393 @@
-# Modules
+# Модулі
 
-You have seen how you can reuse code in your program by defining functions once. What if you wanted to reuse a number of functions in other programs that you write? As you might have guessed, the answer is modules.
+Ви бачили, як можна повторно використовувати код у своїй програмі, визначивши функції один раз. Що, якби ви хотіли повторно використати кілька функцій в інших програмах, які ви пишете? Як ви вже здогадалися, відповідь — модулі.
 
-There are various methods of writing modules, but the simplest way is to create a file with a `.py` extension that contains functions and variables.
+Існують різні методи написання модулів, але найпростішим способом є створення файлу з розширенням `.py`, який містить функції та змінні.
 
-Another method is to write the modules in the native language in which the Python interpreter itself was written. For example, you can write modules in the [C programming language](http://docs.python.org/3/extending/) and when compiled, they can be used from your Python code when using the standard Python interpreter.
+Іншим методом є написання модулів тією мовою, якою був написаний сам інтерпретатор Python. Наприклад, ви можете писати модулі  [мовою програмування C](http://docs.python.org/3/extending/) ,які після компіляції можуть використовуватись стандартним інтерпретатором Python.
 
-A module can be *imported* by another program to make use of its functionality. This is how we can use the Python standard library as well. First, we will see how to use the standard library modules.
+Модуль може бути  *імпортований* в іншу програму, щоб ця програма використовувала функції з модуля. Таким чином ми також можемо використовувати стандартну бібліотеку Python. Спочатку ми побачимо, як використовувати стандартні бібліотечні модулі.
 
-Example (save as `module_using_sys.py`):
+### приклад від перекладача
 
-<pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
+Приклад (зберегти як  "dicethrow.py")
+
+```python
+import random
+
+print("Імітація кидання двох кубиків:")
+a = random.randint(1,6)
+b = random.randint(1,6)
+print("Перший кидок:", a)
+print("Другий кидок:", b)
+print("загальний бал:", a+b)
+```
+
+Висновок: (ваш висновок може бути іншим!)
+
+<pre>
+Імітація кидання двох кубиків:
+Перший кидок: 5
+Другий кидок: 3
+загальний бал: 8
+</pre>
+
+**Як це працює**
+
+По-перше, наведена вище програма Рython *імпортує* модуль "random" зі стандартної бібліотеки Рython.  Стандартна бібліотека  Рython — це величезна колекція модулів Рython, яка автоматично встановлюється, якщо ви інсталюєте  Рython на своєму комп’ютері. Перегляньте <https://docs.python.org/3/library/index.html> для повного списку модулів.
+
+Кожен із цих модулів стандартної бібліотеки Python має декілька функцій. 
+
+Щоб скористатися однією з цих функцій, необхідно використовувати «крапкову нотацію»: написати ім’я модуля, потім крапку, а потім назву функції.
+
+У наведеному вище прикладі функція _randint_ модуля _random_ викликається за допомогою:
+```python
+random.randint(1,6)
+```
+
+Два параметри в дужках (1,6) вказують на те, що функція _randint_ має створювати випадкове ціле число від 1 до 6 (подібно до кидання шестигранного кубика).
+
+-- кінець прикладу перекладача --
+
+### Примітка від перекладача:
+У наступному прикладі від Swaroop використовуються поняття  "PythonPath" і змінні середовища (англ.
+"enviroment variables")
+
+Оскільки не всі знають ці концепції, ось коротке пояснення(може бути корисним наступний сайт https://cpto.dp.ua/public_html/posibnyky/OSWin10/03/3_2.htm):
+
+* У комп'ютерній термінології _катало́г_, _директо́рія_(англ."directory") чи _те́ка_, _па́пка_ (англ."folder") - це фізичне місце, де можна зберігати файли на комп’ютері. Такі файли, як програми на Python або сам інтерпретатор Python.
+
+* _Підпапка_ (англ."subfolder")-це папка всередині іншої папки
+
+* _Головна_  або _коренева_, папка(каталог) (англ."англ.root directory","root folder")- це перша папка в операційній системі. У Linux і MacOS це "/" або "/home/username". У Windows це зазвичай "C:\"
+
+* _Поточна папка_ (англ."current folder") - це папка, в якій на даний момент працює комп'ютер (для збереження файлів)
+
+* Шлях фа́йлу (англ. "Path") - це рядок із іменами всіх папок (а також підпапок і підпідпапок...), починаючи з кореневої папки до поточної папки. Зауважте, що в WINDOWS назви папок відокремлюються зворотною скісною рискою(бекслеш), як-от "C:\carl\documents", але в Linux і MacOS назви папок відокремлюються скісною рискою(слеш): "/home/carl/documents".
+
+* Змінна середовища (англ."enviroment variable") - це змінна, яку десь зберігає операційна система (Windows, Linux або MacOS), щоб вона могла шукати, де насправді встановлено різні програми. Наприклад, якщо ви запустите Microsoft Word із папки десь на вашому комп’ютері, комп’ютер дізнається, де встановлено «word.exe», і запустить його. Якщо бути більш точним, операційна система записує невеликий текстовий файл з одним рядком для кожної змінної середовища. Наприклад, один рядок скаже йому, де встановлено Microsoft Word, інший, де встановлено ваш веб-браузер, інший скаже, де встановлено Python. Усі ці записи називаються змінними середовища.
+
+* PythonPath - це назва однієї спеціальної змінної середовища, яка повідомляє операційній системі (Windows, Linux або MacOS), де встановлено Python і де Python має шукати модулі. Насправді це список шляхів(a list of paths.).
+
+-- кінець примітки від перекладача --
+
+Приклад від автора (зберегти як `module_using_sys.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>
+<pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>-->
 
-**How It Works**
+```python
+import sys
 
-First, we *import* the `sys` module using the `import` statement. Basically, this translates to us telling Python that we want to use this module. The `sys` module contains functionality related to the Python interpreter and its environment i.e. the **sys**tem.
+print('Аргументи командного рядка:')
+for i in sys.argv:
+    print(i)
 
-When Python executes the `import sys` statement, it looks for the `sys` module. In this case, it is one of the built-in modules, and hence Python knows where to find it.
+print('\n\n Змінна  середовища PYTHONPATH містить', sys.path, '\n')
+```
+Висновок: 
+```
+$ python module_using_sys.py ми є аргументами	
+Аргументи командного рядка:
+module_using_sys.py
+ми
+є
+аргументи
 
-If it was not a compiled module i.e. a module written in Python, then the Python interpreter will search for it in the directories listed in its `sys.path` variable. If the module is found, then the statements in the body of that module are run and the module is made *available* for you to use. Note that the initialization is done only the *first* time that we import a module.
+змінна середовища "Pythonpath" вашого комп'ютера: Змінна середовища PYTHONPATH містить (тут ви побачите ВАШ Python path)
+```
+**Як це працює**
 
-The `argv` variable in the `sys` module is accessed using the dotted notation i.e. `sys.argv`. It clearly indicates that this name is part of the `sys` module. Another advantage of this approach is that the name does not clash with any `argv` variable used in your program.
+Спочатку ми  *імпортуємо* модуль `sys` за допомогою команди `import`. По суті, це означає, що ми повідомляємо Python про використання цього модуля. Модуль `sys` містить функції, які стосуються інтерпретатора Python та його середовища, тобто системи (system). 
 
-The `sys.argv` variable is a *list* of strings (lists are explained in detail in a [later chapter](./data_structures.md#data-structures)). Specifically, the `sys.argv` contains the list of *command line arguments* i.e. the arguments passed to your program using the command line.
+Коли Python виконує команду `import sys`, він шукає модуль `sys`. У цьому випадку це один із вбудованих модулів, і, отже, Python знає, де його знайти.
 
-If you are using an IDE to write and run these programs, look for a way to specify command line arguments to the program in the menus.
+Якби це не був скомпільований модуль, тобто модуль, написаний мовою Python,тоді інтерпретатор Python шукав би його у папках , указаних у змінній `sys.path`. Якщо модуль знайдено, команди в тілі цього модуля виконуються, і модуль стає *доступним* для використання. Зауважте, що ініціалізація (ряд дій, які проводяться при початковому завантаженні) виконується при *першому* імпорті модуля.
 
-Here, when we execute `python module_using_sys.py we are arguments`, we run the module `module_using_sys.py` with the `python` command and the other things that follow are arguments passed to the program. Python stores the command line arguments in the `sys.argv` variable for us to use.
+Доступ до змінної `argv` в модулі `sys` здійснюється за допомогою крапкової нотації(крапки), тобто `sys.argv`. Це чітко вказує на те, що це ім'я є частиною модуля `sys`. Ще одна перевага цього підходу полягає в тому, що ім'я не суперечить жодній змінній `argv`, яка використовується у вашій програмі.
 
-Remember, the name of the script running is always the first element in the `sys.argv` list. So, in this case we will have `'module_using_sys.py'` as `sys.argv[0]`, `'we'` as `sys.argv[1]`, `'are'` as `sys.argv[2]` and `'arguments'` as `sys.argv[3]`. Notice that Python starts counting from 0 and not 1.
+Змінна `sys.argv` — це *список* рядків  (списки докладно пояснюються в [пізнішій главі](./data_structures.md#data-structures)). Зокрема, `sys.argv` містить список *аргументів командного рядка* (англ."*command line arguments*"),тобто аргументів, переданих програмі з командного рядка.
 
-The `sys.path` contains the list of directory names where modules are imported from. Observe that the first string in `sys.path` is empty - this empty string indicates that the current directory is also part of the `sys.path` which is same as the `PYTHONPATH` environment variable. This means that you can directly import modules located in the current directory. Otherwise, you will have to place your module in one of the directories listed in `sys.path`.
+Якщо ви використовуєте середовище розробки( англ.IDE, "Integrated Development Environment") для написання та запуску цих програм, пошукайте десь у її меню можливість передавати параметри командного рядка.
 
-Note that the current directory is the directory from which the program is launched. Run `import os; print(os.getcwd())` to find out the current directory of your program.
+У нашому прикладі, коли ми виконуємо `python module_using_sys.py ми є аргументами`, ми запускаємо модуль  `module_using_sys.py`  командою `python`,а все інше, що слідуює далі, - є аргументами, які передаються програмі. Python зберігає аргументи командного рядка у змінній `sys.argv` для подальшого використання.
 
-## Byte-compiled .pyc files {#pyc}
+Пам’ятайте, ім’я запущеного сценарія(від перекладача: програму інтерпретованою мовою програмування також називають сценарієм або скриптом) завжди є першим аргументом у списку `sys.argv`. Отже, у цьому випадку ми матимемо  `'module_using_sys.py'` як `sys.argv[0]`, `'ми'` як `sys.argv[1]`, `'є'` як `sys.argv[2]` та `'аргументами'` як `sys.argv[3]`. Зверніть увагу, що Python починає відлік з 0, а не з 1.
 
-Importing a module is a relatively costly affair, so Python does some tricks to make it faster. One way is to create *byte-compiled* files with the extension `.pyc` which is an intermediate form that Python transforms the program into (remember the [introduction section](./about_python.md#interpreted) on how Python works?). This `.pyc` file is useful when you import the module the next time from a different program - it will be much faster since a portion of the processing required in importing a module is already done. Also, these byte-compiled files are platform-independent.
+`sys.path`- це список шляхів (англ." list of paths"), з яких імпортуються модулі. Зверніть увагу, що перший рядок у `sys.path` порожній - цей порожній рядок вказує на те, що поточна папка також є частиною `sys.path`. Це означає, що ви можете безпосередньо імпортувати модулі, розташовані в поточній папці. Якщо цього не буде, то вам доведеться розмістити свій модуль в одній із папок,указаних у `sys.path`.
 
-NOTE: These `.pyc` files are usually created in the same directory as the corresponding `.py` files. If Python does not have permission to write to files in that directory, then the `.pyc` files will _not_ be created.
+Зверніть увагу, що поточна папка - це папка, з якої запускається програма. Запустіть `import os; print(os.getcwd())`, щоб дізнатися поточну папку вашої програми.
 
-## The from..import statement {#from-import-statement}
 
-If you want to directly import the `argv` variable into your program (to avoid typing the `sys.` everytime for it), then you can use the `from sys import argv` statement.
+![screenshot: get current work directory](screenshot_getcwd.png)
+<small>Screenshot: Get current work directory</small>
 
-> WARNING: In general, *avoid* using the `from..import` statement, use the `import` statement instead. This is because your program will avoid name clashes and will be more readable.
+## Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")
 
-Example:
+ --Текст від перекладача --
+
+Якщо ви пишете програму на Python,використовуючи оператор `import`,як наприклад:
+
+```python
+import turtle
+```
+ тоді під час запуску програми відбуваються наступні речі.
+
+Python намагається знайти модуль turtle.py. Python спочатку шукає в папці вашої програми, якщо Python не може знайти там модуль, він шукає в папці, де встановлено всі модулі Рython (це називається шляхом python- Рython path).
+
+Потім всі функції цього модуля імпортуються, тобто ваша програма може їх використовувати.
+Цей процес імпорту займає відносно багато часу, тому Python робить маленьку хитрість: він намагається зберегти «скомпільовану» версію модуля з розширенням «.pyc» у тому самому місці, де й модуль.
+
+Файл .pyc набагато швидше імпортувати для Рython.
+
+Наступного разу, коли одна з ваших програм намагатиметься імпортувати той самий модуль ("import"), Python не потрібно буде імпортувати відносно повільний модуль turtle.py, а натомість зможе використати набагато швидший скомпільований модуль turtle.pyc.
+
+--- кінець тексту від перекладача ---
+
+Текст від Swaroop:
+
+Імпортування модуля є відносно дорогою справою, тому Python робить деякі хитрощі, щоб зробити це швидше. Одним із способів -створити *байт-скомпільовані*  файли (або байткод)з розширенням `.pyc`, яке є проміжною формою, у яку Python перетворює програму (пам’ятаєте [вступний розділ](./about_python.md#interpreted) про те, як працює Python? ). Цей файл `.pyc` корисний при імпорті модуля наступного разу в іншу програму - це буде набагато швидше, оскільки частину обробки, необхідної для імпортування модуля, уже виконано. Крім того, ці скомпільовані файли не залежать від платформи.
+
+ПРИМІТКА. Зазвичай, файли `.pyc` зазвичай створюються в тій ж самій папці, де розташовані і відповідні файли `.py`. Якщо Python не може отримати доступ до запису файлів у цій папці, файли `.pyc` _не_ створюватимуться.
+
+## Оператор  from..import (англ."The from..import statement")
+
+Якщо ви хочете безпосередньо імпортувати змінну `argv` у свою програму (і не вводити для неї `sys.` при зверненні до неї,щоразу), ви можете використати оператор `from sys import argv`.
+
+> ПОПЕРЕДЖЕННЯ: загалом *уникайте* використання оператора `from..import`, використовуйте замість нього оператор `import`. Це пояснюється тим, що ваша програма уникатиме зіткнень імен і буде більш читабельною.
+
+Приклад (англ.мовою):
 
 ```python
 from math import sqrt
 print("Square root of 16 is", sqrt(16))
 ```
 
-## A module's `__name__` {#module-name}
+Приклад (укр.мовою):
+```python
+# хороша версія (більше набирати на клавіатурі, але безпечніше)
+import math
+print("Квадратний корінь із 16 є", math.sqrt(16))
 
-Every module has a name and statements in a module can find out the name of their module. This is handy for the particular purpose of figuring out whether the module is being run standalone or being imported. As mentioned previously, when a module is imported for the first time, the code it contains gets executed. We can use this to make the module behave in different ways depending on whether it is being used by itself or being imported from another module. This can be achieved using the `__name__` attribute of the module.
+# не така хороша версія (менше набирати на клавіатурі, але великий ризик заплутатися)
+from math import sqrt
+print("Квадратний корінь із 16 є", sqrt(16))
+```
 
-Example (save as `module_using_name.py`):
 
-<pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>
+## Ім'я модуля - `__name__` (англ."A module's `__name__`")
 
-Output:
+Кожен модуль має ім’я. Існують команди Рython, за допомогою яких можно дізнатися назву фактичного модуля Рython.
+Це зручно, щоб з’ясувати, чи працює модуль окремо чи імпортується. Як згадувалося раніше, коли модуль імпортується вперше, код, який він містить, виконується. Ми можемо використовувати це, щоб змусити модуль поводитись по-різному залежно від того, чи використовується він сам по собі, чи імпортується з іншої програми. Цього можна досягти за допомогою атрибута `__name__` модуля.
 
-<pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>
+Приклад (зберегти як`module_using_name.py`):
 
-**How It Works**
+<!--<pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>-->
+```python
+if __name__ == '__main__':
+    print('Ця програма виконується самостійно')
+else:
+    print('Мене імпортують з іншого модуля')
+```
 
-Every Python module has its `__name__` defined. If this is `'__main__'`, that implies that the module is being run standalone by the user and we can take appropriate actions.
+<!--<pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>-->
+Висновок: 
 
-## Making Your Own Modules
+```python
+python module_using_name.py
+Ця програма виконується самостійно
+```
 
-Creating your own modules is easy, you've been doing it all along!  This is because every Python program is also a module. You just have to make sure it has a `.py` extension. The following example should make it clear.
+Якщо невелику програму вище запустити безпосередньо, ви побачите результат, як описано вище.
+Однак, якщо маленьку програму вище імпортовано з іншої програми, ви побачите наступний результат:
 
-Example (save as `mymodule.py`):
+```python
+import module_using_name
+```
+Висновок:
+![screenshot importer](screenshot_importer.png)
 
-<pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>
 
-The above was a sample *module*. As you can see, there is nothing particularly special about it compared to our usual Python program. We will next see how to use this module in our other Python programs.
+**Як це працює**
 
-Remember that the module should be placed either in the same directory as the program from which we import it, or in one of the directories listed in `sys.path`.
+Кожен модуль Python має своє ім´я `__name__`. Якщо воно дорівнює `'__main__'`, це означає, що модуль запущений самостійно користувачем, і ми можемо вжити відповідних дій.
 
-Another module (save as `mymodule_demo.py`):
+## Створення власних модулів
 
-<pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>
+Створювати власні модулі легко, ви робити це весь час! Це тому, що кожна програма Python також є модулем. Вам просто потрібно переконатися, що вона має розширення `.py`. Наступний приклад повинен прояснити це.
 
-Output:
+Приклад (зберегти як `mymodule.py`):
 
-<pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>-->
 
-**How It Works**
+```python
+def скажи_привіт():
+    print('Привіт, говорить мій модуль.')
 
-Notice that we use the same dotted notation to access members of the module. Python makes good reuse of the same notation to give the distinctive 'Pythonic' feel to it so that we don't have to keep learning new ways to do things.
+__version__ = '0.1'
 
-Here is a version utilising the `from..import` syntax (save as `mymodule_demo2.py`):
+```
 
-<pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>
+Вище був зразок *модуля*. Як бачите, у ній немає нічого особливого порівняно з нашою звичайною програмою на Python. Далі ми побачимо, як використовувати цей модуль в інших наших програмах на Python.
 
-The output of `mymodule_demo2.py` is same as the output of `mymodule_demo.py`.
+Пам’ятайте, що модуль слід розмістити або в тій самій папці, що й програма, з якої ми його імпортуємо, або в одній з папок, указаних у `sys.path`.
 
-Notice that if there was already a `__version__` name declared in the module that imports mymodule, there would be a clash. This is also likely because it is common practice for each module to declare it's version number using this name. Hence, it is always recommended to prefer the `import` statement even though it might make your program a little longer.
+Ще один модуль (зберегти як `mymodule_demo.py`):
 
-You could also use:
+<!--<pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>-->
+
+
+<!--<pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>-->
+
+```python
+import mymodule
+
+mymodule.скажи_привіт()
+print('Версія', mymodule.__version__)
+```
+
+Висновок
+```
+$ python mymodule_demo.py
+Привіт, говорить мій модуль.
+Версія 0.1
+```
+
+**Як це працює**
+
+Зверніть увагу, що для доступу до елементів модуля ми використовуємо ту саму нотацію з крапками. Python добре використовує ту саму нотацію, щоб надати їй характерного відчуття «Pythonic», щоб нам не довелося вивчати нові способи виконання завдань.
+
+Ось версія, яка використовує синтаксис  `from..import` (зберегти як`mymodule_demo2.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>-->
+
+```python
+from mymodule import скажи_привіт, __version__
+
+скажи_привіт()
+print('Версія', __version__)
+
+```
+
+Висновок `mymodule_demo2.py` такий самий, як і висновок `mymodule_demo.py`.
+
+Зауважте, що якби ім’я `__version__` вже було оголошено в модулі, який імпортує mymodule, виникне зіткнення. Це також ймовірно, тому що це звичайна практика для кожного модуля оголошувати номер своєї версії за допомогою цієї назви. Отже, завжди рекомендується віддавати перевагу оператору `import`, навіть якщо це може зробити вашу програму трохи довшою.
+
+Ви також можете використовувати:
 
 ```python
 from mymodule import *
 ```
 
-This will import all public names such as `say_hi` but would not import `__version__` because it starts with double underscores.
+Це імпортує всі загальнодоступні назви, такі як `скажи_привіт`, але не імпортує `__version__`, оскільки воно починається з подвійного підкреслення.
 
-> WARNING: Remember that you should avoid using import-star, i.e. `from mymodule import *`.
+> ПОПЕРЕДЖЕННЯ: пам’ятайте, що вам слід уникати використання import-star, тобто `from mymodule import *`.
 
-<!-- -->
 
-> **Zen of Python**
+> **Дзен of Python**
 > 
-> One of Python's guiding principles is that "Explicit is better than Implicit". Run `import this` in Python to learn more.
+> Один із керівних принципів Python полягає в тому, що «Явне краще, ніж неявне». Запустіть `import this` в Python, щоб дізнатися більше.
 
-## The `dir` function {#dir-function}
+## Функція `dir` (англ. "The `dir` function") 
 
-The built-in `dir()` function returns the list of names defined by an object.
-If the object is a module, this list includes functions, classes and variables, defined inside that module.
+![screenshot of dir function](screenshot_dir2.png)
+<small>Screenshot of dir function with a number</small>
 
-This function can accept arguments.
-If the argument is the name of a module, the function returns the list of names from that specified module.
-If there is no argument, the function returns the list of names from the current module.
+![screenshot of dir function](screenshot_dir3.png)
+<small>Screenshot of dir function with a string</small>
 
-Example:
+![screenshot of dir function](screenshot_dir.png)
+<small>Screenshot of using IDLE and displaying all the functionality of the <code>sys</code> module using <code>dir()</code>.</small>
 
-```python
+
+Вбудована функція `dir()` повертає список імен, визначених об’єктом.
+Якщо об’єкт є модулем, цей список включає функції, класи та змінні, визначені в цьому модулі.
+
+Ця функція може приймати аргументи.
+Якщо аргументом є назва модуля, функція повертає список імен цього зазначеного модуля.
+Якщо аргументу немає, функція повертає список імен з поточного модуля.
+
+приклад:
+
+```
 $ python
 >>> import sys
 
-# get names of attributes in sys module
+# отримаємо список атрибутів модуля
 >>> dir(sys)
 ['__displayhook__', '__doc__',
 'argv', 'builtin_module_names',
 'version', 'version_info']
-# only few entries shown here
+# тут показано лише кілька записів
 
-# get names of attributes for current module
+# отримати список атрибутів для поточного модуля
 >>> dir()
 ['__builtins__', '__doc__',
 '__name__', '__package__', 'sys']
 
-# create a new variable 'a'
+# створити нову змінну 'a'
 >>> a = 5
 
 >>> dir()
 ['__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a']
 
-# delete/remove a name
+# видалити/видалити ім’я
 >>> del a
 
 >>> dir()
 ['__builtins__', '__doc__', '__name__', '__package__', 'sys']
 ```
 
-**How It Works**
+**Як це працює**
 
-First, we see the usage of `dir` on the imported `sys` module. We can see the huge list of attributes that it contains.
+По-перше, ми бачимо використання `dir` к імпортованому модулі `sys`. Ми бачимо величезний список атрибутів, які він містить.
 
-Next, we use the `dir` function without passing parameters to it. By default, it returns the list of attributes for the current module. Notice that the list of imported modules is also part of this list.
+Далі ми викликаємо функцію `dir` без передачі їй параметрів. За замовчуванням вона повертає список атрибутів для поточного модуля. Зверніть увагу, що список імпортованих модулів також є частиною цього списку.
 
-In order to observe `dir` in action, we define a new variable `a` and assign it a value and then check `dir` and we observe that there is an additional value in the list of the same name. We remove the variable/attribute of the current module using the `del` statement and the change is reflected again in the output of the `dir` function.
+Щоб спостерігати за дією `dir`, ми визначаємо нову змінну `a` і призначаємо їй значення, а потім знову викливаємо `dir`. Бачимо, що в списку з такою ж назвою є додаткове значення. Ми видаляємо змінну/атрибут поточного модуля за допомогою оператора del, та зміни
+знову відобразяться на виведенні функції `dir`.
 
-A note on `del`: This statement is used to *delete* a variable/name and after the statement has run, in this case `del a`, you can no longer access the variable `a` - it is as if it never existed before at all.
+Примітка щодо `del`: цей оператор використовується для *видалення* змінної/назви, і після виконання оператора, у цьому випадку `del a`, ви більше не можете отримати доступ до змінної `a` - це ніби вона раніше взагалі ніколи не існувала.
 
-Note that the `dir()` function works on *any* object. For example, run `dir(str)` for the attributes of the `str` (string) class.
+Зверніть увагу, що функція `dir()` працює з *будь-яким* об'єктом. Наприклад, запустіть `dir(str)` для атрибутів класу `str` (рядок).
 
-There is also a [`vars()`](http://docs.python.org/3/library/functions.html#vars) function which can potentially give you the attributes and their values, but it will not work for all cases.
+Існує також функція [`vars()`](http://docs.python.org/3/library/functions.html#vars), яка потенційно може надати вам атрибути та їхні значення, але вона не працюватиме для всіх випадків.
 
-## Packages
+## Пакети (англ."Packages")
 
-By now, you must have started observing the hierarchy of organizing your programs. Variables usually go inside functions. Functions and global variables usually go inside modules. What if you wanted to organize modules? That's where packages come into the picture.
+На даний момент ви, мабуть, почали дотримуватись ієрархії організації ваших програм. Змінні зазвичай знаходяться всередині функцій. Функції та глобальні змінні зазвичай знаходяться всередині модулів. Що, якби ви хотіли організувати модулі? Ось тут і з’являються пакети.
 
-Packages are just folders of modules with a special `__init__.py` file that indicates to Python that this folder is special because it contains Python modules.
+Пакети — це просто папки модулів зі спеціальним файлом `__init__.py`, який вказує Python, що ця папка особлива, оскільки містить модулі Python.
 
-Let's say you want to create a package called 'world' with subpackages 'asia', 'africa', etc. and these subpackages in turn contain modules like 'india', 'madagascar', etc.
+Припустімо, ви хочете створити пакет під назвою «світ» із підпакетами «азія», «африка» тощо, а ці підпакети, у свою чергу, містять такі модулі, як «індія», «мадагаскар» тощо.
 
-This is how you would structure the folders:
+Ось як ви структуруєте папки:
 
 ```
-- <some folder present in the sys.path>/
-    - world/
+- <деяка папка, наявна в sys.path>/
+    - світ/
         - __init__.py
-        - asia/
+        - азія/
             - __init__.py
-            - india/
+            - індія/
                 - __init__.py
                 - foo.py
-        - africa/
+        - африкa/
             - __init__.py
-            - madagascar/
+            - мадагаскар/
                 - __init__.py
                 - bar.py
 ```
 
-Packages are just a convenience to organize modules hierarchically. You will see many instances of this in the [standard library](./stdlib.md#stdlib).
+Пакети – це просто зручність для ієрархічної організації модулів. Ви побачите багато прикладів цього в [стандартній бібліотеці](./stdlib.md#stdlib).
 
-## Summary
+## Резюме
 
-Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.
+Подібно до того, як функції є багаторазовими частинами програм, модулі є багаторазовими програмами. Пакети — це ще одна ієрархія для організації модулів. Стандартна бібліотека Python є прикладом такого набору пакетів і модулів.
 
-We have seen how to use these modules and create our own modules.
+Ми побачили, як використовувати ці модулі та створювати власні модулі.
 
-Next, we will learn about some interesting concepts called data structures.
+Далі ми дізнаємося про деякі цікаві концепції, які називаються структурами даних.
