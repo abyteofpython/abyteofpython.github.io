@@ -122,7 +122,7 @@ module_using_sys.py
 Зверніть увагу, що поточна папка - це папка, з якої запускається програма. Запустіть `import os; print(os.getcwd())`, щоб дізнатися поточну папку вашої програми.
 
 
-![screenshot: get current work directory](screenshot_getcwd.png)
+![screenshot: get current work directory](images/screenshot_getcwd.png)
 <small>Screenshot: Get current work directory</small>
 
 ## Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")
@@ -208,7 +208,7 @@ python module_using_name.py
 import module_using_name
 ```
 Висновок:
-![screenshot importer](screenshot_importer.png)
+![screenshot importer](images/screenshot_importer.png)
 
 
 **Як це працює**
@@ -293,13 +293,13 @@ from mymodule import *
 
 ## Функція `dir` (англ. "The `dir` function") 
 
-![screenshot of dir function](screenshot_dir2.png)
+![screenshot of dir function](images/screenshot_dir2.png)
 <small>Screenshot of dir function with a number</small>
 
-![screenshot of dir function](screenshot_dir3.png)
+![screenshot of dir function](images/screenshot_dir3.png)
 <small>Screenshot of dir function with a string</small>
 
-![screenshot of dir function](screenshot_dir.png)
+![screenshot of dir function](images/screenshot_dir.png)
 <small>Screenshot of using IDLE and displaying all the functionality of the <code>sys</code> module using <code>dir()</code>.</small>
 
 
