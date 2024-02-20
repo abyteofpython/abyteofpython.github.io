@@ -435,7 +435,7 @@ $ python function_docstring.py
 Приклад для «автоматизованих інструментів» від перекладача:
  Редактор коду «Visual Studio Code» може зрозуміти, що таке рядок документації (рядок 2) функції, і відобразити його в маленькому полі над курсором, коли ім’я функції вводиться (рядок 8 ) (див. знімок екрана нижче):
 
-![docstring.png](docstring.png)
+![docstring.png](images/docstring.png)
 
 *Screenshot of Visual Studio Code displaying a docstring*
 
