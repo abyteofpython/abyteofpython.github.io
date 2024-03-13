@@ -1,157 +1,424 @@
-# Problem Solving
+# Вирішення проблем (англ."Problem Solving"- на комп'ютерній мові це означає процес виконання дій,спрямованих на досягнення мети,яка задана в рамках проблемної ситуації,завданням)
 
-We have explored various parts of the Python language and now we will take a look at how all these parts fit together, by designing and writing a program which _does_ something useful. The idea is to learn how to write a Python script on your own.
+Ми розглянули різні частини мови Python, а тепер ми подивимося, як усі ці частини поєднуються разом, розробляючи та пишучи програму, яка _робить_ щось корисне. Ціль полягає в тому, щоб навчитися писати сценарії мовою Python самостійно.
 
-## The Problem
+## Проблема
 
-The problem we want to solve is:
+Перед нами стоїть наступна проблема:
 
-> I want a program which creates a backup of all my important files.
+> Скласти програму, яка створює резервні копії всіх важливих файлів.
 
-Although, this is a simple problem, there is not enough information for us to get started with the solution. A little more *analysis* is required. For example, how do we specify _which_ files are to be backed up? _How_ are they stored? _Where_ are they stored?
+Хоча це проста задача, нам недостатньо інформації, щоб почати її вирішення. Необхідний додатковий *аналіз*. Наприклад, як ми виберемо, _які_ файли копіювати? _Як_ їх зберігати? _Де_ їх зберігати?
 
-After analyzing the problem properly, we *design* our program. We make a list of things about how our program should work. In this case, I have created the following list on how _I_ want it to work. If you do the design, you may not come up with the same kind of analysis since every person has their own way of doing things, so that is perfectly okay.
+Після належного аналізу задачі ми *проєктуємо * нашу програму. Ми складаємо список того, що має зробити наша програма. У цьому випадку я створив наступний список того, як _я_ уявляю її роботу.Коли ви проєктуєте програму, у вас може вийти інший результат, оскільки кожна людина уявляє собі це по-своєму, тож це цілком нормально.
 
-- The files and directories to be backed up are specified in a list.
-- The backup must be stored in a main backup directory.
-- The files are backed up into a zip file.
-- The name of the zip archive is the current date and time.
-- We use the standard `zip` command available by default in any standard GNU/Linux or Unix distribution. Note that you can use any archiving command you want as long as it has a command line interface.
+- Файли та папки, які потрібно скопіювати, збираються до списку.
+- Резервні копії повинні зберігатися у головній папці резервних копій.
+- Резервні копії файлів зберігаються у файлі zip.
+- Ім'я для zip-архіву - поточна дата та час.
+- Будемо використовувати стандартну команду `zip`, доступну за замовчуванням у будь-якому стандартному дистрибутиві GNU/Linux або Unix. Зауважте, що ви можете використовувати будь-яку команду архівування, якщо вона має інтерфейс командного рядка.
 
-> **For Windows users**
-> 
-> Windows users can [install](http://gnuwin32.sourceforge.net/downlinks/zip.php) the `zip` command from the [GnuWin32 project page](http://gnuwin32.sourceforge.net/packages/zip.htm) and add `C:\Program Files\GnuWin32\bin` to your system `PATH` environment variable, similar to [what we did for recognizing the python command itself](./installation.md#dos-prompt).
+> **Для користувачів Windows**
+>
+> Користувачі Windows можуть [встановити](http://gnuwin32.sourceforge.net/downlinks/zip.php) команду `zip` зі [сторінки проекту GnuWin32](http://gnuwin32.sourceforge.net/packages/zip .htm) і додати `C:\Program Files\GnuWin32\bin` до набору змінних середовища `PATH`, подібно до  того[ що ми зробили для розпізнавання самої команди python](./installation.md#dos-prompt).
 
-## The Solution
+## Вирішення  (англ."The Solution")
 
-As the design of our program is now reasonably stable, we can write the code which is an *implementation* of our solution.
+Оскільки проєкт нашої програми зараз досить стабільний, ми можемо написати код, який є *реалізацією* нашого вирішення.
 
-Save as `backup_ver1.py`:
+Зберегти як `backup_ver1.py`:
 
-<pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>
-
-Now, we are in the *testing* phase where we test that our program works properly. If it doesn't behave as expected, then we have to *debug* our program i.e. remove the *bugs* (errors) from the program.
-
-If the above program does not work for you, copy the line printed after the `Zip command is` line in the output, paste it in the shell (on GNU/Linux and Mac OS X) / `cmd` (on Windows), see what the error is and try to fix it. Also check the zip command manual on what could be wrong. If this command succeeds, then the problem might be in the Python program itself, so check if it exactly matches the program written above.
-
-**How It Works**
-
-You will notice how we have converted our *design* into *code* in a step-by-step manner.
-
-We make use of the `os` and `time` modules by first importing them. Then, we specify the files and directories to be backed up in the `source` list. The target directory is where we store all the backup files and this is specified in the `target_dir` variable. The name of the zip archive that we are going to create is the current date and time which we generate using the `time.strftime()` function. It will also have the `.zip` extension and will be stored in the `target_dir` directory.
-
-Notice the use of the `os.sep` variable - this gives the directory separator according to your operating system, i.e. it will be `'/'` in GNU/Linux, Unix, macOS, and will be `'\\'` in Windows. Using `os.sep` instead of these characters directly will make our program portable and work across all of these systems.
-
-The `time.strftime()` function takes a specification such as the one we have used in the above program. The `%Y` specification will be replaced by the year with the century. The `%m` specification will be replaced by the month as a decimal number between `01` and `12` and so on. The complete list of such specifications can be found in the [Python Reference Manual](http://docs.python.org/3/library/time.html#time.strftime).
-
-We create the name of the target zip file using the addition operator which _concatenates_ the strings i.e. it joins the two strings together and returns a new one. Then, we create a string `zip_command` which contains the command that we are going to execute. You can check if this command works by running it in the shell (GNU/Linux terminal or DOS prompt).
-
-The `zip` command that we are using has some options available, and one of these options is `-r`.  The `-r` option specifies that the zip command should work **r**ecursively for directories, i.e. it should include all the subdirectories and files. Options are followed by the name of the zip archive to create, followed by the list of files and directories to backup. We convert the `source` list into a string using the `join` method of strings which we have already seen how to use.
-
-Then, we finally *run* the command using the `os.system` function which runs the command as if it was run from the *system* i.e. in the shell - it returns `0` if the command was successfully, else it returns an error number.
-
-Depending on the outcome of the command, we print the appropriate message that the backup has failed or succeeded.
-
-That's it, we have created a script to take a backup of our important files!
-
-> **Note to Windows Users**
-> 
-> Instead of double backslash escape sequences, you can also use raw strings. For example, use `'C:\\Documents'` or `r'C:\Documents'`. However, do *not* use `'C:\Documents'` since you end up using an unknown escape sequence `\D`.
-
-Now that we have a working backup script, we can use it whenever we want to take a backup of the files. This is called the *operation* phase or the *deployment* phase of the software.
-
-The above program works properly, but (usually) first programs do not work exactly as you expect. For example, there might be problems if you have not designed the program properly or if you have made a mistake when typing the code, etc. Appropriately, you will have to go back to the design phase or you will have to debug your program.
-
-## Second Version
-
-The first version of our script works. However, we can make some refinements to it so that it can work better on a daily basis. This is called the *maintenance* phase of the software.
-
-One of the refinements I felt was useful is a better file-naming mechanism - using the _time_ as the name of the file within a directory with the current _date_ as a directory within the main backup directory. The first advantage is that your backups are stored in a hierarchical manner and therefore it is much easier to manage. The second advantage is that the filenames are much shorter. The third advantage is that separate directories will help you check if you have made a backup for each day since the directory would be created only if you have made a backup for that day.
-
-Save as `backup_ver2.py`:
-
-<pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>-->
+```python
+import os
+import time
 
-**How It Works**
+# 1.Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у  Windows:
+# джерело = ['"C:\\My Documents"']
+# Приклад у  Mac OS X and Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+# Ми також могли використати необроблений рядок,
+# написавши [r'C:\My Documents'].
 
-Most of the program remains the same. The changes are that we check if there is a directory with the current day as its name inside the main backup directory using the `os.path.exists` function. If it doesn't exist, we create it using the `os.mkdir` function.
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у  Windows:
+# цільова_папка (англ."target_dir",target directory = 'E:\\Backup'
+# Приклад у  Mac OS X and Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
 
-## Third Version
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Ім'я для zip-архіву - поточна дата та час.
+ціль = цільова_папка + os.sep + \
+         time.strftime('%Y%m%d%H%M%S') + '.zip'
 
-The second version works fine when I do many backups, but when there are lots of backups, I am finding it hard to differentiate what the backups were for! For example, I might have made some major changes to a program or presentation, then I want to associate what those changes are with the name of the zip archive. This can be easily achieved by attaching a user-supplied comment to the name of the zip archive.
+# Створіть цільову папку, якщо її немає
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  #створити папку
 
-WARNING: The following program does not work, so do not be alarmed, please follow along because there's a lesson in here.
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
 
-Save as `backup_ver3.py`:
+# Запускаємо створення резервної копії
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
 
-<pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
+
+```
+Висновок:
+```
+$ python backup_ver1.py
+Zip command є:
+zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена в /Users/swa/backup/20140328084844.zip
+```
+
+Зараз ми знаходимося на етапі *тестування*, де ми перевіряємо, чи наша програма працює належним чином. Якщо вона не поводиться так, як очікувалося, ми повинні *налагодити* (англ."debug") нашу програму, тобто видалити *помилки* (англ."bugs (errors) ") з програми.
+
+Якщо наведена вище програма не працює для вас, скопіюйте рядок, надрукований після рядка `Zip command є` у висновку (zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes), вставте його в оболонку (у GNU/Linux і Mac OS X) / `cmd` (у Windows), подивіться, в чому полягає помилка, і спробуйте її виправити. Також перевірте посібник з команди "zip", щоб дізнатися, що може бути не так. Якщо ця команда виконується успішно, проблема може бути в самій програмі Python, тому перевірте, чи вона точно відповідає програмі, написаній вище.
+
+**Як це працює**
+
+Ви помітите, як ми крок за кроком перетворили наш *проєкт* на *код*.
+
+Ми використовуємо модулі `os` і `time`, попередньо імпортувавши їх. Потім ми вказуємо файли та папки для резервного копіювання у списку  `джерело`. Цільова папка(англ."The target directory") – це місце, де ми зберігаємо всі файли резервних копій, і це вказано у змінній `цільова_папка`.  Ім’я zip-архіву, який ми збираємося створити, — це поточна дата й час, які ми генеруємо за допомогою функції `time.strftime()`. Він також матиме розширення `.zip` і зберігатиметься в папці `цільова_папка`.
+
+Зверніть увагу на використання змінної `os.sep` - вона має роздільник шляху для папки,відповідно до вашої операційної системи, тобто це буде `'/'` у GNU/Linux, Unix, macOS, і буде `'\\'` у Windows. Використання `os.sep` замість цих символів безпосередньо зробить нашу програму переносимою та працюватиме в усіх цих системах.
+
+Функція `time.strftime()` приймає як аргумент формат виводу часу (рядок певного вигляду), подібну до того, який ми використовували у наведеній вище програмі. Символ формата `%Y` буде замінено роком та століттям. Символ формата `%m` буде замінено місяцем у формі числа від `01` до `12` і так далі. Повний список таких символів формата можна знайти в [Довідковому посібнику Python](http://docs.python.org/3/library/time.html#time.strftime).
+
+Ми створюємо назву цільового zip-файлу за допомогою додаткового оператора, який _конкатенує_ (англ."_concatenates_") рядки, тобто об’єднує два рядки разом і повертає новий. Потім ми створюємо рядок `zip_command`, який містить команду, яку ми збираємося виконати. Ви можете перевірити, чи ця команда працює, запустивши її в оболонці (термінал GNU/Linux або командний рядок DOS).
+
+Команда `zip`, яку ми використовуємо, має кілька доступних параметрів, і одним із цих параметрів є `-r`. Параметр `-r` вказує, що команда zip має працювати **р**екурсивно(англ."recursive") для папок, тобто вона має включати всі підпапки та файли. За параметрами слідує ім'я zip-архіву,який потрібно створити, за ним вказується список   файлів і папок для резервного копіювання. Ми перетворюємо список джерел(sourse) у рядок за допомогою методу об’єднання рядків(join), який ми вже бачили, як використовувати.
+
+Потім ми нарешті *запускаємо* команду за допомогою функції `os.system`, яка запускає команду так, ніби її було запущено з *системи*, тобто із командної оболонці - вона повертає `0`, якщо команда виконана успішно, інакше вона повертає номер помилки.
+
+Залежно від результату виконання команди ми друкуємо відповідне повідомлення про те, чи успішним було створення резервних копій чи ні.
+
+Ось і все, ми створили сценарій для збереження резервних копій наших важливих файлів!
+
+>**Примітка для користувачів Windows**
+>
+> Замість подвійної зворотної скісної риски ви також можете використовувати необроблені рядки. Наприклад, використовуйте `'C:\\Documents'` або `r'C:\Documents'`. Однак *не* використовуйте `'C:\Documents'`, оскільки в результаті ви використовуєте невідому екрановану послідовність `\D`.
+
+Тепер, коли у нас є робочий сценарій резервного копіювання, ми можемо використовувати його, коли захочемо зробити резервну копію файлів. Це називається  *операційною* фазою (англ."operation phase") або фазою *розгортання* (англ."deployment phase") програмного забезпечення.
+
+Наведена вище програма працює належним чином, але (зазвичай) перші програми працюють не зовсім так, як ви очікуєте. Наприклад, можуть виникнути проблеми, якщо ви неправильно розробили програму або якщо ви зробили помилку під час введення коду тощо. Відповідно, вам доведеться повернутися до фази проєктування або вам доведеться налагодити свою програму.
+
+## Друга версія
+
+Перша версія нашого сценарію працює. Однак ми можемо внести в нього деякі вдосконалення, щоб вона працювала краще щодня. Це називається фазою *супроводу* (англ."maintenance phase") програмного забезпечення.
+
+Одне із вдосконалень, яке як мені здається, буде корисними -це кращий механізм іменування файлів: використання _часу_ (англ."_time_") в якості імені файлу, що зберігається в папці з поточною _датою_ (англ."_date_") в якості імені, яке, у свою чергу, розташоване у головній папці для збереження резервного копіювання. Перша перевага полягає в тому, що ваші резервні копії зберігаються в ієрархічному порядку, тому ними набагато легше керувати. Друга перевага полягає в тому, що імена файлів набагато коротші. Третя перевага полягає в тому, що за іменами папок можна легко визначити, в які дні створювалися резервні копії, оскільки папка створюється лише у разі резервного копіювання даних у цей день.
+
+Зберегти як `backup_ver2.py`:
+
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>-->
+```python
+import os
+import time
 
-**How This (does not) Work**
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['"C:\\My Documents"', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# # Зауважте, що ми повинні використовувати подвійні лапки всередині рядка
+# для імен із пробілами.
 
-*This program does not work!* Python says there is a syntax error which means that the script does not satisfy the structure that Python expects to see. When we observe the error given by Python, it also tells us the place where it detected the error as well. So we start *debugging* our program from that line.
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ."target_dir",target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
 
-On careful observation, we see that the single logical line has been split into two physical lines but we have not specified that these two physical lines belong together. Basically, Python has found the addition operator (`+`) without any operand in that logical line and hence it doesn't know how to continue. Remember that we can specify that the logical line continues in the next physical line by the use of a backslash at the end of the physical line. So, we make this correction to our program. This correction of the program when we find errors is called *bug fixing*.
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
 
-## Fourth Version
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка  + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
 
-Save as `backup_ver4.py`:
+# Ім'я для zip-архіву
+ціль = сьогодні + os.sep + зараз + '.zip'
 
-<pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+```
+
+```
+$ python backup_ver2.py
+Успішно створена папка /Users/swa/backup/20140329
+Zip command є:
+zip -r /Users/swa/backup/20140329/073201.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена /Users/swa/backup/20140329/073201.zip
+```
+
+
+**Як це працює**
+
+Більша частина програми залишається незмінною. Зміни полягають у тому, що ми перевіряємо, чи є папка з ім'ям, що відповідає поточній даті, в головній папці зберігання резервних копій за допомогою функції `os.path.exists`. Якщо ії не існує, ми створюємо ії за допомогою функції `os.mkdir`.
+
+## Третя версія
+
+Друга версія працює добре з великою кількістю резервних копій, але коли резервних копій стає багато, стає важко відрізнити, яка копія для чого! Наприклад, ми могли внести серйозні зміни в програму чи презентацію, тепер ми хочемо вказати суть цих змін в назві архіву zip. Цього можна легко досягти, додавши наданий користувачем коментар до назви zip-архіву.
+
+ПОПЕРЕДЖЕННЯ: наступна програма не працює, тому не лякайтеся, просто пройдіть по ній, тому що в ній міститься урок.
+
+Зберегти як `backup_ver3.py`:
+
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>
+<pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>-->
+```python
+import os
+import time
 
-**How It Works**
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['"C:\\My Documents"', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
 
-This program now works! Let us go through the actual enhancements that we had made in version 3. We take in the user's comments using the `input` function and then check if the user actually entered something by finding out the length of the input using the `len` function. If the user has just pressed `enter` without entering anything (maybe it was just a routine backup or no special changes were made), then we proceed as we have done before.
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ."target_dir",target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
 
-However, if a comment was supplied, then this is attached to the name of the zip archive just before the `.zip` extension.  Notice that we are replacing spaces in the comment with underscores - this is because managing filenames without spaces is much easier.
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
 
-## More Refinements
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
 
-The fourth version is a satisfactorily working script for most users, but there is always room for improvement. For example, you can include a _verbosity_ level for the zip command by specifying a `-v` option to make your program become more talkative or a `-q` option to make it _quiet_.
+# Прийміть коментар від користувача для
+# створення назви zip-файлу
+коментар = input('Введіть коментар  --> ')
+# Перевірте, чи було введено коментар
+if len(коментар) == 0:
+    ціль = сьогодні + os.sep + зараз + '.zip'
+else:
+    ціль = сьогодні + os.sep + зараз + '_' + 
+        коментар.replace(' ', '_') + '.zip'
 
-Another possible enhancement would be to allow extra files and directories to be passed to the script at the command line. We can get these names from the `sys.argv` list and we can add them to our `source` list using the `extend` method provided by the `list` class.
 
-The most important refinement would be to not use the `os.system` way of creating archives and instead using the [zipfile](http://docs.python.org/3/library/zipfile.html) or [tarfile](http://docs.python.org/3/library/tarfile.html) built-in modules to create these archives. They are part of the standard library and available already for you to use without external dependencies on the zip program to be available on your computer.
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
 
-However, I have been using the `os.system` way of creating a backup in the above examples purely for pedagogical purposes, so that the example is simple enough to be understood by everybody but real enough to be useful.
 
-Can you try writing the fifth version that uses the [zipfile](http://docs.python.org/3/library/zipfile.html) module instead of the `os.system` call?
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
 
-## The Software Development Process
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
 
-We have now gone through the various *phases* in the process of writing a software. These phases can be summarised as follows:
+```
 
-1. What (Analysis)
-2. How (Design)
-3. Do It (Implementation)
-4. Test (Testing and Debugging)
-5. Use (Operation or Deployment)
-6. Maintain (Refinement)
+Висновок:
 
-A recommended way of writing programs is the procedure we have followed in creating the backup script: Do the analysis and design. Start implementing with a simple version. Test and debug it. Use it to ensure that it works as expected. Now, add any features that you want and continue to repeat the Do It-Test-Use cycle as many times as required.
+```
+$ python backup_ver3.py
+  File "backup_ver3.py", line 39
+    ціль = сьогодні + os.sep + зараз + '_' +
+                                        ^
+SyntaxError: invalid syntax
+```
 
-Remember:
 
-> Software is grown, not built.
+**Як це (не) працює**
+
+*Ця програма не працює!* Python повідомляє, що є синтаксична помилка, яка означає, що сценарій не задовольняє структурі, яку очікує побачити Python. Коли ми спостерігаємо помилку, видану Python, він також повідомляє нам місце, де виявив помилку. Отже, ми починаємо *налагодження* (англ."*debugging*") нашої програми з цього рядка. 
+
+Уважно спостерігаючи, ми бачимо, що один логічний рядок був розділений на два фізичних рядка, але ми не вказали, що ці два фізичні рядки є частиною одного. По суті, Python знайшов оператор додавання (`+`) без жодного операнда в цьому логічному рядку, і тому він не знає, як продовжити. Пам’ятайте, що ми можемо вказати, що логічний рядок продовжується в наступному фізичному рядку, використовуючи зворотну косу риску в кінці фізичного рядка. Отже, ми вносимо цю поправку в нашу програму. Це виправлення програми, коли ми знаходимо помилки, називається *виправленням помилок*(англ."*bug fixing*").
+
+## Четверта версія
+
+Зберегти як  `backup_ver4.py`:
+
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>-->
+
+```python
+import os
+import time
+
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['"C:\\My Documents"', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+
+# 2. Резервні копії повинні зберігатися в головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ."target_dir",target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
+
+# Прийміть коментар від користувача для
+# створення назви zip-файлу
+коментар = input('Введіть коментар  --> ')
+# Перевірте, чи було введено коментар
+if len(коментар) == 0:
+    ціль = сьогодні + os.sep + зараз + '.zip'
+else:
+    ціль = сьогодні + os.sep + зараз + '_' +\
+        коментар.replace(' ', '_') + '.zip'
+
+
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
+
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+```
+
+Висновок:
+
+```
+$ python backup_ver4.py
+Введіть коментар  --> додав нові приклади
+Zip command є:
+zip -r /Users/swa/backup/20140329/074122_додав_нові_приклади.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена /Users/swa/backup/20140329/074122_додав_нові_приклади.zip
+```
+
+
+**Як це працює**
+
+Ця програма тепер працює! Розглянемо фактичні вдосконалення, які ми зробили у версії 3. Ми беремо коментарі користувача за допомогою функції `input`, а потім перевіряємо, чи дійсно користувач щось ввів, з’ясовуючи довжину введення за допомогою функції `len`. Якщо користувач щойно натиснув `enter`, не вводячи нічого (можливо, це було просто звичайне резервне копіювання або не було зроблено жодних спеціальних змін), тоді ми продовжуємо, як робили раніше.
+
+Однак, якщо було надано коментар, він додається до імені zip-архіву безпосередньо перед розширенням `.zip`. Зверніть увагу, що ми замінюємо пробіли в коментарях на підкреслення - це тому, що керувати іменами файлів без пробілів набагато легше.
+
+## Більше уточнень
+
+Четверта версія є задовільно робочим сценарієм для більшості користувачів, але завжди є місце для вдосконалення. Наприклад, ви можете включити рівень _дослівності_(англ."_verbosity_ level") для команди zip, вказавши опцію `-v`, щоб зробити вашу програму більш балакучою (англ."talkative"), або опцію `-q`, щоб зробити її _тихою_ (англ."quiet").
+
+Ще одним можливим покращенням була б можливість передавати сценарію інші файли та папки прямо у командному рядку. Ми можемо отримати ці імена зі списку `sys.argv` і додати їх до нашого списку `джерело` за допомогою методу `extend`, який надається класом `список`(англ."list").
+
+Найважливішим удосконаленням було б не використовувати спосіб створення архівів `os.system`, а натомість використовувати [zipfile](http://docs.python.org/3/library/zipfile.html) або [tarfile]( http://docs.python.org/3/library/tarfile.html) - вбудовані модулі для створення цих архівів. Вони є частиною стандартної бібліотеки та вже доступні для використання без зовнішніх залежностей від програми zip, доступної на вашому комп’ютері.
+
+Однак я використовував спосіб `os.system` для створення резервної копії у наведених вище прикладах суто з педагогічною метою, так що приклад достатньо простий, щоб його зрозуміли всі, але достатньо реальний, щоб бути корисним.
+
+Чи можете ви спробувати написати п’яту версію, яка використовує модуль [zipfile](http://docs.python.org/3/library/zipfile.html) замість виклику `os.system`?
+
+## Процес розробки програмного забезпечення
+
+Зараз ми пройшли різні *етапи* в процесі написання програмного забезпечення. Ці фази можна підсумувати таким чином:
+
+1. Що (Аналіз)
+2. Як (Проєктування )
+3. Зроби це (Реалізація)
+4. Тестування (Тестування та Налагодження)
+5. Використання (Оперування та Розгортання)
+6. Супровід (Вдосконалення)
+
+Рекомендований спосіб написання програм — це процедура, якої ми дотримувалися під час створення сценарію резервного копіювання: виконайте аналіз і проєктування. Почніть реалізацію з простого варіанту. Протестуйте та налагодьте його. Використовуйте його, щоб переконатися, що він працює належним чином. Тепер додайте будь-які функції, які вам потрібні, і продовжуйте повторювати цикл «Зроби-тест-використай» стільки разів, скільки потрібно.
+
+Пам'ятайте:
+
+> Програмне забезпечення вирощують, а не створюють.
 > -- [Bill de hÓra](http://97things.oreilly.com/wiki/index.php/Great_software_is_not_built,_it_is_grown)
 
-## Summary
+## Резюме
 
-We have seen how to create our own Python programs/scripts and the various stages involved in writing such programs. You may find it useful to create your own program just like we did in this chapter so that you become comfortable with Python as well as problem-solving.
+Ми побачили, як створювати власні програми/сценарії на Python, а також різні етапи написання таких програм. Вам може бути корисно створити власну програму, як ми робили в цьому розділі, щоб ви навчилися працювати з Python, а також вирішувати проблеми.
 
-Next, we will discuss object-oriented programming.
+Далі ми обговоримо об'єктно-орієнтоване програмування.
