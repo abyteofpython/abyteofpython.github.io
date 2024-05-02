@@ -1,240 +1,527 @@
-# Data Structures {#data-structures}
+#  Структури даних (англ."Data Structures")
 
-Data structures are basically just that - they are *structures* which can hold some *data* together. In other words, they are used to store a collection of related data.
+Структури даних — це, по суті, і є  *структури*, які можуть зберігати деякі *дані* разом. Іншими словами, вони використовуються для зберігання даних.
 
-There are four built-in data structures in Python - _list, tuple, dictionary and set_. We will see how to use each of them and how they make life easier for us.
+У Python є чотири вбудовані структури даних: _список (англ."list"), кортеж (англ."tuple"), словник (англ."dictionary") та множина (англ."set")_. Ми побачимо, як використовувати кожен із них і як вони полегшують нам життя.
 
-## List
+##  Список (англ."List")
 
-A `list` is a data structure that holds an ordered collection of items i.e. you can store a *sequence* of items in a list. This is easy to imagine if you can think of a shopping list where you have a list of items to buy, except that you probably have each item on a separate line in your shopping list whereas in Python you put commas in between them.
+«Список» — це структура даних, яка містить упорядкований набір елементів, тобто зберігає *послідовність* елементів у списку (англ."*a sequence* of items in a list"). Це легко уявити, якщо згадати список покупок, в якому перераховується, що потрібно купити, з тим винятком, що в списку покупок кожен елемент зазвичай розміщується на окремому рядку, тоді як у Python вони розділяються комами.
 
-The list of items should be enclosed in square brackets so that Python understands that you are specifying a list. Once you have created a list, you can add, remove or search for items in the list. Since we can add and remove items, we say that a list is a *mutable* data type i.e. this type can be altered.
+Список елементів має бути укладений у квадратні дужки, щоб Python зрозумів, що ви вказуєте список. Створивши список, ви можете додавати, видаляти або шукати елементи в списку. Оскільки ми можемо додавати та видаляти елементи, ми говоримо, що список є *змінним* (англ."*mutable*") типом даних, тобто цей тип можна змінювати.
 
-## Quick Introduction To Objects And Classes
+## Короткий вступ до об’єктів і класів
 
-Although I've been generally delaying the discussion of objects and classes till now, a little explanation is needed right now so that you can understand lists better. We will explore this topic in detail in a [later chapter](./oop.md#oop).
+Хоч++ я і намагався досі відтягнути обговорення об'єктів і класів, на даному етапі все ж таки необхідне деяке пояснення, щоб ви краще зрозуміли ідею списків. Ми детально розглянемо цю тему в [пізнішому розділі](./oop.md#oop).
 
-A list is an example of usage of objects and classes. When we use a variable `i` and assign a value to it, say integer `5` to it, you can think of it as creating an *object* (i.e. instance) `i` of *class* (i.e. type) `int`. In fact, you can read `help(int)` to understand this better.
+Список є прикладом використання об'єктів і класів. Коли ми присвоюємо деякій змінній `i` значення, скажімо, ціле число `5`, ви можете сприймати це як створення *об’єкта* (тобто екземпляра) `i` *класу* (тобто типу) ` int`. Насправді, ви можете прочитати `help(int)`, щоб зрозуміти це краще.
 
-A class can also have *methods* i.e. functions defined for use with respect to that class only. You can use these pieces of functionality only when you have an object of that class. For example, Python provides an `append` method for the `list` class which allows you to add an item to the end of the list. For example, `mylist.append('an item')` will add that string to the list `mylist`. Note the use of dotted notation for accessing methods of the objects.
+Клас також може мати *методи*, тобто функції, визначені для використання лише стосовно цього класу. Ви можете використовувати ці частини функціональності, лише якщо у вас є об’єкт цього класу. Наприклад, Python надає метод `append` для класу `список`, який дозволяє вам додавати елемент у кінець списку. Наприклад, `мій_список.append('якийсь елемент')` додасть цей рядок до списку `мій_список`. Зверніть увагу на використання нотації з крапками для доступу до методів об’єктів.
 
-A class can also have *fields* which are nothing but variables defined for use with respect to that class only. You can use these variables/names only when you have an object of that class. Fields are also accessed by the dotted notation, for example, `mylist.field`.
+Клас також може мати *поля*, які є нічим іншим, як змінними, визначеними для використання лише стосовно цього класу. Ви можете використовувати ці змінні/імена, лише якщо у вас є об’єкт цього класу. Поля також доступні за допомогою нотації з крапками, наприклад, `мій_список.field`.
 
-Example (save as `ds_using_list.py`):
+Приклад (збережіть як `ds_using_list.py`):
 
-<pre><code class="lang-python">{% include "./programs/ds_using_list.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/ds_using_list.txt" %}</code></pre>
-
-**How It Works**
-
-The variable `shoplist` is a shopping list for someone who is going to the market. In `shoplist`, we only store strings of the names of the items to buy but you can add _any kind of object_ to a list including numbers and even other lists.
-
-We have also used the `for..in` loop to iterate through the items of the list. By now, you must have realised that a list is also a sequence. The speciality of sequences will be discussed in a [later section](#sequence).
-
-Notice the use of the `end` parameter in the call to `print` function to indicate that we want to end the output with a space instead of the usual line break.
-
-Next, we add an item to the list using the `append` method of the list object, as already discussed before. Then, we check that the item has been indeed added to the list by printing the contents of the list by simply passing the list to the `print` function which prints it neatly.
-
-Then, we sort the list by using the `sort` method of the list. It is important to understand that this method affects the list itself and does not return a modified list - this is different from the way strings work. This is what we mean by saying that lists are _mutable_ and that strings are _immutable_.
-
-Next, when we finish buying an item in the market, we want to remove it from the list. We achieve this by using the `del` statement. Here, we mention which item of the list we want to remove and the `del` statement removes it from the list for us.  We specify that we want to remove the first item from the list and hence we use `del shoplist[0]` (remember that Python starts counting from 0).
-
-If you want to know all the methods defined by the list object, see `help(list)` for details.
-
-## Tuple
-
-Tuples are used to hold together multiple objects. Think of them as similar to lists, but without the extensive functionality that the list class gives you. One major feature of tuples is that they are *immutable* like strings i.e. you cannot modify tuples.
-
-Tuples are defined by specifying items separated by commas within an optional pair of parentheses.
-
-Tuples are usually used in cases where a statement or a user-defined function can safely assume that the collection of values (i.e. the tuple of values used) will not change.
-
-Example (save as `ds_using_tuple.py`):
-
-<pre><code class="lang-python">{% include "./programs/ds_using_tuple.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/ds_using_list.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/ds_using_tuple.txt" %}</code></pre>
+<pre><code>{% include "./programs/ds_using_list.txt" %}</code></pre>-->
 
-**How It Works**
+```python
+# Це мій список покупок 
+список_покупок = ['яблуко', 'манго', 'морква', 'банан']
 
-The variable `zoo` refers to a tuple of items. We see that the `len` function can be used to get the length of the tuple. This also indicates that a tuple is a [sequence](#sequence) as well.
+print('Я маю', len(список_покупок), 'товари для покупки.')
 
-We are now shifting these animals to a new zoo since the old zoo is being closed. Therefore, the `new_zoo` tuple contains some animals which are already there along with the animals brought over from the old zoo. Back to reality, note that a tuple within a tuple does not lose its identity.
+print('товари для покупки:', end=' ')
+for елементи in список_покупок:
+    print(елементи, end=' ')
 
-We can access the items in the tuple by specifying the item's position within a pair of square brackets just like we did for lists. This is called the _indexing_ operator. We access the third item in `new_zoo` by specifying `new_zoo[2]` and we access the third item within the third item in the `new_zoo` tuple by specifying `new_zoo[2][2]`. This is pretty simple once you've understood the idiom.
+print('\nЯ також маю купити рис.')
+список_покупок.append('рис')
+print('Мій список покупок зараз', список_покупок)
 
-> **Tuple with 0 or 1 items**
-> 
-> An empty tuple is constructed by an empty pair of parentheses such as `myempty = ()`. However, a tuple with a single item is not so simple. You have to specify it using a comma following the first (and only) item so that Python can differentiate between a tuple and a pair of parentheses surrounding the object in an expression i.e. you have to specify `singleton = (2 , )` if you mean you want a tuple containing the item `2`.
+print('Я відсортую свій список зараз')
+список_покупок.sort()
+print('Сортований список покупок є', список_покупок)
+
+print('Перший товар, який я куплю, це', список_покупок[0])
+старий_елемент = список_покупок[0]
+del список_покупок[0]
+print('Я купив', старий_елемент )
+print('Мій список покупок зараз', список_покупок)
+```
+
+Той самий приклад англійською:
+```$ python ds_using_list.py
+# This is my shopping list
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+
+print('I have', len(shoplist), 'items to purchase.')
+
+print('These items are:', end=' ')
+for item in shoplist:
+    print(item, end=' ')
+
+print('\nI also have to buy rice.')
+shoplist.append('rice')
+print('My shopping list is now', shoplist)
+
+print('I will sort my list now')
+shoplist.sort()
+print('Sorted shopping list is', shoplist)
+
+print('The first item I will buy is', shoplist[0])
+olditem = shoplist[0]
+del shoplist[0]
+print('I bought the', olditem)
+print('My shopping list is now', shoplist)
+```
+Висновок українською
+```python
+Я маю 4 товари для покупки.
+товари для покупки: яблуко манго морква банан 
+Я також маю купити рис.
+Мій список покупок зараз ['яблуко', 'манго', 'морква', 'банан', 'рис']
+Я відсортую свій список зараз
+Сортований список покупок є ['банан', 'манго', 'морква', 'рис', 'яблуко']
+Перший товар, який я куплю, це банан
+Я купив банан
+Мій список покупок зараз ['манго', 'морква', 'рис', 'яблуко']
+```
+Висновок англійською:
+```
+$ python ds_using_list.py
+I have 4 items to purchase.
+These items are: apple mango carrot banana
+I also have to buy rice.
+My shopping list is now ['apple', 'mango', 'carrot', 'banana', 'rice']
+I will sort my list now
+Sorted shopping list is ['apple', 'banana', 'carrot', 'mango', 'rice']
+The first item I will buy is apple
+I bought the apple
+My shopping list is now ['banana', 'carrot', 'mango', 'rice']
+```
+
+**Як це працює**
+
+Змінна `список_покупок` - це список покупок для того, хто збирається на ринок. У `список_покупок` ми зберігаємо лише рядки назв предметів для покупки, але ви можете додавати _будь-які об’єкти_ до списку, включаючи номери та навіть інші списки.
+
+Ми також використали цикл for..in для ітерації по елементах списку. Наразі ви вже зрозуміли, що список також є послідовністю. Особливості  послідовностей буде обговорено в [пізнішому розділі](#sequence).
+
+Зверніть увагу на використання параметра `end` у виклику функції `print`, який вказує, що ми хочемо закінчити рядок у висновоку пробілом замість звичайного розриву рядка.
+
+Далі ми додаємо елемент до списку за допомогою методу `append`- методу об'єкта списку, як уже обговорювалося раніше. Потім ми перевіряємо, що елемент справді додано до списку, друкуючи вміст списку за
+допомогою передачі цього списку функції`print`, яка акуратно друкує його.
+
+Потім ми сортуємо список за допомогою методу `sort`об'єкта списку. Важливо розуміти, що цей метод впливає на сам список і не повертає змінений список - це відрізняється від того, як працюють рядки. Це те, що ми маємо на увазі, кажучи, що списки _змінні_( англ."mutable"), а рядки _незмінні_( англ."immutable").
+
+Потім, коли ми закінчимо купувати товар на ринку, ми хочемо видалити його зі списку. Ми досягаємо цього за допомогою оператора del. Тут ми згадуємо, який елемент зі списку ми хочемо видалити, і оператор del видаляє його зі списку за нас. Ми вказуємо, що ми хочемо видалити перший елемент зі списку, і тому ми використовуємо `del список_покупок[0]` (пам’ятайте, що Python починає відлік з 0).
+
+Якщо ви хочете дізнатися про всі методи, визначені об’єктом списку, подробиці дивіться у `help(list)`.
+
+## Кортеж (англ."Tuple")
+
+Кортежі служать для зберігання кількох об'єктів разом. Вважайте їх подібними до списків, але без широкої функціональності, яку надає вам клас списку. Однією з головних особливостей кортежів є те, що вони *незмінні* (англ."*immutable*")як рядки, тобто ви не можете змінювати кортежі.
+
+Кортежі позначаються визначенням елементів, розділених комами; за бажанням їх можна ще укласти в круглі дужки.
+
+Кортежі зазвичай використовуються у випадках, коли оператор або визначена користувачем функція може безпечно припустити, що набір значень (тобто використаний кортеж значень) не зміниться.
+
+Приклад українською: (збережіть як `ds_using_tuple.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/ds_using_tuple.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/ds_using_tuple.txt" %}</code></pre>-->
+
+```python
+# Я рекомендую завжди використовувати круглі дужки
+# позначати початок та кінец кортежу
+# незважаючи на те, що дужки необов’язкові.
+# Явний краще, ніж неявний.
+зоопарк  = ('пітон', 'слон', 'пінгвін')
+print('Кількість тварин у зоопарку становить', len(зоопарк))
+
+новий_зоопарк = 'мавпа', 'верблюд', зоопарк # дужки не потрібні, але це гарна ідея
+print('Кількість клітин у новому зоопарку становить', len(новий_зоопарк))
+print('Усі тварини в новому зоопарку є', новий_зоопарк)
+print('Тварини, привезені зі старого зоопарку є', новий_зоопарк[2])
+print('Остання тварина, привезена зі старого зоопарку', новий_зоопаркo[2][2])
+print('Кількість тварин у новому зоопарку становить',
+      len(новий_зоопарк)-1+len(новий_зоопарк[2]))
+```
+
+Приклад англійською:
+```python
+# I would recommend always using parentheses
+# to indicate start and end of tuple
+# even though parentheses are optional.
+# Explicit is better than implicit.
+zoo = ('python', 'elephant', 'penguin')
+print('Number of animals in the zoo is', len(zoo))
+
+new_zoo = 'monkey', 'camel', zoo    # parentheses not required but are a good idea
+print('Number of cages in the new zoo is', len(new_zoo))
+print('All animals in new zoo are', new_zoo)
+print('Animals brought from old zoo are', new_zoo[2])
+print('Last animal brought from old zoo is', new_zoo[2][2])
+print('Number of animals in the new zoo is',
+      len(new_zoo)-1+len(new_zoo[2]))
+
+```
+Висновок українською
+```$ python ds_using_tuple.py
+Кількість тварин у зоопарку становить 3
+Кількість клітин у новому зоопарку становить 3
+Усі тварини в новому зоопарку є ('мавпа', 'верблюд', ('пітон', 'слон', 'пінгвін'))
+Тварини, привезені зі старого зоопарку є ('пітон', 'слон', 'пінгвін')
+Остання тварина, привезена зі старого зоопарку пінгвін
+Кількість тварин у новому зоопарку становить 5
+
+```
+Висновок англійською:
+```
+$ python ds_using_tuple.py
+Number of animals in the zoo is 3
+Number of cages in the new zoo is 3
+All animals in new zoo are ('monkey', 'camel', ('python', 'elephant', 'penguin'))
+Animals brought from old zoo are ('python', 'elephant', 'penguin')
+Last animal brought from old zoo is penguin
+Number of animals in the new zoo is 5
+
+```
+
+**Як це працює**
+
+Змінна `зоопарк` означає кортеж елементів. Ми бачимо, що функцію `len` можна використовувати для отримання довжини кортежу. Це також вказує на те, що кортеж також є [послідовністю](#sequence).
+
+Зараз ми переводимо цих тварин у новий зоопарк, оскільки старий зоопарк закривається. Таким чином, кортеж `новий_зоопарк` містить деяких тварин, які вже там разом із тваринами, привезеними зі старого зоопарку. Повертаючись до реальності, зауважте, що кортеж у кортежі не втрачає своєї ідентичності.
+
+Ми можемо отримати доступ до елементів у кортежі, вказавши позицію елемента в парі квадратних дужок, як ми робили для списків. Це називається оператором _індексування_ (англ."_indexing_"). Ми отримуємо доступ до третього елемента в `новий_зоопарк`, вказуючи `новий_зоопарк[2]`, і отримуємо доступ до третього елемента в третьому елементі в кортежі `новий_зоопарк`, вказуючи `новий_зоопарк[2][2]`. Це досить просто, якщо ви зрозуміли ідіому.
+
+> **Кортеж із 0 або 1 елементом**
+>
+> Порожній кортеж створюється пустою парою круглих дужок, наприклад `myempty = ()`. Однак кортеж з одним елементом не такий простий. Його потрібно вказати за допомогою коми після першого (і єдиного) елемента, щоб Python міг розрізнити кортеж і пару круглих дужок, які оточують об’єкт у виразі. Таким чином, щоб отримати кортеж, що містить елемент 2, вам потрібно буде вказати  `singleton = (2 , )`.
 
 <!-- -->
 
-> **Note for Perl programmers**
-> 
-> A list within a list does not lose its identity i.e. lists are not flattened as in Perl. The same applies to a tuple within a tuple, or a tuple within a list, or a list within a tuple, etc. As far as Python is concerned, they are just objects stored using another object, that's all.
+> **Примітка для програмістів Perl**
+>
+> Список у списку не втрачає своєї ідентичності, тобто списки не розгортаються, як у Perl. Те саме стосується кортежу в кортежі, або кортежу в списку, або списку в кортежі тощо. Що стосується Python, це просто об’єкти, які зберігаються за допомогою іншого об’єкта, от і все.
 
-## Dictionary
+## Словник (англ."Dictionary")
 
-A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name i.e. we associate *keys* (name) with *values* (details). Note that the key must be unique just like you cannot find out the correct information if you have two persons with the exact same name.
+Словник схожий на адресну книгу, де ви можете знайти адресу або контактні дані особи, знаючи лише її/її ім’я; тобто ми пов’язуємо *ключі* (імена) із *значеннями* (інформацією). Зауважте, що ключ має бути унікальним, тому що ви не можете знайти правильну інформацію, якщо у вас є дві людини з однаковими іменами.
 
-Note that you can use only immutable objects (like strings) for the keys of a dictionary but you can use either immutable or mutable objects for the values of the dictionary.  This basically translates to say that you should use only simple objects for keys.
+Зауважте, що ви можете використовувати лише незмінні об’єкти (наприклад, рядки) для ключів словника, але ви можете використовувати як незмінні, так і змінні об’єкти для значень словника. По суті, це означає, що ви повинні використовувати лише прості об’єкти для ключів.
 
-Pairs of keys and values are specified in a dictionary by using the notation `d = {key1 : value1, key2 : value2 }`. Notice that the key-value pairs are separated by a colon and the pairs are separated themselves by commas and all this is enclosed in a pair of curly braces.
+Пари ключ-значення вказуються в словнику за допомогою наступної нотації: `d = {key1 : value1, key2 : value2 }`. Зверніть увагу, що ключ і значення відокремлені двокрапкою, а самі пари відокремлені комами, і все це взято у пару фігурних дужок.
 
-Remember that key-value pairs in a dictionary are not ordered in any manner. If you want a particular order, then you will have to sort them yourself before using it.
+Пам’ятайте, що пари ключ-значення в словнику не впорядковані жодним чином. Якщо вам потрібен певний порядок, вам доведеться самостійно відсортувати їх, перш ніж використовувати його.
 
-The dictionaries that you will be using are instances/objects of the `dict` class.
+Словники, які ви використовуватимете, є екземплярами/об’єктами класу `dict`.
 
-Example (save as `ds_using_dict.py`):
+Приклад (збережіть як `ds_using_dict.py`):
 
-<pre><code class="lang-python">{% include "./programs/ds_using_dict.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/ds_using_dict.txt" %}</code></pre>
-
-**How It Works**
-
-We create the dictionary `ab` using the notation already discussed. We then access key-value pairs by specifying the key using the indexing operator as discussed in the context of lists and tuples. Observe the simple syntax.
-
-We can delete key-value pairs using our old friend - the `del` statement. We simply specify the dictionary and the indexing operator for the key to be removed and pass it to the `del` statement. There is no need to know the value corresponding to the key for this operation.
-
-Next, we access each key-value pair of the dictionary using the `items` method of the dictionary which returns a list of tuples where each tuple contains a pair of items - the key followed by the value. We retrieve this pair and assign it to the variables `name` and `address` correspondingly for each pair using the `for..in` loop and then print these values in the for-block.
-
-We can add new key-value pairs by simply using the indexing operator to access a key and assign that value, as we have done for Guido in the above case.
-
-We can check if a key-value pair exists using the `in` operator.
-
-For the list of methods of the `dict` class, see `help(dict)`.
-
-> **Keyword Arguments and Dictionaries**
-> 
-> If you have used keyword arguments in your functions, you have already used dictionaries! Just think about it - the key-value pair is specified by you in the parameter list of the function definition and when you access variables within your function, it is just a key access of a dictionary (which is called the _symbol table_ in compiler design terminology).
-
-## Sequence
-
-Lists, tuples and strings are examples of sequences, but what are sequences and what is so special about them?
-
-The major features are *membership tests*, (i.e. the `in` and `not in` expressions) and *indexing operations*, which allow us to fetch a particular item in the sequence directly.
-
-The three types of sequences mentioned above - lists, tuples and strings, also have a *slicing* operation which allows us to retrieve a slice of the sequence i.e. a part of the sequence.
-
-Example (save as `ds_seq.py`):
-
-<pre><code class="lang-python">{% include "./programs/ds_seq.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/ds_using_dict.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/ds_seq.txt" %}</code></pre>
-
-**How It Works**
-
-First, we see how to use indexes to get individual items of a sequence. This is also referred to as the _subscription operation_. Whenever you specify a number to a sequence within square brackets as shown above, Python will fetch you the item corresponding to that position in the sequence. Remember that Python starts counting numbers from 0. Hence, `shoplist[0]` fetches the first item and `shoplist[3]` fetches the fourth item in the `shoplist` sequence.
-
-The index can also be a negative number, in which case, the position is calculated from the end of the sequence. Therefore, `shoplist[-1]` refers to the last item in the sequence and `shoplist[-2]` fetches the second last item in the sequence.
-
-The slicing operation is used by specifying the name of the sequence followed by an optional pair of numbers separated by a colon within square brackets. Note that this is very similar to the indexing operation you have been using till now. Remember the numbers are optional but the colon isn't.
-
-The first number (before the colon) in the slicing operation refers to the position from where the slice starts and the second number (after the colon) indicates where the slice will stop at. If the first number is not specified, Python will start at the beginning of the sequence. If the second number is left out, Python will stop at the end of the sequence. Note that the slice returned _starts_ at the start position and will end just before the _end_ position i.e. the start position is included but the end position is excluded from the sequence slice.
-
-Thus, `shoplist[1:3]` returns a slice of the sequence starting at position 1, includes position 2 but stops at position 3 and therefore a *slice* of two items is returned.  Similarly, `shoplist[:]` returns a copy of the whole sequence.
-
-You can also do slicing with negative positions. Negative numbers are used for positions from the end of the sequence. For example, `shoplist[:-1]` will return a slice of the sequence which excludes the last item of the sequence but contains everything else.
-
-You can also provide a third argument for the slice, which is the _step_ for the slicing (by default, the step size is 1):
+<pre><code>{% include "./programs/ds_using_dict.txt" %}</code></pre>-->
 
 ```python
->>> shoplist = ['apple', 'mango', 'carrot', 'banana']
->>> shoplist[::1]
-['apple', 'mango', 'carrot', 'banana']
->>> shoplist[::2]
-['apple', 'carrot']
->>> shoplist[::3]
-['apple', 'banana']
->>> shoplist[::-1]
-['banana', 'carrot', 'mango', 'apple']
+# "ab" є скороченням від 'a'ddress'b'ook(address book-адресна книга).
+
+ab = {
+    'Swaroop': 'swaroop@swaroopch.com',
+    'Larry': 'larry@wall.org',
+    'Matsumoto': 'matz@ruby-lang.org',
+    'Spammer': 'spammer@hotmail.com'
+}
+
+print("Адрес Swaroop'а:", ab['Swaroop'])
+
+# Видалення пари ключ-значення
+del ab['Spammer']
+
+print('\nВ адресній книзі {} контакта\n'.format(len(ab)))
+
+for ім_я, адреса in ab.items():
+    print('Контакт {} за адресою: {}'.format(ім_я, адреса))
+
+# Додавання пари ключ-значення
+ab['Guido'] = 'guido@python.org'
+
+if 'Guido' in ab:
+    print("\nАдрес Guido:", ab['Guido'])
+
 ```
+Висновок:
+```$ python3 using_dict.py
+Адрес Swaroop'а: swaroop@swaroopch.com
 
-Notice that when the step is 2, we get the items with position 0, 2,... When the step size is 3, we get the items with position 0, 3, etc.
+В адресній книзі 3 контакта
 
-Try various combinations of such slice specifications using the Python interpreter interactively i.e. the prompt so that you can see the results immediately. The great thing about sequences is that you can access tuples, lists and strings all in the same way!
+Контакт Swaroop за адресою: swaroop@swaroopch.com
+Контакт Larry за адресою: larry@wall.org
+Контакт Matsumoto за адресою: matz@ruby-lang.org
 
-## Set
+Адрес Guido: guido@python.org
 
-Sets are _unordered_ collections of simple objects. These are used when the existence of an object in a collection is more important than the order or how many times it occurs.
+```
+**Як це працює**
 
-Using sets, you can test for membership, whether it is a subset of another set, find the intersection between two sets, and so on.
+Ми створюємо словник `ab`, використовуючи вже розглянуту нотацію. Потім ми отримуємо доступ до пар ключ-значення, вказуючи ключ за допомогою оператора індексування, як обговорювалося в контексті списків і кортежів. Зверніть увагу на простий синтаксис.
+
+Ми можемо видалити пари ключ-значення за допомогою нашого старого друга - оператора `del`. Ми просто вказуємо ім'я словника та оператор індексування для ключа, який потрібно видалити, і передаємо його оператору del. Для цієї операції немає необхідності знати значення, яке відповідає ключу.
+
+Далі ми звертаємося до всіх пар ключ-значення нашого словника ,використовуючи метод `items`, який повертає список кортежів, де кожен кортеж містить пару елементів — ключ та значення. Ми отримуємо цю пару та присвоюємо їй значення змінних `ім_я` та `адреса` відповідно до кожної з пар за допомогою циклу `for..in`, а потім друкуємо ці значення в блоці for.
+
+Ми можемо додати нові пари ключ-значення, просто використовуючи оператор індексування для доступу до ключа та присвоення йому деякого значення, як ми зробили для Guido у наведеному вище випадку.
+
+Ми можемо перевірити, чи існує пара ключ-значення, використовуючи оператор `in`.
+
+Щоб переглянути список методів класу `dict`, перегляньте `help(dict)`.
+
+
+> **Ключові аргументи і словники** (англ."Keyword Arguments and Dictionaries") 
+>
+> Якщо ви використовували ключові аргументи у своїх функціях, ви вже використовували словники! Просто подумайте про це: ви вказали пару ключ-значення серед параметрів функції при її визначенні, а коли звертаєтесь до змінних усередині функції, то це, власне, звернення за ключом до словника (який у термінах розробників компіляторів називається _таблицею імен_ (англ." symbol table")).
+
+## Послідовність (англ."Sequence")
+
+Списки, кортежі та рядки є прикладами послідовностей, але що таке послідовності і що в них такого особливого?
+
+Основними функціями є *перевірка приналежності* (тобто вирази `in` та `not in`) і *операції індексування*, які дозволяють нам отримати певний елемент у послідовності напряму.
+
+Три типи послідовностей, згадані вище - списки, кортежі та рядки, також мають операцію зрізу (англ. *slicing*), яка дозволяє нам отримати зріз послідовності, тобто ії фрагмент.
+
+Приклад (зберегти як `ds_seq.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/ds_seq.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/ds_seq.txt" %}</code></pre>-->
 
 ```python
->>> bri = set(['brazil', 'russia', 'india'])
->>> 'india' in bri
-True
->>> 'usa' in bri
-False
->>> bric = bri.copy()
->>> bric.add('china')
->>> bric.issuperset(bri)
-True
->>> bri.remove('russia')
->>> bri & bric # OR bri.intersection(bric)
-{'brazil', 'india'}
+список_покупок = ['яблуко', 'манго', 'морква', 'банан']
+ім_я = 'swaroop'
+
+# Операція індексування
+print('Елемент 0 є', список_покупок[0])
+print('Елемент 1 є', список_покупок[1])
+print('Елемент 2 є', список_покупок[2])
+print('Елемент 3 є', список_покупок[3])
+print('Елемент -1 є', список_покупок[-1])
+print('Елемент -2 є', список_покупок[-2])
+print('Символ 0 є', ім_я[0])
+
+# Зріз зі списку 
+print('Елемент з 1 до 3 є', список_покупок[1:3])
+print('Елемент з 2 до кінця є', список_покупок[2:])
+print('Елемент з 1 до -1 є', список_покупок[1:-1])
+print('Елемент від початку до кінця є',список_покупок[:])
+
+# Зріз з рядка 
+print('Символи з 1 до 3 є', ім_я[1:3])
+print('Символи з 2 до кінця є', ім_я[2:])
+print('Символи з 1 до  -1 є', ім_я[1:-1])
+print('Символи від початку до кінця є', ім_я[:])
+```
+Висновок
+```$ python3 seq.py
+Елемент 0 є яблуко
+Елемент 1 є манго
+Елемент 2 є морква
+Елемент 3 є банан
+Елемент -1 є банан
+Елемент -2 є морква
+Символ 0 є s
+Елемент з 1 до 3 є ['манго', 'морква']
+Елемент з 2 до кінця є ['морква', 'банан']
+Елемент з 1 до -1 є ['манго', 'морква']
+Елемент від початку до кінця є ['яблуко', 'манго', 'морква', 'банан']
+Символи з 1 по 3 є wa
+Символи з 2 до кінця є aroop
+Символи з 1 до  -1 є waroo
+Символи від початку до кінця є swaroop
+
 ```
 
-**How It Works**
+**Як це працює**
 
-If you remember basic set theory mathematics from school, then this example is fairly self-explanatory.  But if not, you can google "set theory" and "Venn diagram" to better understand our use of sets in Python.
+Спочатку ми бачимо, як використовувати індекси для отримання окремих елементів послідовності. Це також називається операцією _приписування індексу_ (англ."subscription operation").
 
-## References
+Коли ми вказуємо число у квадратних дужках після послідовності, як показано вище, Python витягує елемент, який відповідає зазначеній позиції в послідовності. Пам’ятайте, що Python починає рахувати числа з 0. Отже, ` список_покупокt[0]` витягує перший елемент, а` список_покупокt[3]` витягує  четвертий елемент у послідовності ` список_покупок`.
 
-When you create an object and assign it to a variable, the variable only _refers_ to the object and does not represent the object itself!  That is, the variable name points to that part of your computer's memory where the object is stored. This is called *binding* the name to the object.
+Індекс також може бути від’ємним числом. У цьому випадку позиція обчислюється з кінця послідовності. Таким чином, ` список_покупок[-1]` посилається на останній елемент у послідовності, а` список_покупок[-2]` витягує  передостанній елемент у послідовності.
 
-Generally, you don't need to be worried about this, but there is a subtle effect due to references which you need to be aware of:
+Операція зрізу використовується вказуючи ім’я послідовності, за якою слідують необов’язкові два числа, розділені двокрапкою всередині квадратних дужок. Зауважте, що це дуже схоже на операцію індексування, яку ви використовували досі. Пам’ятайте, що цифри необов’язкові, а двокрапка – обов’язкова.
 
-Example (save as `ds_reference.py`):
+Перше число (перед двокрапкою) в операції зрізу вказує позицію, з якої починається зріз, а друге число (після двокрапки) вказує, де зріз має закінчитися. Якщо перше число не вказано, Python розпочне з початку послідовності. Якщо друге число пропущено, Python зупиниться в кінці послідовності.Зверніть увагу,що отриманий зріз буде починатися із зазначеної початкової позиції(англ."_starts_"),а закінчуватися перед зазначеної кінцевої позицією(англ."_end_"), тобто, початкова позиція буде включена у зріз, а кінцева – ні.
 
-<pre><code class="lang-python">{% include "./programs/ds_reference.py" %}</code></pre>
+Таким чином, `список_покупок[1:3]` повертає зріз із послідовності, починаючи з позиції 1, включає позицію 2, але зупиняється на позиції 3, і тому повертає *зріз* з двох елементів. Так само ` список_покупок[:]` повертає копію всієї послідовності.
+
+Також можна робити зріз використовуючи від’ємні числа. Числа зі знаком мінус використовуються для позицій з кінця послідовності. Наприклад, ` список_покупок[:-1]` поверне зріз послідовності, який виключає останній елемент послідовності, але містить усе інше.
+
+Ви також можете надати третій аргумент для зрізу, який є _кроком_ для зрізу (за замовчуванням розмір кроку дорівнює 1):
+
+```python
+>>> список_покупок= ['яблуко', 'манго', 'морква', 'банан']
+>>> список_покупок[::1]
+['яблуко', 'манго', 'морква', 'банан']
+>>> список_покупок[::2]
+['яблуко', 'морква']
+>>> список_покупок[::3]
+['яблуко', 'банан']
+>>> shсписок_покупокt[::-1]
+['банан', 'морква', 'манго', 'яблуко']
+```
+
+Зауважте, що коли крок дорівнює 2, ми отримуємо елементи з позиціями 0, 2,... Коли розмір кроку дорівнює 3, ми отримуємо елементи з позиціями 0, 3,... тощо.
+
+Спробуйте різні комбінації параметрів зрізу, використовуючи інтерактивний інтерпретатор Python, тобто підказку prompt, щоб ви могли негайно побачити результати. Чудова річ у послідовностях полягає в тому, що ви можете отримати доступ до кортежів, списків і рядків однаково!
+
+##  Множина (англ."Set")
+
+Множини - це _невпорядковані_ (англ."_unordered_ ")набори простих об'єктів. Вони необхідні тоді, коли присутність об'єкта в наборі важливіша за порядок або те, скільки разів даний об'єкт там зустрічається.
+
+Використовуючи множини, ви можете перевірити приналежність, чи є вони підмножиною іншої множини, знайти перетин між двома множинами тощо.
+
+```python
+Скандинавія = set(["Данія","Норвегія","Швеція"])
+print("3 країни Скандинавії:", Скандинавія)
+print("Чи є Ісландія частиною Скандинавії?: ", "Ісландія" in Скандинавія)
+print("Нордичні країни також включають Ісландію та Фінляндію")
+Нордичні_країни = Скандинавія.copy() 
+Нордичні_країни.add("Ісландія")
+Нордичні_країни.add("Фінляндія")
+print("Нордичні країни", Нордичні_країни )
+print("Чи Нордичні країни є супермножиною Скандинавії?", Нордичні_країни.issuperset(Скандинавія))
+print("Чи є Скандинавія підмножиною нордичних країн?", Скандинавія.issubset(Нордичні_країни))
+країни_сухопутного_кордону = Нордичні_країни.copy()
+країни_сухопутного_кордону.remove("Ісландія")
+print("Нордичні країни з сухопутними кордонами: ", країни_сухопутного_кордону)
+print("Перетин Скандинавії та Нордичних країн: ", Скандинавія.intersection(Нордичні_країни))
+
+```
+
+**Як це працює**
+
+Якщо ви пам’ятаєте базову математику теорії множин зі школи, то цей приклад досить зрозумілий. Але якщо ні, ви можете пошукати в Google «теорію множин» і «діаграму Венна», щоб краще зрозуміти, як ми використовуємо множини в Python.
+
+## Посилання
+
+Коли ви створюєте об’єкт і присвоюєте його змінній, змінна лише _посилається_ на об’єкт і не є цим об’єктом! Тобто ім’я змінної вказує на ту частину пам’яті комп’ютера, де зберігається об’єкт. Це називається *прив’язкою* (англ."*binding*") імені до об’єкта.
+
+Загалом, вам не потрібно турбуватися про це, проте є деякий неочевидний ефект, про який потрібно пам'ятати:
+
+Приклад (зберегти як `ds_reference.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/ds_reference.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/ds_reference.txt" %}</code></pre>
+<pre><code>{% include "./programs/ds_reference.txt" %}</code></pre>-->
+```python
+print('Просте присвоєння')
+список_покупок = ['яблуко', 'манго', 'морква', 'банан']
+# мій_список — це просто інша назва, що вказує на той самий об’єкт!
+мій_список = список_покупок
 
-**How It Works**
+# Я купив перший товар, тому видаляю його зі списку
+del список_покупок[0]
 
-Most of the explanation is available in the comments.
+print('список_покупок :', список_покупок)
+print('мій_список :', мій_список)
+# Зауважте, що друкуються і список_покупок,і мій_список
+# з однаковим списком без пункта «яблука»
+# вони вказують на той самий об'єкт
 
-Remember that if you want to make a copy of a list or such kinds of sequences or complex objects (not simple _objects_ such as integers), then you have to use the slicing operation to make a copy. If you just assign the variable name to another name, both of them will ''refer'' to the same object and this could be trouble if you are not careful.
+print('Копіювати, зробивши повний зріз')
+# Зробіть копію, зробивши повний зріз
+мій_список = список_покупок[:]
+# Видалити перший елемент
+del мій_список[0]
 
-> **Note for Perl programmers**
-> 
-> Remember that an assignment statement for lists does **not** create a copy. You have to use slicing operation to make a copy of the sequence.
+print('список_покупок :', список_покупок)
+print('мій_список :', мій_список)
+# Зверніть увагу, що тепер два списки різні
 
-## More About Strings {#more-strings}
+```
+Висновок
 
-We have already discussed strings in detail earlier. What more can there be to know?  Well, did you know that strings are also objects and have methods which do everything from checking part of a string to stripping spaces?  In fact, you've already been using a string method... the `format` method!
+```$ python3 reference.py
+Просте присвоєння
+список_покупок : ['манго', 'морква', 'банан']
+мій_список : ['манго', 'морква', 'банан']
+Копіювати, зробивши повний зріз
+список_покупок : ['манго', 'морква', 'банан']
+мій_список : ['морква', 'банан']
 
-The strings that you use in programs are all objects of the class `str`.  Some useful methods of this class are demonstrated in the next example. For a complete list of such methods, see `help(str)`.
+```
 
-Example (save as `ds_str_methods.py`):
+**Як це працює**
 
-<pre><code class="lang-python">{% include "./programs/ds_str_methods.py" %}</code></pre>
+Більшість пояснень доступна в коментарях.
+
+Пам’ятайте, що якщо ви хочете зробити копію списку або подібних типів послідовностей, або складних об’єктів (а не простих _об’єктів_, таких як цілі числа), тоді ви повинні використовувати операцію зріз, щоб зробити копію. Якщо ви просто присвоїте назву змінної іншій назві, обидві вони «посилатимуться» на той самий об’єкт, і це може спричинити проблеми, якщо ви не будете обережні.
+
+> **Примітка для програмістів Perl**
+>
+> Пам’ятайте, що оператор присвоєння для списків **не** створює копію. Ви повинні використовувати операцію зріз, щоб створити копію послідовності.
+
+## Докладніше про рядки 
+
+Ми вже детально обговорювали рядки раніше. Що ще можна про них дізнатися? Ну, чи знаєте ви, що рядки також є об’єктами та мають методи, які роблять усе, від перевірки частини рядка до видалення пробілів? Фактично, ви вже використовували рядковий метод... метод `format`!
+
+Усі рядки, які ви використовуєте в програмах, є об’єктами класу `str`. Деякі корисні методи цього класу демонструються в наступному прикладі. Щоб отримати повний список таких методів, перегляньте `help(str)`.
+
+Приклад (зберегти як `ds_str_methods.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/ds_str_methods.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/ds_str_methods.txt" %}</code></pre>
+<pre><code>{% include "./programs/ds_str_methods.txt" %}</code></pre>-->
+```python
+# Це рядковий об'єкт
+ім_я = 'Swaroop'
 
-**How It Works**
+if ім_я.startswith('Swa'):
+    print('Так, рядок починається з "Swa"')
 
-Here, we see a lot of the string methods in action. The `startswith` method is used to find out whether the string starts with the given string. The `in` operator is used to check if a given string is a part of the string.
+if 'a' in ім_я:
+    print('Так, він містить рядок "a"')
 
-The `find` method is used to locate the position of the given substring within the string; `find` returns -1 if it is unsuccessful in finding the substring. The `str` class also has a neat method to `join` the items of a sequence with the string acting as a delimiter between each item of the sequence and returns a bigger string generated from this.
+if ім_я.find('war') != -1:
+    print('Так, він містить рядок "war"')
 
-## Summary
+delimiter = '_*_'
+мій_лист = ['Данія', 'Норвегія', 'Швеція', 'Ісланді','Фінляндія' ]
+print(delimiter.join(мій_лист))
+```
+Висновок
+```$ python3 str_methods.py
+Так, рядок починається з "Swa"
+Так, він містить рядок "a"
+Так, він містить рядок "war"
+Данія_*_Норвегія_*_Швеція_*_Ісланді_*_Фінляндія
 
-We have explored the various built-in data structures of Python in detail. These data structures will be essential for writing programs of reasonable size.
+```
 
-Now that we have a lot of the basics of Python in place, we will next see how to design and write a real-world Python program.
+**Як це працює**
+
+Тут бачимо відразу кілька методів рядків у дії. Метод `startswith` використовується, щоб дізнатися, чи починається рядок із заданого рядка. Оператор `in` використовується, щоб перевірити, чи є певний рядок частиною цього рядка.
+
+Метод `find` використовується для визначення позиції даного підрядка в рядку; `find` повертає -1, якщо не вдалося знайти підрядок. Клас `str` також має чудовий метод для `об'єднання`(англ. "`join`") елементів послідовності з рядком, який діє як роздільник між кожним елементом послідовності, і повертає більший рядок, згенерований із цього.
+
+## Резюме
+
+Ми детально дослідили різноманітні вбудовані структури даних Python. Ці структури даних будуть необхідними для написання програм розумного розміру.
+
+Тепер, коли ми маємо багато основ Python, ми далі побачимо, як розробити та написати реальну програму Python.
