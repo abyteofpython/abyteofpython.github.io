@@ -1,12 +1,14 @@
-# Exceptions
+# Винятки (англ."Exceptions")
 
-Exceptions occur when _exceptional_ situations occur in your program. For example, what if you are going to read a file and the file does not exist? Or what if you accidentally deleted it when the program was running? Such situations are handled using **exceptions**.
+Винятки трапляються, коли у вашій програмі виникають _виняткові_(_exceptional_)ситуації. Наприклад,якщо ви збираєтеся прочитати файл, а файл не існує? Або, якщо ви випадково видалили файл під час роботи програми? Такі ситуації обробляються за допомогою **винятків**(англ."**exceptions**").
 
-Similarly, what if your program had some invalid statements? This is handled by Python which **raises** its hands and tells you there is an **error**.
+Подібним чином, якби ваша програма мала деякі неприпустимі команди? У цьому випадку Python  **піднімає** (англ."**raises**")руки та повідомляє, що виявив **помилку** (англ."**error**").
 
-## Errors
+##  Помилки (англ."Errors")
 
-Consider a simple `print` function call. What if we misspelt `print` as `Print`? Note the capitalization. In this case, Python _raises_ a syntax error.
+Розглянемо простий виклик функції `print`. Що, якщо ми помилково напишемо `print` як `Print`? Зверніть увагу на використання великих літер(англ."capitalization"). У цьому випадку Python _піднімає_ синтаксичну помилку.
+
+Приклад англійською:
 
 ```python
 >>> Print("Hello World")
@@ -16,12 +18,19 @@ NameError: name 'Print' is not defined
 >>> print("Hello World")
 Hello World
 ```
+ Приклад українською (скріншот, зроблений в оболонці Python за допомогою IDLE):
+![screenshot_erros.png](screenshot_erros.png)
 
-Observe that a `NameError` is raised and also the location where the error was detected is printed. This is what an **error handler** for this error does.
+де:
+ name 'Print' is not defined.Did you mean:'print'? - ім'я «Print» не визначено. Ви мали на увазі :'print'? 
 
-## Exceptions
+Зверніть увагу, що була підіймана помилка`NameError`,а також друкується місце, де було виявлено помилку. Так у цьому випадку діє **обробник помилок** (англ."**error handler**").
 
-We will **try** to read input from the user.  Enter the first line below and hit the `Enter` key.  When your computer prompts you for input, instead press `[ctrl-d]` on a Mac or `[ctrl-z]` with Windows and see what happens.  (If you're using Windows and neither option works, you can try `[ctrl-c]` in the Command Prompt to generate a KeyboardInterrupt error instead).
+## Винятки (англ."Exceptions")
+
+Ми **спробуємо**(англ."**try**") прочитати щось від користувача. Введіть перший рядок нижче та натисніть клавішу `Enter`.   Коли ваш комп’ютер запропонує вам ввести дані, натомість натисніть `[ctrl-d]` на Mac або `[ctrl-z]` на Windows і подивіться, що станеться. (Якщо ви користуєтеся Windows і жоден із варіантів не працює, ви можете спробувати `[ctrl-c]` у командному рядку, тобто створити KeyboardInterrupt error).
+
+Приклад англійською, автор використувує `[ctrl-d]` чи `[ctrl-z]`:
 
 ```python
 >>> s = input('Enter something --> ')
@@ -29,97 +38,272 @@ Enter something --> Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 EOFError
 ```
+Python підіймає помилку під назвою end-of-file (`EOFError`)(для користувачів,які використувують `[ctrl-d]` чи `[ctrl-z]`), яка в основному означає, що він знайшов символ *кінця файлу*.
 
-Python raises an error called `EOFError` which basically means it found an *end of file* symbol (which is represented by `ctrl-d`) when it did not expect to see it.
+Приклад українською ( скріншот `[ctrl-c]`, зроблений в оболонці Python за допомогою IDLE):
+![screenshot_keyboarddinterrupt.png](screenshot_keyboarddinterrupt.png) 
 
-## Handling Exceptions
+Python підіймає помилку під назвою `KeyboardInterrupt Error`(для користувачів,які використувують `[ctrl-c]`).
 
-We can handle exceptions using the `try..except` statement.  We basically put our usual statements within the try-block and put all our error handlers in the except-block.
+І в англійському, і в українському варіанті сталася помилка.
 
-Example (save as `exceptions_handle.py`):
 
-<pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>
+## Обробка винятків (англ."Handling Exceptions")
+
+Ми можемо обробляти винятки за допомогою оператора `try..except`. По суті, ми розміщуємо наші звичайні команди в блоці try, а всі наші обробники винятків помилок – у блоці except.
+
+Приклад (зберегти як `exceptions_handle.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/exceptions_handle.py" %}</code></pre>-->
+
+```python
+try:
+    text = input('Введіть щось --> ')
+except EOFError:
+    print('Чому ви прислалі мені символ кінця файлу?')
+except KeyboardInterrupt:
+    print('Ви скасували операцію.')
+else:
+    print('Ви увійшли{}'.format(text))
+
+```
+
+Висновок:
+
+```
+$ python exceptions_handle.py
+Введіть щось -->   # натисніть ctrl + d
+Чому ви прислалі мені сигнал кінец файлу? 
+
+
+$ python exceptions_handle.py
+Введіть щось -->  # натисніть ctrl + c
+Ви скасували операцію.  
+
+$ python exceptions_handle.py
+Введіть щось --> Без винятків
+Ви увійшли Без винятків
+```
+
+Підказка: якщо  CTRL+c закриває вікно терміналу замість того, щоб створити очікуване повідомлення про помилку, спробуйте написати цю програму за допомогою IDLE (Меню: File -> New File, потім натисніть Run -> Run module)
+![screenshot_exceptions_handle.png](screenshot_exceptions_handle.png) 
+
+
+
+**Як це працює**
+
+Ми розміщуємо всі командии, які можуть спричиняти винятки/помилки у блоці `try`, а потім розміщуємо обробники відповідних помилок/винятків у блоці `except`. Вираз `except` може обробляти  як одиночну помилку або виняток, так і  список помилок/винятків у дужках. Якщо не надано назви помилок чи винятків, він оброблятимe  _всі_ помилки та винятки.
+
+Зауважте, що для кожного виразу `try` має бути принаймні одне речення `except`. Інакше який сенс мати блок try?
+
+Якщо будь-яка помилка чи виняток не оброблені, тоді викликається обробник Python за замовчуванням, який просто зупиняє виконання програми та друкує повідомлення про помилку. Ми вже бачили це в дії вище.
+
+Також можна додати пункт `else` до відповідного блоку `try..except`. Пункт `else` виконується, якщо не відбувається винятків.
+
+У наступному прикладі ми також побачимо, як отримати об’єкт винятку, щоб ми могли отримати додаткову інформацію.
+
+## Виклик винятків (англ."Raising Exceptions") 
+
+Ви можете _підняти_ винятки за допомогою оператора `raise`, передавши йому ім'я  помилки/винятку, а також об’єкт винятку, який потрібно  _викинути._
+
+Помилка або виняток, який ви можете викликати, має бути класом, який прямо чи опосередковано є похідним від класу `Exception`.
+
+Приклад англійською : (зберегти як `exceptions_raise.py`):
+
+```python
+class ShortInputException(Exception):
+    '''A user-defined exception class.'''
+    def __init__(self, length, atleast):
+        Exception.__init__(self)
+        self.length = length
+        self.atleast = atleast
+
+try:
+    text = input('Enter something --> ')
+    if len(text) < 3:
+        raise ShortInputException(len(text), 3)
+    # Other work can continue as usual here
+except EOFError:
+    print('Why did you do an EOF on me?')
+except ShortInputException as ex:
+    print(('ShortInputException: The input was ' +
+           '{0} long, expected at least {1}')
+          .format(ex.length, ex.atleast))
+else:
+    print('No exception was raised.')
+```
 
 Output:
+```
+$ python exceptions_raise.py
+Enter something --> a
+ShortInputException: The input was 1 long, expected at least 3
 
-<pre><code>{% include "./programs/exceptions_handle.txt" %}</code></pre>
+$ python exceptions_raise.py
+Enter something --> abc
+No exception was raised.
+```
 
-**How It Works**
+Приклад українською : (зберегти як `exceptions_raise.py`):
 
-We put all the statements that might raise exceptions/errors inside the `try` block and then put handlers for the appropriate errors/exceptions in the `except` clause/block. The `except` clause can handle a single specified error or exception, or a parenthesized list of errors/exceptions. If no names of errors or exceptions are supplied, it will handle _all_ errors and exceptions.
+```python
+class Виняток_короткого_введення(Exception):
+    '''Визначений користувачем клас винятків.'''
+    def __init__(self, довжина, як_мінімум):
+        Exception.__init__(self)
+        self.довжина = довжина
+        self.як_мінімум = як_мінімум
 
-Note that there has to be at least one `except` clause associated with every `try` clause. Otherwise, what's the point of having a try block?
+try:
+    текст = input('Введіть щось --> ')
+    if len(текст) < 3:
+        raise Виняток_короткого_введення(len(текст), 3)
+    # Тут може відбуватися звичайна робота
+except EOFError:
+    print('Чому ви прислалі мені символ кінця файлу?')
+except Виняток_короткого_введенн as вн:
+    print(('Виняток_короткого_введення: Довжина_введеного_рядка ' +
+           '{0} очікувалося_як_мінімум {1}')
+          .format(вн.довжина, вн.як_мінімум))
+else:
+    print('Винятків не було.')
+```
 
-If any error or exception is not handled, then the default Python handler is called which just stops the execution of the program and prints an error message. We have already seen this in action above.
+Висновок:
+```
+$ python exceptions_raise.py
+Введіть щось --> a
+Виняток_короткого_введення: Довжина_введеного_рядка очікувалося_як_мінімум 3
 
-You can also have an `else` clause associated with a `try..except` block. The `else` clause is executed if no exception occurs.
+$ python exceptions_raise.py
+Введіть щось --> abc
+Винятків не було.
+```
+**Як це працює**
 
-In the next example, we will also see how to get the exception object so that we can retrieve additional information.
+Тут ми створюємо власний тип винятку. Цей новий тип винятку називається `Виняток_короткого_введення`. У ньому є два поля: `довжина`, що зберігає довжину введеного тексту, і `як_мінімум`, що вказує, яку мінімальну довжину тексту очікувала програма.
 
-## Raising Exceptions
+У пункті `except` ми вказуємо клас помилки, який зберігатиметься `як`(англ.`as`)  змінна `вн` , що містить відповідний об'єкт помилки/виключення. Це аналогічно параметрам і аргументам у виклику функції. Всередині цього пункту `except` ми використовуємо поля `довжину` і `як_мінімум` об'єкта винятку, щоб надрукувати відповідне повідомлення для користувача.
 
-You can _raise_ exceptions using the `raise` statement by providing the name of the error/exception and the exception object that is to be _thrown_.
+## Try ... Finally 
 
-The error or exception that you can raise should be a class which directly or indirectly must be a derived class of the `Exception` class.
+Припустимо, ви читаєте файл у своїй програмі. Як переконатися, що об'єкт файлу був коректно закритий і що не виникло жодного винятку? Це можна зробити за допомогою блоку `finally`.
 
-Example (save as `exceptions_raise.py`):
+Зберегти цю програму як `exceptions_finally.py`:
 
-<pre><code class="lang-python">{% include "./programs/exceptions_raise.py" %}</code></pre>
+Приклад англійською:
+```python
+import sys
+import time
+
+f = None
+try:
+    f = open("poem.txt")
+    # Our usual file-reading idiom
+    while True:
+        line = f.readline()
+        if len(line) == 0:
+            break
+        print(line, end='')
+        sys.stdout.flush()
+        print("Press ctrl+c now")
+        # To make sure it runs for a while
+        time.sleep(2)
+except IOError:
+    print("Could not find file poem.txt")
+except KeyboardInterrupt:
+    print("!! You cancelled the reading from the file.")
+finally:
+    if f:
+        f.close()
+    print("(Cleaning up: Closed the file)")
+```
 
 Output:
+```
+$ python exceptions_finally.py
+Programming is fun
+Press ctrl+c now
+^C!! You cancelled the reading from the file.
+(Cleaning up: Closed the file)
+```
 
-<pre><code>{% include "./programs/exceptions_raise.txt" %}</code></pre>
 
-**How It Works**
+Приклад українською:
+```python
+import sys
+import time
 
-Here, we are creating our own exception type. This new exception type is called `ShortInputException`. It has two fields - `length` which is the length of the given input, and `atleast` which is the minimum length that the program was expecting.
+f = None
+try:
+    f = open("вірш.txt")
+    # наш звичайний спосіб читати файли
+    while True:
+        лінія = f.readline()
+        if len(лінія) == 0:
+            break
+        print(лінія, end='')
+        sys.stdout.flush()
+        print("Натисніть ctrl+c зараз")
+        # Щоб переконатися, що він працює деякий час
+        time.sleep(2)
+except IOError:
+    print("Не вдалося знайти файл вірш.txt")
+except Клавіатура_переривання:
+    print("!! Ви скасували читання з файлу.")
+finally:
+    if f:
+        f.close()
+    print("(Очищення: файл закрито)")
+```
 
-In the `except` clause, we mention the class of error which will be stored `as` the variable name to hold the corresponding error/exception object. This is analogous to parameters and arguments in a function call. Within this particular `except` clause, we use the `length` and `atleast` fields of the exception object to print an appropriate message to the user.
+Висновок:
+```
+$ python exceptions_finally.py
+Програмування – це весело.
+Натисніть ctrl+c зараз
 
-## Try ... Finally {#try-finally}
+^C!! Ви скасували читання з файлу.
+(Очищення: файл закрито)
+```
 
-Suppose you are reading a file in your program. How do you ensure that the file object is closed properly whether or not an exception was raised? This can be done using the `finally` block.
+**Як це працює**
 
-Save this program as `exceptions_finally.py`:
+Ми виконуємо звичайне читання файлів, але ми довільно ввели сплячий режим протягом 2 секунд після друку кожного рядка за допомогою функції `time.sleep`, щоб програма працювала повільно (Python дуже швидкий за своєю природою). Коли програма все ще працює, натисніть `ctrl + c`, щоб перервати/скасувати програму.
 
-<pre><code class="lang-python">{% include "./programs/exceptions_finally.py" %}</code></pre>
+Зверніть увагу, що виникає виняток `Клавіатура_переривання` і програма завершує роботу. Однак перед завершенням роботи програми виконується пункт finally, і файловий об’єкт завжди закривається.
 
-Output:
+Зауважте, що змінна, якій присвоєно значення 0 або `None`, або змінна, яка є порожньою послідовністю чи колекцією, вважається `False` у Python. Ось чому ми можемо використовувати `if f:` у коді вище.
 
-<pre><code>{% include "./programs/exceptions_finally.txt" %}</code></pre>
+Також зауважте, що ми використовуємо `sys.stdout.flush()` після `print`, щоб він негайно друкувався на екрані.
 
-**How It Works**
+## Оператор with (англ."The with statement") 
 
-We do the usual file-reading stuff, but we have arbitrarily introduced sleeping for 2 seconds after printing each line using the `time.sleep` function so that the program runs slowly (Python is very fast by nature). When the program is still running, press `ctrl + c` to interrupt/cancel the program.
+Типовою схемою є запит деякого ресурсу в блоці `try` і подальше звільнення цього ресурсу в блоці `finally`. Отже, є також оператор `with`, який дозволяє це зробити більш "чисто":
 
-Observe that the `KeyboardInterrupt` exception is thrown and the program quits. However, before the program exits, the finally clause is executed and the file object is always closed.
+Зберегти як`exceptions_using_with.py`:
 
-Notice that a variable assigned a value of 0 or `None` or a variable which is an empty sequence or collection is considered `False` by Python.  This is why we can use `if f:` in the code above.
+```python
+with open("вірш.txt") as f:
+    for лінія in f:
+        print(лінія, end='')
 
-Also note that we use `sys.stdout.flush()` after `print` so that it prints to the screen immediately.
+```
 
-## The with statement {#with}
+**Як це працює**
 
-Acquiring a resource in the `try` block and subsequently releasing the resource in the `finally` block is a common pattern. Hence, there is also a `with` statement that enables this to be done in a clean manner:
+Результат має бути таким самим, як у попередньому прикладі. Різниця тут полягає в тому, що ми використовуємо функцію `open` з оператором `with` - цим ми залишаємо автоматичне закриття файлу під відповідальність `with open`.
 
-Save as `exceptions_using_with.py`:
+Те, що відбувається за кулісами, полягає в тому, що існує ятакий собі протокол, який використовується оператором with. Він зчитує об’єкт, який повертається оператором `open`, назвемо його в даному випадку "thefile".
 
-<pre><code class="lang-python">{% include "./programs/exceptions_using_with.py" %}</code></pre>
+Перед запуском блоку коду, що міститься в ньому, оператор with  _завжди_ викликає функцію `thefile.__enter__` також _завжди_ викликає `thefile.__exit__` після завершення  цього блоку кода.
 
-**How It Works**
+Таким чином, код, який ми б написали в блоці `finally`, повинен автоматично оброблятися методом `__exit__`. Це те, що допомагає нам уникнути повторного використання явних операторів `try..finally`.
 
-The output should be same as the previous example. The difference here is that we are using the `open` function with the `with` statement - we leave the closing of the file to be done automatically by `with open`.
+Додаткове обговорення цієї теми виходить за рамки цієї книги, тому, будь ласка, зверніться до [PEP 343](http://www.python.org/dev/peps/pep-0343/) для вичерпного пояснення.
 
-What happens behind the scenes is that there is a protocol used by the `with` statement. It fetches the object returned by the `open` statement, let's call it "thefile" in this case.
+## Резюме
 
-It _always_ calls the `thefile.__enter__` function before starting the block of code under it and _always_ calls `thefile.__exit__` after finishing the block of code.
+Ми обговорили використання операторів `try..except` і `try..finally`. Ми побачили, як створювати власні типи винятків, а також як викликати винятки.
 
-So the code that we would have written in a `finally` block should be taken care of automatically by the `__exit__` method. This is what helps us to avoid having to use explicit `try..finally` statements repeatedly.
-
-More discussion on this topic is beyond scope of this book, so please refer [PEP 343](http://www.python.org/dev/peps/pep-0343/) for a comprehensive explanation.
-
-## Summary
-
-We have discussed the usage of the `try..except` and `try..finally` statements. We have seen how to create our own exception types and how to raise exceptions as well.
-
-Next, we will explore the Python Standard Library.
+Далі ми вивчимо стандартну бібліотеку Python.
