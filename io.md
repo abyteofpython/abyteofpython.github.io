@@ -263,14 +263,14 @@ Whenever we write a program that uses Unicode literals (by putting a `u` before 
 3.якщо unicode містить 4 цифри або менше: 
  print("\u2602")
 
-![screenshot_unicode3.png](screenshot_unicode3.png)
+![screenshot_unicode3.png](images/screenshot_unicode3.png)
 
 4.у випадку друку знака плитки доміно 6, unicode - U+1F061
 5.даний Юнікод містить більше 4 цифр:
 заповнити  рядок початковими нулями, поки не буде 8 цифр:
 print("\U0001F061")
 
-![screenshot_unicode2.png](screenshot_unicode2.png)
+![screenshot_unicode2.png](images/screenshot_unicode2.png)
 
 
 ## Резюме
