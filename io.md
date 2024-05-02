@@ -1,116 +1,284 @@
-# Input and Output {#io}
+# Введення-виведення (англ."Input and Output ") 
 
-There will be situations where your program has to interact with the user. For example, you would want to take input from the user and then print some results back. We can achieve this using the `input()` function and `print` function respectively.
+Будуть ситуації, коли ваша програма повинна взаємодіяти з користувачем. Наприклад, ви хотіли б прийняти дані від користувача, а потім надрукувати деякі результати. Ми можемо досягти цього за допомогою функції `input()` і функції `print` відповідно.
 
-For output, we can also use the various methods of the `str` (string) class. For example, you can use the `rjust` method to get a string which is right justified to a specified width. See `help(str)` for more details.
+Для виведення ми також можемо використовувати різні методи класу `str` (рядок). Наприклад, ви можете використати метод `rjust`, щоб отримати рядок, вирівняний по правому краю до зазначеної ширини. Дивіться `help(str)` для отримання додаткової інформації.
 
-Another common type of input/output is dealing with files. The ability to create, read and write files is essential to many programs and we will explore this aspect in this chapter.
+Іншим поширеним типом введення/виведення є робота з файлами. Можливість створювати, читати та записувати файли є важливою для багатьох програм, і ми дослідимо цей аспект у цій главі.
 
-## Input from user
+## Введення від користувача (англ. "Input from user")
 
-Save this program as `io_input.py`:
+Зберегти цю програму як `io_input.py`:
 
-<pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/io_input.txt" %}</code></pre>
-
-**How It Works**
-
-We use the slicing feature to reverse the text. We've already seen how we can make [slices from sequences](./data_structures.md#sequence) using the `seq[a:b]` code starting from position `a` to position `b`. We can also provide a third argument that determines the _step_ by which the slicing is done. The default step is `1` because of which it returns a continuous part of the text. Giving a negative step, i.e., `-1` will return the text in reverse.
-
-The `input()` function takes a string as argument and displays it to the user. Then it waits for the user to type something and press the return key. Once the user has entered and pressed the return key, the `input()` function will then return that text the user has entered.
-
-We take that text and reverse it. If the original text and reversed text are equal, then the text is a [palindrome](http://en.wiktionary.org/wiki/palindrome).
-
-### Homework exercise
-
-Checking whether a text is a palindrome should also ignore punctuation, spaces and case. For example, "Rise to vote, sir." is also a palindrome but our current program doesn't say it is. Can you improve the above program to recognize this palindrome?
-
-If you need a hint, the idea is that...[^1]
-
-## Files
-
-You can open and use files for reading or writing by creating an object of the `file` class and using its `read`, `readline` or `write` methods appropriately to read from or write to the file. The ability to read or write to the file depends on the mode you have specified for the file opening. Then finally, when you are finished with the file, you call the `close` method to tell Python that we are done using the file.
-
-Example (save as `io_using_file.py`):
-
-<pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>
+<pre><code>{% include "./programs/io_input.txt" %}</code></pre>-->
 
-**How It Works**
+```python
+def реверс(текст):
+    return текст[::-1]
 
-Note that we can create a new file object simply by using the `open` method.  We open (or create it if it doesn't already exist) this file by using the built-in `open` function and specifying the name of the file and the mode in which we want to open the file. The mode can be a read mode (`'r'`), write mode (`'w'`) or append mode (`'a'`). We can also specify whether we are reading, writing, or appending in text mode (`'t'`) or binary mode (`'b'`). There are actually many more modes available and `help(open)` will give you more details about them. By default, `open()` considers the file to be a 't'ext file and opens it in 'r'ead mode.
 
-In our example, we first open/create the file in write text mode and use the `write` method of the file object to write  our string variable `poem` to the file and then we finally `close` the file.
+def є_паліндром(текст):
+    return текст == реверс(текст)
 
-Next, we open the same file again for reading. We don't need to specify a mode because 'read text file' is the default mode. We read in each line of the file using the `readline` method in a loop. This method returns a complete line including the newline character at the end of the line. When an _empty_ string is returned, it means that we have reached the end of the file and we 'break' out of the loop.
+щось = input("Введіть текст: ")
+if є_паліндром(щось):
+    print("Так, це паліндром")
+else:
+    print("Ні, це не паліндром")
+```
+Висновок:
 
-In the end, we finally `close` the file.
+```
+$ python3 io_input.py
+Введіть текст: пан
+Ні, це не паліндром
 
-We can see from our `readline` output that this program has indeed written to and read from our new `poem.txt` file.
+$ python3 io_input.py
+Введіть текст: мадам
+Так, це паліндром
+
+
+$ python3 io_input.py
+Введіть текст: радар
+Так, це паліндром
+```
+
+**Як це працює**
+
+Ми використовуємо функцію зріз, щоб перевернути текст. Ми вже бачили, як можна зробити [зрізи послідовностей,slices from sequences](./data_structures.md#sequence) за допомогою коду `seq[a:b]`, починаючи з позиції `a` до позиції `b`. Ми також можемо надати третій аргумент, який визначає _крок_ (англ."_step_"), за яким виконується зріз. Крок за замовчуванням дорівнює «1», через що він повертає безперервну частину тексту. Введення від’ємного кроку, тобто «-1», поверне текст у зворотному порядку.
+
+Функція `input()` приймає рядок як аргумент і відображає його користувачеві. Потім вона чекає, поки користувач щось введе та натисне клавішу введення. Коли користувач введе та натисне клавішу введення, функція `input()` поверне текст, який ввів користувач.
+
+Ми беремо цей текст і перевертаємо його. Якщо вихідний текст і реверсований текст рівні, тоді текст є [паліндромом](http://en.wiktionary.org/wiki/palindrome).
+
+### Домашнє завдання
+
+Перевірка того, чи є текст паліндромом, також має ігнорувати пунктуацію, пробіли та регістр літер. Наприклад, «Далі буде дуб і лад», також є паліндромом,але наша поточна програма так не вважає.Чи можете ви вдосконалити наведену вище програму, щоб  програма розпізнала цей паліндром?
+
+### Підказка:
+
+Скористайтеся кортежем (список усіх символів пунктуації можна знайти [тут](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)), що містять усі заборонені символи, та застосуйте тест на приналежність, щоб виявити символи, що підлягають видаленню, тобто forbidden = („!“, „?“, „.“, ...).
+
+### Варіант вирешення:
+
+```python
+# покращена версія, буде ігнорувати всі
+# знаки пунктуації, такі як пробіли, крапки, коми тощо.
+
+ігнорувати_рядок = " .,;:!?"
+
+def чистий_текст(чернетка):
+	чистий = ""
+	for x in чернетка:
+		if x not in ігнорувати_рядок:
+			чистий += x
+	return чистий
+
+
+def reverse(текст):
+    return текст[::-1]
+
+
+def є_паліндром(текст):
+    return текст.lower() == reverse(текст).lower()
+
+# "Далі буде дуб і лад"
+щось = input("Введіть текст:")
+if є_паліндром(чистий_текст(щось)):
+    print("Так, це паліндром")
+else:
+    print("Ні, це не паліндром")
+```
+
+## Файли
+
+Ви можете відкривати та використовувати файли для читання або запису, створивши об’єкт класу `file` ,а читати/записувати у файл - використовуючи його методи `read`, `readline` або `write` відповідно. Можливість читання або запису у файл залежить від режиму, який ви вказали для відкриття файлу. Після роботи з файлом, потрібно викликати метод `close`, щоб повідомити Python, що ми закінчили використовувати файл.
+
+Приклад (зберегти як`io_using_file.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>-->
+
+``python
+вірш = '''\
+Програмування – це весело.
+Коли робота виконана,
+і якщо ви хочете повесилитися на роботі:
+    використовуйте Python!
+
+'''
+
+# Відкрито для написання(англ."'w'riting")
+f = open('вірш.txt', 'w')
+# Записати текст у файл
+f.write(вірш)
+# Закрийте файл
+f.close()
+
+# Якщо режим не вказано,
+# pежим читання (англ."'r'eading") передбачається за замовчуванням
+f = open('вірш.txt')
+while True:
+    лінія = f.readline()
+    # Нульова довжина вказує на кінец файлу(EOF)
+    if len(лінія) == 0:
+        break
+    # У `рядку`(`line`) вже є новий рядок  
+    # у кінці кожного рядка,
+    # оскільки він читає  файл.
+    print(лінія, end='')
+# закрити файл
+f.close()
+```
+Висновок:
+
+```python
+Програмування – це весело.
+Коли робота виконана,
+і якщо ви хочете повесилитися на роботі:
+    використовуйте Python!
+```
+
+**Як це працює**
+
+Зауважте, що ми можемо створити новий файловий об’єкт просто за допомогою методу `open`. Ми відкриваємо цей файл (або створюємо його, якщо він ще не існує) за допомогою вбудованої функції `open` і вказуємо назву файлу та режим, у якому ми хочемо відкрити файл. Режим може бути режимом читання (`'r'`), режимом запису (`'w'`) або режимом додавання (`'a'`). Ми також можемо вказати, чи ми читаємо, записуємо або додаємо дані: в текстовому режимі (`'t'`) чи двійковому(бінарному) режимі (`'b'`). Насправді існує набагато більше доступних режимів, і `help(open)` надасть вам більше інформації про них. За замовчуванням `open()` вважає файл текстовим файлом і відкриває його в режимі читання.
+
+У нашому прикладі ми спочатку відкриваємо/створюємо файл у режимі запису тексту та використовуємо метод `write` файлового об'єкта, щоб записати нашу рядкову змінну `вірш` у файл, а потім ми закриваємо файл за допомогою `close`.
+
+Далі знову відкриваємо цей же файл для читання. Нам не потрібно вказувати режим, оскільки «читати текстовий файл» є режимом за замовчуванням. Ми читаємо кожен рядок файлу за допомогою методу `readline` у циклі. Цей метод повертає повний рядок, включаючи символ нового рядка в кінці рядка. Коли повертається _порожній_ рядок, це означає, що ми перериваємо цикл за допомогою break.
+
+Зрештою, ми остаточно закриваємо файл за домопогою `close`.
+
+Ми бачимо з наших результатів `readline`, що ця програма справді записувала та читала наш новий файл `вірш.txt`.
 
 ## Pickle
 
-Python provides a standard module called `pickle` which you can use to store _any_ plain Python object in a file and then get it back later. This is called storing the object *persistently*.
+Python надає стандартний модуль під назвою `pickle`(рickle-англ."маринувати","солити"), який можна використовувати для зберігання _будь-якого_ простого об’єкта Python у файлі, а потім отримати його назад. Це називається *тривалим* (англ."*persistently*") збереженням об’єкта.
 
-Example (save as `io_pickle.py`):
+Приклад (зберегти як `io_pickle.py`):
 
-<pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>
+<pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>-->
+```python
+import pickle
 
-**How It Works**
+# Ім'я файлу, де ми будемо зберігати об'єкт
+файл_список_покупок = 'список_покупок.data'
+# Список фруктів для покупки
+список_покупок_фрукти = ['яблуко', 'манго', 'морква']
 
-To store an object in a file, we have to first `open` the file in __w__rite __b__inary mode and then call the `dump` function of the `pickle` module. This process is called _pickling_.
+# Запис у файл
+f = open(файл_список_покупок, 'wb')
+# Вивести об'єкт у файл
+pickle.dump(список_покупок_фрукти, f)
+f.close()
 
-Next, we retrieve the object using the `load` function of the `pickle` module which returns the object. This process is called _unpickling_.
+# Знищити змінну список_покупок_фрукти
+del список_покупок_фрукти
+
+# Прочитати зі сховища
+f = open(файл_список_покупок, 'rb')
+# Завантажити об'єкт із файлу
+збережений_список = pickle.load(f)
+print(збережений_список)
+f.close()
+
+```
+Висновок:
+```$ python io_pickle.py
+['яблуко', 'манго', 'морква']
+
+```
+
+**Як це працює**
+
+Щоб зберегти об’єкт у файлі, ми маємо спочатку відкрити файл за допомогою `open`  в режимі бінарного запису ('wb'), а потім викликати функцію `dump` із  модуля `pickle`. Цей процес називається _консервацією_(англ."_pickling_").
+
+Далі ми отримуємо об’єкт за допомогою функції `load` із  модуля `pickle`, яка повертає об’єкт. Цей процес називається "розконсервацією"(англ."_unpickling_").
 
 ## Unicode
 
-So far, when we have been writing and using strings, or reading and writing to a file, we have used simple English characters only.  Both English and non-English characters can be represented in Unicode (please see the articles at the end of this section for more info), and Python 3 by default stores string variables (think of all that text we wrote using single or double or triple quotes) in Unicode.  
+Досі, коли ми писали та використовували рядки або читали та записували у файл, ми використовували лише прості англійські символи. Як англійські, так і неанглійські символи можуть бути представлені в Unicode (будь ласка, перегляньте статті в кінці цього розділу для отримання додаткової інформації), а Python 3 за замовчуванням зберігає рядкові змінні (подумайте про весь той текст, який ми написали, використовуючи одиничні, подвійні або потрійні лапки) в Unicode.
 
-> NOTE: If you are using Python 2, and we want to be able to read and write other non-English languages, we need to use the `unicode` type, and it all starts with the character `u`, e.g. `u"hello world"`
+> ПРИМІТКА. Якщо ви використовуєте Python 2, і ми хочемо мати можливість читати та писати іншими мовами, відмінними від англійської, нам потрібно використовувати тип `unicode`, і все починається з символу `u`, напр. `u"Привіт, Світ!"`
 
 ```python
->>> "hello world"
-'hello world'
->>> type("hello world")
+>>> "Привіт, Світ!"
+'Привіт, Світ!'
+>>> type("Привіт, Світ!")
 <class 'str'>
->>> u"hello world"
-'hello world'
->>> type(u"hello world")
+>>> u"Привіт, Світ!"
+'Привіт, Світ!'
+>>> type(u"Привіт, Світ!")
 <class 'str'>
 ```
 
-When data is sent over the Internet, we need to send it in bytes... something your computer easily understands.  The rules for translating Unicode (which is what Python uses when it stores a string) to bytes is called encoding.  A popular encoding to use is UTF-8.  We can read and write in UTF-8 by using a simple keyword argument in our `open` function.
+Коли дані надсилаються через Інтернет, нам потрібно надсилати їх у байтах... те, що ваш комп’ютер легко розуміє. Правила перекладу Unicode (це те, що Python використовує, коли зберігає рядок) у байти, називаються encoding (encoding- англ."кодування","шифрування"). Популярним encoding є UTF-8. Ми можемо читати та писати в UTF-8, використовуючи простий ключовий аргумент у нашій функції `open`.
 
-<pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>
 
-**How It Works**
+<!--<pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>-->
 
+```python
+# encoding=utf-8
+import io
+
+f = io.open("abc.txt", "wt", encoding="utf-8")
+f.write(u"Уявіть собі неанглійську мову")
+f.close()
+
+text = io.open("abc.txt", encoding="utf-8").read()
+print(text)
+```
+
+**Як це працює**
+
+Ми використовуємо `io.open`, а потім використовуємо аргумент `encoding` у першому рядку коду (in the first open statement) для кодування повідомлення, а потім знову в другому рядку коду open під час декодування повідомлення. Зауважте, що ми повинні використовувати кодування лише в рядку коду open у текстовому режимі.
 We use `io.open` and then use the `encoding` argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.
 
+Кожного разу, коли ми пишемо програму, яка використовує літерали Unicode (ставляючи `u` перед рядком), як ми використовували вище, ми повинні переконатися, що самому Python повідомляється, що наша програма використовує UTF-8, і ми повинні поставити ` # encoding=utf-8` коментар у верхній частині нашої програми.
 Whenever we write a program that uses Unicode literals (by putting a `u` before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  `# encoding=utf-8`  comment at the top of our program.  
 
-You should learn more about this topic by reading:
+Ви повинні дізнатися більше про цю тему, прочитавши:
 
-- ["The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"](http://www.joelonsoftware.com/articles/Unicode.html)
+- ["Абсолютний мінімум, який кожен розробник програмного забезпечення має знати про Unicode та набори символів", англ."The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"](http://www.joelonsoftware.com/articles/Unicode.html)
 - [Python Unicode Howto](http://docs.python.org/3/howto/unicode.html)
 - [Pragmatic Unicode talk by Nat Batchelder](http://nedbatchelder.com/text/unipain.html)
 
-## Summary
+Від перекладача:
 
-We have discussed various types of input/output, about file handling, about the pickle module and about Unicode.
+Як працювати з unicode:
+1.знайдіть перелік символів у wiki: https://en.wikipedia.org/wiki/List_of_Unicode_characters ;
+2.знайдіть один знак (наприклад: надрукувати парасольку),
+у вікіпедії сказано, що юнікод: U+2602;
+3.якщо unicode містить 4 цифри або менше: 
+ print("\u2602")
 
-Next, we will explore the concept of exceptions.
+![screenshot_unicode3.png](screenshot_unicode3.png)
+
+4.у випадку друку знака плитки доміно 6, unicode - U+1F061
+5.даний Юнікод містить більше 4 цифр:
+заповнити  рядок початковими нулями, поки не буде 8 цифр:
+print("\U0001F061")
+
+![screenshot_unicode2.png](screenshot_unicode2.png)
+
+
+## Резюме
+
+Ми обговорили різні типи введення-виведення, обробку файлів, модуль pickle і Unicode.
+
+Далі ми розглянемо концепцію винятків.
 
 ---
 
-[^1]: Use a tuple (you can find a list of _all_ [punctuation marks here](http://grammar.ccc.commnet.edu/grammar/marks/marks.htm)) to hold all the forbidden characters, then use the membership test to determine whether a character should be removed or not, i.e. forbidden = (`!`, `?`, `.`, ...).
+
