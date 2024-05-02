@@ -18,6 +18,11 @@ done so far:
   * dedication.md
   * preface.md
   * modules.md
+  * data structure
+  * problem solving
+  * object oriented programming
+  * input and output
+  * exceptions
 
 ---
 
