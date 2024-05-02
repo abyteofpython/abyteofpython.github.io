@@ -1,183 +1,541 @@
-# Object Oriented Programming {#oop}
+# Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming") 
 
-In all the programs we wrote till now, we have designed our program around functions i.e. blocks of statements which manipulate data. This is called the _procedure-oriented_ way of programming. There is another way of organizing your program which is to combine data and functionality and wrap it inside something called an object. This is called the _object oriented_ programming paradigm. Most of the time you can use procedural programming, but when writing large programs or have a problem that is better suited to this method, you can use object oriented programming techniques.
+Досі наші програми складалися з функцій, тобто блоків операторів, які маніпулюють даними. Такий підхід до створення програм називається _процедурно-орієнтованим_ програмуванням. Існує ще один спосіб організації вашої програми, який полягає в тому, щоб об’єднати дані та функціональність усередині якогось об'єкта. Це називається парадигмою _об'єктно-орієнтованого_ програмування. У більшості випадків ви можете використовувати процедурне програмування, але коли пишете великі програми або маєте проблему, яка краще підходить для цього методу, ви можете використовувати методи об’єктно-орієнтованого програмування.
 
-Classes and objects are the two main aspects of object oriented programming. A **class** creates a new _type_ where **objects** are **instances** of the class. An analogy is that you can have variables of type `int` which translates to saying that variables that store integers are variables which are instances (objects) of the `int` class.
+Класи та об'єкти є двома основними аспектами об'єктно-орієнтованого програмування. **Клас** (англ."**class**") створює новий  _тип_ (англ."_type_"), тим часом як **об’єкти**(англ."**objects**") є **екземплярами** (англ."**instances**") класу.Аналогічно,коли ми говоримо про `змінні типи int`, це означає, що змінні, які зберігають цілочисельні значення, є екземплярами (об'єктами) класу `int`.
 
-> **Note for Static Language Programmers**
+> **Примітка для програмістів статичної мови**
 > 
-> Note that even integers are treated as objects (of the `int` class). This is unlike C++ and Java (before version 1.5) where integers are primitive native types.
+> Зауважте, що навіть цілі числа розглядаються як об’єкти (класу `int`), на відміну від C++ і Java (до версії 1.5), де цілі числа є примітивами.
 > 
-> See `help(int)` for more details on the class.
-> 
-> C# and Java 1.5 programmers will find this similar to the _boxing and unboxing_ concept.
+> Перегляньте `help(int)` для отримання додаткової інформації про клас.
+>
+> Програмісти C# і Java 1.5 знайдуть це схожим з концепцією _упаковки та распаковки_(англ." _boxing та unboxing_").
 
-Objects can store data using ordinary variables that _belong_ to the object. Variables that belong to an object or class are referred to as **fields**. Objects can also have functionality by using functions that _belong_ to a class. Such functions are called **methods** of the class. This terminology is important because it helps us to differentiate between functions and variables which are independent and those which belong to a class or object. Collectively, the fields and methods can be referred to as the **attributes** of that class.
+Об’єкти можуть зберігати дані за допомогою звичайних змінних, які _належать_ об’єкту. Змінні, які належать об’єкту або класу, називаються **полями** (англ."**fields**"). Об’єкти також можуть мати функціонал,тобто мати функції, які _належать_ до класу.Такі функції називаються **методами** (англ."**methods**") класу. Ця термінологія важлива, оскільки вона допомагає нам розрізняти незалежні функції і змінні,і ті, що належать до класу чи об’єкта. У сукупності поля та методи можна назвати **атрибутами** (англ."**attributess**")цього класу. 
 
-Fields are of two types - they can belong to each instance/object of the class or they can belong to the class itself. They are called **instance variables** and **class variables** respectively.
+Поля бувають двох типів - вони можуть належати кожному екземпляру/об'єкту класа або вони можуть належати лише самому класу. Вони називаються **змінними екземпляра** (англ."**instance variables**") і **змінними класа** (англ."**class variables**") відповідно. 
 
-A class is created using the `class` keyword. The fields and methods of the class are listed in an indented block.
 
-## The `self` {#self}
+Клас створюється за допомогою ключового слова `class`. Поля та методи класу записуються в блоці кода з відступом.
 
-Class methods have only one specific difference from ordinary functions - they must have an extra first name that has to be added to the beginning of the parameter list, but you **do not** give a value for this parameter when you call the method, Python will provide it. This particular variable refers to the object _itself_, and by convention, it is given the name `self`.
+##  `self` 
 
-Although, you can give any name for this parameter, it is _strongly recommended_ that you use the name `self` - any other name is definitely frowned upon. There are many advantages to using a standard name - any reader of your program will immediately recognize it and even specialized IDEs (Integrated Development Environments) can help you if you use `self`.
+Методи класу мають лише одну конкретну відмінність від звичайних функцій — вони повинні мати додаткове ім’я, яке має бути додано на початку списку параметрів.Однак ви **не** надаєте значення цьому параметру під час виклику методу, це надасть Python. Ця конкретна змінна посилається на _сам_ об’єкт екземпляра класу, і за домовленістю їй дається ім’я `self`.
 
-> **Note for C++/Java/C# Programmers**
-> 
-> The `self` in Python is equivalent to the `this` pointer in C++ and the `this` reference in Java and C#.
+Незважаючи на те, що ви можете дати будь-яку назву для цього параметра, _наполегливо рекомендовано_ використовувати назву `self` - будь-яка інша назва однозначно неприйнятна. Є багато переваг використання стандартної назви - будь-який читач вашої програми одразу впізнає її, і навіть спеціалізовані IDE (інтегровані середовища розробки) можуть допомогти вам, якщо ви використовуєте `self`.
 
-You must be wondering how Python gives the value for `self` and why you don't need to give a value for it. An example will make this clear. Say you have a class called `MyClass` and an instance of this class called `myobject`. When you call a method of this object as `myobject.method(arg1, arg2)`, this is automatically converted by Python into `MyClass.method(myobject, arg1, arg2)` - this is all the special `self` is about.
+> **Примітка для програмістів C++/Java/C#**
+>
+> `self` у Python еквівалентний вказівнику `this` у C++ і посиланню `this` у Java та C#.
 
-This also means that if you have a method which takes no arguments, then you still have to have one argument - the `self`.
+Вам, мабуть, цікаво, як Python присвоює значення для `self` і чому вам не потрібно давати йому значення. Приклад прояснить це. Скажімо, у вас є клас під назвою `MyClass` і екземпляр цього класу під назвою `myobject`. Коли ви викликаєте метод цього об’єкта як `myobject.method(arg1, arg2)`, Python автоматично перетворює його на `MyClass.method(myobject, arg1, arg2)` — це все, що стосується спеціального `self` .
 
-## Classes {#classes}
+Це також означає, що якщо у вас є метод, який не приймає аргументів, ви все одно повинні мати один аргумент – `self`.
 
-The simplest class possible is shown in the following example (save as `oop_simplestclass.py`).
+##  Класи (англ."Classes") 
 
-<pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
+Найпростіший можливий клас показано в наступному прикладі (збережіть як `oop_simplestclass.py`).
+
+<!--<pre><code class="lang-python">{% include "./programs/oop_simplestclass.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>
-
-**How It Works**
-
-We create a new class using the `class` statement and the name of the class. This is followed by an indented block of statements which form the body of the class. In this case, we have an empty block which is indicated using the `pass` statement.
-
-Next, we create an object/instance of this class using the name of the class followed by a pair of parentheses. (We will learn [more about instantiation](#init) in the next section). For our verification, we confirm the type of the variable by simply printing it. It tells us that we have an instance of the `Person` class in the `__main__` module.
-
-Notice that the address of the computer memory where your object is stored is also printed. The address will have a different value on your computer since Python can store the object wherever it finds space.
-
-## Methods
-
-We have already discussed that classes/objects can have methods just like functions except that we have an extra `self` variable. We will now see an example (save as `oop_method.py`).
-
-<pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/oop_method.txt" %}</code></pre>
-
-**How It Works**
-
-Here we see the `self` in action. Notice that the `say_hi` method takes no parameters but still has the `self` in the function definition.
-
-## The `__init__` method {#init}
-
-There are many method names which have special significance in Python classes. We will see the significance of the `__init__` method now.
-
-The `__init__` method is run as soon as an object of a class is instantiated (i.e. created). The method is useful to do any *initialization* (i.e. passing initial values to your object) you want to do with your object. Notice the double underscores both at the beginning and at the end of the name.
-
-Example (save as `oop_init.py`):
-
-<pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/oop_init.txt" %}</code></pre>
-
-**How It Works**
-
-Here, we define the `__init__` method as taking a parameter `name` (along with the usual `self`). Here, we just create a new field also called `name`. Notice these are two different variables even though they are both called 'name'. There is no problem because the dotted notation `self.name` means that there is something called "name" that is part of the object called "self" and the other `name` is a local variable. Since we explicitly indicate which name we are referring to, there is no confusion.
-
-When creating new instance `p`, of the class `Person`, we do so by using the class name, followed by the arguments in the parentheses: p = Person('Swaroop').
-
-We do not explicitly call the `__init__` method.
-This is the special significance of this method.
-
-Now, we are able to use the `self.name` field in our methods which is demonstrated in the `say_hi` method.
-
-## Class And Object Variables {#class-obj-vars}
-
-We have already discussed the functionality part of classes and objects (i.e. methods), now let us learn about the data part. The data part, i.e. fields, are nothing but ordinary variables that are _bound_ to the **namespaces** of the classes and objects. This means that these names are valid within the context of these classes and objects only. That's why they are called _name spaces_.
-
-There are two types of _fields_ - class variables and object variables which are classified depending on whether the class or the object _owns_ the variables respectively.
-
-**Class variables** are shared - they can be accessed by all instances of that class. There is only one copy of the class variable and when any one object makes a change to a class variable, that change will be seen by all the other instances.
-
-**Object variables** are owned by each individual object/instance of the class. In this case, each object has its own copy of the field i.e. they are not shared and are not related in any way to the field by the same name in a different instance. An example will make this easy to understand (save as `oop_objvar.py`):
-
-<pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
-
-Output:
-
-<pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>
-
-**How It Works**
-
-This is a long example but helps demonstrate the nature of class and object variables. Here, `population` belongs to the `Robot` class and hence is a class variable. The `name` variable belongs to the object (it is assigned using `self`) and hence is an object variable.
-
-Thus, we refer to the `population` class variable as `Robot.population` and not as `self.population`. We refer to the object variable `name` using `self.name` notation in the methods of that object. Remember this simple difference between class and object variables. Also note that an object variable with the same name as a class variable will hide the class variable!
-
-Instead of `Robot.population`, we could have also used `self.__class__.population` because every object refers to its class via the `self.__class__` attribute.
-
-The `how_many` is actually a method that belongs to the class and not to the object. This means we can define it as either a `classmethod` or a `staticmethod` depending on whether we need to know which class we are part of. Since we refer to a class variable, let's use `classmethod`.
-
-We have marked the `how_many` method as a class method using a [decorator](./more.md#decorator).
-
-Decorators can be imagined to be a shortcut to calling a wrapper function (i.e. a function that "wraps" around another function so that it can do something before or after the inner function), so applying the `@classmethod` decorator is the same as calling:
+<pre><code>{% include "./programs/oop_simplestclass.txt" %}</code></pre>-->
 
 ```python
-how_many = classmethod(how_many)
+class Person:
+    pass  # Порожній блок
+
+p = Person()
+print(p)
 ```
 
-Observe that the `__init__` method is used to initialize the `Robot` instance with a name. In this method, we increase the `population` count by 1 since we have one more robot being added. Also observe that the values of `self.name` is specific to each object which indicates the nature of object variables.
+Висновок:
+```$ python oop_simplestclass.py
+&lt;__main__.Person instance at 0x10171f518&gt;
+```
 
-Remember, that you must refer to the variables and methods of the same object using the `self` *only*. This is called an *attribute reference*.
+**Як це працює**
 
-In this program, we also see the use of *docstrings* for classes as well as methods. We can access the class docstring at runtime using `Robot.__doc__` and the method docstring as `Robot.say_hi.__doc__`
+Ми створюємо новий клас, використовуючи оператор `class` і назву класу. Далі йде блок рядків коду з відступом, які утворюють тіло класу. У цьому випадку ми маємо порожній блок, який позначається оператором `pass`.
 
-In the `die` method, we simply decrease the `Robot.population` count by 1.
+Далі ми створюємо об’єкт/екземпляр цього класу, використовуючи ім’я класу, після якого йде пара круглих дужок. (Ми дізнаємося [докладніше про інстанціювання](#init) у наступному розділі). Для нашої перевірки ми підтверджуємо тип змінної, просто друкуючи її. Вивод на екран повідомляє нам, що ми маємо екземпляр класу `Person` в модулі `__main__`.
 
-All class members are public. One exception: If you use data members with names using the _double underscore prefix_ such as `__privatevar`, Python uses name-mangling to effectively make it a private variable.
+Зверніть увагу, що також друкується адреса пам’яті комп’ютера, де зберігається ваш об’єкт. Адреса матиме інше значення на вашому комп’ютері, оскільки Python може зберігати об’єкт у будь-якому місці.
 
-Thus, the convention followed is that any variable that is to be used only within the class or object should begin with an underscore and all other names are public and can be used by other classes/objects. Remember that this is only a convention and is not enforced by Python (except for the double underscore prefix).
+## Методи
 
-> **Note for C++/Java/C# Programmers**
-> 
-> All class members (including the data members) are _public_ and all the methods are _virtual_ in Python.
+Ми вже обговорювали, що класи/об’єкти можуть мати методи,  що являють собою функції, за винятком додаткової змінної  `self`. Тепер ми побачимо приклад (збережіть як `oop_method.py`).
 
-## Inheritance
-
-One of the major benefits of object oriented programming is **reuse** of code and one of the ways this is achieved is through the **inheritance** mechanism. Inheritance can be best imagined as implementing a **type and subtype** relationship between classes.
-
-Suppose you want to write a program which has to keep track of the teachers and students in a college. They have some common characteristics such as name, age and address. They also have specific characteristics such as salary, courses and leaves for teachers and, marks and fees for students.
-
-You can create two independent classes for each type and process them but adding a new common characteristic would mean adding to both of these independent classes. This quickly becomes unwieldy.
-
-A better way would be to create a common class called `SchoolMember` and then have the teacher and student classes _inherit_ from this class, i.e. they will become sub-types of this type (class) and then we can add specific characteristics to these sub-types.
-
-There are many advantages to this approach. If we add/change any functionality in `SchoolMember`, this is automatically reflected in the subtypes as well. For example, you can add a new ID card field for both teachers and students by simply adding it to the SchoolMember class. However, changes in the subtypes do not affect other subtypes. Another advantage is that you can refer to a teacher or student object as a `SchoolMember` object which could be useful in some situations such as counting of the number of school members. This is called **polymorphism** where a sub-type can be substituted in any situation where a parent type is expected, i.e. the object can be treated as an instance of the parent class.
-
-Also observe that we reuse the code of the parent class and we do not need to repeat it in the different classes as we would have had to in case we had used independent classes.
-
-The `SchoolMember` class in this situation is known as the **base class** or the **superclass**. The `Teacher` and `Student` classes are called the **derived classes** or **subclasses**.
-
-We will now see this example as a program (save as `oop_subclass.py`):
-
-<pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
+<!--<pre><code class="lang-python">{% include "./programs/oop_method.py" %}</code></pre>
 
 Output:
 
-<pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>
+<pre><code>{% include "./programs/oop_method.txt" %}</code></pre>-->
 
-**How It Works**
+```python
+class Person:
+    def скажи_привіт(self):
+        print('Привіт,ти хто?')
 
-To use inheritance, we specify the base class names in a tuple following the class name in the class definition (for example, `class Teacher(SchoolMember)`).   Next, we observe that the `__init__` method of the base class is explicitly called using the  `self`  variable so that we can initialize the base class part of an instance in the subclass. This is very important to remember- Since we are defining a  `__init__`  method in `Teacher`  and  `Student`  subclasses, Python does not automatically call the constructor of the base class  `SchoolMember`, you have to explicitly call it yourself.
+p = Person()
+p.скажи_привіт()
+# Попередні 2 рядки також можна записати як
+# Person().скажи_привіт()
+```
 
-In contrast, if we have not defined an  `__init__`  method in a subclass, Python will call the constructor of the base class automatically.
+Висновок:
+```$ python oop_method.py
+Привіт,ти хто?
+```
 
-While we could treat instances of `Teacher` or `Student` as we would an instance of `SchoolMember` and access the `tell` method of `SchoolMember` by simply typing `Teacher.tell` or `Student.tell`, we instead define another `tell` method in each subclass (using the `tell` method of `SchoolMember` for part of it) to tailor it for that subclass.  Because we have done this, when we write `Teacher.tell` Python uses the `tell` method for that subclass vs the superclass.  However, if we did not have a `tell` method in the subclass, Python would use the `tell` method in the superclass.  Python always starts looking for methods in the actual subclass type first, and if it doesnt find anything, it starts looking at the methods in the subclasss base classes, one by one in the order they are specified in the tuple (here we only have 1 base class, but you can have multiple base classes) in the class definition.
+**Як це працює**
 
-A note on terminology - if more than one class is listed in the inheritance tuple, then it is called **multiple inheritance**.
+Тут ми бачимо `self` в дії. Зверніть увагу, що метод `скажи_привіт_` не приймає параметрів, але все ще має `self` у визначенні функції.
 
-The `end` parameter is used in the `print` function in the superclass's `tell()` method to print a line and allow the next print to continue on the same line. This is a trick to make `print` not print a `\n` (newline) symbol at the end of the printing.
+## Метод __init__ ( англ."The `__init__` method")
+
+Існує багато методів, які мають особливе значення у класах Python. Зараз ми побачимо значення методу `__init__`.
+
+Метод `__init__` запускається, як тільки об’єкт класу створюється (тобто реалізується). Цей метод корисний для будь-якої *ініціалізації* (тобто передачі початкових значень вашому об’єкту), яку ви хочете зробити з вашим об’єктом. Зверніть увагу на подвійне підкреслення як на початку, так і в кінці імені.
+
+Приклад (зберегти як `oop_init.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/oop_init.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/oop_init.txt" %}</code></pre>-->
+```python
+class Person:
+    def __init__(self, ім_я):
+        self.ім_я = ім_я
+
+    def скажи_привіт(self):
+        print('Привіт,моє ім_я', self.ім_я)
+
+p = Person('Swaroop')
+p.скажи_привіт()
+# Попередні 2 рядки також можна записати як
+# Person().скажи_привіт()
+```
+
+Висновок:
+```$ python oop_init.py
+Привіт,моє ім_я Swaroop
+```
+
+**Як це працює**
+
+Тут ми визначаємо метод `__init__` так, щоб він приймав параметр `ім_я` (разом із звичайним `self`). Тут ми просто створюємо нове поле, яке також називається `ім_я`. Зауважте, що це дві різні змінні, хоча обидві вони називаються «ім_я». Немає жодних проблем, оскільки нотація з крапкою `self.ім_я` означає, що існує щось під назвою «ім_я», яке є частиною об’єкта під назвою «self», а інше `ім_я` є локальною змінною. Оскільки ми чітко вказуємо, яке ім’я маємо на увазі, плутанини немає.
+
+Створюючи новий екземпляр `p` класу `Person`, ми вказуємо ім'я класу, після якого- аргументи в дужках: p = Person('Swaroop').
+
+Ми явно не викликаємо метод `__init__`.
+У цьому полягає особлива значимість цього методу.
+
+Тепер ми можемо використовувати поле `self.ім_я` у наших методах, що продемонстровано в методі `скажи_привіт`.
+
+## Змінні класу та об’єкту (англ."Class And Object Variables") 
+
+Ми вже обговорювали функціональну частину класів і об’єктів (тобто методів), тепер давайте дізнаємося про частину даних. Дані, тобто поля, є не чим іншим, як звичайними змінними, які _прив’язані_ (англ."_bound_") до **просторів імен** (англ."**namespaces**")  класів і об’єктів. Це означає, що ці імена дійсні лише в контексті цих класів та об’єктів. Ось чому їх називають _просторами імен_ (_name spaces_).
+
+Існує два типи _полів_ - змінні класу та змінні об'єкта, які різняться залежно від того,_належить_ змінна класу чи об'єкту відповідно.
+
+**Змінні класу** (англ."**Class variables**") є спільними – до них можуть отримати доступ усі екземпляри цього класу. Існує лише одна копія змінної класу, і коли будь-який об’єкт вносить зміни до змінної класу, цю зміну побачать усі інші екземпляри.
+
+**Змінні об’єкту** (англ."**Object variables**") не є спільними, змінні об’єкту належать кожному окремому об’єкту/екземпляру класу. У цьому випадку кожен об’єкт має власну копію поля, тобто вони не є спільними та жодним чином не пов’язані з полем з тим самим ім’ям в іншому екземплярі. Приклад допоможе зрозуміти це (збережіть як `oop_objvar.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/oop_objvar.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/oop_objvar.txt" %}</code></pre>-->
+```python
+class Робот:
+    """Представляє робота з ім’ям."""
+
+    # Змінна класу,яка підраховує кількість роботів
+    населення = 0
+
+    def __init__(self, ім_я):
+        """Створення (initialization -ініціалізація) даних."""
+        self.ім_я = ім_я
+        print("(Ініціалізація {})".format(self.ім_я))
+
+        # При створенні цієї особи, робот 
+        # додається до змінної 'населення'
+        Робот.населення += 1
+
+    def вмирати(self):
+        """Я вмираю."""
+        print("{} знищується".format(self.ім_я))
+
+        Робот.населення -= 1
+
+        if Робот.населення == 0:
+            print("{} я був останній.".format(self.ім_я))
+        else:
+            print("Все ще є {:d} робочий робот.".format(
+                Робот.населення))
+
+    def скажи_привіт(self):
+        """Привітання від робота..
+
+        Так, вони можуть це зробити."""
+        print("Вітаю, мої господарі називають мене  {}.".format(self.ім_я))
+
+    @classmethod
+    def скільки(cls):
+        """Друкує поточне населення."""
+        print("У нас є {:d} робот.".format(cls.населення))
 
 
-## Summary
+droid1 = Робот("R2-D2")
+droid1.скажи_привіт()
+Робот.скільки()
 
-We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.
+droid2 = Робот("C-3PO")
+droid2.скажи_привіт()
+Робот.скільки()
 
-Next, we will learn how to deal with input/output and how to access files in Python.
+print("\nРоботи можуть виконувати тут певну роботу.\n")
+
+print("Роботи закінчили свою роботу. Тож давайте їх знищимо.")
+droid1.вмирати()
+droid2.вмирати()
+Робот.скільки()
+
+```
+
+Висновок:
+```$ python oop_objvar.py
+(Створення R2-D2)
+Вітаю, мої господарі називають мене  R2-D2.
+У нас є 1 робот.
+(Створення C-3PO)
+Вітаю, мої господарі називають мене  C-3PO.
+У нас є 2 робот.
+
+Роботи можуть виконувати тут певну роботу.
+
+Роботи закінчили свою роботу. Тож давайте їх знищимо.
+R2-D2 знищується
+Все ще є 1 робочий робот.
+C-3PO знищується
+C-3PO я був останній.
+У нас є 0 робот.
+
+```
+
+**Як це працює**
+
+Це довгий приклад, але він допомагає продемонструвати природу змінних класу та об’єкта. Тут `населення` належить до класу `Робот` і, отже, є змінною класу. Змінна `ім_я` належить об’єкту (їй присвоюється значення за допомогою `self`) і, отже, є змінною об’єкта.
+
+Таким чином, ми звертаємося до змінної класу `населення`як `Робот.населення`, а не `self.населення`. До змінної ж об'єкта `ім_я` у всіх методи цього об'єкта ми звертаємося за допомогою позначення  `self.ім_я`. Запам'ятайте цю просту різницю між змінними класу та об'єкта. Також зауважте, що змінна об’єкта з тим же іменем, що й змінна класу, приховає змінну класу!
+
+Замість `Робот.населення` ми також могли б використати `self.__class__.населення`, оскільки кожен об’єкт посилається на свій клас через атрибут `self.__class__`.
+
+`скільки` насправді є методом, який належить до класу, а не до об’єкта. Це означає, що ми можемо визначити його як "`classmethod`" або "`staticmethod`" залежно від того, чи потрібно нам знати, у якому класі ми знаходимося. Оскільки ми посилаємося на змінну класу, давайте використаємо `classmethod`.
+
+Ми позначили метод `скільки` як метод класу за допомогою [decorator](./more.md#decorator).
+
+Декоратори можна уявити як ярлик для виклику функції-обгортки (англ."wrapper function") (тобто функції, яка «обгортається» навколо іншої функції, щоб вона могла робити щось до або після внутрішньої функції), тому застосування декоратора `@classmethod` є таким самим, як і функція виклику: 
+
+```python
+скільки = classmethod(скільки)
+```
+
+Зверніть увагу, що метод `__init__` використовується для ініціалізації екземпляра `Робот` з ім'ям. У цьому методі ми збільшуємо кількість `населення` на 1, оскільки ми додаємо ще одного робота. Також зауважте, що значення `self.ім_я`  для кожного об’єкта свої, що свідчить про природу змінних об’єкта.
+
+Пам’ятайте, що ви повинні звертатися до змінних і методів того самого об’єкта, використовуючи тільки *self*. Це називається *посиланням на атрибут* (англ."attribute reference.").
+
+У цій програмі ми також бачимо використання *рядків документації* (англ."*docstrings*") для класів, а також  для методів. Під час виконання ми можемо звертатись до рядка документації класу за допомогою `Робот.__doc__` ,а до рядка документації методу – за допомогою `Robot.скажи_привіт.__doc__`
+
+У методі `вмирати` ми просто зменшуємо кількість `Робот.населення` на 1.
+
+Усі члени класу є відкритими. Один виняток: якщо ви використовуєте елементи даних з іменами, що використовують _префікс подвійного підкреслення_,(англ."_double underscore prefix_ ") наприклад `__privatevar`, Python використовує спотворення імен (англ."name-mangling"), щоб ефективно зробити їх приватною змінною.
+
+Таким чином, висновок полягає в тому, що будь-яка змінна, яка має використовуватися лише в межах класу чи об’єкта, повинна починатися з підкреслення, а всі інші імена є загальнодоступними та можуть використовуватися іншими класами/об’єктами. Пам’ятайте, що це лише домовленість, і Python її не вимагає (за винятком подвійного префікса підкреслення).
+
+> **Примітка для програмістів C++/Java/C#**
+>
+> Усі члени класу (включно з членами даних) є _загальнодоступними_ ( англ."_public_"), а всі методи — _віртуальними_ (англ."_virtual_") у Python.
+
+## Наслідування (англ."Inheritance") 
+
+Однією з головних переваг об’єктно-орієнтованого програмування є **багаторазове використання** (англ."**reuse**")одного і того ж коду,  і один із способів цього досягти - за допомогою механізму **наслідування**(англ.**inheritance**). Наслідування найкраще можна уявити у вигляді відношення між класами як **тип та підтип** (англ." **type and subtype**"). 
+
+Припустімо, ви хочете написати програму, яка повинна відстежувати вчителів і студентів у коледжі. Вони мають деякі спільні характеристики, такі як ім’я, вік та адреса. Вони також мають певні характеристики, такі як зарплата, курси та відпустки для вчителів, а також оцінки та гонорари для студентів.
+
+Можна створити для них незалежні класи та працювати з ними, але тоді додавання будь-якої нової загальної характеристики вимагатиме додавання її до кожного з цих незалежних класів окремо.Це швидко стає громіздким.
+
+Кращим способом було б створити загальний клас під назвою `УчастникШколи`, а потім зробити так, щоб класи викладача і студента  _успадкували_ цей клас, тобто вони стануть підтипами цього типу (класу), і тоді ми зможемо додати певні характеристики до цих підтипів -типів.
+
+Цей підхід має багато переваг. Якщо ми додаємо/змінюємо будь-яку функціональність в `УчастникШколи`, це також автоматично відображається в підтипах. Наприклад, ви можете додати нове поле ідентифікаційної картки як для вчителів, так і для студентів, просто додавши його до класу УчастникШколи. Однак зміни в підтипах не впливають на інші підтипи. Ще одна перевага полягає в тому, що ви можете звертатися до об’єкта «вчитель» або «студент» як до об’єкта «УчастникШколи», що може бути корисним у деяких ситуаціях, наприклад підрахунок кількості учасників школи. Це називається **поліморфізмом**(англ."**polymorphism**"), коли підтип можна підставити у місці, де очікується батьківський тип, тобто об'єкт вважається екземпляром батьківського класу.
+
+Також зауважте, що ми повторно використовуємо код батьківського класу, і нам не потрібно повторювати його в різних класах, як нам довелося б, якби ми використовували незалежні класи.
+
+Клас `УчастникШколи`у цій ситуації відомий як **базовий клас**(англ."**base class**") або **суперклас**(англ." **superclass**"). Класи «Вчитель» і «Студент» називаються  **похідними класами** (англ."**derived classes**") або **підкласами**(англ." **subclasses**").
+
+Тепер ми побачимо цей приклад на англійській мові як програму (збережіть як `oop_subclass.py`):
+
+<!--<pre><code class="lang-python">{% include "./programs/oop_subclass.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/oop_subclass.txt" %}</code></pre>-->
+
+```python
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: {})'.format(self.name))
+
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "{:d}"'.format(self.salary))
+
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Marks: "{:d}"'.format(self.marks))
+
+t = Teacher('Mrs. Shrividya', 40, 30000)
+s = Student('Swaroop', 25, 75)
+
+# prints a blank line
+print()
+
+members = [t, s]
+for member in members:
+    # Works for both Teachers and Students
+    member.tell()
+```
+
+Висновок:
+```$ python oop_subclass.py
+(Initialized SchoolMember: Mrs. Shrividya)
+(Initialized Teacher: Mrs. Shrividya)
+(Initialized SchoolMember: Swaroop)
+(Initialized Student: Swaroop)
+
+Name:"Mrs. Shrividya" Age:"40" Salary: "30000"
+Name:"Swaroop" Age:"25" Marks: "75"
+```
+
+Приклад українською:
+```python
+class УчастникШколи:
+    '''Представляє будь-якого участника школи.'''
+    def __init__(self, ім_я, вік):
+        self.ім_я = ім_я
+        self.вік = вік
+        print('(Створено УчастникШколи: {})'.format(self.ім_я))
+
+    def повідомити(self):
+        '''Повідомити деталі.'''
+        print('Ім_я:"{}" Вік:"{}"'.format(self.ім_я, self.вік), end=" ")
+
+
+class Викладач(УчастникШколи):
+    '''Представляє викладача.'''
+    def __init__(self, ім_я, вік, зарплата):
+        УчастникШколи.__init__(self, ім_я, вік)
+        self.зарплата = зарплата
+        print('(Створено Викладач: {})'.format(self.ім_я))
+
+    def повідомити(self):
+        УчастникШколи.повідомити(self)
+        print('зарплата: "{:d}"'.format(self.зарплата))
+
+
+class Студент(УчастникШколи):
+    '''Представляє студента.'''
+    def __init__(self, ім_я, вік, оцінки):
+        УчастникШколи.__init__(self, ім_я, вік)
+        self.оцінки = оцінки
+        print('(Створено студент: {})'.format(self.ім_я))
+
+    def повідомити(self):
+        УчастникШколи.повідомити(self)
+        print('Оцінки: "{:d}"'.format(self.оцінки))
+
+t = Викладач('Mrs. Shrividya', 40, 30000)
+s = Студент('Swaroop', 25, 75)
+
+# друкує порожній рядок
+print()
+
+учасники = [t, s]
+for учасники in учасники:
+    # Працює як для вчителів, так і для студентів
+    учасники.повідомити()
+
+```
+
+Висновок:
+```$ python oop_subclass.py
+(Створено УчастникШколи: Mrs. Shrividya)
+(Створено Викладач: Mrs. Shrividya)
+(Створено УчастникШколи: Swaroop)
+(Створено студент: Swaroop)
+
+Ім_я:"Mrs. Shrividya" Вік:"40" зарплата: "30000"
+Ім_я:"Swaroop" Вік:"25" Оцінки: "75"
+```
+
+**Як це працює**
+
+Щоб використовувати наслідування,при визначенні класу ми вказуємо імена його базових класів у вигляді кортежу,який йде відразу за його назвою (наприклад,`class Викладач (УчастникШколи)`).  Далі ми спостерігаємо, що метод`__init__` базового класу явно викликається за допомогою змінної `self`, щоб ми могли ініціалізувати частину об'єкта, що відноситься до базового класу. Це дуже важливо пам’ятати,оскільки ми визначаємо метод  `__init__`  у підкласах  `Викладач`  та  `Студент`, Python не викликає автоматично конструктор базового класу `УчастникШколи`, ви повинні викликати його самостійно у явному вигляді.
+
+Навпаки, якщо ми не визначили метод  `__init__` у підкласі, Python автоматично викличе конструктор базового класу.
+
+Хоча ми могли б обробляти екземпляри `Викладач` або `Студент` так само, як екземпляр `УчастникШколи`, і отримати доступ до методу `повідомити` класа`УчастникШколи`, просто ввівши `Викладач.повідомити` або `Студент.повідомити`.Натомість ми визначаємо інший метод `повідомити` у кожному підкласі (використовуючи метод `повідомити`  в класі`УчастникШколи` для його частини), щоб пристосувати його для цього підкласу. Оскільки ми це зробили, написавши `Викладач.повідомити`, Python використовує метод `повідомити` для цього підкласу проти суперкласу. Однак, якби у нас не було методу `повідомити` у підкласі, Python використовував би метод `повідомити` у суперкласі. Python завжди спочатку починає шукати методи у фактичному типі підкласу, і якщо він нічого не знаходить, він починає шукати методи в базових класах підкласу, один за іншим у тому порядку, в якому вони вказані в кортежі (тут у нас є лише 1 базовий клас, але ви можете мати кілька базових класів) у визначенні класу.
+
+Примітка щодо термінології: якщо в кортежі наслідування зазначено більше одного класу, це називається **множинним наслідуванням**
+(англ."**multiple inheritance**").
+
+Параметр `end` використовується у функції `print` у методі `повідомити()` суперкласу, щоб надрукувати рядок і дозволити наступному друку продовжуватись у тому самому рядку. Це трюк, щоб змусити `print` не друкувати символ `\n` (новий рядок) у кінці друку.
+
+
+
+## Резюме
+
+Зараз ми дослідили різні аспекти класів і об'єктів, а також різну термінологію, пов'язану з ними. Ми також побачили переваги та підводні камені об’єктно-орієнтованого програмування. Python дуже об’єктно-орієнтований, і ретельне розуміння цих концепцій дуже допоможе вам у довгостроковій перспективі.
+
+Далі ми дізнаємося, як працювати з введенням/виведенням і як отримувати доступ до файлів у Python.
+
+
+
+
+<table>
+<tr><th>процедурно-орієнтоване програмування</th><th>об'єктно-орієнтоване програмування</th></tr>
+
+<tr><td> 
+
+The function manipulates the Data
+
+</td><td> 
+
+Data  is organised in Classes.A Class is a way og organising Data
+
+</td></tr> 
+
+<tr><td colspan=2>Example:we have to organize a school.The school has many students. Each student has a first name and last name.  Приклад: ми повинні організувати школу. У школі багато учнів. Кожен учень має ім’я та прізвище.</td></tr>
+<tr><td> 
+
+```python
+Student_1_first_name="KLAUS"
+Student_1_last_name="WILSON"
+Student_2_first_name="MARTIN"
+Student_2_last_name="TAYLOR"
+print(Student_1_first_name,Student_1_last_name)
+print(Student_2_first_name,Student_2_last_name)
+
+
+
+
+
+
+```
+
+
+</td><td>
+
+```python
+class Student:
+	def __init__(self, first_name, last_name):
+		self.first_name=first_name
+		self.last_name=last_name
+
+data=[Student("KLAUS","WILSON"),Student("MARTIN","TAYLOR")]
+
+for s in data:
+	print(s.first_name,s.last_name)
+              
+		
+```
+<tr><td> 
+
+how it works
+
+</td><td> 
+
+how it works
+We define the Student "Objects". Each Student is an object.Each Student is an INSTANT OF THE "STUDENT" CLASS.Therefore, each Student has a "first_name" and a "last_name" field ()
+як це працює
+Ми визначаємо Студент як "Об'єкти" . Кожен Cтудент є об’єктом. Кожен Cтудент є екземпляром класа «СТУДЕНТ». Тому кожен студент має поле «ім’я» та «прізвище» ()
+</td></tr> 
+
+<tr><td colspan=2>Would this (printingthe names of the students) like work with procedural programming? YES       
+For example,Icould make a list of(FIRST NAME_LAST NAME) list (a list of lists)</td></tr>
+<tr><td> 
+
+```python
+
+data=[["KLAUS","WILSON"],["MARTIN","TAYLOR"]]
+for student in data:
+	print(student[0],student[1])
+
+
+```
+
+
+</td><td>
+
+```python
+
+              
+		
+```
+<tr><td> 
+
+<tr><td colspan=2>So far there is no difference between procedural and object-oriented. Both print a list of student Names. The procedural variant is a bit shorter, but the OO variant is better to read: s.first_name is easier to understand than student[0]
+</td></tr>
+<tr><td> 
+</td></tr>
+</table>
+ we define the student "object".Each student is an object.Each student is an INSTANCE of the "student" class.Therefore,each student has a "FIRST NAME"  and a "LAST NAME" field()class Student:
+	def__init__(self,first_name,last_name):
+		self.first_name=first_name
+		self.last_name=last_name
+
+
+
+Now we have defined the student class_we can now create some student objects(they are instances of the student class)
+
+class Student:
+	def__init__(self, first_name, last_name):
+		self.first_name=first_name
+		self.last_name=last_name
+data=[Student("KLAUS","WILSON"),Student("MARTIN","TAYLOR")]
+
+for s in data:
+	print(s.first_name,s.last.name)
+
+
+
+
