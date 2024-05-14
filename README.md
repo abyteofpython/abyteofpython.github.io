@@ -23,7 +23,7 @@ done so far:
   * object oriented programming
   * input and output
   * exceptions
-  * 
+  * standart library
 
 ---
 
