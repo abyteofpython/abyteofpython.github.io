@@ -25,6 +25,7 @@ done so far:
   * exceptions
   * standart library
   * more
+  * what next
 
 ---
 
