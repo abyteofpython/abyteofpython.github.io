@@ -1,109 +1,112 @@
-# Appendix: History Lesson {#history-lesson}
+# Додаток: Урок історії 
 
-I first started with Python when I needed to write an installer for software I had written called 'Diamond' so that I could make the installation easy. I had to choose between Python and Perl bindings for the Qt library. I did some research on the web and I came across [an article by Eric S. Raymond](http://www.python.org/about/success/esr/), a famous and respected hacker, where he talked about how Python had become his favorite programming language. I also found out that the PyQt bindings were more mature compared to Perl-Qt. So, I decided that Python was the language for me.
+Я вперше почав працювати з Python, коли мені потрібно було написати інсталятор для програмного забезпечення під назвою «Diamond», щоб я міг спростити інсталяцію. Мені довелося вибирати між прив’язками Python і Perl для бібліотеки Qt. Я трохи дослідив Інтернет і натрапив на [статтю Еріка С. Реймонда](http://www.python.org/about/success/esr/), відомого та шанованого хакера, де він розповідав про те, як Python став його улюбленою мовою програмування. Я також дізнався, що прив’язки PyQt були більш зрілими порівняно з Perl-Qt. Отже, я вирішив, що мова Python для мене.
 
-Then, I started searching for a good book on Python. I couldn't find any!  I did find some O'Reilly books but they were either too expensive or were more like a reference manual than a guide. So, I settled for the documentation that came with Python. However, it was too brief and small. It did give a good idea about Python but was not complete. I managed with it since I had previous programming experience, but it was unsuitable for newbies.
+Тоді я почав шукати хорошу книгу про Python. І не знайшов!  Я знайшов деякі книги O'Reilly, але вони або були занадто дорогими, або більше нагадували довідник, ніж путівник. Так що мені довелося задовольнятися документацією, яка постачається в комплекті з Python. Однак вона була занадто короткою та малою. Безперечно, вона дала мені деяке уявлення про те, що таке Python, але цього було
+явно замало. Я впорався з документацією, оскільки мав попередній досвід програмування, але вона не підходила для новачків.
 
-About six months after my first brush with Python, I installed the (then) latest Red Hat 9.0 Linux and I was playing around with KWord. I got excited about it and suddenly got the idea of writing some stuff on Python. I started writing a few pages but it quickly became 30 pages long. Then, I became serious about making it more useful in a book form. After a _lot_ of rewrites, it has reached a stage where it has become a useful guide to learning the Python language.  I consider this book to be my contribution and tribute to the open source community.
+Приблизно через шість місяців після мого першого знайомства з Python я встановив (на той час) найновішу версію Red Hat 9.0 Linux і бавився з KWord. Я був у захваті від цього, і раптом у мене виникла ідея написати щось о Python. Я почав писати кілька сторінок, але швидко це стало 30 сторінок. Тоді я вирішив серйозно
+надати цьому тексту форму книги. Після _великої_ кількості переписувань вона досягла такого етапу, коли стала корисним посібником для вивчення мови Python.  Я вважаю цю книгу своїм внеском і даниною спільноті відкритого коду.
 
-This book started out as my personal notes on Python and I still consider it in the same way, although I've taken a lot of effort to make it more palatable to others :)
+Ця книга почалась як мої особисті нотатки про Python, і я досі розглядаю її так само, хоча я доклав багато зусиль, щоб зробити її більш приємною для інших :)
 
-In the true spirit of open source, I have received lots of constructive suggestions, criticisms and [feedback](./README.md#who-reads-bop) from enthusiastic readers which has helped me improve this book a lot.
+У справжньому дусі відкритого коду я отримав багато конструктивних пропозицій, критики та [відгуків](./README.md#who-reads-bop) від захоплених читачів, що дуже допомогло мені покращити цю книгу.
 
-## Status Of The Book
+## Статус книги
 
-The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author]({{ book.contactUrl }}) or the respective [translators](./translations.md#translations) with your comments and suggestions.
+Книзі потрібна допомога таких читачів, як ви, щоб вказати на будь-які частини книги, які є поганими, незрозумілими або просто неправильними. Будь ласка, [напишіть головному автору](https://swaroopch.com/notes/about) або відповідним [перекладачам](./translations.md#translations) свої коментарії та пропозиції.
 
-# Appendix: Revision History {#revision-history}
+# Додаток: Історія версій
 
-- No version change
-    - 06 Nov 2020
-    - Migrated from abandoned GitBook to [community-maintained Honkit, a fork of GitBook legacy](https://github.com/honkit/honkit)
+- Без змін версії
+    - 06 Nov 2020 06/11/2020
+    - Перенесено із залишеного на GitBook на [community-maintained Honkit, a fork of GitBook legacy](https://github.com/honkit/honkit)
 
 - 4.0
-    - 19 Jan 2016
-    - Switched back to Python 3
-    - Switched back to Markdown, using [GitBook](https://www.gitbook.com) and [Spacemacs](http://spacemacs.org)
+    - 19 Jan 2016 19/01/2016
+    - Повернувся до Python 3
+    - Повернувся до Markdown, використовуючи [GitBook](https://www.gitbook.com) та [Spacemacs](http://spacemacs.org)
 
 - 3.0
-    - 31 Mar 2014
-    - Rewritten for Python 2 using [AsciiDoc](http://asciidoctor.org/docs/what-is-asciidoc/) and [adoc-mode](https://github.com/sensorflo/adoc-mode/wiki).
+    - 31 Mar 2014 31/03/2014
+    - Переписано для Python 2 з використанням [AsciiDoc](http://asciidoctor.org/docs/what-is-asciidoc/) та [adoc-mode](https://github.com/sensorflo/adoc-mode/wiki).
 
 - 2.1
-    - 03 Aug 2013
-    - Rewritten using Markdown and [Jason Blevins' Markdown Mode](http://jblevins.org/projects/markdown-mode/)
+    - 03 Aug 2013 03/08/2013
+    - Переписано за допомогою Markdown та [Jason Blevins' Markdown Mode](http://jblevins.org/projects/markdown-mode/)
 
 - 2.0
-    - 20 Oct 2012
-    - Rewritten in [Pandoc format](http://johnmacfarlane.net/pandoc/README.html), thanks to my wife who did most of the conversion from the Mediawiki format
-    - Simplifying text, removing non-essential sections such as `nonlocal` and metaclasses
+    - 20 Oct 2012 20/10/2012
+    - Переписано у форматі [Pandoc format](http://johnmacfarlane.net/pandoc/README.html), дякую моїй дружині, яка перевела велику частина тексту з формату Mediawiki
+    - Спрощення тексту, видалення несуттєвих розділів, таких як `nonlocal` і метакласи
 
 - 1.90
-    - 04 Sep 2008 and still in progress
-    - Revival after a gap of 3.5 years!
-    - Rewriting for Python 3.0
-    - Rewrite using http://www.mediawiki.org[MediaWiki] (again)
+    - 04 Sep 2008 і все ще триває
+    - Відродження після перерви в 3,5 роки!
+    - Оновлення для Python 3.0
+    - Переписано у форматі http://www.mediawiki.org[MediaWiki] (ще раз)
 
 - 1.20
     - 13 Jan 2005
-    - Complete rewrite using [Quanta+](https://en.wikipedia.org/wiki/Quanta_Plus) on [Fedora](http://fedoraproject.org/) Core 3 with lot of corrections and updates. Many new examples. Rewrote my DocBook setup from scratch.
+    - Повне переписування за допомогою  [Quanta+](https://en.wikipedia.org/wiki/Quanta_Plus) на [Fedora](http://fedoraproject.org/) Core 3 із багатьма виправленнями та оновленнями. Багато нових прикладів. Переписав налаштування DocBook з нуля.
 
 - 1.15
     - 28 Mar 2004
-    - Minor revisions
+    - Незначні доопрацювання
 
 - 1.12
     - 16 Mar 2004
-    - Additions and corrections
+    - Доповнення та виправлення
 
 - 1.10
     - 09 Mar 2004
-    - More typo corrections, thanks to many enthusiastic and helpful readers.
+    - Виправлення помилок, завдяки безлічі відгуків зацікавлених читачів.
 
 - 1.00
     - 08 Mar 2004
-    - After tremendous feedback and suggestions from readers, I have made significant revisions to the content along with typo corrections.
+    - Після колосальної кількості відгуків та пропозицій від читачів я зробив
+    значну переробку тексту поряд із виправленням друкарських помилок.
 
 - 0.99
     - 22 Feb 2004
-    - Added a new chapter on modules. Added details about variable number of arguments in functions.
+    - Додано нову главу про модулі. Додано інформацію про змінну кількість аргументів у функціях.
 
 - 0.98
     - 16 Feb 2004
-    - Wrote a Python script and CSS stylesheet to improve XHTML output, including a crude-yet-functional lexical analyzer for automatic VIM-like syntax highlighting of the program listings.
+    - Написав сценарій Python і таблицю стилів CSS для покращення вихідних даних XHTML, включаючи грубий, але функціональний лексичний аналізатор для автоматичного підсвічування синтаксису, подібного до VIM, у прикладах програм.
 
 - 0.97
     - 13 Feb 2004
-    - Another completely rewritten draft, in DocBook XML (again). Book has improved a lot - it is more coherent and readable.
+    - Ще одна повністю переписана чернетка в DocBook XML (знову). Книжка значно покращилася - стала більш зв'язною та читабельною.
 
 - 0.93
     - 25 Jan 2004
-    - Added IDLE talk and more Windows-specific stuff
+    - Додано опис IDLE та багато іншого, що стосується Windows
 
 - 0.92
     - 05 Jan 2004
-    - Changes to few examples.
+    - Зміни в кількох прикладах.
 
 - 0.91
     - 30 Dec 2003
-    - Corrected typos. Improvised many topics.
+    - Виправлені помилки. Зроблено начерки багатьох розділів.
 
 - 0.90
     - 18 Dec 2003
-    - Added 2 more chapters. [OpenOffice](https://en.wikipedia.org/wiki/OpenOffice) format with revisions.
+    - Додано ще 2 розділи. Формат [OpenOffice](https://en.wikipedia.org/wiki/OpenOffice) із змінами.
 
 - 0.60
     - 21 Nov 2003
-    - Fully rewritten and expanded.
+    - Повністю переписано та розширено.
 
 - 0.20
     - 20 Nov 2003
-    - Corrected some typos and errors.
+    - Виправлено деякі опечатки та помилки.
 
 - 0.15
     - 20 Nov 2003
-    - Converted to [DocBook XML](https://en.wikipedia.org/wiki/DocBook) with XEmacs.
+    - Переведено на формат[DocBook XML](https://en.wikipedia.org/wiki/DocBook) за допомогою XEmacs.
 
 - 0.10
     - 14 Nov 2003
-    - Initial draft using [KWord](https://en.wikipedia.org/wiki/Kword).
+    - Первинний начерк у редакторі [KWord](https://en.wikipedia.org/wiki/Kword).
