@@ -26,6 +26,8 @@ done so far:
   * standart library
   * more
   * what next
+  * Appendix: FLOSS
+  * Appendix: Colophon 
 
 ---
 
