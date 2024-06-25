@@ -9,7 +9,7 @@ The translated version of "A byte of Python" can be found at this site:
 done so far:
   
   * about_python.md
-  * about.md
+  
   * basic.md
   * op_ex.md
   * control_flow.md
@@ -18,16 +18,18 @@ done so far:
   * dedication.md
   * preface.md
   * modules.md
-  * data structure
-  * problem solving
-  * object oriented programming
-  * input and output
-  * exceptions
-  * standart library
-  * more
-  * what next
-  * Appendix: FLOSS
-  * Appendix: Colophon 
+  * data structure.md
+  * problem solving.md
+  * object oriented programming.md
+  * input and output.md
+  * exceptions.md
+  * standart library.md
+  * more.md
+  * what next.md
+  * floss.md (Appendix: FLOSS) 
+  * about.md(Appendix: About)
+  * revision_history.md(Appendix: Revision History)
+  * 
 
 ---
 
