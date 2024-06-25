@@ -1,3 +1,3 @@
-# Feedback
+# Зворотній зв'язок
 
-The book needs the help of its readers such as yourselves to point out any parts of the book which are not good, not comprehensible or are simply wrong. Please [write to the main author]({{ book.contactUrl }}) or the respective [translators](./translations.md#translations) with your comments and suggestions.
+Книзі потрібна допомога таких читачів, як ви, щоб вказати на будь-які частини книги, які є поганими, незрозумілими або просто неправильними. Будь ласка, [напишіть основному автору]( https://swaroopch.com/notes/about ) або [відповідним перекладачам](./translations.md#translations) свої коментарі та пропозиції.
