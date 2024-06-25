@@ -24,6 +24,7 @@ done so far:
   * input and output
   * exceptions
   * standart library
+  * more
 
 ---
 
