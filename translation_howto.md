@@ -1,8 +1,8 @@
-# Translation How-to {#translation-howto}
+# Додаток: Інструкція з перекладу
 
-1. The full source of the book is available from {{ book.sourceUrl }}.
-2. Please [fork the repository](https://help.github.com/articles/fork-a-repo).
-3. Then, fetch the repository to your computer. You need to know how to use [Git](http://www.git-scm.com) to do that.
-4. Read the [Honkit documentation](https://honkit.netlify.app), esp. the [Markdown section](https://honkit.netlify.app/syntax/markdown.html).
-5. Start editing the `.md` files to translate to your local language.
-6. See [INSTALL.md](https://github.com/swaroopch/byte-of-python/blob/master/INSTALL.md) on how to generate the website, PDF, EPUB.
+1. Повний вихідний текст книги доступний за посиланням{{ [book.sourceUrl](https://github.com/swaroopch/byte-of-python) }}.
+2. Будь ласка створіть [відгалуження репозиторію](https://help.github.com/articles/fork-a-repo).
+3. Потім завантажте репозиторій на свій комп’ютер. Для цього вам потрібно знати, як використовувати [Git](http://www.git-scm.com).
+4. Прочитайте [Honkit documentation](https://honkit.netlify.app), особливо [Markdown section](https://honkit.netlify.app/syntax/markdown.html).
+5. Почніть редагувати файли `.md` на своїй рідній мові.
+6. Перегляньте [INSTALL.md](https://github.com/swaroopch/byte-of-python/blob/master/INSTALL.md) про те, як створити веб-сайт, PDF, EPUB.
