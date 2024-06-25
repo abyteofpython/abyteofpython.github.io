@@ -1,50 +1,53 @@
-# What Next
+# Що далі
 
-If you have read this book thoroughly till now and practiced writing a lot of programs, then you must have become comfortable and familiar with Python. You have probably created some Python programs to try out stuff and to exercise your Python skills as well. If you have not done it already, you should. The question now is 'What Next?'.
+Якщо ви до цього часу уважно прочитали цю книгу та практикували написання багатьох програм, то вам, мабуть, стало зручніше з Python. Ви, напевно, створили кілька програм на Python, щоб випробувати щось, а також потренувати свої навички Python. Якщо ви ще цього не зробили, то повинні. Зараз постає питання «Що далі?».
 
-I would suggest that you tackle this problem:
+Я пропоную вам вирішити цю проблему (завдання):
 
-> Create your own command-line *address-book* program using which you can browse, add, modify, delete or search for your contacts such as friends, family and colleagues and their information such as email address and/or phone number. Details must be stored for later retrieval.
+> Створіть власну програму *Адресна книга*, що працює з командного рядка. За допомогою даної програми ви можете переглядати, додавати, змінювати, видаляти або шукати контактні дані, такі як дані друзів, родини,колег,а також інформацію про них, наприклад адресу електронної пошти та/або номер телефону. Деталі необхідно зберегти для подальшого пошуку.
 
-This is fairly easy if you think about it in terms of all the various stuff that we have come across till now. If you still want directions on how to proceed, then here's a hint [^1].
+Це досить легко, якщо подумати про це в термінах, з якими ми стикалися досі. Якщо ви все ще хочете отримати вказівки, як діяти далі, ось підказка [^1].
 
-Once you are able to do this, you can claim to be a Python programmer. Now, immediately [send me an email]({{ book.contactUrl }}) thanking me for this great book ;-). This step is optional but recommended. Also, please consider [buying a printed copy]({{ book.buyBookUrl }}) to support the continued development of this book.
+Як тільки ви зможете це зробити, ви можете претендувати на те, щоб бути програмістом Python. Тепер негайно [надішліть мені електронний лист](https://swaroopch.com/notes/contact) із подякою за цю чудову книгу ;-). Цей крок необов’язковий, але рекомендований. Крім того, розгляньте [купівлю друкованої копії](https://swaroopch.com/notes/buybook), щоб підтримати продовження розробки цієї книги.
 
-If you found that program easy, here's another one:
+Якщо вам ця проблема (завдання) здалася легкою, ось ще одна:
 
-> Implement the [replace command](http://unixhelp.ed.ac.uk/CGI/man-cgi?replace). This command will replace one string with another in the list of files provided.
+> Виконайте команду[replace (укр."замінити")](http://unixhelp.ed.ac.uk/CGI/man-cgi?replace). Ця команда замінить один рядок іншим у списку наданих файлів.
 
-The replace command can be as simple or as sophisticated as you wish, from simple string substitution to looking for patterns (regular expressions).
+Команда replace може бути будь-якої бажаної складності: від простої заміни рядків до
+пошуку за шаблоном (регулярним виразом).
 
-## Next Projects
+## Наступні проекти
 
-If you found above programs easy to create, then look at this comprehensive list of projects and try writing your own programs: https://github.com/thekarangoel/Projects#numbers (the same list is also at [Martyr2's Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/)).
+Якщо ви виявили, що вищезазначені програми легко створювати, перегляньте цей вичерпний список проектів і спробуйте написати власні програми:https://github.com/thekarangoel/Projects#numbers (той самий список також є в [Martyr2's Mega Project List](http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/)).
 
-Also see:
 
-- [Exercises for Programmers: 57 Challenges to Develop Your Coding Skills](https://pragprog.com/book/bhwb/exercises-for-programmers)
-- [Intermediate Python Projects](https://openhatch.org/wiki/Intermediate_Python_Workshop/Projects).
+Дивіться також:
 
-## Example Code
+- [Exercises for Programmers: 57 Challenges to Develop Your Coding Skills)](https://pragprog.com/book/bhwb/exercises-for-programmers)
+- [Intermediate Python Projects")](https://openhatch.org/wiki/Intermediate_Python_Workshop/Projects).
 
-The best way to learn a programming language is to write a lot of code and read a lot of code:
 
-- [Python Cookbook](http://code.activestate.com/recipes/langs/python/) is an extremely valuable collection of recipes or tips on how to solve certain kinds of problems using Python. This is a must-read for every Python user.
-- [Python Module of the Week](http://pymotw.com/2/contents.html) is another excellent must-read guide to the [Standard Library](./stdlib.md#stdlib).
+## Приклад коду (англ."Example Code")
 
-## Advice
+Найкращий спосіб вивчити мову програмування – це писати багато коду та читати багато коду:
+
+- [Python Cookbook](http://code.activestate.com/recipes/langs/python/) — це надзвичайно цінна колекція рецептів (порад) щодо вирішення певних проблем за допомогою Python. Це обов’язково для прочитання для кожного користувача Python.
+- [Python Module of the Week"](http://pymotw.com/2/contents.html) — це ще один чудовий посібник із [Стандартної бібліотеки](./stdlib.md#stdlib), який потрібно прочитати.
+
+## Порада
 
 - [The Hitchhiker's Guide to Python!](http://docs.python-guide.org/en/latest/)
 - [The Elements of Python Style](https://github.com/amontalenti/elements-of-python-style)
 - [Python Big Picture](http://slott-softwarearchitect.blogspot.ca/2013/06/python-big-picture-whats-roadmap.html)
-- ["Writing Idiomatic Python" ebook](http://www.jeffknupp.com/writing-idiomatic-python-ebook/) (paid)
+- [Writing Idiomatic Python" ebook](http://www.jeffknupp.com/writing-idiomatic-python-ebook/) (платно)
 
-## Videos
+## Відео
 
 - [Full Stack Web Development with Flask](https://github.com/realpython/discover-flask)
 - [PyVideo](http://www.pyvideo.org)
 
-## Questions and Answers
+## Питання та відповіді
 
 - [Official Python Dos and Don'ts](http://docs.python.org/3/howto/doanddont.html)
 - [Official Python FAQ](http://www.python.org/doc/faq/general/)
@@ -52,86 +55,87 @@ The best way to learn a programming language is to write a lot of code and read 
 - [Python Interview Q & A](http://dev.fyicenter.com/Interview-Questions/Python/index.html)
 - [StackOverflow questions tagged with python](http://stackoverflow.com/questions/tagged/python)
 
-## Tutorials
+## Підручники (англ."Tutorials" )
 
 - [Hidden features of Python](http://stackoverflow.com/q/101268/4869)
 - [What's the one code snippet/python trick/etc did you wish you knew when you learned python?](http://www.reddit.com/r/Python/comments/19dir2/whats_the_one_code_snippetpython_tricketc_did_you/)
 - [Awaretek's comprehensive list of Python tutorials](http://www.awaretek.com/tutorials.html)
 
-## Discussion
+## Обговорення
 
-If you are stuck with a Python problem, and don't know whom to ask, then the [python-tutor list](http://mail.python.org/mailman/listinfo/tutor) is the best place to ask your question.
+Якщо ви застрягли з проблемою Python і не знаєте, кого запитати, то [перелік розсилки python-tutor (англ."python-tutor list")](http://mail.python.org/mailman/listinfo/tutor) — найкраще місце, щоб поставити свої запитання.
 
-Make sure you do your homework by trying to solving the problem yourself first and [ask smart questions](http://catb.org/~esr/faqs/smart-questions.html).
+Переконайтеся, що ви виконали домашнє завдання, спробувавши спершу розв’язати задачу самостійно, і тільки потім [поставити розумні запитання (англ."ask smart questions")](http://catb.org/~esr/faqs/smart-questions.html).
 
-## News
+## Новини
 
-If you want to learn what is the latest in the world of Python, then follow the [Official Python Planet](http://planet.python.org).
+Якщо вас цікавлять останні новини світу Python, відстежуйте їх на офіційній
+[планеті Python](http://planet.python.org).
 
-## Installing libraries
+## Встановлення бібліотек (англ."Installing libraries")
 
-There are a huge number of open source libraries at the [Python Package Index](http://pypi.python.org/pypi) which you can use in your own programs.
+У [Каталогу пакетів Python (англ."Python Package Index")](http://pypi.python.org/pypi) є величезна кількість бібліотек з відкритим кодом, які ви можете використовувати у своїх програмах.
 
-To install and use these libraries, you can use [pip](http://www.pip-installer.org/en/latest/).
+Щоб установити та використовувати ці бібліотеки, ви можете використовувати  [pip](http://www.pip-installer.org/en/latest/).
 
-## Creating a Website
+## Створення сайту
 
-Learn [Flask](http://flask.pocoo.org) to create your own website. Some resources to get started:
-
+Вивчіть [Flask](http://flask.pocoo.org), щоб створити власний веб-сайт. Деякі ресурси для початку:
 - [Flask Official Quickstart](http://flask.pocoo.org/docs/quickstart/)
 - [The Flask Mega-Tutorial](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 - [Example Flask Projects](https://github.com/mitsuhiko/flask/tree/master/examples)
 
-## Graphical Software
+## Графічне програмне забезпечення (англ."Graphical Software")
 
-Suppose you want to create your own graphical programs using Python. This can be done using a GUI (Graphical User Interface) library with their Python bindings. Bindings are what allow you to write programs in Python and use the libraries which are themselves written in C or C++ or other languages.
+Припустімо, ви хочете створити власні графічні програми за допомогою Python. Це можна зробити за допомогою бібліотеки ГІК (графічного інтерфейсу користувача), (анг.GUI -Graphical User Interface) зі своїми прив'язками (англ."bindings") до Python.Прив’язки (англ."bindings") – це те, що дозволяє вам писати програми на Python і використовувати бібліотеки, які самі написані на C або C++ або іншими мовами.
 
-There are lots of choices for GUI using Python:
+Є багато варіантів для GUI з використанням Python:
 
 - Kivy
     - http://kivy.org
 
 - PyGTK
-    - This is the Python binding for the GTK+ toolkit which is the foundation upon which GNOME is built. GTK+ has many quirks in usage but once you become comfortable, you can create GUI apps fast. The Glade graphical interface designer is indispensable. The documentation is yet to improve. GTK+ works well on GNU/Linux but its port to Windows is incomplete. You can create both free as well as proprietary software using GTK+. To get started, read the [PyGTK tutorial](http://www.pygtk.org/tutorial.html).
+    - Це прив’язка Python до набору інструментів GTK+, на основі якого побудовано GNOME. GTK+ має багато особливостей у використанні, але як тільки ви навчитеся, ви зможете швидко створювати програми з графічним інтерфейсом. Конструктор графічного інтерфейсу Glade незамінний. Документацію ще потрібно покращити. GTK+ добре працює на GNU/Linux, але його перенесення на Windows не завершено. За допомогою GTK+ можна створювати як вільні, так і пропрієтарні програми. Щоб почати, прочитайте [PyGTK tutorial](http://www.pygtk.org/tutorial.html).
 
 - PyQt
-    - This is the Python binding for the Qt toolkit which is the foundation upon which the KDE is built. Qt is extremely easy to use and very powerful especially due to the Qt Designer and the amazing Qt documentation. PyQt is free if you want to create open source (GPL'ed) software and you need to buy it if you want to create proprietary closed source software. Starting with Qt 4.5 you can use it to create non-GPL software as well. To get started, read about [PySide](http://qt-project.org/wiki/PySide).
+    - Це прив’язка Python для набору інструментів Qt, який є основою, на якій побудована KDE. Qt надзвичайно простий у використанні та дуже потужний, особливо завдяки Qt Designer та чудовій документації Qt. PyQt безкоштовно, якщо використовується для створення вільних програм (з ліцензією GPL). Для створення закритих пропрієтарних програм вам доведеться його купити.Починаючи з Qt 4.5, дозволяється створювати за допомогою нього не лише GPL'ні програми. Щоб почати, прочитайте про [PySide](http://qt-project.org/wiki/PySide).
 
 - wxPython
-    - This is the Python bindings for the wxWidgets toolkit. wxPython has a learning curve associated with it. However, it is very portable and runs on GNU/Linux, Windows, Mac and even embedded platforms. There are many IDEs available for wxPython which include GUI designers as well such as [SPE (Stani's Python Editor)](http://spe.pycs.net/) and the [wxGlade](http://wxglade.sourceforge.net/) GUI builder. You can create free as well as proprietary software using wxPython. To get started, read the [wxPython tutorial](http://zetcode.com/wxpython/). 
+    -Це прив’язки Python для набору інструментів wxWidgets. wxPython не такий простий в освоєнні. Однак він дуже портативний і працює на GNU/Linux, Windows, Mac і навіть на вбудованих платформах. Багато середовищ розробки для wxPython, такі як [SPE (Stani's Python Editor)](http://spe.pycs.net/) та [wxGlade](http://wxglade.sourceforge.net/) включають дизайнери графічного інтерфейсу. За допомогою wxPython можна створювати як вільні,  так і пропрієтарні програми. Для початку прочитайте підручник з [wxPython tutorial](http://zetcode.com/wxpython/). 
 
-### Summary of GUI Tools
+###  Резюме з інструментів ГІК (англ."GUI Summary of GUI Tools")
 
-For more choices, see the [GuiProgramming wiki page at the official python website](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
+Щоб дізнатися більше, перегляньте [wiki-сторінці GuiProgramming офіційного сайту Python ](http://www.python.org/cgi-bin/moinmoin/GuiProgramming).
 
-Unfortunately, there is no one standard GUI tool for Python. I suggest that you choose one of the above tools depending on your situation. The first factor is whether you are willing to pay to use any of the GUI tools. The second factor is whether you want the program to run only on Windows or on Mac and GNU/Linux or all of them. The third factor, if GNU/Linux is a chosen platform, is whether you are a KDE or GNOME user on GNU/Linux.
+На жаль, для Python не існує жодного стандартного графічного інструменту. Я пропоную вам вибрати один із наведених вище інструментів залежно від вашої ситуації. Перший фактор полягає в тому, чи готові ви платити за використання будь-якого інструменту GUI. Другий фактор полягає в тому, чи хочете ви, щоб програма запускалася лише на Windows, чи на Mac і GNU/Linux, чи на всіх. І по-третє, якщо ви вибрали платформу GNU/Linux,то в якому середовищі ви працюєте: у KDE чи у GNOME.
 
-For a more detailed and comprehensive analysis, see Page 26 of the ['The Python Papers, Volume 3, Issue 1' (PDF)](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
+Для більш детального та всебічного аналізу див. сторінку 26 ['The Python Papers, Volume 3, Issue 1' (PDF)](http://archive.pythonpapers.org/ThePythonPapersVolume3Issue1.pdf).
 
-## Various Implementations
+## Різні реалізації (англ."Various Implementations")
 
-There are usually two parts a programming language - the language and the software. A language is _how_ you write something. The software is _what_ actually runs our programs.
+Зазвичай мова програмування складається з двох частин - мови та програмного забезпечення. Мова - це _як_ ви щось пишете. Програмне забезпечення – це те, _що_ запускає наші програми.
 
-We have been using the _CPython_ software to run our programs. It is referred to as CPython because it is written in the C language and is the _Classical Python interpreter_.
+Ми використовували програмне забезпечення _CPython_ для запуску наших програм. Його називають CPython, оскільки він написаний мовою C і є _класичним інтерпретатором Python_(англ."_Classical Python interpreter_").
 
-There are also other software that can run your Python programs:
+Але існує й інше програмне забезпечення, здатне виконувати програми на
+Python:
 
 - [Jython](http://www.jython.org)
-    - A Python implementation that runs on the Java platform. This means you can use Java libraries and classes from within Python language and vice-versa.
+    - Реалізація Python, яка працює на платформі Java. Це означає, що ви можете використовувати бібліотеки та класи Java в програмі Python і навпаки.
 
 - [IronPython](http://www.codeplex.com/Wiki/View.aspx?ProjectName=IronPython)
-    - A Python implementation that runs on the .NET platform. This means you can use .NET libraries and classes from within Python language and vice-versa.
+    - Реалізація Python, яка працює на платформі .NET,що означає можливість використання бібліотек та класів .NET в програмах Python і навпаки.
 
 - [PyPy](http://codespeak.net/pypy/dist/pypy/doc/home.html)
-    - A Python implementation written in Python! This is a research project to make it fast and easy to improve the interpreter since the interpreter itself is written in a dynamic language (as opposed to static languages such as C, Java or C# in the above three implementations)
+    - Реалізація Python, написана на Python! Це дослідницький проект, спрямований на те, щоб швидко та легко вдосконалити інтерпретатор, оскільки сам інтерпретатор написаний динамічною мовою (на відміну від статичних мов, таких як C, Java або C# у трьох наведених вище реалізаціях).
 
-There are also others such as [CLPython](http://common-lisp.net/project/clpython/) - a Python implementation written in Common Lisp and [Brython](http://brython.info/) which is an implementation on top of a JavaScript interpreter which could mean that you can use Python (instead of JavaScript) to write your web-browser ("Ajax") programs.
+Існують також інші реалізації, такі як [CLPython](http://common-lisp.net/project/clpython/) – реалізація Python, написана мовою Common Lisp і [Brython](http://brython.info/), яка є реалізацію поверх інтерпретатора JavaScript, що може означати, що ви можете використовувати Python (замість JavaScript) для написання програм веб-браузера («Ajax»).
 
-Each of these implementations have their specialized areas where they are useful.
+Кожна з цих реалізацій має свої спеціальні області, де вони корисні.
 
-## Functional Programming (for advanced readers) {#functional-programming}
+## Функціональне програмування (для досвідчених читачів) 
 
-When you start writing larger programs, you should definitely learn more about a functional approach to programming as opposed to the class-based approach to programming that we learned in the [object-oriented programming chapter](./oop.md#oop):
+Коли ви починаєте писати більші програми, вам обов’язково слід дізнатися більше про функціональний підхід до програмування на відміну від підходу до програмування, що базується на класах, про який ми дізналися в [розділі про об’єктно-орієнтоване програмування](./oop.md#oop):
 
 - [Functional Programming Howto by A.M. Kuchling](http://docs.python.org/3/howto/functional.html)
 - [Functional programming chapter in 'Dive Into Python' book](http://www.diveintopython.net/functional_programming/index.html)
@@ -139,10 +143,10 @@ When you start writing larger programs, you should definitely learn more about a
 - [Funcy library](https://github.com/Suor/funcy)
 - [PyToolz library](http://toolz.readthedocs.org/en/latest/)
 
-## Summary
+## Резюме
 
-We have now come to the end of this book but, as they say, this is the _the beginning of the end_!. You are now an avid Python user and you are no doubt ready to solve many problems using Python. You can start automating your computer to do all kinds of previously unimaginable things or write your own games and much much more. So, get started!
+Ми підійшли до кінця цієї книги, але, як кажуть, це _початок кінця_!. Тепер ви затятий користувач Python і, без сумніву, готові вирішити багато проблем за допомогою Python. Ви можете почати автоматизувати свій комп’ютер, щоб робити всі види раніше немислимих речей або писати власні ігри та багато іншого. Отже, починайте!
 
 ---
 
-[^1]: Create a class to represent the person's information. Use a dictionary to store person objects with their name as the key. Use the pickle module to store the objects persistently on your hard disk. Use the dictionary built-in methods to add, delete and modify the persons.
+[^1]:Створіть клас для збереження персональних даних. Об'єкти візитних карток зберігайте у словнику, в якому імена контактів будуть ключами. Використовуйте модуль pickle для тривалого зберігання об’єктів на жорсткому диску. Використовуйте вбудовані методи словника, щоб додавати, видаляти та змінювати контакти.
