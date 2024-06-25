@@ -29,7 +29,9 @@ done so far:
   * floss.md (Appendix: FLOSS) 
   * about.md(Appendix: About)
   * revision_history.md(Appendix: Revision History)
-  * 
+  * translations.md
+  * translation how-to
+  * feedback
 
 ---
 
