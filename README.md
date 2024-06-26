@@ -282,7 +282,7 @@ done so far:
 
 Ця книга використовується/використовувалась як навчальний матеріал у різних навчальних закладах:
 
-- Курс 'Принципи мов програмування' в університеті Vrije(англ.'Principles of Programming Languages'), Амстердам,[Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html)
+- Курс 'Принципи мов програмування' (англ.'Principles of Programming Languages') в університеті Vrije, Амстердам,[Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html)
 
 - Курс 'Основні концепції обчислювальної техніки' (англ.'Basic Concepts of Computing') в університеті Каліфорнії, Девіс, [University of California, Davis](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html)
 
