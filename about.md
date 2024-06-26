@@ -1,17 +1,18 @@
-# Додаток: Колофон 
+# Додаток: про книгу
+
+## Колофон 
 
 Майже все програмне забезпечення, яке я використовував для створення цієї книги, є [ВВПЗ (англ."FLOSS")](./floss.md#floss).
 
 ## Народження Книги
 
-При написанні першої чернетки цієї книги в основі моєї системи була Red Hat 9.0
+При написанні  первинного начерку цієї книги в основі моєї системи була Red Hat 9.0
 Linux, але вже шосту версію чернетки я писав на Fedora Core 3 Linux.
-Спочатку я використовував KWord для написання книги (як пояснюється в [урок історії(англ."history lesson")](./revision_history.md#history-lesson)).
+Спочатку я використовував KWord для написання книги (як пояснюється в [уроці історії(англ."history lesson")](./revision_history.md#history-lesson)).
 
 ## Підліткові роки
 
-Пізніше я перейшов на формат DocBook XML та використовував Kate,але це здалося мені надто нудним.  Отже, я перейшов на OpenOffice,який чудово підходив
-зі своїм рівнем управління форматуванням та можливістю генерувати PDF, але він створював дуже неохайний HTML із документа.
+Пізніше я перейшов на формат DocBook XML та використовував Kate,але це здалося мені надто нудним.  Отже, я перейшов на OpenOffice,який чудово підходив зі своїм рівнем управління форматуванням та можливістю генерувати PDF, але він створював дуже неохайний HTML із документа.
 
 Нарешті я відкрив для себе XEmacs і переписав книгу з нуля в форматі DocBook XML (знову), після того як вирішив, що цей формат є довгостроковим рішенням.
 
@@ -20,9 +21,9 @@ Linux, але вже шосту версію чернетки я писав на
 
 Для сьомої редакції я використовував [MediaWiki](http://www.mediawiki.org) як основу мого сайта. Тепер я все редагую прямо на сайті, і читачі можуть безпосередньо читати/редагувати/обговорювати вміст  на вікі-сторінці, але зрештою я витратив більше часу на боротьбу зі спамом, ніж на написання.
 
-Для восьмої версії чернетки я використовував [Vim]({{ book.vimBookUrl }}), [Pandoc](http://johnmacfarlane.net/pandoc/README.html), and Mac OS X.
+Для восьмої версії чернетки я використовував [Vim](https://vim.swaroopch.com/), [Pandoc](http://johnmacfarlane.net/pandoc/README.html), and Mac OS X.
 
-Для дев'ятої версії чернетки я перейшов на[AsciiDoc format](http://asciidoctor.org/docs/what-is-asciidoc/) і використав [Emacs 24.3](http://www.masteringemacs.org/articles/2013/03/11/whats-new-emacs-24-3/),
+Для дев'ятої версії чернетки я перейшов на [AsciiDoc format](http://asciidoctor.org/docs/what-is-asciidoc/) і використав [Emacs 24.3](http://www.masteringemacs.org/articles/2013/03/11/whats-new-emacs-24-3/),
 [tomorrow theme](https://github.com/chriskempson/tomorrow-theme),
 [Fira Mono font](https://www.mozilla.org/en-US/styleguide/products/firefox-os/typeface/#download-primary) та [adoc-mode](https://github.com/sensorflo/adoc-mode/wiki) для написання книги.
 
@@ -36,4 +37,4 @@ Linux, але вже шосту версію чернетки я писав на
 
 ## Про автора
 
-Перегляньте {{ book.authorUrl }}
+Перегляньте  (https://swaroopch.com/notes/about) 
