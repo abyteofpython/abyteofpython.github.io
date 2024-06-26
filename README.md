@@ -300,7 +300,7 @@ done so far:
 
 - 'Вступ до інформатики та програмування' (англ.'Introduction to Computer Science and Programming') у [MIT OpenCourseWare](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)
 
--  'Базове програмування на факультеті суспільних наук Університету Любляни, Словенія' (англ.'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' ),University of Ljubljana, Slovenia' -- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) каже _"Я (і мій попередник) використовували вашу книгу як літературну основу для цього курсу"_
+-  'Базове програмування на факультеті суспільних наук Університету Любляни, Словенія' (англ.'Basic programming at the Faculty of Social Sciences, University of Ljubljana, Slovenia' ),-- [Aleš Žiberna](mailto:ales.ziberna@fdv.uni-lj.si) каже _"Я (і мій попередник) використовували вашу книгу як літературну основу для цього курсу"_
 
 - 'Вступ до програмування' (англ.'Introduction to programming'), факультет інформаційних наук, Університет Задара, Хорватія -- Krešimir Zauder  каже: _«Я хотів би повідомити вам, що «Укус Пітона» є обов’язковим для читання на моєму курсі»_
 
