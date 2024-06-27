@@ -1,62 +1,72 @@
-# First Steps
+# Перші кроки
 
-We will now see how to run a traditional 'Hello World' program in Python. This will teach you how to write, save and run Python programs.
+Давайте подивимося, як створити традиційну програму «Привіт,Світ!» на Python. Це навчить вас писати, зберігати та запускати програми Python.
 
-There are two ways of using Python to run your program - using the interactive interpreter prompt or using a source file. We will now see how to use both of these methods.
+Є два способи використання Python для запуску вашої програми - використання інтерактивного запрошення інтерпретатора та використання файлу з текстом програми. Зараз ми побачимо, як використовувати обидва ці методи.
 
-## Using The Interpreter Prompt
+## Використання командного рядка інтерпретатора (англ. "Using The Interpreter Prompt")
 
-Open the terminal in your operating system (as discussed previously in the [Installation](./installation.md#installation) chapter) and then open the Python prompt by typing `python3` and pressing `[enter]` key.
+Відкрийте вікно термінала у вашій операційній системі (як описано раніше в розділі [Інсталяція] [Installation](./installation.md#installation) ) і запустіть інтерпретатор Python, ввівши команду `python3`та натиснувши клавішу`[enter]`.
 
-Once you have started Python, you should see `>>>` where you can start typing stuff. This is called the _Python interpreter prompt_.
+Щойно ви запустите Python, ви побачите `>>>>, де ви можете почати вводити текст.Це називається _командний рядок інтерпретатора Python_(англ." _Python interpreter prompt_").
 
-At the Python interpreter prompt, type:
+У командному рядку інтерпретатора Python введіть:
 
 ```python
-print("Hello World")
+print("Привіт, Світ!")
 ```
 
-followed by the `[enter]` key. You should see the words `Hello World` printed to the screen.
+після чого натиснить клавішу `[enter]`. Ви повинні побачити на екрані слова  `Привіт, Світ!`.
 
-Here is an example of what you should be seeing, when using a Mac OS X computer. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.
+The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.Ось приклад того, що ви повинні бачити під час використання комп’ютера Mac OS X. Інформація о версії програмного забезпечення Python  може відрізнятися залежно від вашого комп’ютера, але частина командного рядка (тобто від `>>>` і далі) має бути однаковою незалежно від операційної системи.
 
-<!-- The output should match pythonVersion variable in book.json -->
-```python
+<!-- Вихід має відповідати змінній pythonVersion variable in book.json -->
+
+```
 $ python3
 Python 3.6.0 (default, Jan 12 2017, 11:26:36)
 [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
->>> print("Hello World")
-Hello World
+>>> print("Привіт, Світ!")
+Привіт, Світ!
 ```
 
-Notice that Python gives you the output of the line immediately! What you just entered is a single Python _statement_. We use `print` to (unsurprisingly) print any value that you supply to it. Here, we are supplying the text `Hello World` and this is promptly printed to the screen.
+Зауважте, що Python миттєво дає вам результат рядка! Те, що ви щойно ввели, є одиночним _оператором_ Python. Ми використовуємо `print`, щоб (як це не дивно) надрукувати будь-яке значення, яке ви йому надаєте. Тут ми надаємо текст «Привіт, Світ!», і він негайно друкується на екрані.
 
-### How to Quit the Interpreter Prompt
+### Як вийти з командного рядка інтерпретатора (англ." How to Quit the Interpreter Prompt")
 
-If you are using a GNU/Linux or OS X shell, you can exit the interpreter prompt by pressing `[ctrl + d]` or entering `exit()` (note: remember to include the parentheses, `()`) followed by the `[enter]` key.
+If you are using a GNU/Linux or OS X shell,
 
-If you are using the Windows command prompt, press `[ctrl + z]` followed by the `[enter]` key.
+Якщо ви використовуєте оболонку GNU/Linux або OS X, ви можете вийти з командного рядка підказки інтерпретатора, натиснувши `[ctrl + d]` або ввівши `exit()` (примітка: не забудьте включити дужки, `()`) за допомогою клавіші `[enter]`.
 
-## Choosing An Editor
+Якщо ви використовуєте командний рядок Windows, натисніть `[ctrl + z]`, а потім клавішу `[enter]`.
 
-We cannot type out our program at the interpreter prompt every time we want to run something, so we have to save them in files and can run our programs any number of times.
+## Вибір редактора (англ." Choosing An Editor")
 
-To create our Python source files, we need an editor software where you can type and save. A good programmer's editor will make your life easier in writing the source files. Hence, the choice of an editor is crucial indeed. You have to choose an editor as you would choose a car you would buy. A good editor will help you write Python programs easily, making your journey more comfortable and helps you reach your destination (achieve your goal) in a much faster and safer way.
+Оскільки ми не можемо набирати програму в командному рядку інтерпретатора щоразу, коли нам потрібно щось запустити, нам доведеться зберігати програми в
+файлах, щоб потім мати можливість запускати їх скільки завгодно разів.
 
-One of the very basic requirements is _syntax highlighting_ where all the different parts of your Python program are colorized so that you can _see_ your program and visualize its running.
+Перш ніж приступити до написання програм на Python у файлах, нам потрібний редактор
+для роботи із файлами програм. Вибір редактора дуже важливий. Підходити до вибору редактора треба так само, як і до вибору особистого автомобіля. Хороший редактор допоможе
+вам легко писати програми на Python, роблячи вашу подорож більш комфортною, а
+також дозволяючи швидше та безпечніше досягти вашої мети.
 
-If you have no idea where to start, I would recommend using [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
+Одна з основних вимог є _підсвічування синтаксису_, коли різні елементи
+програми на Python розфарбовані так, щоб ви могли легко _бачити_ вашу програму та
+хід виконання.
 
-If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
+Якщо ви не знаєте, з чого почати, я б порекомендував використовувати програмне забезпечення [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/), яке доступне для Windows, Mac OS X і GNU/Linux. Подробиці в наступному розділі.
 
-If you are an experienced programmer, then you must be already using [Vim](http://www.vim.org) or [Emacs](http://www.gnu.org/software/emacs/). Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use both for most of my programs, and have even written an [entire book on Vim]({{ book.vimBookUrl }}).
+Якщо ви використовуєте Windows, *не використовуйте Блокнот* - це поганий вибір, оскільки в нього не має функції підсвічування синтаксису,а також  він не дозволяє вставляти відступи, що дуже важливо у нашому випадку, як ми побачимо пізніше. Хороші редактори зроблять це автоматично.
 
-In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do learn to use either of them as it will be very useful for you in the long run. However, as I mentioned before, beginners can start with PyCharm and focus the learning on Python rather than the editor at this moment.
+Якщо ви досвідчений програміст, ви повинні вже використовувати [Vim](http://www.vim.org) або [Emacs](http://www.gnu.org/software/emacs/). Зайве говорити, що це два найпотужніші редактори, і ви отримаєте користь від їх використання для написання своїх програм на Python. Я особисто використовую обидва для більшості своїх програм і навіть написав [цілу книгу про Vim](https://vim.swaroopch.com/).
 
-To reiterate, please choose a proper editor - it can make writing Python programs more fun and easy.
 
-If you are interested in a detailed discussion on this topic, check out [Finding the Perfect Python Code Editor](https://realpython.com/courses/finding-perfect-python-code-editor/).
+Якщо ви бажаєте витратити час на вивчення Vim або Emacs, я настійно рекомендую вам навчитися використовувати будь-який з них, оскільки це буде дуже корисно для вас у довгостроковій перспективі. Однак, як я вже згадував раніше, початківці можуть почати з PyCharm і зосередити навчання на Python, а не на редакторі на даний момент.
+
+Повторюю, будь ласка, виберіть відповідний редактор - це може зробити написання програм Python веселішим і легшим.
+
+Якщо ви зацікавлені в детальному обговоренні цієї теми, перегляньте [Пошук ідеального редактора коду Python](https://realpython.com/courses/finding-perfect-python-code-editor/).
 
 ## PyCharm {#pycharm}
 
