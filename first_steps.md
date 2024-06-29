@@ -138,4 +138,4 @@ python3 привіт.py
 
 Це припускає, що ви трохи знаєте про роботу термінала і що ви зберегли програму привіт.py у тому самому місці, де ви відкривали термінал.
 
-![Screenshot_pruvit.png](Screenshot_pruvit.png) 
+![Screenshot_pruvit.png](images/Screenshot_pruvit.png) 
