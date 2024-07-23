@@ -441,7 +441,7 @@ MSB = старший біт, LSB = молодший значущий біт
 
 Зауважте, що біт, якби старший біт (MSB, число 7) був би 1, результуюче число було б більшим, як у прикладі вище.
 
-![rotate left](Rotate_left_logically.svg.png)
+![rotate left](images/Rotate_left_logically.svg.png)
 
 <sup>Опис зображення: 0001 0111 (десяткове число 23) логічно зсувається на один біт вліво, результат 0010 1110 (десяткове число 46).
 <br> Image rights: By <a href="https://en.wikipedia.org/wiki/User:Cburnett" class="extiw" title="en:User:Cburnett">en:User:Cburnett</a> - This W3C-unspecified <a href="https://en.wikipedia.org/wiki/Vector_images" class="extiw" title="w:Vector images">vector image</a> was created with <a href="https://en.wikipedia.org/wiki/Inkscape" class="extiw" title="w:Inkscape">Inkscape</a> ., <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1505663">Link</a></sup>
@@ -485,7 +485,7 @@ print(0b1001, ">>1 =", 0b1001>>1)
 MSB = старший біт, LSB = молодший значущий біт 
 
 Зауважте, що на зображенні нижче молодший значущий біт (LSB) знищується
-![right shift](Rotate_right_logically.svg.png)
+![right shift](images/Rotate_right_logically.svg.png)
 
 <sup>
 Опис зображення: 0001 0111 (десяткове число 23) логічно зсувається на один біт вправо,результат буде: 0000 1011 (десяткове число 11)
