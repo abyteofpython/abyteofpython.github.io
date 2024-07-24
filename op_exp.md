@@ -206,10 +206,7 @@ $ python expression.py
 
 
 
-__Від перекладача__
-
-## Бінарні операції ( англ."binary operations")
-
+-- Від перекладачa --
 
 ## Розуміння двійкових цифр
 
@@ -550,7 +547,7 @@ Image rights: By <a href="https://en.wikipedia.org/wiki/User:Cburnett" class="ex
 ###  Побітове НЕ (bitwise inversion)
 
  `~` (bit-wise invert)
-    - Побітова операція НЕ для числа  x відповідає -(x+1).The bit-wise inversion of x is -(x+1).
+    - Побітова операція НЕ для числа  x відповідає -(x+1).
     Значення: до числа додається 0b01 і змінюється знак.
 
 ```python
@@ -603,7 +600,7 @@ print("=-(x+1)=-(-0b1111+0b0001)=-0b1110")
 
 - `|` (bit-wise OR)
     - Побітова операція АБО над числами: якщо обидва біти дорівнюють `0`, результат `0`.  В іншому випадку це `1`. 
-    Bitwise OR of the numbers: if both bits are `0`, the result is `0`. Otherwise, it's `1`. 
+
     
 | Приклад A | Приклад B | Приклад C | 
 | :--: | :--: | :--: |
