@@ -443,7 +443,6 @@ $ python function_docstring.py
  Редактор коду «Visual Studio Code» може зрозуміти, що таке рядок документації (рядок 2) функції, і відобразити його в маленькому полі над курсором, коли ім’я функції вводиться (рядок 8 ) (див. знімок екрана нижче):
 
 ![docstring.png](images/docstring.png)
-![rotate left](images/Rotate_left_logically.svg.png)
 
 *Screenshot of Visual Studio Code displaying a docstring*
 
