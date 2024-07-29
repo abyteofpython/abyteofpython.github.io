@@ -131,7 +131,7 @@ The PYTHONPATH is ['/tmp/py',
 Зверніть увагу, що поточна папка - це папка, з якої запускається програма. Запустіть `import os; print(os.getcwd())`, щоб дізнатися поточну папку вашої програми.
 
 
-![screenshot: get current work directory](screenshot_getcwd.png)
+![screenshot: get current work directory](image/screenshot_getcwd.png)
 <small>Screenshot: Get current work directory</small>
 
 ## Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")
