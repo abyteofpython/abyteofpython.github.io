@@ -217,7 +217,7 @@ python module_using_name.py
 import module_using_name
 ```
 Висновок:
-![screenshot importer](screenshot_importer.png)
+![screenshot importer](images/screenshot_importer.png)
 
 
 **Як це працює**
