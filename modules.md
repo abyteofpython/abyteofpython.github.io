@@ -423,6 +423,4 @@ Python намагається знайти модуль turtle.py. Python спо
 ![screenshot of dir function](images/screenshot_dir.png)
 <small>Screenshot of using IDLE and displaying all the functionality of the <code>sys</code> module using <code>dir()</code>.</small>
 
---- __кінець доповнень від перекладача__ ---
-
 --- __завершення доповнень від перекладача__ ---
