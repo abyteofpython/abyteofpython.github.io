@@ -6,13 +6,13 @@
 
 ##  Список (англ."List")
 
-«Список» — це структура даних, яка містить упорядкований набір елементів, тобто зберігає *послідовність* елементів у списку (англ."*a sequence* of items in a list"). Це легко уявити, якщо згадати список покупок, в якому перераховується, що потрібно купити, з тим винятком, що у списку покупок кожен елемент зазвичай розміщується на окремому рядку, тоді як у Python вони розділяються комами.
+Список — це структура даних, яка містить упорядкований набір елементів, тобто зберігає *послідовність* елементів у списку (англ."*a sequence* of items in a list"). Це легко уявити, якщо згадати список покупок, в якому перераховується, що потрібно купити, з тим винятком, що у списку покупок кожен елемент зазвичай розміщується на окремому рядку, тоді як у Python вони розділяються комами.
 
-Список елементів має бути укладений у квадратні дужки, щоб Python зрозумів, що ви вказуєте список. Створивши список, ви можете додавати, видаляти або шукати елементи в списку. Оскільки ми можемо додавати та видаляти елементи, ми говоримо, що список є *змінним* (англ."*mutable*") типом даних, тобто цей тип можна змінювати.
+Список елементів має бути укладений у квадратні дужки, щоб Python зрозумів, що ви вказуєте список. Створивши список, ви можете додавати, видаляти або шукати елементи у списку. Оскільки ми можемо додавати та видаляти елементи, ми говоримо, що список є *змінним* (англ."*mutable*") типом даних, тобто цей тип можна змінювати.
 
 ## Короткий вступ до об’єктів і класів
 
-Хоч я і намагався досі відтягнути обговорення об'єктів і класів, на даному етапі все ж таки необхідне деяке пояснення, щоб ви краще зрозуміли ідею списків. Ми детально розглянемо цю тему в [пізнішому розділі](./oop.md#oop).
+Хоч я і намагався досі відтягнути обговорення об'єктів і класів, на даному етапі все ж таки необхідне деяке пояснення, щоб ви краще зрозуміли ідею списків. Ми детально розглянемо цю тему у [пізнішому розділі](./oop.md#oop).
 
 Список є прикладом використання об'єктів і класів. Коли ми присвоюємо деякій змінній `i` значення, скажімо, ціле число `5`, ви можете сприймати це як створення *об’єкта* (тобто екземпляра) `i` *класу* (тобто типу) ` int`. Насправді, ви можете прочитати `help(int)`, щоб зрозуміти це краще.
 
@@ -64,46 +64,6 @@ print('Мій список покупок зараз', список_покупо
 Перший товар, який я куплю, це банан
 Я купив банан
 Мій список покупок зараз ['манго', 'морква', 'рис', 'яблуко']
-```
-
-Той самий приклад англійською:
-``` python ds_using_list.py
-# This is my shopping list
-shoplist = ['apple', 'mango', 'carrot', 'banana']
-
-print('I have', len(shoplist), 'items to purchase.')
-
-print('These items are:', end=' ')
-for item in shoplist:
-    print(item, end=' ')
-
-print('\nI also have to buy rice.')
-shoplist.append('rice')
-print('My shopping list is now', shoplist)
-
-print('I will sort my list now')
-shoplist.sort()
-print('Sorted shopping list is', shoplist)
-
-print('The first item I will buy is', shoplist[0])
-olditem = shoplist[0]
-del shoplist[0]
-print('I bought the', olditem)
-print('My shopping list is now', shoplist)
-```
-
-Висновок :
-```
-$ python ds_using_list.py
-I have 4 items to purchase.
-These items are: apple mango carrot banana
-I also have to buy rice.
-My shopping list is now ['apple', 'mango', 'carrot', 'banana', 'rice']
-I will sort my list now
-Sorted shopping list is ['apple', 'banana', 'carrot', 'mango', 'rice']
-The first item I will buy is apple
-I bought the apple
-My shopping list is now ['banana', 'carrot', 'mango', 'rice']
 ```
 
 **Як це працює**
@@ -166,36 +126,6 @@ print('Кількість тварин у новому зоопарку стан
 Кількість тварин у новому зоопарку становить 5
 
 ``` 
-Приклад англійською:
-```python
-# I would recommend always using parentheses
-# to indicate start and end of tuple
-# even though parentheses are optional.
-# Explicit is better than implicit.
-zoo = ('python', 'elephant', 'penguin')
-print('Number of animals in the zoo is', len(zoo))
-
-new_zoo = 'monkey', 'camel', zoo    # parentheses not required but are a good idea
-print('Number of cages in the new zoo is', len(new_zoo))
-print('All animals in new zoo are', new_zoo)
-print('Animals brought from old zoo are', new_zoo[2])
-print('Last animal brought from old zoo is', new_zoo[2][2])
-print('Number of animals in the new zoo is',
-      len(new_zoo)-1+len(new_zoo[2]))
-
-```
-
-Висновок:
-```
-$ python ds_using_tuple.py
-Number of animals in the zoo is 3
-Number of cages in the new zoo is 3
-All animals in new zoo are ('monkey', 'camel', ('python', 'elephant', 'penguin'))
-Animals brought from old zoo are ('python', 'elephant', 'penguin')
-Last animal brought from old zoo is penguin
-Number of animals in the new zoo is 5
-
-```
 
 **Як це працює**
 
