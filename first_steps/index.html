@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Перші кроки - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../feedback/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../floss/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Перші кроки</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#using-the-interpreter-prompt" class="nav-link">Використання командного рядка інтерпретатора (англ. "Using The Interpreter Prompt")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#choosing-an-editor" class="nav-link">Вибір редактора (англ." Choosing An Editor")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pycharm-pycharm" class="nav-link">PyCharm {#pycharm}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#visual-studio-code" class="nav-link">Visual Studio code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vim" class="nav-link">Vim</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#emacs" class="nav-link">Emacs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#i-other-editors" class="nav-link">Iнші редактори (АНГЛ."Other editors")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#-using-no-editor-working-directly-with-source-files" class="nav-link">Без використання редактора - робота безпосередньо з вихідними файлами (англ. "Using no editor - working directly with source files")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Перші кроки</h1>
+<p>Давайте подивимося, як створити традиційну програму «Привіт, Світ!» на Python. Це навчить вас писати, зберігати та запускати програми на Python.</p>
+<p>Є два способи використання Python для запуску вашої програми - використання інтерактивного командного рядка інтерпретатора та використання файлу з текстом програми. Зараз ми побачимо, як використовувати обидва ці методи.</p>
+<h2 id="using-the-interpreter-prompt">Використання командного рядка інтерпретатора (англ. "Using The Interpreter Prompt")</h2>
+<p>Запустіть інтерпретатор Python, ввівши команду <code>python3</code>та натиснувши клавішу<code>[Enter]</code>.</p>
+<p>Щойно ви запустите Python, ви побачите <code>&gt;&gt;&gt;</code>, де ви можете почати вводити текст.Це називається <em>командний рядок інтерпретатора Python</em>(англ." <em>Python interpreter prompt</em>").</p>
+<p>У командному рядку інтерпретатора Python введіть:</p>
+<pre><code class="language-python">print(&quot;Привіт, Світ!&quot;)
+</code></pre>
+<p>після чого натиснить клавішу <code>[Enter]</code>. Ви повинні побачити на екрані слова  <code>Привіт, Світ!</code>.</p>
+<p>Приклад: </p>
+<pre><code>$ python3
+Python 3.6.0 (default, Jan 12 2017, 11:26:36)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; print(&quot;Привіт, Світ!&quot;)
+Привіт, Світ!
+</code></pre>
+<p>Це приклад того, що ви повинні бачити під час використання комп’ютера Mac OS X. Інформація о версії програмного забезпечення Python  може відрізнятися в наступних рядках:</p>
+<pre><code>Python 3.6.0 (default, Jan 12 2017, 11:26:36)
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
+</code></pre>
+<p>залежно від вашого комп’ютера, але частина командного рядка (тобто від <code>&gt;&gt;&gt;</code> і далі) має бути однаковою незалежно від операційної системи:</p>
+<pre><code>Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; print(&quot;Привіт, Світ!&quot;)
+Привіт, Світ!
+</code></pre>
+<p>Зауважте, що Python миттєво дає вам результат рядка! Те, що ви щойно ввели, є одиночним <em>оператором</em> Python. Ми використовуємо <code>print</code>, щоб (як це не дивно) надрукувати будь-яке значення, яке ви йому надаєте. Тут ми надаємо текст «Привіт, Світ!», і він негайно друкується на екрані.</p>
+<h3 id="how-to-quit-the-interpreter-prompt">Як вийти з командного рядка інтерпретатора (англ. "How to Quit the Interpreter Prompt")</h3>
+<p>Якщо ви використовуєте оболонку GNU/Linux або OS X, ви можете вийти з <em>Python interpreter prompt</em>, натиснувши <code>[ctrl + d]</code> або ввівши <code>exit()</code>(примітка: не забудьте включити дужки, <code>()</code>) ,а потім натиснути клавіші <code>[Enter]</code>.</p>
+<p>Якщо ви використовуєте <em>Python interpreter prompt</em> Windows, натисніть <code>[ctrl + z]</code>, а потім клавішу <code>[Enter]</code>.</p>
+<h2 id="choosing-an-editor">Вибір редактора (англ." Choosing An Editor")</h2>
+<p>Оскільки ми не можемо набирати програму в <em>Python interpreter prompt</em> щоразу, коли нам потрібно щось запустити, нам доведеться зберігати програми у файлах, щоб потім мати можливість запускати їх скільки завгодно разів.</p>
+<p>Перш ніж приступити до написання програм на Python у файлах, нам потрібний редактор для роботи із файлами програм. Вибір редактора дуже важливий. Підходити до вибору редактора треба так само, як і до вибору особистого автомобіля. Хороший редактор допоможе вам легко писати програми на Python, роблячи вашу подорож більш комфортною, а також дозволяючи швидше та безпечніше досягти вашої мети.</p>
+<p>Одна з основних вимог є <em>підсвічування синтаксису</em>, коли різні елементи програми на Python розфарбовані так, щоб ви могли легко <em>бачити</em> вашу програму та хід виконання.</p>
+<p>Якщо ви не знаєте, з чого почати, я б порекомендував використовувати програмне забезпечення <a href="https://www.jetbrains.com/pycharm-edu/">PyCharm Educational Edition</a>, яке доступне для Windows, Mac OS X і GNU/Linux. Подробиці в наступному розділі.</p>
+<p>Якщо ви використовуєте Windows, <em>не використовуйте Блокнот</em> - це поганий вибір, оскільки в нього не має функції підсвічування синтаксису,а також  він не дозволяє вставляти відступи, що дуже важливо у нашому випадку, як ми побачимо пізніше. Хороші редактори зроблять це автоматично.</p>
+<p>Якщо ви досвідчений програміст, ви повинні вже використовувати <a href="http://www.vim.org">Vim</a> або <a href="http://www.gnu.org/software/emacs/">Emacs</a>. Зайве говорити, що це два найпотужніші редактори, і ви отримаєте користь від їх використання для написання своїх програм на Python. Я особисто використовую обидва для більшості своїх програм і навіть написав <a href="https://vim.swaroopch.com/">цілу книгу про Vim</a>.</p>
+<p>Якщо ви бажаєте витратити час на вивчення Vim або Emacs, я настійно рекомендую вам навчитися використовувати будь-який з них, оскільки це буде дуже корисно для вас у довгостроковій перспективі. Однак, як я вже згадував раніше, початківці можуть почати з PyCharm і зосередити навчання на Python, а не на редакторі на даний момент.</p>
+<p>Повторюю, будь ласка, виберіть відповідний редактор - це може зробити написання програм Python веселішим і легшим.</p>
+<p>Якщо ви зацікавлені в детальному обговоренні цієї теми, перегляньте <a href="https://realpython.com/courses/finding-perfect-python-code-editor/">Пошук ідеального редактора коду Python</a>.</p>
+<h2 id="pycharm-pycharm">PyCharm {#pycharm}</h2>
+<p>[PyCharm (Community Edition)] це безкоштовний редактор, спеціально розроблений для написання програм на Python. Щоб завантажити PyCharm, дотримуйтесь інструкцій на  <a href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></p>
+<p>Зверніть увагу, що PyCharm також пропонує професійну версію редактора з більшими можливостями, однак ця версія не є безкоштовною.</p>
+<h2 id="visual-studio-code">Visual Studio code</h2>
+<p>Visual Studio Code — безкоштовний редактор коду, який можна використовувати для написання програм на Python.</p>
+<p>1.Завантажте та встановіть Visual Studio Code з  <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<p>2.Коли ви пишете свою першу програму на Python з Visual Studio code, як наприклад, 'print("Привіт,Світ")' і запускаєте її, Visual Studio Code автоматично завантажить і встановить розширення для мови Python. Як тільки цей плагін буде встановлено, ви готові.</p>
+<p>Дивіться більше інформації про те, як використовувати код Visual Studio з python тут:</p>
+<ul>
+<li>https://code.visualstudio.com/docs/languages/python</li>
+</ul>
+<h2 id="vim">Vim</h2>
+<p>Vim є відомим безкоштовним текстовим редактором, який можна використовувати для написання програм на Python.</p>
+<p>1.Завантажте та встановіть Vim з офіційної домашньої сторінки:  <a href="http://www.vim.org">http://www.vim.org</a></p>
+<p>2.Перегляньте статті про те, як адаптувати Vim для використання з програмами Python у вашій операційній системі, наприклад:</p>
+<ul>
+<li>https://realpython.com/vim-and-python-a-match-made-in-heaven/</li>
+<li>https://rapphil.github.io/vim-python-ide/</li>
+</ul>
+<h2 id="emacs">Emacs</h2>
+<p>Emacs є дуже відомим безкоштовним текстовим редактором, який можна використовувати майже для всього, включно з написанням програм на Python.</p>
+<ol>
+<li>Завантажте та встановіть Emacs <a href="http://www.gnu.org/software/emacs/">http://www.gnu.org/software/emacs/</a></li>
+<li>
+<p>Перегляньте статті про те, як адаптувати Emacs для написання програм на Python у вашій операційній системі, наприклад:</p>
+</li>
+<li>
+<p>https://realpython.com/emacs-the-best-python-editor/</p>
+</li>
+<li>https://www.emacswiki.org/emacs/PythonProgrammingInEmacs</li>
+</ol>
+<h2 id="i-other-editors">Iнші редактори (АНГЛ."Other editors")</h2>
+<p>Існує багато інших редакторів для написання коду на Python, більшість із яких є безкоштовним програмним забезпеченням. Кожен із них має свої особливі переваги та недоліки. Виберіть на свій смак, що найкраще підходить саме для вас.</p>
+<p>Список редакторів Pytho можна знайти тут:</p>
+<ul>
+<li>https://wiki.python.org/moin/PythonEditors</li>
+</ul>
+<h2 id="-using-no-editor-working-directly-with-source-files">Без використання редактора - робота безпосередньо з вихідними файлами (англ. "Using no editor - working directly with source files")</h2>
+<p>Вам не потрібен спеціальний редактор для написання програм на Python, ви можете використовувати будь-який редактор, якщо збережете свою програму на Python як текстовий файл із правильним розширенням файлу ".py". </p>
+<p>Наприклад, напишіть цю програму та збережіть її як "привіт.py":</p>
+<pre><code>print(&quot;Привіт,Cвіт&quot;)
+</code></pre>
+<p>Більшість редакторів Python пропонують кнопку «Пуск» або «Виконати», на якій можна натиснути, щоб запустити програму. Однак, якщо у вас є  відкритий термінал у тій же папці, де збережена і ваша програма <code>привіт.py</code>, і вона збережена правильно, ви можете просто ввести в терміналі:</p>
+<p>```
+python3 привіт.py</p>
+<p>````
+щоб запустити програму.</p>
+<p>Це припускає, що ви трохи знаєте про роботу термінала і що ви зберегли програму привіт.py у тому самому місці, де ви відкривали термінал.</p>
+<p><img alt="Screenshot_pruvit.png" src="../images/Screenshot_pruvit.png" /> </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

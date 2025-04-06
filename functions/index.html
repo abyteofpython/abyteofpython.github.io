@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Функції - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../floss/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../installation/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Функції</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Параметри функції</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Локальні змінні</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#global-the-global-statement" class="nav-link">Global оператор (англ. "The global statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#default-argument-values" class="nav-link">Значення аргументів за замовчуванням (англ."Default Argument Values")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#keyword-arguments" class="nav-link">Аргументи ключових слів ( англ."Keyword Arguments")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#varargs-parameters-or-variable-number-of-arguments" class="nav-link">Довільна кількість аргументів ( англ."VarArgs parameters" or "variable number of Arguments")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#return-the-return-statement" class="nav-link">Оператор "return" (англ."the return statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#docstrings" class="nav-link">Рядки документації (англ." DocStrings")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Функції</h1>
+<p>Функції — є багаторазовими фрагментами програми. Вони дозволяють вам дати назву блоку рядків коду, щоб згодом запускати цей блок, використовуючи вказане ім’я будь-де у вашій програмі та будь-яку кількість разів. Це називається <em>викликом</em> функції. Ми вже використовували багато вбудованих функцій, таких як <code>len</code> і <code>range</code>.</p>
+<p>Концепція функції є, ймовірно, <em>найважливішим</em> будівельним блоком будь-якого нетривіального програмного забезпечення (на будь-якій мові програмування), тому ми розглянемо різні аспекти функцій у цій главі.</p>
+<p>Функції визначаються за допомогою ключового слова <code>def</code>. Для того, щоб створити функцію, потрібно розмістити ключове слово def перед ідентифікатором функції (її ім’ям), потім вказати пару дужок, всередині яких можуть міститися імена змінних, поставити в кінці рядка двокрапку, яка закінчує рядок. Далі йде блок рядків коду, які є частиною цієї функції. Приклад покаже, що це насправді дуже просто:</p>
+<p>Приклад (зберегти як <code>function1.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function1.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function1.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def скажи_привіт():
+    # блок, що належить функції
+    print('привіт, Світ!')
+# Кінець функції
+
+скажи_привіт()  # виклик функції
+скажи_привіт()  # ще один виклик функції
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function1.py
+привіт, Світ!
+привіт, Світ!
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Ми визначаємо функцію під назвою <code>скажи_привіт</code> використовуючи синтаксис, описаний вище. Ця функція не приймає параметрів і, отже, немає змінних, оголошених у дужках. Параметри функції – це деякі вхіднi дані, які ми можемо передати функції, щоб отримати відповідний їм результат.
+Зверніть увагу, що ми можемо викликати ту саму функцію двічі, що означає, що нам не потрібно писати той самий код знову.</p>
+<h2 id="_2">Параметри функції</h2>
+<p>Функції можуть приймати параметри, тобто деякі значення, що передаються функції,щоб вона щось <em>зробила</em> з ними. Ці параметри схожі на змінні, за винятком того, що значення цих змінних вказуються при виклику функції, та під час роботи функції їм вже надано їх значення.</p>
+<p>Параметри вказуються в парі круглих дужок при визначенні функції, розділені символом
+коми. Коли ми викликаємо функцію, ми надаємо значення таким же чином. Зверніть увагу на термінологію: імена, наведені при визначенні функції, називаються <em>параметрами</em>, тоді як значення,які ви передаєте в функцію при її виклику, - називаються <em>аргументами</em>.</p>
+<p>Приклад (зберегти як <code>function_param.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_param.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_param.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def print_max(a, b):
+    if a &gt; b:
+        print(a, 'є максимальним')
+    elif a == b:
+        print(a, 'дорівнює', b)
+    else:
+        print(b, 'є максимальним')
+
+# пряма передача значень
+print_max(3, 4)
+
+x = 5
+y = 7
+# передача змінних як аргументи
+print_max(x, y)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_param.py
+4 є максимальним
+7 є максимальним
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Тут ми визначаємо функцію з назвою <code>print_max</code>, яка використовує два параметри з назвою <code>a</code> і <code>b</code>. Ми знаходимо більше число за допомогою простого  блоку  <code>if..else</code>, а потім друкуємо більше число.</p>
+<p>Коли ми вперше викликаємо функцію <code>print_max</code>, ми безпосередньо передаємо числа як аргументи. У другому випадку ми викликаємо функцію зі змінними в якості аргументів. <code>print_max(x, y)</code> призначає значення аргумента <code>x</code> параметру <code>a</code>, а значення аргумента <code>y</code> - параметру <code>b</code>. Функція <code>print_max</code> працює однаково в обох випадках.</p>
+<p>---- <strong>Від перекладача</strong> ----</p>
+<p>Зберегти як <code>function_param1.py</code>:</p>
+<pre><code class="language-python">def ноутбук(текст=&quot;привіт&quot;,кількість=2):
+    print(текст*кількість)
+
+ноутбук()               # виклик функції без аргументів (використовуються аргументи за замовчуванням)
+ноутбук(&quot;Toshiba&quot;)      #виклик функції лише з одним аргументом (аргумент за замовчуванням
+                        #використовується для другого параметра)
+ноутбук(&quot;Lenovo&quot;,8)    # виклик функції з обома аргументами
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ function_param1.py
+
+привіт привіт 
+Toshiba Toshiba 
+Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo Lenovo
+
+</code></pre>
+<p>де:
+1. у рядку коду <strong>def ноутбук (текст="привіт",кількість=2):</strong>   , 
+<em>текст</em> та <em>кількість</em> є параметрами;</p>
+<ol>
+<li>у рядкях коду <strong>ноутбук("Toshiba")</strong>, <strong>ноутбук("Lenovo", 8)</strong>  , <em>Toshiba</em>, <em>Lenovo</em>, <em>8</em>  є аргументами.</li>
+</ol>
+<p>--- <strong>завершення прикладу від перекладача</strong> ---</p>
+<h2 id="_3">Локальні змінні</h2>
+<p>При оголошенні змінних всередині визначення функції, вони жодним чином не пов’язані з іншими змінними з такими ж іменами, які використовуються поза функцією, тобто імена змінних є <em>локальними</em> для функції. Це називається  <em>областю видимості</em> змінної. Область видимості всіх змінних обмежена блоком, де вони оголошені, починаючи з точки визначення імені.</p>
+<p>Приклад (зберегти як <code>function_local.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_local.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_local.txt" %}</code></pre>-->
+
+<pre><code class="language-python">x = 50
+
+
+def func(x):
+    print('x дорівнює', x)
+    x = 2
+    print('Заміна локального x на',x)
+
+
+func(x)
+print('x як і раніше', x)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_local.py
+x дорівнює 50
+Заміна локального x на 2
+x як і раніше 50
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Коли ми вперше друкуємо <em>значення</em>, наданого імені <em>x</em>, у першому рядку тіла  функції (<code>print('x дорівнює', x)</code>), Python використовує значення параметра, оголошене в основному блоці над визначенням функції (x = 50).</p>
+<p>Далі ми присвоюємо <code>x</code> значення <code>2</code>. Лише в межах функції <code>x</code> тепер має значення <code>2</code>. У глобальній області <code>x</code> все ще має значення <code>50</code>. Ім’я  <code>x</code> є локальним для нашої функції. Отже, коли ми змінюємо значення <code>x</code> у функції, <code>x</code> визначене в основному блоці, залишається незмінним.</p>
+<p>За допомогою останнього виклика функції <code>print</code> , ми відображаємо значення  <code>x</code>, яке  вказане в основному блоці, тим самим підтверджуючи, що воно не змінилося при локальному привласненні значення раніше викликаної функції.</p>
+<h2 id="global-the-global-statement"><code>Global</code> оператор (англ. "The <code>global</code> statement")</h2>
+<p>Щоб призначити деяке значення змінній, визначеній на вищому рівні програми (тобто не в якійсь області видимості, як функції або класи), необхідно повідомити Python, що ії ім’я не є локальним, а є <code>глобальним</code>. Ми робимо це за допомогою оператора <code>global</code>. Неможливо призначити значення змінній, визначеній поза функцією, без оператора <code>global</code>.</p>
+<p>Можна використовувати вже існуючі значення змінних, визначених поза межами функції (за умови, що всередині функції не було оголошено змінної з таким жe ім'ям).
+Однак це не заохочується, і цього слід уникати, оскільки читачеві програми стає незрозуміло, де знаходиться визначення цієї змінної. Використання оператора <code>global</code> дає зрозуміти, що змінна визначена в самому зовнішньому блоці.</p>
+<p>Приклад (зберегти як <code>function_global.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_global.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_global.txt" %}</code></pre>-->
+
+<pre><code class="language-python">x = 50
+
+
+def func():
+    global x
+
+    print('x дорівнює', x)
+    x = 2
+    print('Глобальний x змінено на', x)
+
+
+func()
+print('Значення x є', x)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_global.py
+x дорівнює 50
+Глобальний x змінено на 2
+Значення x є 2
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Оператор <code>global</code> використовується для оголошення того, що <code>x</code> є глобальною змінною, отже, коли ми присвоюємо значення <code>x</code> всередині функції, це переінакшення позначиться на значенні змінної x в
+основному блоці програми.</p>
+<p>Ви можете вказати більше однієї глобальної змінної за допомогою того самого оператора <code>global</code>, наприклад: <code>global x, y, z</code>.</p>
+<h2 id="default-argument-values">Значення аргументів за замовчуванням (англ."Default Argument Values")</h2>
+<p>Для деяких функцій ви можете зробити деякі параметри <em>необов’язковими</em> та використовувати значення за замовчуванням на випадок, якщо користувач не хоче надавати для них значення. Це робиться за допомогою значень аргументів за замовчуванням. Ви можете вказати значення аргументів за замовчуванням, додавши до назви параметра у визначенні функції оператор присвоєння (<code>=</code>), для подальших значень за замовчуванням.</p>
+<p>Зауважте, що значення аргументу за замовчуванням має бути константою. Точніше, значення аргументу за замовчуванням має бути незмінним (англ."immutable")- це детально пояснюється в наступних розділах. Наразі просто запам’ятайте це.</p>
+<p>Приклад (зберегти як <code>function_default.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_default.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_default.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def висловлювання(повідомлення, кількість=1):
+    print(повідомлення * кількість)
+
+висловлювання('Привіт')
+висловлювання('Світ', 5)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_default.py
+Привіт
+СвітСвітСвітСвітСвіт
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Функція під назвою <code>висловлювання</code> використовується для друку рядка стільки разів, скільки вказано. Якщо ми не надаємо значення, то за замовчуванням рядок друкується лише один раз. Ми досягаємо цього, вказуючи значення аргументу за замовчуванням <code>1</code> для параметра <code>кількість</code>.</p>
+<p>Під час першого виклика функції <code>висловлювання</code> ми вказуємо лише рядок ('Привіт'), і він друкує рядок один раз. Під час другого виклика функції <code>висловлювання</code> ми вказуємо і рядок('Привіт'), і аргумент <code>5</code>, вказуючи, що ми хочемо <em>промовити</em> повідомлення рядка 5 разів.</p>
+<blockquote>
+<p><em>Важливо</em></p>
+<p>Значення за замовчуванням  можуть мати лише параметри, що знаходяться в кінці списку параметрів.
+Таким чином, у списку параметрів функції, параметр зі значенням за замовчуванням не може передувати параметру без
+значення за замовчуванням.</p>
+<p>Це пов’язано з тим, що значення призначаються параметрам за позицією. Наприклад, <code>def func(a,
+b=5)</code> є дійсним, але <code>def func(a=5, b)</code> є <em>недійсним</em>.</p>
+</blockquote>
+<h2 id="keyword-arguments">Аргументи ключових слів ( англ."Keyword Arguments")</h2>
+<p>Якщо у вас є функції з багатьма параметрами, і ви хочете вказати при виклику функції лише деякі з них, тоді ви можете надати значення таким параметрам, назвавши їх - це називається <em>аргументи ключового слова</em>. У цьому випадку  для передачі аргументів функції використовується ім'я (ключ) замість позиції (як було досі).</p>
+<p>Є дві переваги такого підходу: ​​одна полягає в тому, що використовувати функцію легше, оскільки нам не потрібно турбуватися про порядок аргументів. По-друге, ми можемо надавати значення лише тим параметрам, яким ми хочемо, за умови, що інші параметри мають значення аргументів за замовчуванням.</p>
+<p>Приклад (зберегти як <code>function_keyword.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_keyword.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_keyword.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def func(a, b=5, c=10):
+    print('a дорівнює', a, ' b дорівнює', b, ' c дорівнює', c)
+
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_keyword.py
+a дорівнює 3, b дорівнює 7, c дорівнює 10
+a дорівнює 25, b дорівнює 5, c дорівнює 24
+a дорівнює 100, b дорівнює 5, c дорівнює 50
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Функція з назвою <code>func</code> має один параметр без значення за замовчуванням, а потім два параметри зі значеннями за замовчуванням.</p>
+<p>Під час першого виклику, <code>func(3, 7)</code>, параметр <code>a</code> отримує значення <code>3</code>, параметр <code>b</code> отримує значення <code>7</code>, а <code>c</code> отримує значення за умовчанням <code>10</code>.</p>
+<p>При другому виклику <code>func(25, c=24)</code> змінна <code>a</code> отримує значення 25 через позицію аргументу. Тоді параметр <code>c</code> отримує значення <code>24</code> завдяки іменуванню, тобто ключовим аргументам. Змінна "b" отримує  значення  за замовчуванням, рівне "5".</p>
+<p>У третьому випадку використання <code>func(c=50, a=100)</code> ми використовуємо ключові аргументи для всіх вказаних значень. Зверніть увагу, що ми вказуємо значення для параметра <code>c</code> перед значенням <code>a</code>, хоча <code>a</code> визначено перед <code>c</code> у визначенні функції.</p>
+<h2 id="varargs-parameters-or-variable-number-of-arguments">Довільна кількість аргументів ( англ."VarArgs parameters" or "variable number of Arguments")</h2>
+<p>Іноді вам може знадобитися визначити функцію, яка може приймати <em>будь-яку</em> кількість параметрів, тобто <strong>змінну</strong> кількість <strong>аргументів</strong>, цього можна досягти за допомогою зірочок (збережіть як <code>function_varargs.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_varargs.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_varargs.txt" %}</code></pre>-->
+
+<pre><code class="language-python"> def підсумок(a=5, *номера, **телефонна_книга):
+    print('a', a)
+
+    #прохід по всіх елементах кортежу
+    for один_елемент in номера:
+        print('один_елемент', один_елемент)
+
+    #прохід по всіх елементах словника  
+    for перша_частина, друга_частина in телефонна_книга.items():
+        print(перша_частина,друга_частина)
+
+підсумок(10,1,2,3,Джек=1123,Джон=2231,Інге=1560)
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python function_varargs.py
+a 10
+один_елемент 1
+один_елемент 2
+один_елемент 3
+Джек 1123
+Джон 2231
+Інге 1560
+
+</code></pre>
+<p>приклад англійською:</p>
+<pre><code class="language-python">def total(a=5, *numbers, **phonebook):
+    print('a', a)
+
+    #iterate through all the items in tuple
+    for single_item in numbers:
+        print('single_item', single_item)
+
+    #iterate through all the items in dictionary    
+    for first_part, second_part in phonebook.items():
+        print(first_part,second_part)
+
+total(10,1,2,3,Jack=1123,John=2231,Inge=1560)
+</code></pre>
+<p>Output:</p>
+<pre><code>$ python function_varargs.py
+a 10
+single_item 1
+single_item 2
+single_item 3
+Jack 1123
+John 2231
+Inge 1560
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Коли ми оголошуємо параметр із зірочкою, наприклад <code>*param</code>, тоді всі позиційні аргументи від цієї позиції і до кінця збираються в кортеж під назвою 'param'.</p>
+<p>Подібним чином, коли ми оголошуємо параметр із подвійною зірочкою, наприклад <code>**param</code>, тоді всі аргументи ключового слова від цієї позиції і до кінця збираються як словник під назвою 'param'.</p>
+<p>Ми досліджуватимемо кортежі та словники в <a href="../data_structures/#data-structures">пізнішій главі</a>.</p>
+<h2 id="return-the-return-statement">Оператор "return" (англ."the <code>return</code> statement")</h2>
+<p>Оператор <code>return</code> використовується для <em>повернення</em> з функції, тобто для припинення її роботи та виходу з неї. За бажання ми також можемо <em>повернути значення</em> з функції.</p>
+<p>Приклад (зберегти як <code>function_return.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_return.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_return.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def максимум(x, y):
+    if x &gt; y:
+        return x
+    elif x == y:
+        return 'Числа рівні'
+    else:
+        return y
+
+print(максимум(2, 3))
+</code></pre>
+<p>Output:</p>
+<pre><code>$ python function_return.py
+3
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Функція <code>максимум</code> повертає максимальний з двох параметрів, які в
+даному випадку передаються їй під час виклику. Вона  використовує блок if..else для визначення найбільшого числа, а потім <em>повертає</em>  це число.</p>
+<p>Зауважте, що оператор <code>return</code> без значення еквівалентний виразу <code>return None</code>. <code>None</code> — це спеціальний тип даних у Python, який представляє ніщо. Наприклад, він використовується, щоб вказати, що змінна не має значення, якщо вона має значення «None».</p>
+<p>Кожна функція неявно містить оператор <code>return None</code> в кінці, якщо ви не написали власний оператор <code>return</code>. Ви можете побачити це, запустивши <code>print(some_function())</code>, де функція <code>some_function</code> не використовує оператор <code>return</code> у явному вигляді, наприклад:</p>
+<pre><code class="language-python">def some_function():
+    pass
+</code></pre>
+<p>Оператор <code>pass</code> використовується в Python для позначення порожнього блоку команд.</p>
+<blockquote>
+<p>ПОРАДА: Існує вбудована функція під назвою <code>max</code>, яка вже реалізує функцію 'знайти максимум', тому використовуйте цю вбудовану функцію, коли це можливо.</p>
+</blockquote>
+<h2 id="docstrings">Рядки документації (англ." DocStrings")</h2>
+<p>У Python є чудова функція під назвою <em>рядки документації</em>, яку зазвичай називають коротшою назвою <em>DocStrings</em>. DocStrings є важливим інструментом, який вам слід використовувати, оскільки він допомагає краще документувати програму та полегшує її розуміння. Дивовижно, але ми навіть можемо отримати рядок документації, скажімо, з функції, коли програма фактично запущена!</p>
+<p>Приклад (зберегти як <code>function_docstring.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/function_docstring.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/function_docstring.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def print_max(x, y):
+    '''Виводить максимальне із двох чисел.
+
+    Ці два значення мають бути цілими числами.'''
+    # конвертувати в цілі числа, якщо можливо
+    x = int(x)
+    y = int(y)
+
+    if x &gt; y:
+        print(x, 'найбільше')
+    else:
+        print(y, 'найбільше')
+
+print_max(3, 5)
+print(print_max.__doc__)
+</code></pre>
+<p>Output:</p>
+<pre><code>$ python function_docstring.py
+5 найбільше
+Виводить максимальне із двох чисел.
+
+    Ці два значення мають бути цілими числами.
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Рядок у першому логічному рядку функції є <em>рядком документації</em> для цієї функції. Зверніть увагу, що DocStrings також застосовуються до <a href="../modules/#modules">модулів</a> та <a href="../oop/#oop">класів</a>, про які ми дізнаємося у відповідних розділах.</p>
+<p>Існує домовленість щодо написання рядків документації —  Їх прийнято розміщувати в багаторядковий рядок, де перший рядок починається з великої літери та закінчується крапкою. Потім другий рядок залишається порожнім, а потім іде детальне пояснення, починаючи з третього рядка. Вам <em>настійно рекомендовано</em> дотримуватися цієї домовленості для всіх ваших рядків документації зі всіма вашими нетривіальними функціями.</p>
+<p>Ми можемо отримати доступ до рядка документації функції <code>print_max</code> за допомогою атрибута цієї функції (тобто імені, що належить їй) <code>__doc__</code> (зверніть увагу на <em>подвійне підкреслення</em>). Просто пам’ятайте, що Python розглядає <em>все</em> як об’єкт, включаючи функції. Ми дізнаємося більше про об’єкти в розділі про <a href="../oop/#oop">класи</a>.</p>
+<p>Якщо ви використовували функцію <code>help()</code> в Python, то ви вже бачили використання рядків документації! Ця функція просто зчитує атрибут <code>__doc__</code> відповідній функції та акуратно виводить його на екран.Ви можете перевірити її на розглянутій
+вище функції: просто включить <code>help(print_max)</code> у текст програми. Не забудьте натиснути клавішу <code>q</code>, щоб вийти з <code>довідки</code>.</p>
+<p>Так само автоматизовані інструменти можуть отримувати документацію з вашої програми. Тому я <em>настійно рекомендую</em> використовувати рядки документів для будь-якої нетривіальної функції, яку ви пишете. Команда <code>pydoc</code>, яка постачається з пакетом Python, працює подібно до <code>help()</code>, використовуючи рядки документації.</p>
+<p>Приклад для "автоматизованих інструментів" від перекладача:</p>
+<p>Редактор коду «Visual Studio Code» може зрозуміти, що таке рядок документації функції (рядок 2), і відобразити його в маленькому полі над курсором, коли ім’я функції вводиться (рядок 8).
+Дивиться знімок екрана нижче:</p>
+<p><img alt="docstring.png" src="../images/docstring.png" /></p>
+<p><em>Screenshot of Visual Studio Code displaying a docstring</em></p>
+<h2 id="_4">Резюме</h2>
+<p>Ми розглянули доволі багато аспектів функцій, але зауважте, що ми ще не охопили всі їх аспекти. Однак ми вже розглянули більшість того, що ви будете використовувати щодо функцій Python щодня.</p>
+<p>Далі ми побачимо, як використовувати та створювати модулі Python.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

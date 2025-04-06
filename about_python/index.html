@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Про мову програмування Python - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../basics/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#python" class="nav-link">Про мову програмування Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Історія, що стоїть за назвою</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#python_1" class="nav-link">Особливості Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#python-3-2" class="nav-link">Різниця між версією Python 3 та 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">Що кажуть програмісти</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="python">Про мову програмування Python</h1>
+<p>Python — одна з тих рідкісних мов, які можуть бути водночас <em>простими</em> і <em>потужними</em>. Ви будете приємно здивовані, побачивши, як легко зосередитися на вирішенні поставленого завдання, а не на синтаксисі та структурі мови, на якій ви програмуєте.</p>
+<p>Офіційно мову Python представляють так:</p>
+<blockquote>
+<p>Python — це потужна мова програмування, яка проста у вивченні. Вона має ефективні високорівневі структури даних та простий, але ефективний підхід до об’єктно-орієнтованого програмування. Елегантний синтаксис і динамічна типізація мови Python разом із інтерпретованою природою роблять ії ідеальною мовою для створення сценаріїв і швидкої розробки додатків у багатьох сферах на більшості платформ.</p>
+</blockquote>
+<p>Більш детально я розповім про більшість із цих особливостей у наступному розділі.</p>
+<h2 id="_1">Історія, що стоїть за назвою</h2>
+<p>Гвідо ван Россум, автор мови програмування Python, назвав свою розробку на честь телешоу на
+BBC під назвою "Літаючий Цирк Монті Пайтона"(англ."Monty Python's Flying Circus"). 
+А зовсім не тому,що він любить змій, які вбивають тварин для їжі шляхом звивання
+їхніх довгих тіл навколо них і розчавлювання їх.</p>
+<h2 id="python_1">Особливості Python</h2>
+<h3 id="_2">Проста мова програмування</h3>
+<p>Python — проста та мінімалістична мова. Читання хорошої програми на мові Python виглядає майже як читання англійською, хоча англійська дуже сувора! Ця псевдокодoва природа мови Python є однією з ії найбільших переваг. Це дозволяє зосередитися на вирішенні завдання, а не на самій мові.</p>
+<h3 id="_3">Легко вчитися</h3>
+<p>Як ви побачите,з мови Python дуже легко почати програмувати. Python має надзвичайно простий синтаксис, як уже згадувалося.</p>
+<h3 id="_4">Вільне і відкрите програмне забезпечення</h3>
+<p>Python є прикладом <em>ВВПЗ</em> (Вільне та Відкрите Програмне Забезпечення), (англ."<em>FLOSS</em>" (Free/Libre and Open Source Software)).Простіше кажучи, ви можете вільно поширювати копії цього програмного забезпечення, читати його вихідний код, вносити в нього зміни та використовувати його частини в нових безкоштовних програмах. ВВПЗ базується на концепції спільноти, яка ділиться знаннями. Це одна з причин, чому мова Python така гарна - вона була створена і постійно вдосконалюється спільнотою, яка просто хоче бачити кращу мову Python.</p>
+<h3 id="_5">Мова високого рівня</h3>
+<p>Коли ви пишете програми на мові Python, вам ніколи не доведеться турбуватися про деталі низького рівня, такі, як наприклад, керування пам’ятю, яку використовує ваша програма, тощо.</p>
+<h3 id="python_2">Python — портативна мова програмування</h3>
+<p>Через свою відкриту природу, мова Python була портована на (тобто змінена, щоб змусити її працювати на) багатьох платформах. Усі ваші програми на мові Python можуть працювати на будь-якій із цих платформ, не вимагаючи жодних змін, якщо ви будете достатньо обережні, щоб уникнути будь-яких системно-залежних функцій.
+Ви можете використовувати мову Python на GNU/Linux, Windows, FreeBSD, Macintosh, Solaris, OS/2, Amiga, AROS, AS/400, BeOS, OS/390, z/OS, Palm OS, QNX, VMS, Psion, Acorn RISC OS, VxWorks, PlayStation, Sharp Zaurus, Windows CE і PocketPC!</p>
+<p>Ви навіть можете використовувати таку платформу, як <a href="http://kivy.org">Kivy</a>, щоб створювати ігри для свого комп’ютера <em>і</em> для iPhone, iPad і Android.</p>
+<h3 id="_6">Інтерпретована мова</h3>
+<p>Це вимагає трохи пояснень.</p>
+<p>Програма, написана компільованою мовою програмування, як наприклад, C або C+ +, перетворюється з вихідного коду(тобто C або C++) на мову, зрозумілу компьютеру (бінарний код, тобто нулі та одиниці), використовуючи компілятор з різними опціями. Коли ви запускаєте програму, компонувальник/завантажувач (англ."linker/loader software") копіює програму з жорсткого диска в оперативну пам’ять і починає її виконання.</p>
+<p>Мова Python, напроти, не потребує компіляції у бінарний код. Ви просто <em>запускаєте</em> програму безпосередньо з вихідного коду(англ."source code"). Aвтоматично мова Python перетворює вихідний код у деяку проміжну форму, звану байт-кодами, а потім перекладає байт-коди на рідну мову вашого комп’ютера (бінарний код), і запускає. Все це, насправді, значно полегшує використання мови Python, оскільки вам не потрібно турбуватися про компіляцію програми, переконуватися, що відповідні бібліотеки пов’язані та завантажені тощо.Це також робить ваші програми на Python набагато більш портативними, оскільки ви можете просто скопіювати свою програму,написану мовою Python на інший комп’ютер, і вона просто запрацює!</p>
+<h3 id="-">Об'єктно-орієнтоване програмування</h3>
+<p>Мова Python підтримує процедурно-орієнтоване програмування, а також об’єктно-орієнтоване програмування (ООП). У <em>процедурно-орієнтованих</em> мовах програма побудована навколо процедур або функцій, які є не що інше, як багаторазові частини програм. У <em>об’єктно-орієнтованих</em> мовах програма побудована навколо об’єктів, які поєднують дані та функціонал. Python має дуже простий, але потужний спосіб створення ООП, особливо в порівнянні з такими великими мовами, як C++ або Java.</p>
+<h3 id="_7">Розширювана мова</h3>
+<p>Якщо вам потрібно,щоб деякий критичний фрагмент коду працював дуже швидко, або ви хочете, щоб якийсь фрагмент алгоритму не був відкритим для інших, ви можете програмувати цю частину вашої програми на мові C або C++, а потім викликати її з програм на мові Python.</p>
+<h3 id="_8">Можливість вбудовування</h3>
+<p>Ви можете вбудовувати Python у свої програми C/C++, щоб надати користувачам "<em>scripting</em> capabilities" (можливості  написати маленький фрагмент коду на мові Python всередені вашої великої програми(наприклад, C/C++,Java,тощо )).</p>
+<h3 id="_9">Обширні бібліотеки</h3>
+<p>Стандартна бібліотека мови Python справді величезна. Вона може допомогти з вирішенням самих різноманітних завдань, пов'язаних з використанням регулярних виразів, генеруваням документації, перевіркою блоків коду, розпаралелювання процесів, базами даних, веб-браузерами, CGI, FTP, електронною поштою, XML, XML-RPC, HTML, файлами WAV, криптографією, GUI (графічними інтерфейсами користувача), та іншими системно-залежними речами. Пам’ятайте, що все це завжди доступно, де б не було встановлено Python. Це називається філософією Python <em>Все входить</em> ("<em>Batteries Included</em>" ).</p>
+<p>Крім стандартної бібліотеки, існують інші високоякісні бібліотеки, які ви можете знайти в <a href="http://pypi.python.org/pypi">каталозі пакетів Python</a>.</p>
+<h3 id="_10">Резюме</h3>
+<p>Мова Python справді захоплююча та потужна. Вона має правильне поєднання продуктивність і можливості, які роблять написання програм на мові Python одночасно веселим і легким.</p>
+<h2 id="python-3-2">Різниця між версією Python 3 та 2</h2>
+<p>Ви можете проігнорувати цей розділ, якщо вас не цікавить різниця між версіями «Python 2» і «Python 3». Але майте на увазі, яку версію ви використовуєте. Ця книга написана для версії Python 3.</p>
+<p>Пам’ятайте, що як тільки ви правильно зрозумієте та навчитеся використовувати одну версію, ви зможете легко дізнатися про відмінності та використовувати іншу. Найважче – навчитися програмуванню та зрозуміти основи самої мови Python.Це наша мета в цій книзі, і коли ви досягнете цієї мети, ви зможете легко використовувати Python 2 або Python 3 залежно від вашої ситуації.</p>
+<p>Докладніше про відмінності між Python 2 і Python 3 дивиться:</p>
+<ul>
+<li><a href="http://lwn.net/Articles/547191/">Майбутнє Python 2 (англ."The future of Python 2")</a></li>
+<li><a href="https://docs.python.org/3/howto/pyporting.html">Перенесення коду Python 2 на Python 3 (англ."Porting Python 2 Code to Python 3")</a></li>
+<li><a href="https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef">Написання коду, який працює на Python2 і 3(англ."Writing code that runs under both Python 2 and 3")</a></li>
+<li><a href="http://python3porting.com">Підтримка Python 3: докладний посібник(англ."Supporting Python 3: An in-depth guide")</a></li>
+</ul>
+<h2 id="_11">Що кажуть програмісти</h2>
+<p>Можливо, вам буде цікаво почитати, що такі великі хакери, як Ерік С. Реймонд (ESR), мають сказати про Python:</p>
+<ul>
+<li><em>Ерік Стівен Реймонд</em> є автором книги «Собор і базар», а також людиною, яка ввела термін <em>відкритого програмного забезпечення</em>. Він каже, що <a href="http://www.python.org/about/success/esr/">Python став його улюбленою мовою програмування</a>. Ця стаття стала справжнім натхненням моїх перших робіт з Python.</li>
+<li><em>Брюс Екель</em> є автором знаменитих книг «Мислення на Java» та «Мислення на C++». Він каже, що жодна мова не зробила його більш продуктивним, ніж мова Python. Він каже, що Python, мабуть, єдина мова, яка спрямована на полегшення роботи програміста. Прочитайте <a href="http://www.artima.com/intv/aboutme.html">повне інтерв’ю</a>, щоб дізнатися більше.</li>
+<li><em>Пітер Норвіг</em> — відомий автор Lisp і директор із якості пошуку в Google (дякую Гвідо ван Россуму за те, що звернув увагу на це). Він каже, що <a href="https://news.ycombinator.com/item?id=1803815">написання на Python — це все одно, що написання в псевдокоді</a>. Він каже, що Python завжди був невід’ємною частиною Google. Ви можете перевірити це твердження, переглянувши сторінку <a href="http://www.google.com/jobs/index.html">Вакансії в Google</a>, на якій знання Python є обов’язковими для інженерів програмного забезпечення.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

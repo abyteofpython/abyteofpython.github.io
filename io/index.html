@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Введення-виведення (англ."Input and Output ") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../installation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../modules/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#-input-and-output" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#input-from-user" class="nav-link">Введення від користувача (англ. "Input from user")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Файли</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pickle" class="nav-link">Pickle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="-input-and-output">Введення-виведення (англ."Input and Output ")</h1>
+<p>Будуть ситуації, коли ваша програма повинна взаємодіяти з користувачем. Наприклад, ви хотіли б прийняти дані від користувача, а потім надрукувати деякі результати. Ми можемо досягти цього за допомогою функції <code>input()</code> і функції <code>print</code> відповідно.</p>
+<p>Для виведення ми також можемо використовувати різні методи класу <code>str</code> (рядок). Наприклад, ви можете використати метод <code>rjust</code>, щоб отримати рядок, вирівняний по правому краю до зазначеної ширини. Дивіться <code>help(str)</code> для отримання додаткової інформації.</p>
+<p>Іншим поширеним типом введення/виведення є робота з файлами. Можливість створювати, читати та записувати файли є важливою для багатьох програм, і ми дослідимо цей аспект у цій главі.</p>
+<h2 id="input-from-user">Введення від користувача (англ. "Input from user")</h2>
+<p>Зберегти цю програму як <code>io_input.py</code>:</p>
+<!--<pre><code class="lang-python">{% include "./programs/io_input.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/io_input.txt" %}</code></pre>-->
+
+<pre><code class="language-python">def реверс(текст):
+    return текст[::-1]
+
+
+def є_паліндром(текст):
+    return текст == реверс(текст)
+
+щось = input(&quot;Введіть текст: &quot;)
+if є_паліндром(щось):
+    print(&quot;Так, це паліндром&quot;)
+else:
+    print(&quot;Ні, це не паліндром&quot;)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python3 io_input.py
+Введіть текст: пан
+Ні, це не паліндром
+
+$ python3 io_input.py
+Введіть текст: мадам
+Так, це паліндром
+
+
+$ python3 io_input.py
+Введіть текст: радар
+Так, це паліндром
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Ми використовуємо функцію зріз, щоб перевернути текст. Ми вже бачили, як можна зробити <a href="../data_structures/#sequence">зрізи послідовностей,slices from sequences</a> за допомогою коду <code>seq[a:b]</code>, починаючи з позиції <code>a</code> до позиції <code>b</code>. Ми також можемо надати третій аргумент, який визначає <em>крок</em> (англ."<em>step</em>"), за яким виконується зріз. Крок за замовчуванням дорівнює «1», через що він повертає безперервну частину тексту. Введення від’ємного кроку, тобто «-1», поверне текст у зворотному порядку.</p>
+<p>Функція <code>input()</code> приймає рядок як аргумент і відображає його користувачеві. Потім вона чекає, поки користувач щось введе та натисне клавішу введення. Коли користувач введе та натисне клавішу введення, функція <code>input()</code> поверне текст, який ввів користувач.</p>
+<p>Ми беремо цей текст і перевертаємо його. Якщо вихідний текст і реверсований текст рівні, тоді текст є <a href="http://en.wiktionary.org/wiki/palindrome">паліндромом</a>.</p>
+<h3 id="_1">Домашнє завдання</h3>
+<p>Перевірка того, чи є текст паліндромом, також має ігнорувати пунктуацію, пробіли та регістр літер. Наприклад, «Далі буде дуб і лад», також є паліндромом,але наша поточна програма так не вважає.Чи можете ви вдосконалити наведену вище програму, щоб  програма розпізнала цей паліндром?</p>
+<h3 id="_2">Підказка:</h3>
+<p>Скористайтеся кортежем (список усіх символів пунктуації можна знайти <a href="http://grammar.ccc.commnet.edu/grammar/marks/marks.htm">тут</a>), що містять усі заборонені символи, та застосуйте тест на приналежність, щоб виявити символи, що підлягають видаленню, тобто forbidden = („!“, „?“, „.“, ...).</p>
+<h3 id="_3">Варіант вирешення:</h3>
+<pre><code class="language-python"># покращена версія, буде ігнорувати всі
+# знаки пунктуації, такі як пробіли, крапки, коми тощо.
+
+ігнорувати_рядок = &quot; .,;:!?&quot;
+
+def чистий_текст(чернетка):
+    чистий = &quot;&quot;
+    for x in чернетка:
+        if x not in ігнорувати_рядок:
+            чистий += x
+    return чистий
+
+
+def reverse(текст):
+    return текст[::-1]
+
+
+def є_паліндром(текст):
+    return текст.lower() == reverse(текст).lower()
+
+# &quot;Далі буде дуб і лад&quot;
+щось = input(&quot;Введіть текст:&quot;)
+if є_паліндром(чистий_текст(щось)):
+    print(&quot;Так, це паліндром&quot;)
+else:
+    print(&quot;Ні, це не паліндром&quot;)
+</code></pre>
+<h2 id="_4">Файли</h2>
+<p>Ви можете відкривати та використовувати файли для читання або запису, створивши об’єкт класу <code>file</code> ,а читати/записувати у файл - використовуючи його методи <code>read</code>, <code>readline</code> або <code>write</code> відповідно. Можливість читання або запису у файл залежить від режиму, який ви вказали для відкриття файлу. Після роботи з файлом, потрібно викликати метод <code>close</code>, щоб повідомити Python, що ми закінчили використовувати файл.</p>
+<p>Приклад (зберегти як<code>io_using_file.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/io_using_file.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/io_using_file.txt" %}</code></pre>-->
+
+<pre><code class="language-python">вірш = &quot;&quot;&quot;\
+Програмування – це весело.
+Коли робота виконана,
+і якщо ви хочете повесилитися на роботі:
+    використовуйте Python!
+
+&quot;&quot;&quot;
+
+# Відкрито для написання(англ.&quot;'w'riting&quot;)
+f = open('вірш.txt', 'w')
+# Записати текст у файл
+f.write(вірш)
+# Закрийте файл
+f.close()
+
+# Якщо режим не вказано,
+# pежим читання (англ.&quot;'r'eading&quot;) передбачається за замовчуванням
+f = open('вірш.txt')
+while True:
+    лінія = f.readline()
+    # Нульова довжина вказує на кінец файлу(EOF)
+    if len(лінія) == 0:
+        break
+    # У `рядку`(`line`) вже є новий рядок  
+    # у кінці кожного рядка,
+    # оскільки він читає  файл.
+    print(лінія, end='')
+# закрити файл
+f.close()
+</code></pre>
+<p>Висновок:</p>
+<pre><code class="language-python">Програмування – це весело.
+Коли робота виконана,
+і якщо ви хочете повесилитися на роботі:
+    використовуйте Python!
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Зауважте, що ми можемо створити новий файловий об’єкт просто за допомогою методу <code>open</code>. Ми відкриваємо цей файл (або створюємо його, якщо він ще не існує) за допомогою вбудованої функції <code>open</code> і вказуємо назву файлу та режим, у якому ми хочемо відкрити файл. Режим може бути режимом читання (<code>'r'</code>), режимом запису (<code>'w'</code>) або режимом додавання (<code>'a'</code>). Ми також можемо вказати, чи ми читаємо, записуємо або додаємо дані: в текстовому режимі (<code>'t'</code>) чи двійковому(бінарному) режимі (<code>'b'</code>). Насправді існує набагато більше доступних режимів, і <code>help(open)</code> надасть вам більше інформації про них. За замовчуванням <code>open()</code> вважає файл текстовим файлом і відкриває його в режимі читання.</p>
+<p>У нашому прикладі ми спочатку відкриваємо/створюємо файл у режимі запису тексту та використовуємо метод <code>write</code> файлового об'єкта, щоб записати нашу рядкову змінну <code>вірш</code> у файл, а потім ми закриваємо файл за допомогою <code>close</code>.</p>
+<p>Далі знову відкриваємо цей же файл для читання. Нам не потрібно вказувати режим, оскільки «читати текстовий файл» є режимом за замовчуванням. Ми читаємо кожен рядок файлу за допомогою методу <code>readline</code> у циклі. Цей метод повертає повний рядок, включаючи символ нового рядка в кінці рядка. Коли повертається <em>порожній</em> рядок, це означає, що ми перериваємо цикл за допомогою break.</p>
+<p>Зрештою, ми остаточно закриваємо файл за домопогою <code>close</code>.</p>
+<p>Ми бачимо з наших результатів <code>readline</code>, що ця програма справді записувала та читала наш новий файл <code>вірш.txt</code>.</p>
+<h2 id="pickle">Pickle</h2>
+<p>Python надає стандартний модуль під назвою <code>pickle</code>(рickle-англ."маринувати","солити"), який можна використовувати для зберігання <em>будь-якого</em> простого об’єкта Python у файлі, а потім отримати його назад. Це називається <em>тривалим</em> (англ."<em>persistently</em>") збереженням об’єкта.</p>
+<p>Приклад (зберегти як <code>io_pickle.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/io_pickle.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/io_pickle.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import pickle
+
+# Ім'я файлу, де ми будемо зберігати об'єкт
+файл_список_покупок = 'список_покупок.data'
+# Список фруктів для покупки
+список_покупок_фрукти = ['яблуко', 'манго', 'морква']
+
+# Запис у файл
+f = open(файл_список_покупок, 'wb')
+# Вивести об'єкт у файл
+pickle.dump(список_покупок_фрукти, f)
+f.close()
+
+# Знищити змінну список_покупок_фрукти
+del список_покупок_фрукти
+
+# Прочитати зі сховища
+f = open(файл_список_покупок, 'rb')
+# Завантажити об'єкт із файлу
+збережений_список = pickle.load(f)
+print(збережений_список)
+f.close()
+
+</code></pre>
+<p>Висновок:
+```$ python io_pickle.py
+['яблуко', 'манго', 'морква']</p>
+<pre><code>
+**Як це працює**
+
+Щоб зберегти об’єкт у файлі, ми маємо спочатку відкрити файл за допомогою `open`  в режимі бінарного запису ('wb'), а потім викликати функцію `dump` із  модуля `pickle`. Цей процес називається _консервацією_(англ.&quot;_pickling_&quot;).
+
+Далі ми отримуємо об’єкт за допомогою функції `load` із  модуля `pickle`, яка повертає об’єкт. Цей процес називається &quot;розконсервацією&quot;(англ.&quot;_unpickling_&quot;).
+
+## Unicode
+
+Досі, коли ми писали та використовували рядки або читали та записували у файл, ми використовували лише прості англійські символи. Як англійські, так і неанглійські символи можуть бути представлені в Unicode (будь ласка, перегляньте статті в кінці цього розділу для отримання додаткової інформації), а Python 3 за замовчуванням зберігає рядкові змінні (подумайте про весь той текст, який ми написали, використовуючи одиничні, подвійні або потрійні лапки) в Unicode.
+
+&gt; ПРИМІТКА. Якщо ви використовуєте Python 2, і ми хочемо мати можливість читати та писати іншими мовами, відмінними від англійської, нам потрібно використовувати тип `unicode`, і все починається з символу `u`, напр. `u&quot;Привіт, Світ!&quot;`
+
+```python
+&gt;&gt;&gt; &quot;Привіт, Світ!&quot;
+'Привіт, Світ!'
+&gt;&gt;&gt; type(&quot;Привіт, Світ!&quot;)
+&lt;class 'str'&gt;
+&gt;&gt;&gt; u&quot;Привіт, Світ!&quot;
+'Привіт, Світ!'
+&gt;&gt;&gt; type(u&quot;Привіт, Світ!&quot;)
+&lt;class 'str'&gt;
+</code></pre>
+<p>Коли дані надсилаються через Інтернет, нам потрібно надсилати їх у байтах... те, що ваш комп’ютер легко розуміє. Правила перекладу Unicode (це те, що Python використовує, коли зберігає рядок) у байти, називаються encoding (encoding- англ."кодування","шифрування"). Популярним encoding є UTF-8. Ми можемо читати та писати в UTF-8, використовуючи простий ключовий аргумент у нашій функції <code>open</code>.</p>
+<!--<pre><code class="lang-python">{% include "./programs/io_unicode.py" %}</code></pre>-->
+
+<pre><code class="language-python"># encoding=utf-8
+import io
+
+f = io.open(&quot;abc.txt&quot;, &quot;wt&quot;, encoding=&quot;utf-8&quot;)
+f.write(u&quot;Уявіть собі неанглійську мову&quot;)
+f.close()
+
+text = io.open(&quot;abc.txt&quot;, encoding=&quot;utf-8&quot;).read()
+print(text)
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Ми використовуємо <code>io.open</code>, а потім використовуємо аргумент <code>encoding</code> у першому рядку коду (in the first open statement) для кодування повідомлення, а потім знову в другому рядку коду open під час декодування повідомлення. Зауважте, що ми повинні використовувати кодування лише в рядку коду open у текстовому режимі.
+We use <code>io.open</code> and then use the <code>encoding</code> argument in the first open statement to encode the message, and then again in the second open statement when decoding the message.  Note that we should only use encoding in the open statement when in text mode.</p>
+<p>Кожного разу, коли ми пишемо програму, яка використовує літерали Unicode (ставляючи <code>u</code> перед рядком), як ми використовували вище, ми повинні переконатися, що самому Python повідомляється, що наша програма використовує UTF-8, і ми повинні поставити <code># encoding=utf-8</code> коментар у верхній частині нашої програми.
+Whenever we write a program that uses Unicode literals (by putting a <code>u</code> before the string) like we have used above, we have to make sure that Python itself is told that our program uses UTF-8, and we have to put  <code># encoding=utf-8</code>  comment at the top of our program.  </p>
+<p>Ви повинні дізнатися більше про цю тему, прочитавши:</p>
+<ul>
+<li><a href="http://www.joelonsoftware.com/articles/Unicode.html">"Абсолютний мінімум, який кожен розробник програмного забезпечення має знати про Unicode та набори символів", англ."The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets"</a></li>
+<li><a href="http://docs.python.org/3/howto/unicode.html">Python Unicode Howto</a></li>
+<li><a href="http://nedbatchelder.com/text/unipain.html">Pragmatic Unicode talk by Nat Batchelder</a></li>
+</ul>
+<p>Від перекладача:</p>
+<p>Як працювати з unicode:
+1.знайдіть перелік символів у wiki: https://en.wikipedia.org/wiki/List_of_Unicode_characters ;
+2.знайдіть один знак (наприклад: надрукувати парасольку),
+у вікіпедії сказано, що юнікод: U+2602;
+3.якщо unicode містить 4 цифри або менше: 
+ print("\u2602")</p>
+<p><img alt="screenshot_unicode3.png" src="../images/screenshot_unicode3.png" /></p>
+<p>4.у випадку друку знака плитки доміно 6, unicode - U+1F061
+5.даний Юнікод містить більше 4 цифр:
+заповнити  рядок початковими нулями, поки не буде 8 цифр:
+print("\U0001F061")</p>
+<p><img alt="screenshot_unicode2.png" src="../images/screenshot_unicode2.png" /></p>
+<h2 id="_5">Резюме</h2>
+<p>Ми обговорили різні типи введення-виведення, обробку файлів, модуль pickle і Unicode.</p>
+<p>Далі ми розглянемо концепцію винятків.</p>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

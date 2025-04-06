@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Потік керування (англ."Control Flow") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../basics/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../data_structures/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#control-flow" class="nav-link">Потік керування (англ."Control Flow")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#if-the-if-statement" class="nav-link">Оператор if (англ."The if statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#whilethe-while-statement" class="nav-link">Оператор while(англ."The while Statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#for-the-for-loop" class="nav-link">Цикл for (англ."The for loop")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#break-the-break-statement" class="nav-link">Оператор break (англ."The break Statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#continue-the-continue-statement" class="nav-link">Оператор  continue (англ." The continue Statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="control-flow">Потік керування (англ."Control Flow")</h1>
+<p>У програмах, які ми бачили дотепер, завжди була послідовність рядків коду, сумлінно виконаних Python у точному порядку зверху вниз. Що, якби ви хотіли змінити потік виконування рядків коду? Наприклад, ви хочете, щоб програма приймала деякі рішення та виконувала різні дії залежно від різних ситуацій, наприклад, друкувала "Доброго ранку" або "Доброго вечора" залежно від часу доби?</p>
+<p>Як ви могли здогадатися, це досягається за допомогою операторів потоку керування (англ."control flow statements"). У Python є три операторa потоку керування: <code>if</code>, <code>for</code> і <code>while</code>.</p>
+<h2 id="if-the-if-statement">Оператор <code>if</code> (англ."The <code>if</code> statement")</h2>
+<p>Оператор <code>if</code> використовується для перевірки умови: <em>якщо</em> (англ."if") умова  <em>вірна</em> (відповідає булевому значенню True), ми виконуємо блок рядків коду (званий <em>if-block</em>), <em>інакше</em>  (англ."else") ми обробляємо інший блок рядків коду (званий <em>else-block</em>) . Блок <em>else</em> необов’язковий.</p>
+<p>Приклад (зберегти як <code>if.py</code>):</p>
+<!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
+
+<!--    
+<pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/if.txt" %}</code></pre>
+-->
+
+<!-- if.py -->
+
+<pre><code class="language-python">число = 23
+здогадка = int(input('Введіть ціле число : '))
+
+if здогадка == число:
+    # Новий блок починається тут
+    print('Вітаємо, ви вгадали,')
+    print('(хоч і не виграли жодного призу!)')
+    # Новий блок закінчується тут
+elif здогадка &lt; число:
+    # Ще один блок
+    print('Ні, задане число трохи вище, ніж здогадка')
+    # Ви можете робити все, що завгодно в блоці ...
+else:
+    print('Ні, задане число трохи нижче, ніж здогадка')
+    # щоб потрапити сюди здогадка повина бути більша, ніж число
+
+print('Виконано')
+# Цей останій рядок коду завжди виконується, після виконання оператора if.
+
+</code></pre>
+<p>Висновок:</p>
+<!-- programs/if.txt -->
+
+<pre><code>$ python if.py
+Введіть ціле число: 50
+Ні, задане число трохи нижче, ніж здогадка
+Виконано
+
+$ python if.py
+Введіть ціле число: 22
+Ні, задане число трохи вище, ніж здогадка
+Виконано
+
+$ python if.py
+Введіть ціле число: 23
+Вітаємо, ви вгадали.
+(хоч і не виграли жодного призу!)
+Виконано
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>У цій програмі ми приймаємо варіанти від користувача та перевіряємо, чи збігаються вони із заздалегідь заданим числом. Ми встановлюємо змінній <code>число</code> значення будь-якого цілого числа, якого хочемо, скажімо, 23. Потім ми приймаємо варіанти числа від користувача за допомогою функції <code>input()</code>. Функції — це лише багаторазово використовувані частини програм. Ми прочитаємо про них більше в <a href="../functions/#functions">наступному розділі</a>.</p>
+<p>Ми надаємо рядок вбудованій функції <code>input</code>, яка друкує його на екрані та чекає введення від користувача. Коли ми вводимо щось і натискаємо клавішу <em>Enter</em>, функція <code>input()</code> повертає те, що ми ввели, у вигляді рядка. Потім ми перетворюємо цей рядок на ціле число за допомогою <code>int</code>, та зберігаємо це значення в змінній <code>здогадка</code>. Насправді <code>int</code> — це клас, але на даному етапі вам достатньо знати лише, що ви можете використовувати його для перетворення рядка в ціле число (припускаючи, що рядок містить ціле число в тексті). </p>
+<p>Далі ми порівнюємо здогадку користувача із заданим нами числом. Якщо вони рівні, ми друкуємо повідомлення про успіх. Зверніть увагу, що ми використовуємо відповідні рівні відступу, щоб повідомити Python, які рядки коду належать до якого блоку. Ось чому відступи настільки важливі в Python. Сподіваюсь, ви дотримуєтесь правила "постійних відступів". Чи не так?</p>
+<p>Зверніть увагу, що рядок коду, який починається з <code>if</code> мусить закінчуватися двокрапкою - ми вказуємо Python, що зараз буде слідувати рядок коду з відступом.</p>
+<p>Потім ми перевіряємо, чи здогадка користувача є менша заданого числа, і якщо так, ми повідомляємо користувачу, що йому слід вибрати число трохи більші за це. Тут ми використали блок elif, який фактично об’єднує декілька блоків <code>if else-if else</code> в один об’єднаний блок <code>if-elif-else</code>. Це полегшує роботу з програмою та зменшує кількість необхідних відступів.</p>
+<p>Блоки <code>elif</code> і <code>else</code> також повинні мати двокрапку в кінці логічного рядка, за якою слідує відповідні рядки коду (з відповідним числом відступів, звичайно).</p>
+<p>Усередині if-блоку може бути інший блок <code>if</code> і так далі - це називається вкладеним блоком <code>if</code>.    </p>
+<p>Пам’ятайте, що блок <code>elif</code> і блок <code>else</code> необов’язкові. Мінімальний коректний запис блока <code>if</code> такий :</p>
+<pre><code class="language-python">if True:
+    print('Так, це вірно.')
+</code></pre>
+<p>Після того, як Python завершить виконання всього блока <code>if</code> разом із відповідними блоками <code>elif</code> і <code>else</code>, він переходить до наступного блока в блоці, що містить блок <code>if</code> (рядки коду з однаковим відступом). У нашому випадку це головний блок (в якому починається виконання програми), а наступним є вираз <code>print('Виконано')</code>. Після цього Python доходить до кінця програми та просто виходить із неї.</p>
+<p>Незважаючи на те, що це дуже проста програма, я вказав на багато речей, на які ви повинні звернути увагу. Усе це досить просто (і напрочуд просто для тих із вас, хто має досвід C/C++). Спочатку вам потрібно буде запам'ятати всі ці речі, але після деякої практики з ними - ви звикнете, і все це буде для вас «природним».</p>
+<blockquote>
+<p><strong>Примітка для програмістів C/C++</strong></p>
+<p>Починаючи з версії 3.10, Python має оператор  <code>"match - case"</code>, подібний до оператора <code>switch</code> в інших мовах програмування, таких як C, Java тощо.
+Для отримання додаткової інформації перегляньте офіційну документацію Python: <a href="https://docs.python.org/3/tutorial/controlflow.html#match-statements">https://docs.python.org/3/tutorial/controlflow.html#match-statements</a>.
+ Ви можете використовувати блок <code>if..elif..else</code> щоб зробити те саме,що і за допомогою оператора <code>switch</code>(і в деяких випадках використовуйте <a href="../data_structures/#dictionary">словник</a>,щоб зробити це швидко)</p>
+</blockquote>
+<h2 id="whilethe-while-statement">Оператор <code>while</code>(англ."The while Statement")</h2>
+<p>Оператор <code>while</code> дозволяє вам багаторазово виконувати блок рядків коду,поки умова істинна (англ."True"), або поки виконується деяка умова. Оператор  <code>while</code> є прикладом так званого оператора <em>циклу</em>. Оператор <code>while</code> може мати необов'язковий блок <code>else</code>.</p>
+<p>Приклад (зберегти як <code>while.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
+
+
+Output:
+
+<pre><code>{% include "./programs/while.txt" %}</code></pre>-->
+
+<pre><code class="language-python">число = 23
+гра_запуститься = True
+
+while гра_запуститься == True:
+    здогадка = int(input('Введіть ціле число : '))
+
+    if здогадка == число:
+        print('Вітаємо, ви вгадали.')
+         # це призводить до зупинки циклу while
+    elif здогадка &lt; число:
+        print('Ні, задане число трохи вище, ніж здогадка.')
+    else:
+        print('Ні, задане число трохи нижче, ніж здогадка.')
+else:
+    print('Цикл while закінчено.')
+    # Робіть тут усе, що хочете
+
+print('Виконано')
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python while.py
+Введіть ціле число: 50
+Ні, задане число трохи нижче, ніж здогадка
+Введіть ціле число: 22
+Ні, задане число трохи вище, ніж здогадка
+Введіть ціле число: 23
+Вітаємо, ви вгадали.
+Цикл while закінчено.
+Виконано
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>У цій програмі ми все ще граємо у вгадування, але перевага полягає в тому, що користувачеві дозволено продовжувати вгадувати, доки він не вгадає правильно – немає потреби повторно запускати програму для кожного вгадування, як ми робили у попередньому прикладі. Це наочно демонструє використання оператора <code>while</code>.</p>
+<p>Ми переміщуємо оператори <code>input</code> і <code>if</code> всередину циклу <code>while</code> і встановлюємо змінну <code>гра_запуститься</code> у значенні <code>True</code> перед циклом while. Спочатку ми перевіряємо, чи змінна <code>гра_запуститься</code>(гра_запуститься==True) має значення <code>True</code>, а потім продовжуємо виконувати відповідний <em>while-block</em>.</p>
+<p>Після виконання цього блоку (<em>while-block</em>) знову перевіряється умова, яка в даному випадку є змінною <code>гра_запуститься</code>. Якщо вона істинна, ми знову виконуємо блок while, інакше ми продовжуємо виконувати необов’язковий блок else, а потім переходимо до наступного рядка коду.</p>
+<p>Блок <code>else</code> виконується, коли умова циклу <code>while</code> стає хибною (англ." <code>False</code>") - це може статися навіть при першій перевірці умови. Якщо у циклу <code>while</code> є додатковий блок else, він завжди виконується, якщо цикл не буде перерваний оператором break. </p>
+<p><code>True</code> і <code>False</code> називають булевим типом даних, і їх можна вважати еквівалентними значенням <code>1</code> і <code>0</code> відповідно.</p>
+<blockquote>
+<p><strong>Примітка для програмістів C/C++</strong>
+Пам’ятайте, що цикл <code>while</code> може мати блок <code>else</code>.</p>
+</blockquote>
+<p>-- Від перекладача --</p>
+<p>Після оператора <code>while</code> завжди йде вираз. Вираз — це щось, що може обчислити комп’ютер і завжди має результат <code>True</code> або <code>False</code>. (Наприклад, 3 &gt; 5 є <code>False</code>, але 3 == 3 є <code>True</code>).
+У наведеному вище прикладі коду для змінної <code>гра_запуститься</code> було встановлено значення <code>True</code>.</p>
+<p><code>гра_запуститься = True</code></p>
+<p>Тепер Рython має перевірити, чи значення <em><code>гра_запуститься</code></em> має значення <code>True</code>, щоб зрозуміти, чи потрібно виконувати блок while:</p>
+<p><code>while гра_запуститься == True:</code></p>
+<p>Частина між словами <code>while</code> і двокрапкою - є виразом, і Python може обчислити результат цього виразу. Результатом виразу є (на даний момент) <code>True</code>. Таким чином, буде виконано блок while.</p>
+<p>Усередині блоку <code>while</code> є блок <code>if elif else</code>. Лише блок <code>if здогадка == число:</code> містить команду для зміни значення <code>гра_запуститься</code>:</p>
+<p><code>гра_запуститься = False</code></p>
+<p>Інші блоки (elif та else) не змінюють значення змінної <code>гра_запуститься</code>.</p>
+<p>Після виконання всього блоку while програма Python повертається до початку блоку <code>while</code> і знову перевіряє вираз, щоб зрозуміти, чи потрібно блок <code>while</code> виконувати інший раз:</p>
+<p><code>while гра_запуститься == True:</code></p>
+<p>Якщо вираз має значення <code>False</code> (коли число було вгадано правильно та рядок <code>гра_запуститься` = False</code> було виконано), тоді блок <code>while</code> НЕ буде виконано знову, і програма Python продовжує роботу в рядку коду після блоку <code>while</code> (у наведеному вище прикладі це рядок <code>else:</code>), за яким слідує <code>print("Цикл while закінчено")</code></p>
+<h3 id="while-else">Блок <code>while</code> з блоком <code>else</code></h3>
+<p>Блок <code>while</code> може мати додатковий блок <code>else</code> під собою, як у грі вгадування чисел вище.</p>
+<p>Якщо вираз праворуч від команди <code>while</code> стає <code>False</code>, блок while не виконується, а замість нього виконується блок else. Якщо такого блоку else не існує, виконується наступний рядок коду після блоку while.</p>
+<p>Однак існує особливий випадок: якщо виконується блок while і всередині блоку while виконується команда <code>break</code>, тоді блок else НЕ буде виконано. Команда <code>break</code> буде пояснена пізніше в цьому розділі.</p>
+<p>-- завершення доповнень від перекладача --</p>
+<h2 id="for-the-for-loop">Цикл <code>for</code> (англ."The <code>for</code> loop")</h2>
+<p>Оператор <code>for..in</code> — це ще один оператор циклу, який <em>ітерує</em> послідовність об’єктів, тобто проходить через кожен елемент у послідовності. Ми детально розглянемо про <a href="../data_structures/#sequence">послідовності</a> у наступних розділах. Зараз вам потрібно знати, що послідовність — це впорядкований набір елементів.
+Приклад (зберегти як <code>for.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/for.txt" %}</code></pre>-->
+
+<pre><code class="language-python">for i in range(1, 5):
+    print(i)
+else:
+    print('Цикл for завершено')
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python for.py
+1
+2
+3
+4
+Цикл for завершено
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>У цій програмі ми друкуємо <em>послідовність</em> чисел. Ми генеруємо цю послідовність чисел за допомогою вбудованої функції <code>range</code>.</p>
+<p>Ми задаємо два числа, і <code>range</code> повертає послідовність чисел від першого числа до другого. Наприклад, <code>range(1,5)</code> дає послідовність <code>[1, 2, 3, 4]</code>. За замовчуванням <code>range</code> приймає кількість кроків, рівну 1. Якщо ми задамо також і третє число <code>range</code>, воно служитиме кроком. Наприклад, range (1,5,2) дає значення [1,3]. Пам'ятайте, інтервал простягається тільки до другого числа, тобто не включає його у себе.</p>
+<p>Зауважте, що <code>range()</code> генерує послідовність чисел, але одне число за раз. Щоб побачити всю послідовність чисел відразу, напешіть <code>list(range())</code>, наприклад, <code>list(range(5))</code> призведе до "[0, 1, 2, 3, 4]". Списки (англ. "list") пояснюються в <a href="../data_structures/#data-structures">главі про структури даних</a>.</p>
+<p>Потім цикл <code>for</code> здійснює ітерацію з цього діапазону - <em>for i in range(1,5)</em>  еквівалентно  <em>for i in [1, 2, 3, 4]</em>, що схоже на привласнення змінної <code>i</code> за одним числом (або об'єктом) за раз, виконуючи блок команд для кожного значення <code>i</code>. У цьому випадку в блоці рядків коду ми просто друкуємо значення.</p>
+<p>Пам’ятайте, що блок "else" необов’язковий. Якщо він присутній, він завжди виконується один раз після закінчення циклу for, якщо тільки не вказан оператор <a href="#break-statement">break</a>.</p>
+<p>Пам’ятайте також, що цикл <code>for..in</code> працює для будь-якої послідовності. У нашому випадку - це список чисел, згенерованих вбудованою функцією <code>range</code>, але загалом ми можемо використовувати будь-яку послідовність будь-яких типів об’єктів! Ми детально розглянемо цю ідею в наступних розділах.</p>
+<blockquote>
+<p><strong>Примітка для програмістів C/C++/Java/C#</strong></p>
+<p>Цикл <code>for</code> у Python радикально відрізняється від циклу <code>for</code> C/C++. Програмісти C# звернуть увагу на те, що цикл <code>for</code> у Python схожий на цикл <code>foreach</code> у C#. Java-програмістам це може нагадати конструкцію <code>for (int i : IntArray)</code> у Java 1.5. </p>
+<p>У C/C++, якщо ви хочете написати <code>for (int i = 0; i &lt; 5; i++)</code>, тоді у Python цьому відповідає вираз <code>for i in range(0,5)</code>. Як бачите, цикл for є простішим, виразнішим і менш схильним до помилок у Python.</p>
+</blockquote>
+<h2 id="break-the-break-statement">Оператор break (англ."The break Statement")</h2>
+<p>Команда <code>break</code> може бути використана лише всередині циклу (всередині блоку <em>for</em> чи блоку <em>while</em>). Що робить оператор <code>break</code>?
+Якщо Python читає команду break, Python миттєво припиняє виконання рядків коду у блоці команд цикла і переходить до першого командного рядка після циклу.</p>
+<p>Важливе зауваження полягає в тому, що якщо цикли <code>for</code> або <code>while</code> <em>перервани</em> оператором break, відповідні їм блоки else виконуватися не будуть.</p>
+<p>Приклад (зберегти як <code>break.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/break.txt" %}</code></pre>-->
+
+<pre><code class="language-python">while True:
+    s = input('Введіть щось : ')
+    if s == 'Вийти':
+        break
+    print('Довжина рядка становить :', len(s))
+print('Виконано')
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python break.py
+Введіть щось : Програмування – це весело
+Довжина рядка становить : 25
+Введіть щось : Коли робота виконана
+Довжина рядка становить : 20
+Введіть щось : І якщо ви хочете повесилитися на роботі:
+Довжина рядка становить : 40
+Введіть щось : Використовуйте Python!
+Довжина рядка становить : 22
+Введіть щось : Вийти 
+Вийти
+
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>У цій програмі ми багаторазово зчитуємо введення користувача та друкуємо довжину кожного введення кожного разу. Ми надаємо спеціальну умову для зупинки програми, перевіряючи, чи є введені користувачем рядки коду <code>'Вийти'</code>. Для зупинення програми ми вводимо спеціальну умову, яка перевіряє, чи збігається введення користувача з рядком коду "вихід". Ми зупиняємо програму, <em>перериванням</em>  циклу оператором break, і досягаємо кінця програми.</p>
+<p>Довжина введеного рядка може бути знайдена за допомогою вбудованої функції <code>len</code>.</p>
+<p>Пам'ятайте також, що оператор <code>break</code> може застосовуватись і в циклі <code>for</code>.</p>
+<p><strong>Поетичний Python Swaroop'а</strong></p>
+<p>Вхідні дані, які я використав тут, це міні-вірш, який я написав. Він називається
+Поетичний Python Swaroop'а:</p>
+<pre><code>Програмування – це весело.
+Коли робота виконана,
+і якщо ви хочете повесилитися на роботі:
+    використовуйте Python!
+</code></pre>
+<p>Англійський варіант:</p>
+<pre><code>Programming is fun.
+When the work is done,
+if you wanna make your work also fun:
+    use Python!
+
+</code></pre>
+<h2 id="continue-the-continue-statement">Оператор  <code>continue</code> (англ." The <code>continue</code> Statement")</h2>
+<p>Оператор <code>continue</code> використовується, щоб наказати Python пропустити решту операторів у поточному блоці циклу та <em>продовжити</em> (англ."continue") з наступної ітерації циклу.</p>
+<p>Приклад (зберегти як<code>continue.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/continue.txt" %}</code></pre>-->
+
+<pre><code class="language-python">while True:
+    s = input('Введіть щось :')
+    if s == 'вийти':
+        break
+    if len(s) &lt; 3:
+        print('Занадто мало')
+        continue
+    print('Введений рядок достатньої довжини')
+    # Різні інші дії тут...
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python continue.py
+Введіть щось : a
+Занадто мало
+Введіть щось : 12
+Занадто мало
+Введіть щось : abc
+Введений рядок достатньої довжини
+Введіть щось : вийти
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>У цій програмі ми приймаємо введення від користувача, але обробляємо введений рядок, лише якщо він містить принаймні 3 символи. Отже, ми використовуємо вбудовану функцію <code>len</code>, щоб отримати довжину рядка, і якщо довжина менша за 3, ми пропускаємо решту операторів у блоці за допомогою оператора <code>continue</code>. В іншому випадку решта операторів у циклі виконується, роблячи будь-які маніпуляції, які нам потрібні.</p>
+<p>Зауважте, що оператор continue також працює і з циклом for.</p>
+<h2 id="_1">Резюме</h2>
+<p>Ми побачили, як використовувати три оператори потоку керування - <code>if</code>, <code>while</code> і <code>for</code> разом із відповідними операторами <code>break</code> і <code>continue</code>.Це одні з найбільш часто використовуваних конструкцій Python, тому оволодіти ними дуже важливо.</p>
+<p>Далі ми побачимо, як створювати та використовувати функції.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

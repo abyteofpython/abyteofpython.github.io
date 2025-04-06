@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Основи (англ."Basics") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../about_python/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../control_flow/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#basics" class="nav-link">Основи (англ."Basics")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Коментарі</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#literal-constants" class="nav-link">Літеральні константи (англ."Literal Constants")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#numbers" class="nav-link">Числа (англ."Numbers")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#p-strings" class="nav-link">Pядки (англ."Strings")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#variable" class="nav-link">Змінні (англ."Variable")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#identifier-naming" class="nav-link">Іменування ідентифікатора (англ."Identifier Naming")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#data-types" class="nav-link">Типи даних (англ."Data Types")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#object" class="nav-link">Об'єкт (англ."Object")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#python" class="nav-link">Як писати програми на Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#logical-and-physical-line" class="nav-link">Логічні та фізичні рядки (англ."Logical And Physical Line")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#b-indentation" class="nav-link">Bідступи (англ."Indentation")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="basics">Основи (англ."Basics")</h1>
+<p>Просто надрукувати <code>Привіт, Світ!</code> недостатньо, чи не так? Ви хочете зробити більше, ніж це – ви хочете ввести щось у програму, обробити та отримати щось на виході. Ми можемо досягти цього у Python за допомогою констант і змінних, і ми також вивчимо деякі інші концепції в цьому розділі.</p>
+<h2 id="_1">Коментарі</h2>
+<p><em>Коментарі</em> – це будь-який текст,що пишеться після символу <code>#</code> і в основному корисний як примітка для читача програми.</p>
+<p>Наприклад:</p>
+<pre><code class="language-python">print('Привіт, Світ!') # Зауважте, що print — це функція
+</code></pre>
+<p>або:</p>
+<pre><code class="language-python"># Зауважте, що print — це функція
+print('Привіт, Світ!')
+</code></pre>
+<p>Використовуйте якомога більше корисних коментарів у своїй програмі, щоб пояснювати:</p>
+<ul>
+<li>припущення;</li>
+<li>важливі рішення;</li>
+<li>важливі деталі;</li>
+<li>проблеми, які ви намагаєтеся вирішити;</li>
+<li>проблеми, які ви намагаєтеся подолати у своїй програмі тощо.</li>
+</ul>
+<p><a href="http://www.codinghorror.com/blog/2006/12/code-tells-you-how-comments-tell-you-why.html"><em>Код програми підкаже вам, ЯК, а коментарі мають розповісти вам, ЧОМУ</em></a>.</p>
+<p>Це корисно для читачів вашої програми, щоб вони могли легко зрозуміти, що робить програма. Пам'ятайте, що такою людиною можете виявитися ви самі через півроку!</p>
+<h2 id="literal-constants">Літеральні константи (англ."Literal Constants")</h2>
+<p>Прикладом літеральної константи є числа, такі як <code>5</code>, <code>1,23</code>, або рядок, як-от <code>Це рядок</code> або <code>It's a string!</code>.
+Вони називаються літеральними, тому що вони <em>буквальні</em> - ви використовуєте їхнє значення буквально. Число <code>2</code> завжди представляє саме себе і нічого іншого - це <em>константа</em>, оскільки ії значення не можна змінити. Отже, усі вони називаються літеральними константами.</p>
+<h2 id="numbers">Числа (англ."Numbers")</h2>
+<p>Числа в основному бувають двох типів - цілі (англ."integers") і з рухомою комою (англ."floating point numbers" (або "floats"скорочено)).</p>
+<p>Прикладом цілого числа може служити "2", яке є цілим числом.</p>
+<p>Прикладами чисел з рухомою комою можуть бути <code>3.23</code> і <code>52.3E-4</code>. Позначення E показує ступені числа 10. У цьому випадку <code>52,3E-4</code> означає 52,3 * 10<sup>-4</sup>.</p>
+<p>Примітка від перекладача: 
+<em>РІЗНИЦЯ між поняттями «Рухома кома» та «Рухома крапка»</em>.
+Оскільки в деяких, переважно в  Америці та англомовних країнах, при запису чисел ціла частина відділяється від дробової крапкою (Decimal Point), то в термінології цих країн фігурує назва «рухома крапка» (англ. floating point).
+В Европейських країнах,як і в Україні, ціла частина числа від дробової традиційно відділяється комою (Decimal Comma), то для позначення того ж поняття історично використовується термін «рухома кома» (англ. floating comma), проте в літературі та технічній документації можна зустріти обидва варіанти. 
+У програмуванні Python використовується при позначені числа з рухомою комою <em>крапка</em>.</p>
+<blockquote>
+<p><strong>Примітка для досвідчених програмістів</strong></p>
+<p>На відміну від інших мов програмування (наприклад, C, Java тощо), число <em>int</em> на мові Python не має верхньої межі.</p>
+</blockquote>
+<h2 id="p-strings">Pядки (англ."Strings")</h2>
+<p>Рядок — це послідовність символів. Найчастіше рядки - це просто набір слів.</p>
+<p>Ви будете використовувати рядки майже в кожній програмі на мові Python, яку пишете, тому зверніть увагу на наступну частину.</p>
+<h3 id="single-quote">Одинарні лапки (англ."Single Quote")</h3>
+<p>Ви можете вказати рядки, використовуючи одинарні лапки, наприклад <code>'Фраза в лапках'</code>.</p>
+<p>Усі пробіли та знаки табуляції, зберігаються як є.</p>
+<h3 id="double-quotes">Подвійні лапки (англ."Double Quotes")</h3>
+<p>Рядки у подвійних лапках працюють так само, як рядки в одинарних лапках. Приклад: <code>"Як тебе звуть?"</code>.</p>
+<h3 id="triple-quotes">Потрійні лапки (англ."Triple Quotes")</h3>
+<p>Ви можете вказати багаторядкові рядки, використовуючи потрійні лапки - (<code>"""</code> або <code>'''</code>). Ви можете вільно використовувати одинарні та подвійні лапки в потрійних лапках. Наприклад:</p>
+<pre><code class="language-python">'''Це багаторядковий рядок.Це перший рядок.
+Це другий рядок.
+&quot;Як тебе звати?&quot;, — запитав я.
+Він сказав &quot;Бонд, Джеймс Бонд&quot;.
+'''
+</code></pre>
+<h3 id="strings-are-immutable">Рядки незмінні (англ."Strings Are Immutable")</h3>
+<p>Це означає, що коли ви створили рядок, ви не можете його змінити. На перший погляд це може показатися недоліком, насправді це не так. Пізніше,на прикладі різних програм,ми побачимо, чому це не є обмеженням.</p>
+<blockquote>
+<p><strong>Примітка для програмістів C/C++</strong></p>
+<p>У Python немає окремого типу даних <code>char</code>. У цьому немає справжньої потреби, і я впевнений, що ви не нудьгуватимете за ним.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><strong>Примітка для програмістів Perl/PHP</strong></p>
+<p>Пам’ятайте, що рядки в одинарних лапках і рядки в подвійних лапках однакові – вони нічим не відрізняються.</p>
+</blockquote>
+<h3 id="the-format-method">Метод форматування (англ."The format method")</h3>
+<p>Іноді нам може знадобитися побудувати рядки на основі будь-яких даних. Ось де корисний метод <code>format()</code>.</p>
+<p>Завантажуйте наступні рядки як файл <code>str_format.py</code>.</p>
+<p>Примітка від перекладача:</p>
+<ol>
+<li>
+<p>Пунктуація, як апостроф, двокрапка тощо, не можно використовувати у змінних (variable), тільки підкреслення "_". Тому у прикладі замість грамотично вірного написання слова "ім'я" використано -"ім_я"; </p>
+</li>
+<li>
+<p><code>Swaroop</code> - Swaroop Chitlur - aвтор книги ("Bite of Python"– "Укус Пітона"). </p>
+</li>
+</ol>
+<pre><code class="language-python">вік = 20
+ім_я = 'Swaroop'
+
+print('{0} було {1} років, коли він написав цю книгу'.format(ім_я, вік))
+print('Чому {0} грає з цим Рython?'.format(ім_я))
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python str_format.py
+Swaroop було 20 років, коли він написав цю книгу.
+Чому Swaroop грає з цим Рython?
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Рядок може використовувати певні позначення, і згодом можна викликати метод <code>format</code>, щоб замінити ці позначення відповідними аргументами в метод <code>format</code>.</p>
+<p>Зверніть увагу на перший випадок, коли ми використовуємо <code>{0}</code>, і це відповідає змінній <code>ім_я</code>, яка є першим аргументом методу format. Подібним чином другe позначення — <code>{1}</code>, що відповідає змінній <code>вік</code>,є другим аргументом методу format. Зверніть увагу, що Python починає відлік з 0, що означає, що перша позиція знаходиться в індексі 0, друга позиція в індексі 1 і так далі.</p>
+<p>Зверніть увагу, що ми могли б досягти того ж, використовуючи об'єднання рядків:</p>
+<pre><code class="language-python">ім_я + ' було ' + str(вік) + ' років '
+</code></pre>
+<p>але це набагато гірше та більше схильне до помилок. По-друге, перетворення в рядок буде виконано автоматично за допомогою методу <code>format</code> на відміну від явного перетворення в нашому прикладі. По-третє, використовуючи метод <code>format</code>, ми можемо змінити повідомлення, не торкаючись використовуваних змінних, і навпаки.</p>
+<p>Також зауважте, що числа є необов’язковими, тому ви також можете записати так:</p>
+<pre><code class="language-python">вік = 20
+ім_я = 'Swaroop'
+
+print('{} було {} років, коли він написав цю книгу'.format(ім_я, вік))
+print('Чому {} грає з цим  Python?'.format(ім_я))
+</code></pre>
+<p>та отримати такий самий результат, як і раніше.</p>
+<p>Ми також можемо назвати параметри ( де вік, ім_я є параметрами):</p>
+<pre><code class="language-python">вік = 20
+ім_я = 'Swaroop'
+
+print('{ім_я} було {вік} років, коли він написав цю книгу'.format(ім_я=ім_я, вік=вік))
+print('Чому {ім_я} грає з цим Рython?'.format(ім_я=ім_я))
+</code></pre>
+<p>та отримати такий самий результат, як і раніше.</p>
+<p>Python 3.6 представив коротший спосіб створення іменованих параметрів, який називається «f-strings»:</p>
+<pre><code class="language-python">вік = 20
+ім_я = 'Swaroop'
+
+print(f'{ім_я} було {вік} років, коли він написав цю книгу')  # зверніть увагу на 'f' перед рядком
+print(f'Чому {ім_я} грає з цим Рython?')  # зверніть увагу на 'f' перед рядком
+</code></pre>
+<p>та отримати такий самий результат, як і раніше.</p>
+<p>Те, що Python робить у методі <code>format</code>, полягає в тому, що він поміщає значення кожного аргументу(більш детальніше пояснення про аргументи та параметри пізніше) в зазначене місце. Можуть бути більш детальні позначення, такі як (для отримання додаткової інформації дивіться документацію https://docs.python.org/3/library/string.html#formatspec):</p>
+<pre><code class="language-python"># десяткове число (.) з точністю в 3 знаки для числа з рухомою комою '0.333'
+print('{0:.3f}'.format(1.0/3))
+# заповнити підкресленнями (_) з центруванням тексту
+# (^) по ширині 11: '___привіт___'
+print('{0:_^11}'.format('привіт'))
+# на основі ключових слів 'Swaroop написав «Укус Пітона»'
+print('{ім_я} написав {книга}'.format(ім_я='Swaroop', книга='Укус Пітона'))
+</code></pre>
+<p>Висновок:</p>
+<pre><code>0.333
+___привіт___
+Swaroop написав Укус Пітона
+
+</code></pre>
+<p>Оскільки ми обговорюємо форматування, зауважте, що <code>print</code> завжди закінчується невидимим символом «нового рядка» (<code>\n</code>), тому повторні виклики <code>print</code> будуть виводитися з нового рядка. Фактично print() виводить вказане значення, а після цього переводить курсор на наступний рядок.  Щоб запобігти друку  символу нового рядка, ви можете вказати, що він повинен закінчуватися без пробілів:</p>
+<pre><code class="language-python">print('a', end='')
+print('b', end='')
+</code></pre>
+<p>Висновок:</p>
+<pre><code>ab
+</code></pre>
+<p>Або ви можете завершити <code>пробілом</code>:</p>
+<pre><code class="language-python">print('a', end=' ')
+print('b', end=' ')
+print('c')
+</code></pre>
+<p>Висновок:</p>
+<pre><code>a b c
+</code></pre>
+<h3 id="escape-sequences">Екранована послідовность,символ \,зворотній слеш (англ."Escape Sequences")</h3>
+<p>Припустімо, ви хочете мати рядок, який містить одинарну лапку (<code>'</code>), як ви вкажете цей рядок? Наприклад, рядок є<code>"Як Ваше ім'я?"</code>. Ви не можете вказати <code>'Як Ваше ім'я?'</code> тому що Python заплутається щодо того, де починається і де закінчується рядок. Отже, вам доведеться вказати, що ця одинарна лапка не вказує на кінець рядка. Це можна зробити за допомогою так званої <em>екранована послідовность</em> (англ.<em>"escape sequence"</em>). Ви вказуєте одинарну лапку як <code>\'</code>: зверніть увагу на зворотній слеш. Тепер ви можете вказати рядок як<code>'Як Ваше ім\'я?'</code>.</p>
+<p>Іншим способом вказати цей конкретний рядок буде <code>"Як Ваше ім'я?"</code>, тобто використовуючи подвійні лапки.Подібним чином, ви повинні використовувати escape sequence для позначення подвійних лапок всередині рядку з подвійними лапками.Приклад від перекладача:</p>
+<pre><code class="language-python"># цей варіант не працює, оскільки подвійні лапки знаходяться всередині рядка подвійних лапок:
+print(&quot;Мова програмування &quot;Python&quot; займає у моєму серці важливе місце.&quot;)
+
+# цей варіант спрацює, оскільки подвійні лапки навколо слова Python екрановані:
+print(&quot;Мова програмування \&quot;Python\&quot; займає у моєму серці важливе місце.&quot;)
+</code></pre>
+<p>Ви також можете вказати подвійний зворотній слеш за допомогою escape sequence <code>\\</code>.
+Приклад від перекладача:</p>
+<pre><code class="language-python">#  \n — це екранована послідовність для нового рядка
+#  \f — form feed - йде на один рядок нижче
+# це речення буде виводитися у три рядки,але з нюансами:
+print(&quot;мої фотографії збережено на  диску c:\new_pictures\foto.jpg&quot;)
+
+# Висновок:
+мої фотографії збережено на  диску c:
+ew_pictures
+           oto.jpg
+
+# щоб надрукувати речення правильно, треба використати подвійний зворотній слеш:
+print(&quot;мої фотографії збережено на  диску c:\\new_picture\\foto.jpg&quot;)
+# Висновок:
+мої фотографії збережено на  диску c:\new_picture\foto.jpg
+
+</code></pre>
+<p>Що, якби ви хотіли вказати дворядковий рядок? Одним із способів є використання рядка в потрійних лапках, як показано <a href="#Потрійні_лапки">раніше</a> або ви можете використати escape sequence для символу нового рядка - <code>\n</code>, щоб вказати початок нового рядка. Наприклад:  </p>
+<pre><code class="language-python">'Це перший рядок\nЦе другий рядок'
+</code></pre>
+<p>Висновок:</p>
+<pre><code>Це перший рядок
+Це другий рядок
+</code></pre>
+<p>Приклад від перекладача</p>
+<pre><code class="language-python"># з потрійними лапками
+вірш1 = &quot;&quot;&quot;я можу бути програмістом 
+і мова Python потрібна звісно.&quot;&quot;&quot;
+print(вірш1)
+# з екранованої послідовностю \n
+вірш2 = &quot;я можу бути програмістом\nі мова Python потрібна звісно.&quot;
+print(вірш2)
+
+# Висновок:
+я можу бути програмістом
+і мова Python потрібна звісно.
+</code></pre>
+<p>Ще одна корисна  escape sequence, про яку слід знати, це послідовність символів:<code>\t</code>(розглядається як один символ табуляції ). Існує ще багато   escape sequences, але я згадав тут лише найкорисніші.</p>
+<p>Варто зауважити, що зворотній слеш в кінці рядка означає, що рядок продовжується в наступному рядку, але новий рядок не додається. Наприклад:</p>
+<pre><code class="language-python">&quot;Це перше речення. \
+Це друге речення.&quot;
+</code></pre>
+<p>еквівалентно</p>
+<pre><code class="language-python">&quot;Це перше речення. Це друге речення.&quot;
+</code></pre>
+<h3 id="raw-string">Необроблений рядоки (англ."Raw String")</h3>
+<p>Якщо вам потрібно вказати деякі рядки, де не обробляються спеціальні символи, наприклад escape sequences, тоді вам потрібно вказати <em>raw string</em>, додавши до рядка префікс <code>r</code> або <code>R</code>.Необроблений рядок Python розглядає символ зворотної похилої риски ( \ ) як буквальний символ.Наприклад:</p>
+<pre><code class="language-python">r&quot;Нові рядки позначаються \n&quot;
+</code></pre>
+<blockquote>
+<p><strong>Примітка для користувачів регулярного виразу (англ."Regular Expression User")</strong> </p>
+<p>Завжди використовуйте raw strings під час роботи з регулярними виразами. Інакше може знадобитися чимало зворотних слешей. 
+Наприклад, абревіатуру з регулярними виразами в Python можна знайти за допомогою  <code>'\\1'</code> or <code>r'\1'</code> (на відміну роботи з Python, пошук абревіатури з регулярними виразами в інших системах виконується символом <code>\1</code>)</p>
+</blockquote>
+<h2 id="variable">Змінні (англ."Variable")</h2>
+<p>Використання лише літеральних констант незабаром може набриднути — нам потрібен якийсь спосіб зберігання будь-якої інформації та маніпулювання нею. Ось тут і з’являються <em>змінні</em>. Змінні — це саме те, що випливає з назви — їхнє значення може змінюватися, тобто ви можете зберігати будь-що за допомогою змінної. Змінні — це лише частини пам’яті комп’ютера, де зберігається деяка інформація. На відміну від літеральних констант, вам потрібен певний метод доступу до цих змінних і, отже, ви даєте їм імена.</p>
+<h2 id="identifier-naming">Іменування ідентифікатора (англ."Identifier Naming")</h2>
+<p>Змінні є прикладами ідентифікаторів. <em>Ідентифікатори</em> — це імена, надані для ідентифікації <em>чогось</em>. Існують деякі правила, яких слід дотримуватися для ідентифікаторів імен:</p>
+<ul>
+<li>Першим символом ідентифікатора має бути літера алфавіту (символ ASCII в
+верхньому(великі літери) або нижньому(малі літери) регістрі, або символ Unicode), а також знак підкреслення(<code>_</code>).</li>
+<li>Решта назви ідентифікатора може складатися з літер (символ ASCII в
+верхньому або нижньому регістрі, або символ Unicode),знак підкреслення (<code>_</code>) або цифр (0-9).</li>
+<li>Імена ідентифікаторів чутливі до регістру. Наприклад, <code>myname</code> і <code>myName</code> <em>не</em> те саме. Зверніть увагу на <code>n</code> у нижньому регістрі у першому випадку та на <code>N</code> у верхньому регістрі у другому випадку.</li>
+<li>Прикладами <em>допустимих</em> імен ідентифікаторів є <code>i</code>, <code>name_2_3</code>. Прикладами <em>неприпустимих</em> імен ідентифікаторів є <code>2things</code>, <code>this is spaced out</code>, <code>my-name</code> і <code>&gt;a1b2_c3</code>.</li>
+</ul>
+<h2 id="data-types">Типи даних (англ."Data Types")</h2>
+<p>Змінні можуть містити значення різних типів, які називаються <em>типами даних</em>.Основними типами є числа та рядки, які ми вже обговорювали. У наступних розділах ми побачимо, як створювати власні типи за допомогою <a href="../oop/#classes">класів</a>.</p>
+<h2 id="object">Об'єкт (англ."Object")</h2>
+<p>Пам’ятайте, Python називає все, що використовується в програмі, <em>об’єктом</em>. Це мається на увазі в загальному значенні. Замість того, щоб говорити "<em>щось</em>"', ми говоримо "<em>об'єкт</em>".</p>
+<blockquote>
+<p><strong>Примітка для користувачів об’єктно-орієнтованого програмування</strong>:</p>
+<p>Python сильно об’єктно-орієнтований у тому сенсі, що все є об’єктом, включаючи числа, рядки та функції.</p>
+</blockquote>
+<p>Тепер ми побачимо, як використовувати змінні разом із літеральними константами. Збережіть наступний приклад і запустіть програму.</p>
+<h2 id="python">Як писати програми на Python</h2>
+<p>Відтепер стандартна процедура збереження та запуску програми Python така:</p>
+<h3 id="pycharm">Для PyCharm</h3>
+<ol>
+<li>Відкрийте <a href="../first_steps/#pycharm">PyCharm</a>.</li>
+<li>Створіть новий файл з назвою файлу.</li>
+<li>Введіть програмний код, наведений у прикладі.</li>
+<li>Клацніть правою кнопкою миші та запустіть поточний файл.</li>
+</ol>
+<p>ПРИМІТКА. Щоразу, коли вам потрібно надати <a href="../modules/#modules">command line arguments ("аргументи командного рядка")</a>, натисніть кнопку<code>Run</code> -&gt; <code>Edit Configurations</code>, введіть аргументи в розділ <code>Script parameters:</code> і натисніть кнопку <code>OK</code>:</p>
+<p><img alt="PyCharm command line arguments(&quot;Аргументи командного рядка PyCharm)" src="../img/pycharm_command_line_arguments.png" /></p>
+<h3 id="_2">Для інших редакторів</h3>
+<ol>
+<li>Відкрийте вибраний редактор.</li>
+<li>Введіть програмний код, наведений у прикладі.</li>
+<li>Збережіть його як файл з назвою файлу.</li>
+<li>Запустіть інтерпретатор командою <code>python program.py</code>, щоб запустити програму.</li>
+</ol>
+<h3 id="_3">Приклад: використання змінних і літеральних констант</h3>
+<p>Введіть і запустіть таку програму:</p>
+<pre><code class="language-python"># Ім'я файлу : var.py
+i = 5
+print(i)
+i = i + 1
+print(i)
+
+s = '''Це багаторядковий рядок.
+Це другий рядок.'''
+print(s)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>5
+6
+Це багаторядковий рядок.
+Це другий рядок.
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Ось як працює ця програма. Спочатку ми привласнюємо значення константи <code>5</code> змінній <code>i</code> за допомогою оператора присвоювання (<code>=</code>).Цей рядок називається statement - так би мовити "інструкція рoботи для комп'ютера".
+Вираз і=5 має три частини:
+1. "і" - назва змінної;
+2. "=" - оператор присвоювання;
+3. "5" - літеральна константа.</p>
+<p>Ці частини не працюють поодинці, але разом вони створюють інструкцію рoботи для комп'ютера. 
+Цей рядок називається statement,оскільки в ньому зазначено, що потрібно щось зробити, і в цьому випадку ми з’єднуємо назву змінної <code>i</code> зі значенням <code>5</code>. Далі ми друкуємо значення <code>i</code> за допомогою функції <code>print</code>, яка, як не дивно, просто виводить значення змінної на екран.</p>
+<p>Потім ми додаємо «1» до значення, збереженого в «i», і зберігаємо його там. Потім ми друкуємо його і, як очікується, отримуємо значення "6".</p>
+<p>Подібним чином ми присвоюємо рядковий літерал змінній <code>s</code>, а потім друкуємо його.</p>
+<blockquote>
+<p><strong>Примітка для програмістів статичної мови</strong></p>
+<p>Змінні використовуються простим наданням їм значень. Ніякого попередньоного оголошення або визначення типу даних не потрібно/застосовується.</p>
+</blockquote>
+<h2 id="logical-and-physical-line">Логічні та фізичні рядки (англ."Logical And Physical Line")</h2>
+<p>Фізична лінія - це те, що ви <em>бачите</em>, коли пишете програму. Логічний рядок — це те, що <em>Python сприймає</em> як "a single statement" (одну інструкцію). Python неявно припускає, що кожен <em>фізичний рядок</em> відповідає <em>логічному рядку</em>.</p>
+<p>Прикладом логічного рядка є statement <code>print('Привіт, Світ!')</code>- якщо воно в одному рядку(як ви бачите це в редакторі), то цей рядок також відповідає фізичному рядку.</p>
+<p>Неявно Python заохочує використання одного statement на рядок, що робить код більш читабельним.</p>
+<p>Якщо ви хочете вказати більше ніж один логічний рядок в одному фізичному рядку, ви повинні явно вказати це за допомогою крапки з комою (<code>;</code>), яка вказує на кінець логічного рядка/statement. Наприклад:</p>
+<pre><code class="language-python">i = 5
+print(i)
+</code></pre>
+<p>те саме, що</p>
+<pre><code class="language-python">i = 5;
+print(i);
+</code></pre>
+<p>і те саме може бути записано у вигляді</p>
+<pre><code class="language-python">i = 5; print(i);
+</code></pre>
+<p>або</p>
+<pre><code class="language-python">i = 5; print(i)
+</code></pre>
+<p>Однак я <em>настійно рекомендую</em> вам дотримуватися <em>написання максимум одного логічного рядка в кожному фізичному рядку</em>. Ідея полягає в тому, що ви можете обійтися без крапки з комою. Фактично, я <em>ніколи</em> не використовував і навіть не бачив крапку з комою в програмі Python.</p>
+<p>Існує одна ситуація, коли ця концепція дійсно корисна: якщо у вас є довгий рядок коду, ви можете розбити його на кілька фізичних рядків, використовуючи зворотній слеш. Це називається <em>явним з’єднанням рядків (англ."explicit line joining")</em>:</p>
+<pre><code class="language-python">s = 'Це рядок. \
+Цей рядок продовжується.'
+print(s)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>Це рядок. Цей рядок продовжується.
+</code></pre>
+<p>Аналогічно,</p>
+<pre><code class="language-python">i = \
+5
+</code></pre>
+<p>те саме, що</p>
+<pre><code class="language-python">i = 5
+</code></pre>
+<p>Іноді існує неявне припущення, що вам не потрібно використовувати зворотній слеш. Це випадок, коли в логічному рядку є відкриваюча кругла, квадратна або фігурна дужка, але немає закриваючої . Це називається <em>неявним з’єднанням ліній</em> (англ."implicit line joining") . Ви можете побачити це в дії, коли ми пишемо програми за допомогою <a href="../data_structures/#lists">list</a> у наступних розділах.</p>
+<h2 id="b-indentation">Bідступи (англ."Indentation")</h2>
+<p>Пробіли (англ."Whitespace") важливі в Python. Точніше <em>пробіли на початку рядка важливі</em>. Це називається <em>відступами</em>. Передні відступи (пробіли та табуляції) на початку логічного рядка використовуються для визначення рівня відступу логічного рядка, який, у свою чергу, використовується для групування statement.</p>
+<p>Це означає, що statement, які йдуть разом, <em>повинні</em> мати однаковий відступ. Кожен такий набір statement називається <em>блоком</em>. У наступних розділах ми побачимо приклади важливості блоків.</p>
+<p>Пам’ятайте, що неправильний відступ може спричинити помилки. Наприклад:</p>
+<pre><code class="language-python">i = 5
+# Помилка нижче! Зверніть увагу на один пробіл на початку рядка
+ print('Значення є', i)
+print('Я повторюю, значення є', i)
+</code></pre>
+<p>Коли ви запускаєте це, ви отримуєте таку помилку:</p>
+<pre><code>  File &quot;whitespace.py&quot;, line 3
+    print('Значення є', i) # Помилка! Пробіл на початку рядка
+    ^
+IndentationError: unexpected indent
+</code></pre>
+<p>Зверніть увагу, що на початку другого рядка є один пробіл. Помилка, відображена у Python, повідомляє нам, що синтаксис програми невірний, тобто програму було написано неправильно.Для вас це означає те, що <em>ви не можете довільно починати нові блоки statement</em> ​​(за винятком головного блоку за замовчуванням, який ви використовували протягом всієї програми,). Випадки, коли ви можете використовувати нові блоки, будуть детально описані в наступних розділах, наприклад  <a href="../control_flow/#control_flow">control flow</a>.</p>
+<blockquote>
+<p><strong>Як зробити відступ</strong></p>
+<p>Використовуйте чотири пробіли для відступу. Це офіційна рекомендація щодо мови Python. Хороші редактори автоматично зроблять це за вас. Переконайтеся, що ви використовуєте однакову кількість пробілів для відступів, інакше ваша програма не працюватиме або матиме неочікувану поведінку.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><strong>Примітка для програмістів статичної мови програмування</strong></p>
+<p>Python завжди використовуватиме відступи для блоків і ніколи не використовуватиме дужки. Запустіть <code>from __future__ import braces</code>, щоб дізнатися більше.</p>
+</blockquote>
+<h2 id="_4">Резюме</h2>
+<p>Тепер, коли ми пройшли через багато дрібних деталей, ми можемо перейти до більш цікавих речей, таких як оператори потоку керування. Переконайтеся, що ви зрозуміли те, що ви прочитали в цьому розділі.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
