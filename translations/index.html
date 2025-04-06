@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Переклади - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../translation_howto/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../what_next/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Переклади</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Арабська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Азербайджанська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Бразильська Португальська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">Китайський</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">Китайський традиційний</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">Французька</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">Німецький</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">Грецька</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">Індонезійська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">Італійська (перша)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">Італійська (друга)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_15" class="nav-link">Японська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_16" class="nav-link">Корейська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_18" class="nav-link">Монгольська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bokmal" class="nav-link">Норвезька (bokmål)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_19" class="nav-link">Польська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_20" class="nav-link">Португальська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_21" class="nav-link">Російська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_22" class="nav-link">Українська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">Сербська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_24" class="nav-link">Словацька</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_25" class="nav-link">Іспанська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_26" class="nav-link">Шведська</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_27" class="nav-link">Турецька</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Переклади</h1>
+<p>Завдяки багатьом невтомним волонтерам доступно багато перекладів книги різними мовами!</p>
+<p>Якщо ви хочете допомогти з цими перекладами, будь ласка, перегляньте список волонтерів для відповідних мов нижче та вирішіть, чи хочете ви розпочати новий переклад чи допомогти в уже існуючих проектах перекладу.</p>
+<p>Якщо ви плануєте почати новий переклад, будь ласка, прочитайте <a href="../translation_howto/#translation-howto">Інструкцію з перекладу</a>.</p>
+<h2 id="_2">Арабська</h2>
+<p>Нижче наведено посилання на арабську версію. Дякуємо Ashraf Ali Khalaf за переклад книги, ви можете прочитати всю книгу онлайн за адресою <a href="http://www.khaledhosny.org/byte-of-python/index.html">http://www.khaledhosny.org/byte-of-python/index.html</a> або завантажити її з [sourceforge.net] (http://downloads.sourceforge.net/omlx/byteofpython_arabic.pdf?use_mirror=osdn). Для отримання додаткової інформації див. <a href="http://itwadi.com/byteofpython_arabi">http://itwadi.com/byteofpython_arabi</a>.</p>
+<h2 id="_3">Азербайджанська</h2>
+<p>Jahangir Shabiyev (c.shabiev@gmail.com) зголосився перекласти книгу азербайджанською мовою. Переклад виконується за адресою https://www.gitbook.com/book/jahangir-sh/piton-sancmasi</p>
+<h2 id="_4">Бразильська Португальська</h2>
+<p>Є два переклади з різними рівнями завершеності та доступності. Старіший переклад зараз відсутній/втрачений, а новіший переклад неповний.</p>
+<p>Samuel Dias Neto (samuel.arataca@gmail.com) зробив перший бразильський португальський переклад (старіший переклад) цієї книги, коли версія Python була 2.3.5. Переклад більше не є загальнодоступним.</p>
+<p><a href="http://rodrigoamaral.net">Rodrigo Amaral</a> (rodrigoamaral@gmail.com) зголосився перекласти книгу бразильською португальською мовою (новіший переклад), який ще не завершено.</p>
+<h3 id="_5">Каталонська</h3>
+<p>Moises Gomez (moisesgomezgiron@gmail.com) зголосився перекласти книгу каталонською мовою. Переклад триває.</p>
+<blockquote>
+<p>Moisès Gómez - Я розробник, а також викладач програмування (як правило, для людей без попереднього досвіду).</p>
+<p>Деякий час тому мені потрібно було навчитися програмувати на Python, і робота Swaroop’а була справді корисною. Чітко, лаконічно та досить повно. Саме те, що мені було потрібно.</p>
+<p>Після цього досвіду я подумав, що деякі інші люди в моїй країні також можуть скористатися цим. Але англійська мова може стати перешкодою.</p>
+<p>Отже, чому б не спробувати це перекласти? І я зробив для попередньої версії книги.</p>
+<p>У моїй країні є дві державні мови. Я вибрав каталонську, тому що подумав, що на більш поширену іспанську її напевно переведе хтось інший.</p>
+</blockquote>
+<h2 id="_6">Китайський</h2>
+<p>У 2017 році, тобто через 11 років, Mo Lun (i@molun.net) повторно переклав книгу з самого початку, на основі версії 4.0. А переклад зберігається на GitHub і Gitbook. Він стежить за цим перекладеним виданням і готовий виправити його, якщо в перекладеній версії книги є якась помилка.</p>
+<p>Видання перекладу 2017 року доступне на <a href="https://bop.molun.net">https://bop.molun.net</a>.</p>
+<p>Mo Lun каже:</p>
+<blockquote>
+<p>Я звичайний студент журналістики Китайського молодіжного університета політичних наук ( англ."China Youth University for Political Sciences (CYU)"), Пекін. І фактично, коли я починав перекладати цю книгу, я був абсолютний новачок у програмуванні на Python. Спочатку це була просто примха, але коли я закінчив переклад, я зрозумів, що рішення, викликане інтересом, змусило мене зайти так далеко.</p>
+<p>За допомогою перекладів моїх попередників,великої кількості інформації в Інтернет, і за допомогою моїх друзів я зміг представити це видання. Я просто сподіваюся, що моя перекладацька робота допоможе іншим новачкам у вивченні Python.</p>
+<p>Водночас я завжди чекаю  зауважень і пропозицій до мого перекладу і готовий змінити або вдосконалити цю поверхневу роботу.</p>
+</blockquote>
+<h3 id="_7">Попередній китайський переклад</h3>
+<p>В 2005, Shen Jieyuan переклав цю книгу з версією 1.20 китайською мовою та опублікував її в Інтернеті. Це перше китайське видання. На офіційному сайті книги його звали Juan Shen,за адресою електронної пошти  orion_val@163.com。Це видання було широко розповсюджене в мережі, а посилання, надані на офіційному сайті книги, більше не доступні, тому його оригінальне джерело неможливо знайти. Тому тут не можна вказати певну адресу. Але ви можете спробувати знайти копію за ключовими словами, наприклад  “简明Python教程 沈洁元”.</p>
+<p>Juan Shen каже:</p>
+<blockquote>
+<p>Я аспірант відділу бездротових телекомунікацій у Пекінському технологічному університеті, Китай. Наразі мої дослідницькі інтереси стосуються синхронізації, регулюванням каналу передачі даних і багатокористувацьким визначенням системи з багатьма несучими частотами CDMA. Python — моя основна мова програмування для щоденного моделювання та дослідницької роботи. Здебільшого з використанням Python
+Numeric. Я познайомився з Python лише півроку тому, але, як ви бачите, він дійсно простий у використанні, простий у використанні та ефективний. Як і попереджав у своїй книзі Swaroop, «Це тепер моя улюблена мова програмування».</p>
+<p>'A Byte of Python' був моїм посібником із вивчення Python. Він зрозуміло та ефективно, вводить вас у світ Python за найкоротший час. Він не надто довгий, але ефективно охоплює майже всі важливі теми в Python. Я думаю, що «A Byte of Python» слід настійно рекомендувати новачкам як перший підручник з Python. Я присвячую мій переклад потенційним мільйонам користувачів Python у Китаї.</p>
+</blockquote>
+<h2 id="_8">Китайський традиційний</h2>
+<p>Fred Lin (gasolin@gmail.com) зголосився перекласти книгу китайською мовою.</p>
+<p>Книга доступна на: <a href="http://code.google.com/p/zhpy/wiki/ByteOfZhpy">http://code.google.com/p/zhpy/wiki/ByteOfZhpy</a>.</p>
+<p>Захоплююча особливість цього перекладу полягає в тому, що він також містить <em>вихідні тексти китайського Python</em> поруч із оригінальними текстами на Python.</p>
+<blockquote>
+<p>Fred Lin - Я працюю інженером мережевого мікропрограмного забезпечення в Delta Network, а також роблю внесок у веб-платформу TurboGears.</p>
+<p>Як євангеліст python (:-p), мені потрібен матеріал для просування мови python. Я виявив, що «A Byte of Python» найкраще підходить як для новачків, так і для досвідчених програмістів. «A Byte of Python» детально викладає основи Python в
+розумних обсягах.</p>
+<p>Переклад спочатку базувався на спрощеній китайській версії, і незабаром було зроблено багато переписань, щоб відповідати поточній версії книги та якості читання.</p>
+<p>Остання китайська традиційна версія також містить  вихідні коди програм китайського Python, які досягнуті за допомогою мого нового проекту «zhpy» (китайською — python) (запуск 7 серпня).</p>
+<p>zhpy(вимовляти як "Зед.Аш.Пі", або "Зіппі") є такою собі надбудовою над Python, що переводить Python на традиційну або спрощену китайську. Цей проект існує насамперед з освітньою метою.</p>
+</blockquote>
+<h2 id="_9">Французька</h2>
+<p>Gregory (coulix@ozforces.com.au) зголосився перекласти книгу французькою мовою.</p>
+<p>Gérard Labadie (gerard.labadie@gmail.com) завершив переклад книги французькою мовою.</p>
+<p>Пізніше цей переклад було перенесено у формат markdown, оновлено відповідно до останньої версії книги та опубліковано на GitBook  Romain Gilliotte (rgilliotte@gmail.com).</p>
+<p>Його можна знайти за адресою https://rgilliotte.gitbook.io/byte-of-python/</p>
+<h2 id="_10">Німецький</h2>
+<p>Lutz Horn (lutz.horn@gmx.de), Bernd Hengelein (bernd.hengelein@gmail.com) та Christoph Zwerschke (cito@online.de) зголосилися перекласти книгу німецькою мовою.</p>
+<p>Переклад можна знайти за адресою: http://cito.github.io/byte_of_python/</p>
+<!-- Їхній переклад розміщено за адресою  http://ftp.jaist.ac.jp/pub//sourceforge/a/ab/abop-german.berlios/ -->
+
+<p>Lutz Horn каже:</p>
+<blockquote>
+<p>Мені 32 роки, я маю ступінь з математики в Гейдельберзькому університеті, Німеччина. Наразі я працюю інженером-програмістом в проекті, який фінансується державою, щоб створити веб-портал комп'ютерних наук у Німеччині. Основною мовою, яку я використовую як професіонал, є Java, але я намагаюся робити якомога більше з Python за кадром. Зокрема, з Python дуже легко аналізувати та конвертувати текст. Я не дуже знайомий із наборами інструментів графічного інтерфейсу користувача, оскільки більшість мого програмування стосується веб-додатків, де інтерфейс користувача формується
+такими Java інструментами як Struts. Зараз я намагаюся більше використовувати функції функціонального програмування Python і генераторів.  Після короткого вивчення Ruby я був дуже вражений використанням блоків у цій мові. Загалом мені подобається динамічний характер таких мов, як Python і Ruby, оскільки це дозволяє мені робити те, що неможливо в більш статичних мовах, таких як Java. Я шукав якийсь вступ до програмування, придатний для навчання повного непрограміста. Я знайшов книжку 'How to Think Like a Computer Scientist: Learning with Python', та 'Dive into Python. Перша книга добра для початківців, але ії потрібно довго перекладати. Друга - не підходить новачкам. Я думаю, що «A Byte of Python» чудово вписується між ними, оскільки вона не надто довга, написана по суті, і водночас досить докладна для навчання
+новачка. Крім того, мені подобається проста структура DocBook, яка дозволяє перекладати текст, а також генерувати результуючий текст
+у різних форматах як за помахом чарівної палички.</p>
+</blockquote>
+<p>Bernd Hengelein каже:</p>
+<blockquote>
+<p>Lutz і я збираємося зробити німецький переклад разом. Ми тільки почали зі вступу та передмови, але ми будемо інформувати вас про прогрес, якого ми досягаємо. Гаразд, тепер трохи особистого про мене. Мені 34 роки, і я граю з комп’ютерами з 1980-х років, коли «Commodore C64» панував у дитячих кімнатах. Після вивчення інформатики я почав працювати інженером-програмістом. Зараз я працюю у сфері медичної візуалізації у великій німецькій компанії. Хоча C++ є основною мовою, яку я (маю) використовувати для щоденної роботи, я постійно шукаю щось нове для вивчення. Минулого року я закохався у Python, яка є чудовою мовою як за своїми можливостями, так і за своєю красою. Я читав десь в мережі про хлопця, який сказав, що йому подобається Python, тому що код виглядає дуже красиво. Як на мене, він абсолютно правий. У той час, коли я вирішив вивчити python, я помітив, що є дуже мало хорошої документації німецькою мовою. Коли я натрапив на вашу книгу, мені спала на думку спонтанна ідея німецького перекладу. На щастя, у Lutz була та сама ідея, і тепер ми можемо розділити роботу. Я з нетерпінням чекаю на плідну співпрацю!</p>
+</blockquote>
+<h2 id="_11">Грецька</h2>
+<p>Грецька спільнота Ubuntu [переклала книгу грецькою] (http://wiki.ubuntu-gr.org/byte-of-python-el), для використання в наших онлайн уроках Python, які проводяться на наших форумах. Щоб дізнатися більше, зв’яжіться з  <a href="https://twitter.com/savvasradevic">@savvasradevic</a>.</p>
+<h2 id="_12">Індонезійська</h2>
+<p>Daniel (daniel.mirror@gmail.com) перекладає книгу індонезійською мовою <a href="http://python.or.id/moin.cgi/ByteofPython">http://python.or.id/moin.cgi/ByteofPython</a>.</p>
+<p>Wisnu Priyambodo (cibermen@gmail.com) також зголосився перекласти книгу індонезійською мовою.</p>
+<p>Також, Bagus Aji Santoso (baguzzzaji@gmail.com) зголосився.</p>
+<h2 id="_13">Італійська (перша)</h2>
+<p>Enrico Morelli (mr.mlucci@gmail.com) і Massimo Lucci (morelli@cerm.unifi.it) зголосилися перекласти книгу італійською мовою.</p>
+<p>Переклад італійською доступний на <a href="http://www.gentoo.it/Programmazione/byteofpython">http://www.gentoo.it/Programmazione/byteofpython</a>.</p>
+<blockquote>
+<p><em>Massimo Lucci and Enrico Morelli</em> - ми працюємо в університеті Флоренції (Італія) - хімічний факультет. Я (Massimo) як сервісний інженер та системний адміністратор спектрометрів ядерного магнітного резонансу; Enrico як сервісний інженер і системний адміністратор  паралельних/кластерних систем. Ми програмуємо на python близько семи років, маємо досвід роботи з платформами Linux з десяти років. В Італії ми адмініструємо веб-сторінку www.gentoo.it для дистрибутива  Gentoo/Linux та www.nmr.it (зараз у розробці) для додатків ядерного магнітного резонансу та організації конгресу та управління. Ось і все! Ми вражені розумною мовою, використаною у вашій книзі, і ми вважаємо, що це важливо для наближення Python до нових користувачів (ми маємо на увазі сотні студентів і дослідників, які працюють у наших лабораторіях)..</p>
+</blockquote>
+<h2 id="_14">Італійська (друга)</h2>
+<p>Італійський переклад був створений
+<a href="http://besthcgdropswebsite.com/translate">Calvina Bice</a> та колегами з  <a href="http://besthcgdropswebsite.com/translate/a-byte-of-python/">http://besthcgdropswebsite.com/translate/a-byte-of-python/</a>.</p>
+<h2 id="_15">Японська</h2>
+<p>Shunro Dozono (dozono@gmail.com)перекладає книгу японською мовою.</p>
+<h2 id="_16">Корейська</h2>
+<h3 id="epsimatt-2019">Epsimatt (2019)</h3>
+<p>Epsimatt розпочав новий корейський переклад:</p>
+<ul>
+<li>Читайте онлайн на https://epsimatt.gitbook.io/byte-of-python/</li>
+<li>Слідкуйте за прогресом на https://github.com/epsimatt/byte-of-python/issues/16</li>
+</ul>
+<h3 id="_17">Старіша</h3>
+<p>Jeongbin Park (pjb7687@gmail.com) переклав книгу на корейську - <a href="https://github.com/pjb7687/byte_of_python">https://github.com/pjb7687/byte_of_python</a></p>
+<blockquote>
+<p>Я Jeongbin Park, зараз працюю дослідником у галузі біофізики та біоінформатики в Кореї.</p>
+<p>Рік тому я шукав гарний підручник/посібник на Python, щоб представити його своїм колегам, тому що використання Python у галузях досліджень зростає через те, що кількість користувачів стає дедалі більшою.</p>
+<p>Але на той час було лише кілька книг про Python доступні корейською мовою, тому я вирішив перекласти вашу електронну книгу, оскільки вона виглядає як один із найкращих посібників, які я коли-небудь читав!</p>
+<p>Наразі книга майже повністю перекладена корейською мовою, за винятком частини тексту у вступному розділі та додатків.</p>
+<p>Ще раз дякую, що написали такий гарний посібник!</p>
+</blockquote>
+<h2 id="_18">Монгольська</h2>
+<p>Ariunsanaa Tunjin (luftballons2010@gmail.com) зголосився перекласти книгу монгольською мовою.</p>
+<p><em>Оновлення від 22 листопада 2009</em> : Ariunsanaa на порозі завершення перекладу.</p>
+<h2 id="bokmal">Норвезька (bokmål)</h2>
+<p>Eirik Vågeskar студент <a href="http://no.wikipedia.org/wiki/Sandvika_videreg%C3%A5ende_skole">Sandvika videregående skole</a> у Норвегії, <a href="http://forbedre.blogspot.com/">блогер</a> і зараз перекладає книгу норвезькою (bokmål).</p>
+<blockquote>
+<p><em>Eirik Vågeskar</em>: Я завжди хотів програмувати, але оскільки я розмовляю малопоширеною мовою, процес навчання був набагато важчим. Більшість підручників і книг написані дуже технічною англійською мовою, тому більшість випускників середньої школи навіть не матимуть словникового запасу, щоб зрозуміти, про що підручник. Коли я відкрив цю книгу, усі мої проблеми були вирішені. «A Byte of Python» використав просту нетехнічну мову, щоб пояснити таку ж просту мову програмування, і ці дві речі роблять вивчення Python цікавим. Прочитавши половину книги, я вирішил, що книга варта перекладу. Я сподіваюся, що переклад допоможе людям, які опинилися в такій самій ситуації, як я (особливо молоді), і, можливо, допоможе поширити інтерес до мови серед людей з меншими технічними знаннями.</p>
+</blockquote>
+<h2 id="_19">Польська</h2>
+<p>Dominik Kozaczko (dominik@kozaczko.info) зголосився перекласти книгу польською мовою. Переклад триває, і його головна сторінка доступна тут: <a href="http://python.edu.pl/byteofpython/">Ukąś Pythona</a>.</p>
+<p><em>Оновлення</em> : переклад завершено та готовий станом на 2 жовтня 2009 р. Дякуємо Dominik та двом його студентам та їхньому другові за їх час і зусилля!</p>
+<blockquote>
+<p><em>Dominik Kozaczko</em> - Я вчитель інформатики та інформаційних технологій.</p>
+</blockquote>
+<h2 id="_20">Португальська</h2>
+<p>Artur Weber (arturweberguimaraes@gmail.com) завершив переклад цієї книги португальською (станом на 21 лютого 2018 р.) на <a href="https://www.homeyou.com/~edu/introducao">https://www.homeyou.com/~edu/introducao</a>.</p>
+<blockquote>
+<p><em>Artur Weber</em>: Мої студенти навчаються на політехнічному факультеті Екологічного університету в місті Куритиба (Бразилія), і деякі з них цікавляться різними роботами.</p>
+<p>Оскільки вони пишуть курсові та академічні роботи, вони завжди шукають цікаві статті та сторінки. Також я намагаюся знайти цікаві матеріали, які можуть бути джерелами для їхніх університетських робіт.</p>
+<p>Я знайшов матеріали з вашого сайту корисними для деяких моїх студентів, які пишуть роботи на основі програмування на Python. Власне, тому я вирішив зробити португальський переклад, щоб мої студенти, які не знають англійської, могли читати захоплюючі статті рідною мовою (португальською).</p>
+</blockquote>
+<h2 id="_21">Російська</h2>
+<p>Vladimir Smolyar (v_2e@ukr.net) завершив переклад російською на <a href="http://wombat.org.ua/AByteOfPython/">http://wombat.org.ua/AByteOfPython/</a>.</p>
+<h2 id="_22">Українська</h2>
+<p>Averkiev Andrey (averkiyev@ukr.net) зголосився перекласти книгу російською, і, можливо, українською (якщо дозволить час).</p>
+<p>Daria Jens (jensdarya@gmail.com) 2024 році завершила переклад українською мовою.</p>
+<h2 id="_23">Сербська</h2>
+<p>"BugSpice" (amortizerka@gmail.com) завершив сербський переклад:</p>
+<blockquote>
+<p>Це посилання для завантаження більше не доступне.</p>
+</blockquote>
+<p>Докладніше на  <a href="http://forum.ubuntu-rs.org/Thread-zagrljaj-pitona">http://forum.ubuntu-rs.org/Thread-zagrljaj-pitona</a>.</p>
+<h2 id="_24">Словацька</h2>
+<p>Albertio Ward (albertioward@gmail.com) переклав книгу словацькою мовою на <a href="http://www.fatcow.com/edu/python-swaroopch-sl/">http://www.fatcow.com/edu/python-swaroopch-sl/</a> :</p>
+<blockquote>
+<p>Ми є некомерційною організацією «Переклад для освіти». Ми представляємо групу людей, переважно студентів і викладачів Слов'янського університету. Тут зібрані студенти різних факультетів: лінгвістики, хімії, біології та ін. Ми намагаємося знаходити в Інтернеті цікаві публікації, які можуть бути актуальними для нас та наших колег з університету. Іноді ми самі знаходимо статті; іноді наші викладачі допомагають нам підібрати матеріал для перекладу. Після отримання дозволу авторів ми перекладаємо статті та розміщуємо їх у своєму блозі, який доступний для наших колег і друзів. Ці перекладені публікації часто допомагають студентам у щоденній рутині навчання.</p>
+</blockquote>
+<h2 id="_25">Іспанська</h2>
+<p>Alfonso de la Guarda Reyes (alfonsodg@ictechperu.net), Gustavo Echeverria (gustavo.echeverria@gmail.com), David Crespo Arroyo (davidcrespoarroyo@hotmail.com) і Cristian Bermudez Serna (crisbermud@hotmail.com) зголосилися перекладати книгу на іспанську.</p>
+<p>Gustavo Echeverria каже:</p>
+<blockquote>
+<p>Я працюю інженером-програмістом в Аргентині. На роботі я використовую здебільшого технології C# і .Net, але в особистих проектах – виключно Python або Ruby. Я знав про Python багато років тому і відразу ж зупинився на Python. Незабаром після знайомства з Python я відкрив цю книгу, і вона допомогла мені вивчити мову. Тоді я зголосився перекласти книгу іспанською мовою. Тепер, отримавши кілька запитів, я почав перекладати «A Byte of Python» разом з Maximiliano Soler.</p>
+</blockquote>
+<p>Cristian Bermudez Serna каже:</p>
+<blockquote>
+<p>Я студент телекомунікаційної інженерії в Університеті Антіокії (Колумбія). Кілька місяців тому я почав вивчати Python і знайшов цю чудову книгу, тому я зголосився приєднатися до перекладу на іспанську мову.</p>
+</blockquote>
+<h2 id="_26">Шведська</h2>
+<p>Mikael Jacobsson (leochingkwake@gmail.com) зголосився перекласти книгу шведською мовою.</p>
+<h2 id="_27">Турецька</h2>
+<p>Türker SEZER (tsezer@btturk.net) та Bugra Cakir (bugracakir@gmail.com) зголосилися перекласти книгу турецькою мовою. "Де турецька версія? Bitse de okusak."</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
