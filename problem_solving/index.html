@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Вирішення проблем (англ."Problem Solving") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../preface/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../revision_history/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#problem-solving" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Проблема</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#the-solution" class="nav-link">Вирішення  (англ."The Solution")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Друга версія</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Третя версія</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Четверта версія</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">Більше уточнень</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">Процес розробки програмного забезпечення</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#-" class="nav-link">-- Доповнення від перекладача --</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="problem-solving">Вирішення проблем (англ."Problem Solving")</h1>
+<p>Ми розглянули різні частини мови Python, а тепер ми подивимося, як усі ці частини поєднуються разом, розробляючи та пишучи програму, яка <em>робить</em> щось корисне. Ціль полягає в тому, щоб навчитися писати сценарії мовою Python самостійно.</p>
+<h2 id="_1">Проблема</h2>
+<p>Перед нами стоїть наступна проблема:</p>
+<blockquote>
+<p>Скласти програму, яка створює резервні копії всіх важливих файлів.</p>
+</blockquote>
+<p>Хоча це проста проблема (задача), нам недостатньо інформації, щоб почати її вирішення. Необхідний додатковий <em>аналіз</em>. Наприклад, як ми виберемо, <em>які</em> файли копіювати? <em>Як</em> їх зберігати? <em>Де</em> їх зберігати?</p>
+<p>Після належного аналізу проблеми, ми *проєктуємо * нашу програму. Ми складаємо список того, що має зробити наша програма. У цьому випадку я створив наступний список того, як <em>я</em> уявляю її роботу. Коли ви проєктуєте програму, у вас може вийти інший результат, оскільки кожна людина уявляє собі це по-своєму, тож це цілком нормально.</p>
+<ul>
+<li>Файли та папки, які потрібно скопіювати, збираються до списку.</li>
+<li>Резервні копії повинні зберігатися у головній папці резервних копій.</li>
+<li>Резервні копії файлів зберігаються у файлі zip.</li>
+<li>Ім'я для zip-архіву - поточна дата та час.</li>
+<li>Будемо використовувати стандартну команду <code>zip</code>, доступну за замовчуванням у будь-якому стандартному дистрибутиві GNU/Linux або Unix. Зауважте, що ви можете використовувати будь-яку команду архівування, якщо вона має інтерфейс командного рядка.</li>
+</ul>
+<blockquote>
+<p><strong>Для користувачів Windows</strong></p>
+<p>Користувачі Windows можуть <a href="http://gnuwin32.sourceforge.net/downlinks/zip.php">встановити</a> команду <code>zip</code> зі <a href="https://gnuwin32.sourceforge.net/packages/zip.htm">сторінки проекту GnuWin32</a> і додати <code>C:\Program Files\GnuWin32\bin</code> до набору змінних середовища <code>PATH</code>, подібно до  того<a href="../installation/#dos-prompt"> що ми зробили для розпізнавання самої команди python</a>.</p>
+</blockquote>
+<h2 id="the-solution">Вирішення  (англ."The Solution")</h2>
+<p>Оскільки проєкт нашої програми зараз досить стабільний, ми можемо написати код, який є <em>реалізацією</em> нашого вирішення.</p>
+<p>Зберегти як <code>backup_ver1.py</code>:</p>
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver1.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/backup_ver1.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import os
+import time
+
+# 1.Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у  Windows:
+# джерело = ['&quot;C:\\My Documents&quot;']
+# Приклад у  Mac OS X and Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+# Ми також могли використати необроблений рядок,
+# написавши [r'C:\My Documents'].
+
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у  Windows:
+# цільова_папка (англ.&quot;target_dir&quot;,target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X and Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Ім'я для zip-архіву - поточна дата та час.
+ціль = цільова_папка + os.sep + \
+         time.strftime('%Y%m%d%H%M%S') + '.zip'
+
+# Створіть цільову папку, якщо її немає
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  #створити папку
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запускаємо створення резервної копії
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python backup_ver1.py
+Zip command є:
+zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена в /Users/swa/backup/20140328084844.zip
+</code></pre>
+<p>Зараз ми знаходимося на етапі <em>тестування</em>, де ми перевіряємо, чи наша програма працює належним чином. Якщо вона не поводиться так, як очікувалося, ми повинні <em>налагодити</em> (англ."debug") нашу програму, тобто видалити <em>помилки</em> (англ."bugs (errors) ") з програми.</p>
+<p>Якщо наведена вище програма не працює для вас, скопіюйте рядок, надрукований після рядка <code>Zip command є</code> у висновку (zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes), вставте його в оболонку (у GNU/Linux і Mac OS X) / <code>cmd</code> (у Windows), подивіться, в чому полягає помилка, і спробуйте її виправити. Також перевірте посібник з команди "zip", щоб дізнатися, що може бути не так. Якщо ця команда виконується успішно, проблема може бути в самій програмі Python, тому перевірте, чи вона точно відповідає програмі, написаній вище.</p>
+<p><strong>Як це працює</strong></p>
+<p>Ви вже помітили, як ми крок за кроком перетворили наш <em>проєкт</em> на <em>код</em>.</p>
+<p>Ми використовуємо модулі <code>os</code> і <code>time</code>, попередньо імпортувавши їх. Потім ми вказуємо файли та папки для резервного копіювання у списку  <code>джерело</code>. Цільова папка (англ."The target directory") – це місце, де ми зберігаємо всі файли резервних копій, і це вказано у змінній <code>цільова_папка</code>.  Ім’я zip-архіву, який ми збираємося створити, — це поточна дата й час, які ми генеруємо за допомогою функції <code>time.strftime()</code>. Він (архів) також матиме розширення <code>.zip</code> і зберігатиметься в папці <code>цільова_папка</code>.</p>
+<p>Зверніть увагу на використання змінної <code>os.sep</code> - вона має роздільник шляху для папки,відповідно до вашої операційної системи, тобто це буде <code>'/'</code> у GNU/Linux, Unix, macOS, і буде <code>'\\'</code> у Windows. Використання <code>os.sep</code> замість цих символів безпосередньо зробить нашу програму переносимою та працюватиме в усіх цих системах.</p>
+<p>Функція <code>time.strftime()</code> приймає як аргумент формат виводу часу (рядок певного вигляду), подібну до того, який ми використовували у наведеній вище програмі. Символ формата <code>%Y</code> буде замінено роком та століттям. Символ формата <code>%m</code> буде замінено місяцем у формі числа від <code>01</code> до <code>12</code> і так далі. Повний список таких символів формата можна знайти в <a href="http://docs.python.org/3/library/time.html#time.strftime">Довідковому посібнику Python</a>.</p>
+<p>Ми створюємо назву цільового zip-файлу за допомогою додаткового оператора, який <em>конкатенує</em> (англ."<em>concatenates</em>") рядки, тобто об’єднує два рядки разом і повертає новий. Потім ми створюємо рядок <code>zip_command</code>, який містить команду, яку ми збираємося виконати. Ви можете перевірити, чи ця команда працює, запустивши її в оболонці (термінал GNU/Linux або командний рядок DOS).</p>
+<p>Команда <code>zip</code>, яку ми використовуємо, має кілька доступних параметрів, і одним із цих параметрів є <code>-r</code>. Параметр <code>-r</code> вказує, що команда zip має працювати <strong>р</strong>екурсивно(англ."recursive") для папок, тобто вона має включати всі підпапки та файли. За параметрами слідує ім'я zip-архіву, який потрібно створити, за ним вказується список   файлів і папок для резервного копіювання. Ми перетворюємо список джерел (англ."sourse") у рядок за допомогою методу об’єднання рядків(англ."join"), який ми вже бачили, як використовувати.</p>
+<p>Потім ми нарешті <em>запускаємо</em> команду за допомогою функції <code>os.system</code>, яка запускає команду так, ніби її було запущено з <em>системи</em>, тобто із командної оболонки - вона повертає <code>0</code>, якщо команда виконана успішно, інакше вона повертає номер помилки.</p>
+<p>Залежно від результату виконання команди ми друкуємо відповідне повідомлення про те, чи успішним було створення резервних копій чи ні.</p>
+<p>Ось і все, ми створили сценарій для збереження резервних копій наших важливих файлів!</p>
+<blockquote>
+<p><strong>Примітка для користувачів Windows</strong></p>
+<p>Замість подвійної зворотної скісної риски ви також можете використовувати необроблені рядки. Наприклад, використовуйте <code>'C:\\Documents'</code> або <code>r'C:\Documents'</code>. Однак <em>не</em> використовуйте <code>'C:\Documents'</code>, оскільки в результаті ви використовуєте невідому екрановану послідовність <code>\D</code>.</p>
+</blockquote>
+<p>Тепер, коли у нас є робочий сценарій резервного копіювання, ми можемо використовувати його, коли захочемо зробити резервну копію файлів. Це називається  <em>операційною</em> фазою (англ."operation phase") або фазою <em>розгортання</em> (англ."deployment phase") програмного забезпечення.</p>
+<p>Наведена вище програма працює належним чином, але (зазвичай) перші програми працюють не зовсім так, як ви очікуєте. Наприклад, можуть виникнути проблеми, якщо ви неправильно розробили програму або якщо ви зробили помилку під час введення коду тощо. Відповідно вам доведеться повернутися до фази проєктування або вам доведеться налагодити свою програму.</p>
+<h2 id="_2">Друга версія</h2>
+<p>Перша версія нашого сценарію працює. Однак ми можемо внести в нього деякі вдосконалення, щоб вона працювала краще щодня. Це називається фазою <em>супроводу</em> (англ."maintenance phase") програмного забезпечення.</p>
+<p>Одне із вдосконалень, яке, як мені здається, буде корисними - це кращий механізм іменування файлів: використання <em>часу</em> (англ."<em>time</em>") в якості імені файлу, що зберігається в папці з поточною <em>датою</em> (англ."<em>date</em>") в якості імені, яке, у свою чергу, розташоване у головній папці для збереження резервного копіювання. Перша перевага полягає в тому, що ваші резервні копії зберігаються в ієрархічному порядку, тому ними набагато легше керувати. Друга перевага полягає в тому, що імена файлів набагато коротші. Третя перевага полягає в тому, що за іменами папок можна легко визначити, в які дні створювалися резервні копії, оскільки папка створюється лише у разі резервного копіювання даних у цей день.</p>
+<p>Зберегти як <code>backup_ver2.py</code>:</p>
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver2.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/backup_ver2.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import os
+import time
+
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['&quot;C:\\My Documents&quot;', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# # Зауважте, що ми повинні використовувати подвійні лапки всередині рядка
+# для імен із пробілами.
+
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ.&quot;target_dir&quot;,target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка  + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
+
+# Ім'я для zip-архіву
+ціль = сьогодні + os.sep + зараз + '.zip'
+
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+</code></pre>
+<pre><code>$ python backup_ver2.py
+Успішно створена папка /Users/swa/backup/20140329
+Zip command є:
+zip -r /Users/swa/backup/20140329/073201.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена /Users/swa/backup/20140329/073201.zip
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Більша частина програми залишається незмінною. Зміни полягають у тому, що ми перевіряємо, чи є папка з ім'ям, що відповідає поточній даті, в головній папці зберігання резервних копій за допомогою функції <code>os.path.exists</code>. Якщо ії не існує, ми створюємо ії за допомогою функції <code>os.mkdir</code>.</p>
+<h2 id="_3">Третя версія</h2>
+<p>Друга версія працює добре з великою кількістю резервних копій, але коли резервних копій стає багато, стає важко відрізнити, яка копія для чого! Наприклад, ми могли внести серйозні зміни в програму чи презентацію, тепер ми хочемо вказати суть цих змін в назві архіву zip. Цього можна легко досягти, додавши наданий користувачем коментар до назви zip-архіву.</p>
+<p>ПОПЕРЕДЖЕННЯ: наступна програма не працює, тому не лякайтеся, просто пройдіть по ній, тому що в ній міститься урок.</p>
+<p>Зберегти як <code>backup_ver3.py</code>:</p>
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver3.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/backup_ver3.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import os
+import time
+
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['&quot;C:\\My Documents&quot;', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ.&quot;target_dir&quot;,target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
+
+# Прийміть коментар від користувача для
+# створення назви zip-файлу
+коментар = input('Введіть коментар  --&gt; ')
+# Перевірте, чи було введено коментар
+if len(коментар) == 0:
+    ціль = сьогодні + os.sep + зараз + '.zip'
+else:
+    ціль = сьогодні + os.sep + зараз + '_' + 
+        коментар.replace(' ', '_') + '.zip'
+
+
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
+
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python backup_ver3.py
+  File &quot;backup_ver3.py&quot;, line 39
+    ціль = сьогодні + os.sep + зараз + '_' +
+                                        ^
+SyntaxError: invalid syntax
+</code></pre>
+<p><strong>Як це (не) працює</strong></p>
+<p><em>Ця програма не працює!</em> Python повідомляє, що є синтаксична помилка, яка означає, що сценарій не задовольняє структурі, яку очікує побачити Python. Коли ми спостерігаємо помилку, видану Python, він також повідомляє нам місце, де виявив помилку. Отже, ми починаємо <em>налагодження</em> (англ."<em>debugging</em>") нашої програми з цього рядка. </p>
+<p>Уважно спостерігаючи, ми бачимо, що один логічний рядок був розділений на два фізичних рядка, але ми не вказали, що ці два фізичні рядки є частиною одного. По суті, Python знайшов оператор додавання (<code>+</code>) без жодного операнда в цьому логічному рядку, і тому він не знає, як продовжити. Пам’ятайте, що ми можемо вказати, що логічний рядок продовжується в наступному фізичному рядку, використовуючи зворотну косу риску в кінці фізичного рядка. Отже, ми вносимо цю поправку в нашу програму. Це виправлення програми, коли ми знаходимо помилки, називається <em>виправленням помилок</em> (англ."<em>bug fixing</em>").</p>
+<h2 id="_4">Четверта версія</h2>
+<p>Зберегти як  <code>backup_ver4.py</code>:</p>
+<!--<pre><code class="lang-python">{% include "./programs/backup_ver4.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/backup_ver4.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import os
+import time
+
+# 1. Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у Windows:
+# джерело = ['&quot;C:\\My Documents&quot;', 'C:\\Code']
+# Приклад на Mac OS X та Linux:
+джерело = ['/Users/swa/notes']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+
+# 2. Резервні копії повинні зберігатися в головній папці резервних копій
+# Приклад у Windows: 
+# цільова_папка (англ.&quot;target_dir&quot;,target directory) = 'E:\\Backup'
+# Приклад у  Mac OS X та Linux:
+цільова_папка = '/Users/swa/backup'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# Створіть цільову папку,якщо ії не має
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  # зробити папку
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Поточна дата - це ім'я підпапки у головній папці. 
+сьогодні = цільова_папка + os.sep + time.strftime('%Y%m%d')
+# Поточний час є ім'ям zip-архіву.
+зараз = time.strftime('%H%M%S')
+
+# Прийміть коментар від користувача для
+# створення назви zip-файлу
+коментар = input('Введіть коментар  --&gt; ')
+# Перевірте, чи було введено коментар
+if len(коментар) == 0:
+    ціль = сьогодні + os.sep + зараз + '.zip'
+else:
+    ціль = сьогодні + os.sep + зараз + '_' +\
+        коментар.replace(' ', '_') + '.zip'
+
+
+# Створіть підпапку,якщо ії не має
+if not os.path.exists(сьогодні):
+    os.mkdir(сьогодні)
+    print('Папку успішно створено', сьогодні)
+
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запустіть резервне копіювання
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python backup_ver4.py
+Введіть коментар  --&gt; додав нові приклади
+Zip command є:
+zip -r /Users/swa/backup/20140329/074122_додав_нові_приклади.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена /Users/swa/backup/20140329/074122_додав_нові_приклади.zip
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Ця програма тепер працює! Розглянемо фактичні вдосконалення, які ми зробили у версії 3. Ми беремо коментарі користувача за допомогою функції <code>input</code>, а потім перевіряємо, чи дійсно користувач щось ввів, з’ясовуючи довжину введення за допомогою функції <code>len</code>. Якщо користувач щойно натиснув <code>enter</code>, не вводячи нічого (можливо, це було просто звичайне резервне копіювання або не було зроблено жодних спеціальних змін), тоді ми продовжуємо, як робили раніше.</p>
+<p>Однак, якщо було надано коментар, він додається до імені zip-архіву безпосередньо перед розширенням <code>.zip</code>. Зверніть увагу, що ми замінюємо пробіли в коментарях на підкреслення - це тому, що керувати іменами файлів без пробілів набагато легше.</p>
+<h2 id="_5">Більше уточнень</h2>
+<p>Четверта версія є задовільно робочим сценарієм для більшості користувачів, але завжди є місце для вдосконалення. Наприклад, ви можете включити рівень <em>дослівності</em> (англ."<em>verbosity</em> level") для команди zip, вказавши опцію <code>-v</code>, щоб зробити вашу програму більш балакучою (англ."talkative"), або опцію <code>-q</code>, щоб зробити її <em>тихою</em> (англ."quiet").</p>
+<p>Ще одним можливим покращенням була б можливість передавати сценарію інші файли та папки прямо у командному рядку. Ми можемо отримати ці імена зі списку <code>sys.argv</code> і додати їх до нашого списку <code>джерело</code> за допомогою методу <code>extend</code>, який надається класом <code>список</code>(англ."list").</p>
+<p>Найважливішим удосконаленням було б не використовувати спосіб створення архівів <code>os.system</code>, а натомість використовувати <a href="http://docs.python.org/3/library/zipfile.html">zipfile</a> або <a href="http://docs.python.org/3/library/tarfile.html">tarfile</a> - вбудовані модулі для створення цих архівів. Вони є частиною стандартної бібліотеки та вже доступні для використання без зовнішніх залежностей від програми zip, доступної на вашому комп’ютері.</p>
+<p>Однак я використовував спосіб <code>os.system</code> для створення резервної копії у наведених вище прикладах суто з педагогічною метою, так що приклад достатньо простий, щоб його зрозуміли всі, але достатньо реальний, щоб бути корисним.</p>
+<p>Чи можете ви спробувати написати п’яту версію, яка використовує модуль <a href="http://docs.python.org/3/library/zipfile.html">zipfile</a> замість виклику <code>os.system</code>?</p>
+<h2 id="_6">Процес розробки програмного забезпечення</h2>
+<p>Зараз ми пройшли різні <em>етапи</em> в процесі написання програмного забезпечення. Ці фази можна підсумувати таким чином:</p>
+<ol>
+<li>Що (Аналіз)</li>
+<li>Як (Проєктування )</li>
+<li>Зроби це (Реалізація)</li>
+<li>Тестування (Тестування та Налагодження)</li>
+<li>Використання (Оперування та Розгортання)</li>
+<li>Супровід (Вдосконалення)</li>
+</ol>
+<p>Рекомендований спосіб написання програм — це процедура, якої ми дотримувалися під час створення сценарію резервного копіювання: виконайте аналіз і проєктування. Почніть реалізацію з простого варіанту. Протестуйте та налагодьте його. Використовуйте його, щоб переконатися, що він працює належним чином. Тепер додайте будь-які функції, які вам потрібні, і продовжуйте повторювати цикл «Зроби-тест-використай» стільки разів, скільки потрібно.</p>
+<p>Пам'ятайте:</p>
+<blockquote>
+<p>Програмне забезпечення вирощують, а не створюють.
+-- <a href="http://97things.oreilly.com/wiki/index.php/Great_software_is_not_built,_it_is_grown">Bill de hÓra</a></p>
+</blockquote>
+<h2 id="_7">Резюме</h2>
+<p>Ми побачили, як створювати власні програми/сценарії на Python, а також різні етапи написання таких програм. Вам може бути корисно створити власну програму, як ми робили в цьому розділі, щоб ви навчилися працювати з Python, а також вирішувати проблеми.</p>
+<p>Далі ми обговоримо об'єктно-орієнтоване програмування.</p>
+<h2 id="-">-- Доповнення від перекладача --</h2>
+<p>Перший приклад не буде працювати на вашему комп'ютері,якщо ви не змінили Swaroop Path (/Users/swa/notes) на ваш Path.</p>
+<ul>
+<li>
+<p><em>Головна</em>  або <em>коренева</em>  папка, каталог (англ."англ.root directory","root folder")- це перша папка в операційній системі. У Linux і MacOS це "/" або "/home/username". У Windows це зазвичай "C:\"</p>
+</li>
+<li>
+<p>Шлях фа́йлу (англ. "Path") - це рядок із іменами всіх папок (а також підпапок і підпідпапок...), починаючи з кореневої папки до поточної папки. Зауважте, що в WINDOWS назви папок відокремлюються зворотною скісною рискою(бекслеш), як-от "C:\carl\documents", але в Linux і MacOS назви папок відокремлюються скісною рискою(слеш): "/home/carl/documents".</p>
+</li>
+</ul>
+<p>Swaroop пояснює,що якщо наведена вище програма не працює для вас, скопіюйте рядок, надрукований після рядка <code>Zip command є</code> у висновку (zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes), вставте його в оболонку (у GNU/Linux і Mac OS X) / <code>cmd</code> (у Windows), подивіться, в чому полягає помилка, і спробуйте її виправити.</p>
+<p>Як це зробити?</p>
+<p>Щоб відкрити термінал у Linux ,треба використати наступну комбінацію: Strg + Alt + T
+<img alt="Screenshot_terminal.png" src="../images/Screenshot_terminal.png" /></p>
+<p>Якщо ви хочете перевірити,які файли у вас у головній папці,треба ввести ls (англ."list files").
+Якщо хочете перейти в якусь субпапку треба ввести сd (chance directory)  та назву субпапки.</p>
+<p><img alt="Screenshot_ls_cd.png" src="../images/Screenshot_ls_cd.png" /></p>
+<p>На моєму комп'ютері перший приклад працює у наступному виконанні:</p>
+<pre><code class="language-python">import os
+import time
+
+# 1.Файли та папки, які потрібно скопіювати, збираються до списку.
+# Приклад у  Windows:
+# джерело = ['&quot;C:\\My Documents&quot;']
+# Приклад у  Mac OS X and Linux:
+джерело = ['/home/kurs/Documents']
+# Зауважте, що ми повинні використовувати подвійні лапки всередині рядка для імен із пробілами.
+# Ми також могли використати необроблений рядок,
+# написавши [r'C:\My Documents'].
+
+# 2. Резервні копії повинні зберігатися у головній папці резервних копій
+# Приклад у  Windows:
+# цільова_папка (англ.&quot;target_dir&quot;,target directory = 'E:\\Backup'
+# Приклад у  Mac OS X and Linux:
+цільова_папка = '/home/kurs/Desktop/byte_of_python_ps'
+# Не забудьте замінити шлях `/Users/swa/backup` вашими власними назвами папок.
+
+# 3. Резервні копії файлів зберігаються у файлі zip.
+# 4. Ім'я для zip-архіву - поточна дата та час.
+ціль = цільова_папка + os.sep + \
+         time.strftime('%Y%m%d%H%M%S') + '.zip'
+
+# Створіть цільову папку, якщо її немає
+if not os.path.exists(цільова_папка):
+    os.mkdir(цільова_папка)  #створити папку
+
+# 5. Ми використовуємо команду zip, щоб помістити файли в zip-архів
+zip_command = 'zip -r {0} {1}'.format(ціль,
+                                      ' '.join(джерело))
+
+# Запускаємо створення резервної копії
+print('Zip command є:')
+print(zip_command)
+print('Запуск:')
+if os.system(zip_command) == 0:
+    print('Резервна копія успішно створена', ціль)
+else:
+    print('Створення резервної копії НЕ ВДАЛОСЯ')
+
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python backup_ver1.py
+Zip command є:
+zip -r /Users/swa/backup/20140328084844.zip /Users/swa/notes
+Запуск:
+  adding: Users/swa/notes/ (stored 0%)
+  adding: Users/swa/notes/blah1.txt (stored 0%)
+  adding: Users/swa/notes/blah2.txt (stored 0%)
+  adding: Users/swa/notes/blah3.txt (stored 0%)
+Резервна копія успішно створена в /Users/swa/backup/20140328084844.zip
+</code></pre>
+<p>--- <strong>завершення доповнень від перекладача</strong> ---</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

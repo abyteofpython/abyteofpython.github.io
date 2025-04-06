@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Стандартна бібліотека (англ."Standard Library") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../revision_history/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../translation_howto/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#standard-library" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#syssys-module" class="nav-link">модуль sys(англ."sys module")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#logging-logging-module" class="nav-link">Модуль logging (англ." logging module")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#module-of-the-week-series" class="nav-link">Модуль серії тижня (англ."Module of the Week Series")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="standard-library">Стандартна бібліотека (англ."Standard Library")</h1>
+<p>Стандартна бібліотека Python містить величезну кількість корисних модулів і є частиною кожної стандартної інсталяції Python. Важливо ознайомитися зі стандартною бібліотекою Python, оскільки багато проблем можна швидко вирішити, якщо ви знайомі з можливостями цих бібліотек.</p>
+<p>Ми розглянемо деякі з часто використовуваних модулів у цій бібліотеці. Ви можете знайти повну інформацію про всі модулі стандартної бібліотеки Python у <a href="http://docs.python.org/3/library/">розділі «Довідник бібліотеки»(англ."Library Reference")</a> документації, яка постачається разом із інсталяцією Python.</p>
+<p>Давайте розглянемо кілька корисних модулів.</p>
+<blockquote>
+<p>УВАГА: якщо ви вважаєте теми цього розділу занадто складними, ви можете пропустити цей розділ. Однак я настійно рекомендую повернутися до цього розділу, коли вам стане зручніше програмувати на Python.</p>
+</blockquote>
+<h2 id="syssys-module">модуль <code>sys</code>(англ."<code>sys</code> module")</h2>
+<p>Модуль <code>sys</code> містить функціональність, характерну для системи. Ми вже бачили, що список <code>sys.argv</code> містить аргументи командного рядка.</p>
+<p>Припустімо, ми хочемо перевірити версію використовуваного програмного забезпечення Python, модуль <code>sys</code> надає нам цю інформацію.</p>
+<!-- Результат має відповідати змінній pythonVersion у book.json -->
+
+<pre><code class="language-python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.version_info
+sys.version_info(major=3, minor=6, micro=0, releaselevel='final', serial=0)
+&gt;&gt;&gt; sys.version_info.major == 3
+True
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Модуль <code>sys</code> має кортеж <code>version_info</code>, який надає нам інформацію про версію. Перший запис(major=3) — основна версія. Ми можемо отримати цю інформацію, щоб використати її.</p>
+<h2 id="logging-logging-module">Модуль <code>logging</code> (англ." <code>logging</code> module")</h2>
+<p>Уявіть ситуацію, коли необхідно зберегти деякі налагоджувальні або інші важливі повідомлення де-небудь,щоб мати можливість пізніше перевірити, чи ваша програма працює так, як ви цього очікували? Як ви «де-небудь зберігаєте» ці повідомлення? Цього можна досягти за допомогою модуля <code>logging</code>.</p>
+<p>Зберегти як<code>stdlib_logging.py</code>:</p>
+<pre><code class="language-python">import os
+import platform
+import logging
+
+if platform.platform().startswith('Windows'):
+    logging_file = os.path.join(os.getenv('HOMEDRIVE'),
+                                os.getenv('HOMEPATH'),
+                                'test.log')
+else:
+    logging_file = os.path.join(os.getenv('HOME'),
+                                'test.log')
+
+print(&quot;Logging to&quot;, logging_file)
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s : %(levelname)s : %(message)s',
+    filename=logging_file,
+    filemode='w',
+)
+
+logging.debug(&quot;Початок програми&quot;)
+logging.info(&quot;Якісь дії&quot;)
+logging.warning(&quot;Програма вмирає&quot;)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python stdlib_logging.py
+Logging to /Users/swa/test.log
+
+$ cat /Users/swa/test.log
+2014-03-29 09:27:36,660 : DEBUG : Початок програми
+2014-03-29 09:27:36,660 : INFO : Якісь дії
+2014-03-29 09:27:36,660 : WARNING : Програма вмирає
+</code></pre>
+<p>Команда  <code>cat</code> використовується в командному рядку для читання файлу 'test.log'. Якщо команда <code>cat</code> недоступна, натомість ви можете відкрити файл <code>test.log</code> у текстовому редакторі.</p>
+<p><strong>Як це працює</strong></p>
+<p>Ми використовуємо три модулі зі стандартної бібліотеки: модуль <code>os</code> для взаємодії з операційною системою, модуль <code>platform</code> для отримання інформації про платформу, тобто операційну систему, і модуль <code>logging</code> для <em>логування</em> інформації (англ." to log information").</p>
+<p>Спочатку ми перевіряємо, яку операційну систему ми використовуємо, перевіряючи рядок, який повертає функція <code>platform.platform()</code> (для отримання додаткової інформації див. <code>import platform; help (platform)</code>). Якщо це Windows, ми визначаємо home drive (диск) ,який містить домашню папку та назву файлу, де ми хочемо зберігати інформацію. Зібравши ці три частини разом, ми отримаємо повне розташування файлу. Для інших платформ нам потрібно знати лише домашню папку користувача, і ми отримаємо повний шлях до файлу.</p>
+<p>Ми використовуємо функцію <code>os.path.join()</code>, щоб поєднати ці три частини шляху. Причина використання спеціальної функції, а не простого додавання рядків разом, полягає в тому, що ця функція гарантує, що повний шлях відповідає формату, очікуваному операційною системою. </p>
+<p>Примітка : метод <code>join()</code>, який ми використовуємо тут є частиною модуля <code>os</code>,він відрізняється від рядкового методу <code>join()</code>, який ми використовували в інших частинах цієї книги.</p>
+<p>Ми налаштовуємо модуль <code>logging</code> для запису всіх повідомлень у певному форматі у вказаний файл.</p>
+<p>Нарешті, ми можемо виводити повідомлення, призначені для налагодження, інформування, попередження та навіть критичні повідомлення. Після запуску програми ми можемо перевірити цей файл і знати, що сталося в програмі, навіть якщо користувач, який запускає програму, не показує жодної інформації.</p>
+<h2 id="module-of-the-week-series">Модуль серії тижня (англ."Module of the Week Series")</h2>
+<p>У стандартній бібліотеці, як-от  <a href="http://docs.python.org/3/library/pdb.html">налагодження (англ."debugging")</a>,
+<a href="http://docs.python.org/3/library/argparse.html">обробка параметрів командного рядка(англ."handling command line options")</a>, <a href="http://docs.python.org/3/library/re.html">регулярні вирази(англ."regular expressions")</a> є ще багато чого для вивчення.</p>
+<p>Найкращий спосіб глибше вивчити стандартну бібліотеку — це прочитати чудову серію Doug Hellmann <a href="http://pymotw.com/2/contents.html">"Модуль тижня" (англ."Python Module of the Week")</a> (також доступна як <a href="http://amzn.com/0321767349">книга</a>)або  <a href="http://docs.python.org/3/">Офіційну документацію Python</a>.</p>
+<h2 id="_1">Резюме</h2>
+<p>Ми дослідили деякі функції багатьох модулів стандартної бібліотеки Python. Настійно рекомендуємо переглянути <a href="http://docs.python.org/3/library/">документацію стандартної бібліотеки Python</a>, щоб отримати уявлення про всі доступні модулі.</p>
+<p>Далі ми розглянемо різні аспекти Python, які зроблять наш огляд Python більш <em>повним</em>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

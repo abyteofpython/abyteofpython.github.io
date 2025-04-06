@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Додаток: Урок історії - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../problem_solving/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../stdlib/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">Додаток: Урок історії</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Статус книги</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#_3" class="nav-link">Додаток: Історія версій</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Додаток: Урок історії</h1>
+<p>Я вперше почав працювати з Python, коли мені потрібно було написати інсталятор для програмного забезпечення під назвою «Diamond», щоб я міг спростити інсталяцію. Мені довелося вибирати між прив’язками Python і Perl для бібліотеки Qt. Я трохи дослідив Інтернет і натрапив на <a href="http://www.python.org/about/success/esr/">статтю Еріка С. Реймонда</a>, відомого та шанованого хакера, де він розповідав про те, як Python став його улюбленою мовою програмування. Я також дізнався, що прив’язки PyQt були більш зрілими порівняно з Perl-Qt. Отже, я вирішив, що мова Python для мене.</p>
+<p>Тоді я почав шукати хорошу книгу про Python. І не знайшов!  Я знайшов деякі книги O'Reilly, але вони або були занадто дорогими, або більше нагадували довідник, ніж путівник. Так що мені довелося задовольнятися документацією, яка постачається в комплекті з Python. Однак вона була занадто короткою та малою. Безперечно, вона дала мені деяке уявлення про те, що таке Python, але цього було
+явно замало. Я впорався з документацією, оскільки мав попередній досвід програмування, але вона не підходила для новачків.</p>
+<p>Приблизно через шість місяців після мого першого знайомства з Python я встановив (на той час) найновішу версію Red Hat 9.0 Linux і бавився з KWord. Я був у захваті від цього, і раптом у мене виникла ідея написати щось о Python. Я почав писати кілька сторінок, але швидко це стало 30 сторінок. Тоді я вирішив серйозно
+надати цьому тексту форму книги. Після <em>великої</em> кількості переписувань вона досягла такого етапу, коли стала корисним посібником для вивчення мови Python.  Я вважаю цю книгу своїм внеском і даниною спільноті відкритого коду.</p>
+<p>Ця книга почалась як мої особисті нотатки про Python, і я досі розглядаю її так само, хоча я доклав багато зусиль, щоб зробити її більш приємною для інших :)</p>
+<p>У справжньому дусі відкритого коду я отримав багато конструктивних пропозицій, критики та <a href="./README.md#who-reads-bop">відгуків</a> від захоплених читачів, що дуже допомогло мені покращити цю книгу.</p>
+<h2 id="_2">Статус книги</h2>
+<p>Книзі потрібна допомога таких читачів, як ви, щоб вказати на будь-які частини книги, які є поганими, незрозумілими або просто неправильними. Будь ласка, <a href="https://swaroopch.com/notes/about">напишіть головному автору</a> або відповідним <a href="../translations/#translations">перекладачам</a> свої коментарії та пропозиції.</p>
+<h1 id="_3">Додаток: Історія версій</h1>
+<ul>
+<li>
+<p>Без змін версії</p>
+<ul>
+<li>06 Nov 2020 06/11/2020</li>
+<li>Перенесено із залишеного на GitBook на <a href="https://github.com/honkit/honkit">community-maintained Honkit, a fork of GitBook legacy</a></li>
+</ul>
+</li>
+<li>
+<p>4.0</p>
+<ul>
+<li>19 Jan 2016 19/01/2016</li>
+<li>Повернувся до Python 3</li>
+<li>Повернувся до Markdown, використовуючи <a href="https://www.gitbook.com">GitBook</a> та <a href="http://spacemacs.org">Spacemacs</a></li>
+</ul>
+</li>
+<li>
+<p>3.0</p>
+<ul>
+<li>31 Mar 2014 31/03/2014</li>
+<li>Переписано для Python 2 з використанням <a href="http://asciidoctor.org/docs/what-is-asciidoc/">AsciiDoc</a> та <a href="https://github.com/sensorflo/adoc-mode/wiki">adoc-mode</a>.</li>
+</ul>
+</li>
+<li>
+<p>2.1</p>
+<ul>
+<li>03 Aug 2013 03/08/2013</li>
+<li>Переписано за допомогою Markdown та <a href="http://jblevins.org/projects/markdown-mode/">Jason Blevins' Markdown Mode</a></li>
+</ul>
+</li>
+<li>
+<p>2.0</p>
+<ul>
+<li>20 Oct 2012 20/10/2012</li>
+<li>Переписано у форматі <a href="http://johnmacfarlane.net/pandoc/README.html">Pandoc format</a>, дякую моїй дружині, яка перевела велику частина тексту з формату Mediawiki</li>
+<li>Спрощення тексту, видалення несуттєвих розділів, таких як <code>nonlocal</code> і метакласи</li>
+</ul>
+</li>
+<li>
+<p>1.90</p>
+<ul>
+<li>04 Sep 2008 і все ще триває</li>
+<li>Відродження після перерви в 3,5 роки!</li>
+<li>Оновлення для Python 3.0</li>
+<li>Переписано у форматі http://www.mediawiki.org[MediaWiki] (ще раз)</li>
+</ul>
+</li>
+<li>
+<p>1.20</p>
+<ul>
+<li>13 Jan 2005</li>
+<li>Повне переписування за допомогою  <a href="https://en.wikipedia.org/wiki/Quanta_Plus">Quanta+</a> на <a href="http://fedoraproject.org/">Fedora</a> Core 3 із багатьма виправленнями та оновленнями. Багато нових прикладів. Переписав налаштування DocBook з нуля.</li>
+</ul>
+</li>
+<li>
+<p>1.15</p>
+<ul>
+<li>28 Mar 2004</li>
+<li>Незначні доопрацювання</li>
+</ul>
+</li>
+<li>
+<p>1.12</p>
+<ul>
+<li>16 Mar 2004</li>
+<li>Доповнення та виправлення</li>
+</ul>
+</li>
+<li>
+<p>1.10</p>
+<ul>
+<li>09 Mar 2004</li>
+<li>Виправлення помилок, завдяки безлічі відгуків зацікавлених читачів.</li>
+</ul>
+</li>
+<li>
+<p>1.00</p>
+<ul>
+<li>08 Mar 2004</li>
+<li>Після колосальної кількості відгуків та пропозицій від читачів я зробив
+значну переробку тексту поряд із виправленням друкарських помилок.</li>
+</ul>
+</li>
+<li>
+<p>0.99</p>
+<ul>
+<li>22 Feb 2004</li>
+<li>Додано нову главу про модулі. Додано інформацію про змінну кількість аргументів у функціях.</li>
+</ul>
+</li>
+<li>
+<p>0.98</p>
+<ul>
+<li>16 Feb 2004</li>
+<li>Написав сценарій Python і таблицю стилів CSS для покращення вихідних даних XHTML, включаючи грубий, але функціональний лексичний аналізатор для автоматичного підсвічування синтаксису, подібного до VIM, у прикладах програм.</li>
+</ul>
+</li>
+<li>
+<p>0.97</p>
+<ul>
+<li>13 Feb 2004</li>
+<li>Ще одна повністю переписана чернетка в DocBook XML (знову). Книжка значно покращилася - стала більш зв'язною та читабельною.</li>
+</ul>
+</li>
+<li>
+<p>0.93</p>
+<ul>
+<li>25 Jan 2004</li>
+<li>Додано опис IDLE та багато іншого, що стосується Windows</li>
+</ul>
+</li>
+<li>
+<p>0.92</p>
+<ul>
+<li>05 Jan 2004</li>
+<li>Зміни в кількох прикладах.</li>
+</ul>
+</li>
+<li>
+<p>0.91</p>
+<ul>
+<li>30 Dec 2003</li>
+<li>Виправлені помилки. Зроблено начерки багатьох розділів.</li>
+</ul>
+</li>
+<li>
+<p>0.90</p>
+<ul>
+<li>18 Dec 2003</li>
+<li>Додано ще 2 розділи. Формат <a href="https://en.wikipedia.org/wiki/OpenOffice">OpenOffice</a> із змінами.</li>
+</ul>
+</li>
+<li>
+<p>0.60</p>
+<ul>
+<li>21 Nov 2003</li>
+<li>Повністю переписано та розширено.</li>
+</ul>
+</li>
+<li>
+<p>0.20</p>
+<ul>
+<li>20 Nov 2003</li>
+<li>Виправлено деякі опечатки та помилки.</li>
+</ul>
+</li>
+<li>
+<p>0.15</p>
+<ul>
+<li>20 Nov 2003</li>
+<li>Переведено на формат<a href="https://en.wikipedia.org/wiki/DocBook">DocBook XML</a> за допомогою XEmacs.</li>
+</ul>
+</li>
+<li>
+<p>0.10</p>
+<ul>
+<li>14 Nov 2003</li>
+<li>Первинний начерк у редакторі <a href="https://en.wikipedia.org/wiki/Kword">KWord</a>.</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
