@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Модулі (англ."Modules") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../op_exp/" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../io/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../more/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#modules" class="nav-link">Модулі (англ."Modules")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#-pyc-byte-compiledpyc-files" class="nav-link">Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fromimport-the-fromimport-statement" class="nav-link">Оператор  from..import (англ."The from..import statement")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#-__name__-a-modules-__name__" class="nav-link">Ім'я модуля - __name__ (англ."A module's __name__")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Створення власних модулів</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dir-the-dir-function" class="nav-link">Функція dir (англ. "The dir function")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#packages" class="nav-link">Пакети (англ."Packages")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#-" class="nav-link">-- Доповнення від перекладача --</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Модулі</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#-pyc-byte-compiledpyc-files_1" class="nav-link">Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#dir-the-dir-function_1" class="nav-link">Функція dir (англ. "The dir function")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="modules">Модулі (англ."Modules")</h1>
+<p>Ви бачили, як можна повторно використовувати код у своїй програмі, визначивши функції один раз. Що, якби ви хотіли повторно використати кілька функцій в інших програмах, які ви пишете? Як ви вже здогадалися, відповідь — модулі.</p>
+<p>Існують різні методи написання модулів, але найпростішим способом є створення файлу з розширенням <code>.py</code>, який містить функції та змінні.</p>
+<p>Іншим методом є написання модулів тією мовою, якою був написаний сам інтерпретатор Python. Наприклад, ви можете писати модулі  <a href="http://docs.python.org/3/extending/">мовою програмування C</a> ,які після компіляції можуть використовуватись стандартним інтерпретатором Python.</p>
+<p>Модуль може бути  <em>імпортований</em> в іншу програму, щоб програма використовувала функції з модуля. Таким чином ми також можемо використовувати стандартну бібліотеку Python. Спочатку ми побачимо, як використовувати стандартні бібліотечні модулі.</p>
+<p>Приклад (зберегти як <code>module_using_sys.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/module_using_sys.py" %}</code></pre>
+
+Output:
+
+<pre><code>{% include "./programs/module_using_sys.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import sys
+
+print('Аргументи командного рядка:')
+for i in sys.argv:
+    print(i)
+
+print('\n\n Змінна  середовища PYTHONPATH містить', sys.path, '\n')
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$ python module_using_sys.py ми є аргументами   
+Аргументи командного рядка:
+module_using_sys.py
+ми
+є
+аргументи
+
+змінна середовища &quot;Pythonpath&quot; вашого комп'ютера: Змінна середовища PYTHONPATH 
+містить (тут ви побачите ВАШ Python path)
+</code></pre>
+<p>Приклад англійською:</p>
+<pre><code class="language-python">import sys
+
+print('The command line arguments are:')
+for i in sys.argv:
+    print(i)
+
+print('\n\nThe PYTHONPATH is', sys.path, '\n')
+</code></pre>
+<p>Висновок: </p>
+<pre><code>$$ python module_using_sys.py we are arguments    # each arg is separated by white space
+The command line arguments are:
+module_using_sys.py
+we
+are
+arguments
+
+
+The PYTHONPATH is ['/tmp/py',
+# many entries here, not shown here
+'/Library/Python/2.7/site-packages',
+'/usr/local/lib/python2.7/site-packages']
+
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Спочатку ми  <em>імпортуємо</em> модуль <code>sys</code> за допомогою команди <code>import</code>. По суті, це означає, що ми повідомляємо Python про використання цього модуля. Модуль <code>sys</code> містить функції, які стосуються інтерпретатора Python та його середовища, тобто системи (system). </p>
+<p>Коли Python виконує команду <code>import sys</code>, він шукає модуль <code>sys</code>. У цьому випадку це один із вбудованих модулів, і, отже, Python знає, де його знайти.</p>
+<p>Якби це не був скомпільований модуль, тобто модуль, написаний мовою Python,тоді інтерпретатор Python шукав би його у папках , указаних у змінній <code>sys.path</code>. Якщо модуль знайдено, команди в тілі цього модуля виконуються, і модуль стає <em>доступним</em> для використання. Зауважте, що ініціалізація (ряд дій, які проводяться при початковому завантаженні) виконується при <em>першому</em> імпорті модуля.</p>
+<p>Доступ до змінної <code>argv</code> в модулі <code>sys</code> здійснюється за допомогою крапкової нотації(крапки), тобто <code>sys.argv</code>. Це чітко вказує на те, що це ім'я є частиною модуля <code>sys</code>. Ще одна перевага цього підходу полягає в тому, що ім'я не суперечить жодній змінній <code>argv</code>, яка використовується у вашій програмі.</p>
+<p>Змінна <code>sys.argv</code> — це <em>список</em> рядків  (списки докладно пояснюються в <a href="../data_structures/#data-structures">пізнішій главі</a>). Зокрема, <code>sys.argv</code> містить список <em>аргументів командного рядка</em> (англ."<em>command line arguments</em>"),тобто аргументів, переданих програмі з командного рядка.</p>
+<p>Якщо ви використовуєте середовище розробки( англ.IDE, "Integrated Development Environment") для написання та запуску цих програм, пошукайте десь у її меню можливість передавати параметри командного рядка.</p>
+<p>У нашому прикладі, коли ми виконуємо <code>python module_using_sys.py ми є аргументами</code>, ми запускаємо модуль  <code>module_using_sys.py</code>  командою <code>python</code>,а все інше, що слідуює далі, - є аргументами, які передаються програмі. Python зберігає аргументи командного рядка у змінній <code>sys.argv</code> для подальшого використання.</p>
+<p>Пам’ятайте, ім’я запущеного сценарія (програму на інтерпретованій мові програмування також називають сценарієм або скриптом) завжди є першим аргументом у списку <code>sys.argv</code>. Отже, у цьому випадку ми матимемо  <code>'module_using_sys.py'</code> як <code>sys.argv[0]</code>, <code>'ми'</code> як <code>sys.argv[1]</code>, <code>'є'</code> як <code>sys.argv[2]</code> та <code>'аргументами'</code> як <code>sys.argv[3]</code>. Зверніть увагу, що Python починає відлік з 0, а не з 1.</p>
+<p><code>sys.path</code>- це список шляхів (англ." list of paths"), з яких імпортуються модулі. Зверніть увагу, що перший рядок у <code>sys.path</code> порожній - цей порожній рядок вказує на те, що поточна папка також є частиною <code>sys.path</code>. Це означає, що ви можете безпосередньо імпортувати модулі, розташовані в поточній папці. Якщо цього не буде, то вам доведеться розмістити свій модуль в одній із папок, указаних у <code>sys.path</code>.</p>
+<p>Зверніть увагу, що поточна папка - це папка, з якої запускається програма. Запустіть <code>import os; print(os.getcwd())</code>, щоб дізнатися поточну папку вашої програми.</p>
+<p><img alt="screenshot: get current work directory" src="screenshot_getcwd.png" />
+<small>Screenshot: Get current work directory</small></p>
+<p><img alt="screenshot: get current work directory" src="../images/screenshot_getcwd.png" />
+<small>Screenshot: Get current work directory</small></p>
+<h2 id="-pyc-byte-compiledpyc-files">Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")</h2>
+<p>Імпортування модуля є відносно дорогою справою, тому Python робить деякі хитрощі, щоб зробити це швидше. Одним із способів -створити <em>байт-скомпільовані</em>  файли (або байткод) з розширенням <code>.pyc</code>, яке є проміжною формою, у яку Python перетворює програму (пам’ятаєте <a href="../about_python/#interpreted">вступний розділ</a> про те, як працює Python? ). Цей файл <code>.pyc</code> корисний при імпорті модуля наступного разу в іншу програму - це буде набагато швидше, оскільки частину обробки, необхідної для імпортування модуля, уже виконано. Крім того, ці скомпільовані файли не залежать від платформи.</p>
+<p>ПРИМІТКА. Зазвичай, файли <code>.pyc</code> створюються в тій ж самій папці, де розташовані і відповідні файли <code>.py</code>. Якщо Python не може отримати доступ до запису файлів у цій папці, файли <code>.pyc</code> <em>не</em> створюватимуться.</p>
+<h2 id="fromimport-the-fromimport-statement">Оператор  from..import (англ."The from..import statement")</h2>
+<p>Якщо ви хочете безпосередньо імпортувати змінну <code>argv</code> у свою програму (і не вводити для неї <code>sys.</code> при зверненні до неї, щоразу), ви можете використати оператор <code>from sys import argv</code>.</p>
+<blockquote>
+<p>ПОПЕРЕДЖЕННЯ: загалом <em>уникайте</em> використання оператора <code>from..import</code>, використовуйте замість нього оператор <code>import</code>. Це пояснюється тим, що ваша програма уникатиме зіткнень імен і буде більш читабельною.</p>
+</blockquote>
+<p>Приклад (англ.мовою):</p>
+<pre><code class="language-python">from math import sqrt
+print(&quot;Square root of 16 is&quot;, sqrt(16))
+</code></pre>
+<p>Приклад (укр.мовою):</p>
+<pre><code class="language-python"># не така хороша версія (менше набирати на клавіатурі, але великий ризик заплутатися)
+from math import sqrt
+print(&quot;Квадратний корінь із 16 є&quot;, sqrt(16))
+
+# хороша версія (більше набирати на клавіатурі, але безпечніше)
+import math
+print(&quot;Квадратний корінь із 16 є&quot;, math.sqrt(16))
+</code></pre>
+<h2 id="-__name__-a-modules-__name__">Ім'я модуля - <code>__name__</code> (англ."A module's <code>__name__</code>")</h2>
+<p>Кожен модуль має ім’я. Існують команди Рython, за допомогою яких можно дізнатися назву фактичного модуля Рython.
+Це зручно, щоб з’ясувати, чи працює модуль окремо чи імпортується. Як згадувалося раніше, коли модуль імпортується вперше, код, який він містить, виконується. Ми можемо використовувати це, щоб змусити модуль поводитись по-різному, залежно від того, чи використовується він сам по собі, чи імпортується з іншої програми. Цього можна досягти за допомогою атрибута <code>__name__</code> модуля.</p>
+<p>Приклад (зберегти як<code>module_using_name.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/module_using_name.py" %}</code></pre>-->
+
+<pre><code class="language-python">if __name__ == '__main__':
+    print('Ця програма виконується самостійно')
+else:
+    print('Мене імпортують з іншого модуля')
+</code></pre>
+<!--<pre><code>{% include "./programs/module_using_name.txt" %}</code></pre>-->
+<p>Висновок: </p>
+<pre><code class="language-python">python module_using_name.py
+Ця програма виконується самостійно
+</code></pre>
+<p>Якщо невелику програму вище запустити безпосередньо, ви побачите результат, як описано вище.
+Однак, якщо маленьку програму вище імпортовано з іншої програми, ви побачите наступний результат:</p>
+<pre><code class="language-python">import module_using_name
+</code></pre>
+<p>Висновок:
+<img alt="screenshot importer" src="../images/screenshot_importer.png" /></p>
+<p><strong>Як це працює</strong></p>
+<p>Кожен модуль Python має своє ім´я <code>__name__</code>. Якщо воно дорівнює <code>'__main__'</code>, це означає, що модуль запущений самостійно користувачем, і ми можемо вжити відповідних дій.</p>
+<h2 id="_1">Створення власних модулів</h2>
+<p>Створювати власні модулі легко, ви робити це весь час! Це тому, що кожна програма Python також є модулем. Вам просто потрібно переконатися, що вона має розширення <code>.py</code>. Наступний приклад повинен прояснити це.</p>
+<p>Приклад (зберегти як <code>mymodule.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/mymodule.py" %}</code></pre>-->
+
+<pre><code class="language-python">def скажи_привіт():
+    print('Привіт, говорить мій модуль.')
+
+__version__ = '0.1'
+
+</code></pre>
+<p>Вище був зразок <em>модуля</em>. Як бачите, у ній немає нічого особливого порівняно з нашою звичайною програмою на Python. Далі ми побачимо, як використовувати цей модуль в інших наших програмах на Python.</p>
+<p>Пам’ятайте, що модуль слід розмістити або в тій самій папці, що й програма, з якої ми його імпортуємо, або в одній з папок, указаних у <code>sys.path</code>.</p>
+<p>Ще один модуль (зберегти як <code>mymodule_demo.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/mymodule_demo.py" %}</code></pre>-->
+
+<!--<pre><code>{% include "./programs/mymodule_demo.txt" %}</code></pre>-->
+
+<pre><code class="language-python">import mymodule
+
+mymodule.скажи_привіт()
+print('Версія', mymodule.__version__)
+</code></pre>
+<p>Висновок</p>
+<pre><code>$ python mymodule_demo.py
+Привіт, говорить мій модуль.
+Версія 0.1
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Зверніть увагу, що для доступу до елементів модуля ми використовуємо ту саму нотацію з крапкою. Python добре використовує ту саму нотацію, щоб надати їй характерного відчуття «Pythonic», щоб нам не довелося вивчати нові способи виконання завдань.</p>
+<p>Ось версія, яка використовує синтаксис  <code>from..import</code> (зберегти як<code>mymodule_demo2.py</code>):</p>
+<!--<pre><code class="lang-python">{% include "./programs/mymodule_demo2.py" %}</code></pre>-->
+
+<pre><code class="language-python">from mymodule import скажи_привіт, __version__
+
+скажи_привіт()
+print('Версія', __version__)
+
+</code></pre>
+<p>Висновок <code>mymodule_demo2.py</code> такий самий, як і висновок <code>mymodule_demo.py</code>.</p>
+<p>Зауважте, що якби ім’я <code>__version__</code> вже було оголошено в модулі, який імпортує mymodule, виникне зіткнення. Це також ймовірно, тому що це звичайна практика для кожного модуля оголошувати номер своєї версії за допомогою цієї назви. Отже, завжди рекомендується віддавати перевагу оператору <code>import</code>, навіть якщо це може зробити вашу програму трохи довшою.</p>
+<p>Ви також можете використовувати:</p>
+<pre><code class="language-python">from mymodule import *
+</code></pre>
+<p>Це імпортує всі загальнодоступні назви, такі як <code>скажи_привіт</code>, але не імпортує <code>__version__</code>, оскільки воно починається з подвійного підкреслення.</p>
+<blockquote>
+<p>ПОПЕРЕДЖЕННЯ: пам’ятайте, що вам слід уникати використання import-star, тобто <code>from mymodule import *</code>.</p>
+<p><strong>Дзен of Python</strong></p>
+<p>Один із керівних принципів Python полягає в тому, що «Явне краще, ніж неявне». Запустіть <code>import this</code> в Python, щоб дізнатися більше.</p>
+</blockquote>
+<h2 id="dir-the-dir-function">Функція <code>dir</code> (англ. "The <code>dir</code> function")</h2>
+<p>Вбудована функція <code>dir()</code> повертає список імен, визначених об’єктом.
+Якщо об’єкт є модулем, цей список включає функції, класи та змінні, визначені в цьому модулі.</p>
+<p>Ця функція може приймати аргументи.
+Якщо аргументом є назва модуля, функція повертає список імен цього зазначеного модуля.
+Якщо аргументу немає, функція повертає список імен з поточного модуля.</p>
+<p>приклад:</p>
+<pre><code>$ python
+&gt;&gt;&gt; import sys
+
+# отримаємо список атрибутів модуля
+&gt;&gt;&gt; dir(sys)
+['__displayhook__', '__doc__',
+'argv', 'builtin_module_names',
+'version', 'version_info']
+# тут показано лише кілька записів
+
+# отримати список атрибутів для поточного модуля
+&gt;&gt;&gt; dir()
+['__builtins__', '__doc__',
+'__name__', '__package__', 'sys']
+
+# створити нову змінну 'a'
+&gt;&gt;&gt; a = 5
+
+&gt;&gt;&gt; dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a']
+
+# видалити/видалити ім’я
+&gt;&gt;&gt; del a
+
+&gt;&gt;&gt; dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'sys']
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>По-перше, ми бачимо використання <code>dir</code> к імпортованому модулі <code>sys</code>. Ми бачимо величезний список атрибутів, які він містить.</p>
+<p>Далі ми викликаємо функцію <code>dir</code> без передачі їй параметрів. За замовчуванням вона повертає список атрибутів для поточного модуля. Зверніть увагу, що список імпортованих модулів також є частиною цього списку.</p>
+<p>Щоб спостерігати за дією <code>dir</code>, ми визначаємо нову змінну <code>a</code> і призначаємо їй значення, а потім знову викливаємо <code>dir</code>. Бачимо, що в списку з такою ж назвою є додаткове значення. Ми видаляємо змінну/атрибут поточного модуля за допомогою оператора del, та зміни
+знову відобразяться на виведенні функції <code>dir</code>.</p>
+<p>Примітка щодо <code>del</code>: цей оператор використовується для <em>видалення</em> змінної/назви, і після його виконання, у нашому випадку <code>del a</code>, ви більше не можете отримати доступ до змінної <code>a</code> -  ніби вона раніше взагалі ніколи не існувала.</p>
+<p>Зверніть увагу, що функція <code>dir()</code> працює з <em>будь-яким</em> об'єктом. Наприклад, запустіть <code>dir(str)</code> для атрибутів класу <code>str</code> (рядок).</p>
+<p>Існує також функція <a href="http://docs.python.org/3/library/functions.html#vars"><code>vars()</code></a>, яка потенційно може надати вам атрибути та їхні значення, але вона не працюватиме для всіх випадків.</p>
+<h2 id="packages">Пакети (англ."Packages")</h2>
+<p>На даний момент ви, мабуть, почали дотримуватись ієрархії організації ваших програм. Змінні зазвичай знаходяться всередині функцій. Функції та глобальні змінні зазвичай знаходяться всередині модулів. Що, якби ви хотіли організувати модулі? Ось тут і з’являються пакети.</p>
+<p>Пакети — це просто папки модулів зі спеціальним файлом <code>__init__.py</code>, який вказує Python, що ця папка особлива, оскільки містить модулі Python.</p>
+<p>Припустімо, ви хочете створити пакет під назвою «світ» із підпакетами «азія», «африка» тощо, а ці підпакети, у свою чергу, містять такі модулі, як «індія», «мадагаскар» тощо.</p>
+<p>Ось як ви структуруєте папки:</p>
+<pre><code>- &lt;деяка папка, наявна в sys.path&gt;/
+    - світ/
+        - __init__.py
+        - азія/
+            - __init__.py
+            - індія/
+                - __init__.py
+                - foo.py
+        - африкa/
+            - __init__.py
+            - мадагаскар/
+                - __init__.py
+                - bar.py
+</code></pre>
+<p>Пакети – це просто зручність для ієрархічної організації модулів. Ви побачите багато прикладів цього в <a href="../stdlib/#stdlib">стандартній бібліотеці</a>.</p>
+<h2 id="_2">Резюме</h2>
+<p>Подібно до того, як функції є багаторазовими частинами програм, модулі є багаторазовими програмами. Пакети — це ще одна ієрархія для організації модулів. Стандартна бібліотека Python є прикладом такого набору пакетів і модулів.</p>
+<p>Ми побачили, як використовувати ці модулі та створювати власні модулі.</p>
+<p>Далі ми дізнаємося про деякі цікаві концепції, які називаються структурами даних.</p>
+<h2 id="-">-- Доповнення від перекладача --</h2>
+<h2 id="_3">Модулі</h2>
+<p>Приклад (зберегти як  "dicethrow.py")</p>
+<pre><code class="language-python">import random
+
+print(&quot;Імітація кидання двох кубиків:&quot;)
+a = random.randint(1,6)
+b = random.randint(1,6)
+print(&quot;Перший кидок:&quot;, a)
+print(&quot;Другий кидок:&quot;, b)
+print(&quot;загальний бал:&quot;, a+b)
+</code></pre>
+<p>Висновок (ваш висновок може бути іншим!):</p>
+<pre>
+Імітація кидання двох кубиків:
+Перший кидок: 5
+Другий кидок: 3
+Загальний бал: 8
+</pre>
+
+<p><strong>Як це працює</strong></p>
+<p>По-перше, наведена вище програма Рython <em>імпортує</em> модуль "random" зі стандартної бібліотеки Рython.  Стандартна бібліотека  Рython — це величезна колекція модулів Рython, яка автоматично встановлюється, якщо ви інсталюєте  Рython на своєму комп’ютері. Перегляньте <a href="https://docs.python.org/3/library/index.html">https://docs.python.org/3/library/index.html</a> для повного списку модулів.</p>
+<p>Кожен із цих модулів стандартної бібліотеки Python має декілька функцій. </p>
+<p>Щоб скористатися однією з цих функцій, необхідно використовувати "крапкову нотацію": написати ім’я модуля, потім крапку, а потім назву функції.</p>
+<p>У наведеному вище прикладі функція <em>randint</em> модуля <em>random</em> викликається за допомогою:</p>
+<pre><code class="language-python">random.randint(1,6)
+</code></pre>
+<p>Два параметри в дужках (1,6) вказують на те, що функція <em>randint</em> має створювати випадкове ціле число від 1 до 6 (подібно до кидання шестигранного кубика).</p>
+<p>У прикладах від Swaroop використовуються поняття  "PythonPath" і Змінні середовища (англ."Еnviroment variables")</p>
+<p>Оскільки не всі знають ці концепції, ось коротке пояснення (може бути корисним наступний сайт https://cpto.dp.ua/public_html/posibnyky/OSWin10/03/3_2.htm):</p>
+<ul>
+<li>
+<p>У комп'ютерній термінології <em>катало́г</em>, <em>директо́рія</em>(англ."directory") чи <em>те́ка</em>, <em>па́пка</em> (англ."folder") - це фізичне місце, де можна зберігати файли на комп’ютері. Такі файли, як програми на Python або сам інтерпретатор Python.</p>
+</li>
+<li>
+<p><em>Підпапка</em> (англ."subfolder")- це папка всередині іншої папки.</p>
+</li>
+<li>
+<p><em>Головна</em>  або <em>коренева</em>  папка, каталог (англ."англ.root directory","root folder")- це перша папка в операційній системі. У Linux і MacOS це "/" або "/home/username". У Windows це зазвичай "C:\"</p>
+</li>
+<li>
+<p><em>Поточна папка</em> (англ."current folder") - це папка, в якій на даний момент працює комп'ютер (для збереження файлів)</p>
+</li>
+<li>
+<p>Шлях фа́йлу (англ. "Path") - це рядок із іменами всіх папок (а також підпапок і підпідпапок...), починаючи з кореневої папки до поточної папки. Зауважте, що в WINDOWS назви папок відокремлюються зворотною скісною рискою(бекслеш), як-от "C:\carl\documents", але в Linux і MacOS назви папок відокремлюються скісною рискою(слеш): "/home/carl/documents".</p>
+</li>
+<li>
+<p>Змінна середовища (англ."enviroment variable") - це змінна, яку десь зберігає операційна система (Windows, Linux або MacOS), щоб вона могла шукати, де насправді встановлено різні програми. Наприклад, якщо ви запустите Microsoft Word із папки десь на вашому комп’ютері, комп’ютер дізнається, де встановлено «word.exe», і запустить його. Якщо бути більш точним, операційна система записує невеликий текстовий файл з одним рядком для кожної змінної середовища. Наприклад, один рядок скаже йому, де встановлено Microsoft Word, інший, де встановлено ваш веб-браузер, інший скаже, де встановлено Python. Усі ці записи називаються змінними середовища.</p>
+</li>
+<li>
+<p>PythonPath - це назва однієї спеціальної змінної середовища, яка повідомляє операційній системі (Windows, Linux або MacOS), де встановлено Python і де Python має шукати модулі. Насправді це список шляхів(a list of paths.).</p>
+</li>
+</ul>
+<h2 id="-pyc-byte-compiledpyc-files_1">Байт-компільовані.pyc файли (англ."Byte-compiled.pyc files")</h2>
+<p>Якщо ви пишете програму на Python,використовуючи оператор <code>import</code>, як наприклад:</p>
+<pre><code class="language-python">import turtle
+</code></pre>
+<p>тоді під час запуску програми відбуваються наступні речі.</p>
+<p>Python намагається знайти модуль turtle.py. Python спочатку шукає в папці вашої програми, якщо Python не може знайти там модуль, він шукає в папці, де встановлено всі модулі Рython (це називається шляхом python- Рython path).</p>
+<p>Потім всі функції цього модуля імпортуються, тобто ваша програма може їх використовувати.
+Цей процес імпорту займає відносно багато часу, тому Python робить маленьку хитрість: він намагається зберегти «скомпільовану» версію модуля з розширенням «.pyc» у тому самому місці, де й модуль.</p>
+<p>Файл .pyc набагато швидше імпортувати для Рython.</p>
+<p>Наступного разу, коли одна з ваших програм намагатиметься імпортувати той самий модуль ("import"), Python не потрібно буде імпортувати відносно повільний модуль turtle.py, а натомість зможе використати набагато швидший скомпільований модуль turtle.pyc.</p>
+<h1 id="dir-the-dir-function_1">Функція <code>dir</code> (англ. "The <code>dir</code> function")</h1>
+<p><img alt="screenshot of dir function" src="../images/screenshot_dir2.png" />
+<small>Screenshot of dir function with a number</small></p>
+<p><img alt="screenshot of dir function" src="../images/screenshot_dir3.png" />
+<small>Screenshot of dir function with a string</small></p>
+<p><img alt="screenshot of dir function" src="../images/screenshot_dir.png" />
+<small>Screenshot of using IDLE and displaying all the functionality of the <code>sys</code> module using <code>dir()</code>.</small></p>
+<p>--- <strong>завершення доповнень від перекладача</strong> ---</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

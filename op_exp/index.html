@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Оператори та вирази (англ. "Operators and Expressions") - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Ласкаво просимо!</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../INSTALL/" class="nav-link">INSTALL</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../SUMMARY/" class="nav-link">Summary</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Додаток: про книгу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about_python/" class="nav-link">Про мову програмування Python</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../basics/" class="nav-link">Основи (англ."Basics")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../control_flow/" class="nav-link">Потік керування (англ."Control Flow")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../data_structures/" class="nav-link">Структури даних (англ."Data Structures")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../dedication/" class="nav-link">Посвята</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../exceptions/" class="nav-link">Винятки (англ."Exceptions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../feedback/" class="nav-link">Зворотній зв'язок</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../first_steps/" class="nav-link">Перші кроки</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../floss/" class="nav-link">Додаток : FLOSS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../functions/" class="nav-link">Функції</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../installation/" class="nav-link">Інсталяція</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../io/" class="nav-link">Введення-виведення (англ."Input and Output ")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../modules/" class="nav-link">Модулі (англ."Modules")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../more/" class="nav-link">Більше</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../oop/" class="nav-link">Об'єктно-орієнтоване програмування ( англ."Object Oriented Programming")</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../preface/" class="nav-link">Передмова</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../problem_solving/" class="nav-link">Вирішення проблем (англ."Problem Solving")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../revision_history/" class="nav-link">Додаток: Урок історії</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../stdlib/" class="nav-link">Стандартна бібліотека (англ."Standard Library")</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translation_howto/" class="nav-link">Додаток: Інструкція з перекладу</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../translations/" class="nav-link">Переклади</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../what_next/" class="nav-link">Що далі</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../oop/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../preface/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#operators-and-expressions" class="nav-link">Оператори та вирази (англ. "Operators and Expressions")</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#operators" class="nav-link">Оператори (англ."Operators")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">Короткий запис математичних операцій та привласнення</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#evaluation-order" class="nav-link">Порядок обчислення (англ. "evaluation Order")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#changing-the-order-of-evaluation" class="nav-link">Зміна порядку обчислення {англ."Changing the Order Of Evaluation"}</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">Асоціативність</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#expressions" class="nav-link">Вирази (англ. "Expressions")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">Резюме</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">Розуміння двійкових цифр</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#left-shift-operation" class="nav-link">Оператори зсуву вліво на задану кількість біт (англ."left shift operation")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#right-shift-operation" class="nav-link">Оператори зсуву вправо на задану кількість біт (англ."right shift operation")</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#python-boolean-operators" class="nav-link">Логічні оператори python (boolean operators)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#not" class="nav-link">Логічне НЕ (NOT)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#and" class="nav-link">Логічне І (AND)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#or" class="nav-link">Логічне АБО (OR)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#boolean-operations-with-binary-digits" class="nav-link">Логічні операції з двійковими цифрами (boolean operations with binary digits)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bitwise-or-inclusive-or" class="nav-link">Побітне АБО (bitwise or (inclusive OR))</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bitwise-xor-exclusive-or" class="nav-link">Побітне ВИКЛЮЧНО АБО (bitwise xor (exclusive OR))</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="operators-and-expressions">Оператори та вирази (англ. "Operators and Expressions")</h1>
+<p>Більшість statements (логічних рядків), які ви пишете, міститимуть <em>вирази</em>. Простим прикладом виразу є <code>2 + 3</code>. Вираз можна розбити на оператори та операнди.</p>
+<p><em>Оператори</em> — це певний функціонал, який виконує певні дії та який може бути представлений такими символами, як наприклад «+», або спеціальними ключовими словами. Операторам потрібні деякі дані для роботи, і такі дані називаються <em>операндами</em>. У цьому випадку "2" і "3" є операндами.</p>
+<h2 id="operators">Оператори (англ."Operators")</h2>
+<p>Ми коротко розглянемо оператори та їх використання.</p>
+<p>Зверніть увагу, що ви можете обчислити вирази, наведені у прикладах, використовуючи інтерпретатор інтерактивно. Наприклад, щоб перевірити вираз <code>2 + 3</code>, скористайтесь інтерактивним командним рядком інтерпретатора Python:</p>
+<pre><code class="language-python">&gt;&gt;&gt; 2 + 3
+5
+&gt;&gt;&gt; 3 * 5
+15
+&gt;&gt;&gt;
+</code></pre>
+<p>Ось короткий огляд доступних операторів:</p>
+<ul>
+<li>
+<p><code>+</code>  (Плюс, англ."plus") </p>
+<ul>
+<li>Підсумовує два об'єкта</li>
+<li><code>3 + 5</code> дорівнює <code>8</code>. <code>'a' + 'b'</code> дорівнює <code>'ab'</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>-</code> (Мінус, англ."minus")</p>
+<ul>
+<li>Дає віднімання одного числа від іншого; якщо перший операнд відсутній, він вважається нульовим.</li>
+<li><code>-5.2</code> дасть негативне число, а <code>50 - 24</code> дасть <code>26</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>*</code> (Mноження, англ. "multiply")</p>
+<ul>
+<li>Видає множення двох чисел або повертає рядок, що повторюється задане число разів.</li>
+<li><code>2 * 3</code> дорівнює <code>6</code>. <code>'la' * 3</code> дорівнює <code>'lalala'</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>**</code> (Піднесення до степеня, англ."power")</p>
+<ul>
+<li>Повертає число х, зведене в ступінь y</li>
+<li><code>3 ** 4</code> дорівнює <code>81</code> (тобто <code>3 * 3 * 3 * 3</code>)</li>
+</ul>
+</li>
+<li>
+<p><code>/</code> (Ділення, англ. "divide")</p>
+<ul>
+<li>Ділить x на y</li>
+<li><code>13 / 3</code> дорівнює <code>4.333333333333333</code></li>
+</ul>
+</li>
+<li>
+<p><code>//</code> (Цілочисельний поділ, англ. "divide and floor")</p>
+<ul>
+<li>Розділіть x на y та округліть відповідь <em>вниз</em> до найближчого цілого значення. Зауважте, що якщо одне зі значень є числом з плаваючою комою, ви отримаєте значення з плаваючою комою.</li>
+<li><code>13 // 3</code>  дорівнює <code>4</code></li>
+<li><code>-13 // 3</code> дорівнює <code>-5</code></li>
+<li><code>9//1.81</code>  дорівнює <code>4.0</code></li>
+</ul>
+</li>
+<li>
+<p><code>%</code> (Поділ по модулю, англ. "modulo") </p>
+<ul>
+<li>Повертає залишок від ділення</li>
+<li><code>13 % 3</code> дорівнює <code>1</code>. <code>-25.5 % 2.25</code> дорівнює <code>1.5</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;&lt;</code> (Оператори зсуву вліво на задану кількість біт, англ."left shift" )</p>
+<ul>
+<li>Зсуває біти числа вліво на задане число позицій. (Кожне число представлено в пам’яті бітами або двійковими цифрами, тобто 0 і 1)</li>
+<li><code>2 &lt;&lt; 2</code> дорівнює <code>8</code>. У двійковій системи числення <code>2</code> представляє собою<code>10</code>.</li>
+<li>Зрушення вліво на 2 біта дає «1000», що у десятковій системи числення означає 8.</li>
+</ul>
+</li>
+<li>
+<p><code>&gt;&gt;</code> (Оператори зсуву вправо на задану кількість біт, англ."right shift")</p>
+<ul>
+<li>Зсуває біти числа вправо на задане число позицій.</li>
+<li><code>11 &gt;&gt; 1</code> дорівнює <code>5</code>.</li>
+<li>У двійковій системи числення <code>11</code> представлено в бітах як <code>1011</code> яке при зсуві вправо на 1 біт дорівнює <code>101</code> і яке є десятковим <code>5</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>&amp;</code> (Побітове І, англ."bit-wise AND")</p>
+<ul>
+<li>Побітова операція І над числами: якщо обидва біти дорівнюють <code>1</code>, то результат дорівнює <code>1</code>. В іншому випадку це <code>0</code>.</li>
+<li><code>5 &amp; 3</code> дорівнює <code>1</code> (<code>0101 &amp; 0011</code> дорівнює <code>0001</code>)</li>
+</ul>
+</li>
+<li>
+<p><code>|</code> (Побітове АБО, англ."bit-wise OR")</p>
+<ul>
+<li>Побітова операція АБО над числами: якщо обидва біти дорівнюють <code>0</code>, результат <code>0</code>.  В іншому випадку це <code>1</code>. </li>
+<li><code>5 | 3</code> дорівнює <code>7</code> (<code>0101 | 0011</code> дорівнює <code>0111</code>)</li>
+</ul>
+</li>
+<li>
+<p><code>^</code> (Побітове виключне АБО, англ."bit-wise XOR")</p>
+<ul>
+<li>Побітова операція виключне АБО над числами: якщо обидва біти (<code>1 або 0</code>) однакові, результат дорівнює <code>0</code>.  В іншому випадку це <code>1</code>. </li>
+<li><code>5 ^ 3</code> дорівнює <code>6</code> (<code>O101 ^ 0011</code> дорівнює <code>0110</code>)</li>
+</ul>
+</li>
+<li>
+<p><code>~</code>(Побітове НЕ, англ."bit-wise invert") </p>
+<ul>
+<li>Побітова операція НЕ для числа x відповідає -(x+1)</li>
+<li><code>~5</code> дорівнює <code>-6</code>. Детальніше на  http://stackoverflow.com/a/11810203</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;</code> (Менше ніж, англ."less than") </p>
+<ul>
+<li>Визначає чи вірно те, що x менше за y. Усі оператори порівняння повертають<code>True</code> або <code>False</code>. Зверніть увагу на написання цих імен з великої літери.</li>
+<li><code>5 &lt; 3</code> дорівнює <code>False</code>, а <code>3 &lt; 5</code> дорівнює <code>True</code>.</li>
+<li>Можна складати довільні ланцюжки: <code>3 &lt; 5 &lt; 7</code> дає <code>True</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>&gt;</code> (Більше ніж, англ."greater than")</p>
+<ul>
+<li>Визначає чи вірно те, що x більше за y</li>
+<li><code>5 &gt; 3</code> повертає <code>True</code>. Якщо обидва операнди є числами, вони спочатку перетворюються на однаковий тип. В іншому випадку завжди повертається <code>False</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>&lt;=</code> (менше або дорівнює, англ."less than or equal to") </p>
+<ul>
+<li>Визначає чи вірно те, що x менше або дорівнює y</li>
+<li><code>x = 3; y = 6; x &lt;= y</code> повертає <code>True</code></li>
+</ul>
+</li>
+<li>
+<p><code>&gt;=</code> (більше або дорівнює, англ." greater than or equal to")</p>
+<ul>
+<li>Визначає чи вірно те, що x більше або дорівнює y</li>
+<li><code>x = 4; y = 3; x &gt;= 3</code> повертає <code>True</code></li>
+</ul>
+</li>
+<li>
+<p><code>==</code> (дорівнює, англ."equal to") </p>
+<ul>
+<li>Порівнює, чи однакові об'єкти</li>
+<li><code>x = 2; y = 2; x == y</code> повертає<code>True</code></li>
+<li><code>x = 'str'; y = 'stR'; x == y</code> повертає <code>False</code></li>
+<li><code>x = 'str'; y = 'str'; x == y</code> повертає <code>True</code></li>
+</ul>
+</li>
+<li>
+<p><code>!=</code> (не дорівнює, англ."not equal to") </p>
+<ul>
+<li>Порівнює, якщо об'єкти не рівні</li>
+<li><code>x = 2; y = 3; x != y</code> повертає <code>True</code></li>
+</ul>
+</li>
+<li>
+<p><code>not</code> (логічне НЕ, англ."boolean NOT")</p>
+<ul>
+<li>Якщо x дорівнює <code>True</code>, оператор поверне <code>False</code>. Якщо ж x дорівнює <code>False</code>, отримаємо <code>True</code>.</li>
+<li><code>x = True; not x</code> повертає <code>False</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>and</code> (логічне І, англ."boolean AND") </p>
+<ul>
+<li><code>x and y</code> повертає <code>False</code>,якщо x дорівнює <code>False</code>,в протилежному випадку(х=True) повертає значення y</li>
+<li><code>x = False; y = True; x and y</code> повертає <code>False</code> оскільки x є False. У цьому випадку Python не обчислюватиме y, оскільки він знає, що ліва частина виразу «and» має значення «False», що означає, що весь вираз буде «False» незалежно від інших значень. Це називається скороченою оцінкою булевих (логічних) виразів (англ. "short-circuit evaluation").</li>
+</ul>
+</li>
+<li>
+<p><code>or</code> (логічне АБО, англ."boolean OR")</p>
+<ul>
+<li>Якщо x дорівнює  <code>True</code>, він повертає True, в протилежному випадку отримаємо значення y</li>
+<li><code>x = True; y = False; x or y</code> повертає <code>True</code>.Тут також застосовується скорочена оцінка виразів.</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">Короткий запис математичних операцій та привласнення</h2>
+<p>Зазвичай виконується математична операція над змінною, а потім привласнюється результат цієї операції тій самій змінній, отже, для таких виразів існує скорочення:</p>
+<pre><code class="language-python">a = 2
+a = a * 3
+</code></pre>
+<p>можна записати як:</p>
+<pre><code class="language-python">a = 2
+a *= 3
+</code></pre>
+<p>Зверніть увагу, що вирази виду  <code>var = var operation expression</code>("змінна = змінна операція
+вираз") стає <code>var operation= expression</code>("змінна операція = вираз").</p>
+<h2 id="evaluation-order">Порядок обчислення (англ. "evaluation Order")</h2>
+<p>Якщо у вас є такий вираз, як «2 + 3 * 4», спочатку виконується додавання чи множення? Шкільний курс математики говорить нам, що спочатку потрібно виконати множення. Це означає, що оператор множення має вищий пріоритет, ніж оператор додавання.</p>
+<p>У наcтупній таблиці нижче  наведено пріоритет операторів Python, починаючи з самого найнижчого пріоритету (найслабше зв'язування, англ."least binding") до найвищого пріоритету (найсильніше зв'язування, англ."most binding"). Це означає, що у будь-якому вираженні Python спочатку оцінить оператори та вирази, розташовані нижче в таблиці, а потім ті, що перераховані вище в таблиці.</p>
+<p>Для повноти опису наведено наступну таблицю, взяту з <a href="http://docs.python.org/3/reference/expressions.html#operator-precedence">Посібника  мови Python (англ."Python reference manual")</a>. Набагато краще використовувати  дужки для відповідного групування операторів і операндів, щоб явно вказати порядок обчислення виразів. Це робить програму більш читабельною. Див. <a href="#changing-order-of-evaluation">Зміна порядку оцінювання (англ. "Changing the Order of Evaluation")</a> нижче для отримання додаткової інформації.</p>
+<ul>
+<li><code>lambda</code> : Лямбда-вираз (англ."Lambda Expression")</li>
+<li><code>if - else</code>: Умовний вираз (англ."Conditional expression")</li>
+<li><code>or</code> : Логічне АБО (англ."Boolean OR")</li>
+<li><code>and</code> : Логічне І (англ."Boolean AND")</li>
+<li><code>not x</code> : Логічне НЕ (англ."Boolean NOT")</li>
+<li><code>in, not in, is, is not, &lt;, &lt;=, &gt;, &gt;=, !=, ==</code> : Порівняння, включаючи тести на приналежність і тести на тотожність</li>
+<li><code>|</code> : Побітове АБО (англ."Bitwise OR")</li>
+<li><code>^</code> : Побітове ВИКЛЮЧНО АБО (англ."Bitwise XOR")</li>
+<li><code>&amp;</code> : Побітове I (англ."Bitwise AND")</li>
+<li><code>&lt;&lt;, &gt;&gt;</code> : Зміщеня (англ."Shifts")</li>
+<li><code>+, -</code> : Додавання і віднімання(англ."Addition and subtraction")</li>
+<li><code>*, /, //, %</code> : Множення, ділення, цілочисельне ділення та залишок від ділення (англ."Multiplication", "Division", "Floor Division" and "Remainder")</li>
+<li><code>+x, -x, ~x</code> : Позитивне, негативне, побітове НЕ (англ."Positive", "Negative", "bitwise NOT")</li>
+<li><code>**</code> : Піднесення до степеня (англ." Exponentiation")</li>
+<li><code>x[index], x[index:index], x(arguments...), x.attribute</code> : Звернення за індексом,зріз,виклик функції, посилання на атрибут (англ."Subscription", "slicing", "call", "attribute reference") </li>
+<li><code>(expressions,..), [expressions,..], {key: value,..}, {expressions...}</code> : Зв’язка або кортеж, список, словник, множина (англ."Binding or tuple display, "list display", "dictionary display", "set display")</li>
+</ul>
+<p>Оператори, які ми ще не зустрічали, будуть пояснені в наступних розділах.</p>
+<p>Оператори з <em>однаковим пріоритетом</em> містяться в одному рядку у наведеній вище таблиці. Наприклад, «+» і «-» мають однаковий пріоритет.</p>
+<h2 id="changing-the-order-of-evaluation">Зміна порядку обчислення {англ."Changing the Order Of Evaluation"}</h2>
+<p>Щоб зробити вирази більш зрозумілими, ми можемо використовувати круглі дужки.Наприклад, <code>2 + (3 * 4)</code> легше зрозуміти, ніж <code>2 + 3 * 4</code>, яке вимагає знання пріоритетів операторів. Як і в усьому іншому, дужки слід використовувати розумно (не перестарайтеся) і вони не повинні бути зайвими, як у <code>(2 + (3 * 4))</code>.</p>
+<p>Є додаткова перевага використання круглих дужок - це допомагає нам змінити порядок обчислення.  Наприклад, якщо ви хочете, щоб додавання обчислювалося перед множенням у виразі, ви можете написати щось на зразок <code>(2 + 3) * 4</code>.</p>
+<h2 id="_2">Асоціативність</h2>
+<p>Оператори зазвичай обробляються зліва направо. Це означає, що оператори з однаковим пріоритетом обчислюються зліва направо. Наприклад, "2 + 3 + 4" обчислюється як "(2 + 3) + 4".</p>
+<h2 id="expressions">Вирази (англ. "Expressions")</h2>
+<p>Приклад (зберегти як <code>expression.py</code>):</p>
+<pre><code class="language-python">довжина = 5
+ширина = 2
+
+площа = довжина * ширина
+print('Площа дорівнює', площа)
+print('Периметр дорівнює', 2 * (довжина + ширина))
+</code></pre>
+<p>Висновок:</p>
+<pre><code>$ python expression.py
+Площа дорівнює 10
+Периметр дорівнює 14
+</code></pre>
+<p><strong>Як це працює</strong></p>
+<p>Довжина і ширина прямокутника зберігаються в однойменних змінних (довжина та ширина) відповідно. Ми використовуємо їх для обчислення площі та периметра прямокутника за допомогою виразів. Ми зберігаємо результат виразу <code>довжина * ширина</code> у змінній <code>площа</code>, а потім друкуємо його за допомогою функції <code>print</code>. У другому випадку ми безпосередньо використовуємо значення виразу <code>2 * (довжина + ширина)</code> у функції друку.</p>
+<p>Також зверніть увагу на те, як Python <em>"гарно друкує"</em>  результат. Навіть незважаючи на те, що  не вказано пробіл у кінці речення у лапках <code>'Площа дорівнює'</code>, Python розміщує його для нас, щоб ми отримали чистий гарний результат, і програма стала набагато читабельнішою таким чином (оскільки  не потрібно турбуватися про пробіли в рядках, які ми використовуємо для виведення(друку)). Це приклад того, як Python полегшує життя програміста.</p>
+<h2 id="_3">Резюме</h2>
+<p>Ми побачили, як використовувати оператори, операнди та вирази - це основні будівельні блоки будь-якої програми. Далі ми побачимо, як використовувати їх у наших програмах за допомогою statements (операторів).</p>
+<p>-- Від перекладачa --</p>
+<h2 id="_4">Розуміння двійкових цифр</h2>
+<p><a href="https://en.wikipedia.org/wiki/Binary_number">Двійкове число (англ."binary number")</a> - це число, виражене у двійковій системі числення, використовуючи лише два різні символи, як 0 і 1.</p>
+<p>Щоб краще зрозуміти двійкову систему числення, давайте спочатку розглянемо більш популярну <a href="https://en.wikipedia.org/wiki/Decimal">десяткову систему числення, англ."decimal numeral system"</a>:</p>
+<p>Вона містить 10 різних символів (0,1,2,3,4,5,6,7,8 і 9).</p>
+<p>Щоб записати число більше 9, потрібно використати 2 або більше таких символів.</p>
+<p>Наприклад, щоб записати число тридцять шість у десятковій системі, потрібно написати:</p>
+<pre>36</pre>
+
+<p>Тридцять шість — це двозначне число, тобто для його опису потрібні два символи. </p>
+<p>Якщо читати обидва символи зліва направо, вони утворюють інструкцію обчислення:</p>
+<pre>
+36 (двозначне число)
+розрахувати:
+3 x 10 + 6 x 1 =
+30 + 6 = 
+36 
+</pre>
+
+<p>Цікава частина цього полягає в тому, що лівий символ (3) має бути обчислений на 10, а правий символ (6) має бути обчислений на одиницю, а сума обох операцій представляє число.</p>
+<p>Щоб записати число, більше 99, потрібні три цифри. Наприклад, щоб записати число дев'ятсот сорок два, потрібно написати:</p>
+<pre>942 (тризначне число)
+читати зліва направо:
+9 x 100 + 4 x 10 + 2 x 1 = 
+900 + 40 + 2 = 
+942</pre>
+
+<p>Оскільки число складається з трьох цифр, перший символ потрібно помножити на 100, другий на 10 і третій на 1. </p>
+<p>Цю десяткову систему числення також називають системою з основою 10.</p>
+<p>Коефіцієнти для множення символів на (1,10,100,...) можна записати у вигляді степенів основи 10:</p>
+<pre>
+10<sup>0</sup> =    1
+10<sup>1</sup> =   10 
+10<sup>2</sup> =  100
+10<sup>3</sup> = 1000
+і так далі...
+</pre>
+
+<p>Інструкцію з розрахунку числа 942 також можна записати так:</p>
+<pre>
+942:
+9 x 10<sup>2</sup> + 4 x 10<sup>1</sup> + 2 x 10<sup>0</sup> =
+9 x 100 + 4 x 10 + 2 x 1 =
+900 + 40 + 2 = 
+942
+</pre>
+
+<h3 id="_5">Двійкова система числення</h3>
+<p>Двійкова система має основу не 10, а 2:</p>
+<pre>
+2<sup>0</sup> =   1
+2<sup>1</sup> =   2
+2<sup>2</sup> =   4
+2<sup>3</sup> =   8
+2<sup>4</sup> =  16
+2<sup>5</sup> =  32
+2<sup>6</sup> =  64
+2<sup>7</sup> = 128
+і так далі...
+</pre>
+
+<p>Однозначні числа в двійковій системі можуть відображати тільки числа 0 і 1:</p>
+<p>щоб виразити число нуль, ви пишете:</p>
+<pre>
+0:
+0 x 2<sup>0</sup> =
+0 x 1 =
+0
+</pre>
+
+<p>щоб виразити число один, ви пишете:</p>
+<pre>
+1:
+1 x 2<sup>0</sup> =
+1 x 1 =
+1
+</pre>
+
+<p>і для будь-якого числа, більшого за 1, необхідно більше цифр.</p>
+<p>Для числа два ви пишете 10:</p>
+<pre>
+10 (binary):
+1 x 2<sup>1</sup> + 0 x 2<sup>0</sup>=
+1 x 2 + 0 x 1=
+2 (decimal)
+</pre>
+
+<p>Для числа три ви пишете 11:</p>
+<pre>
+11 (binary):
+1 x 2<sup>1</sup> + 1 x 2<sup>0</sup>=
+1 x 2 + 1 x 1=
+2 + 1 =
+3 (decimal)
+</pre>
+
+<p>А для числа чотири потрібні вже три цифри:</p>
+<pre>
+100 (у двійковій системі, чотири у десятковій системі)
+1 x 2<sup>2</sup> + 0 x 2<sup>1</sup> + 0 x 2<sup>0</sup>=
+1 x 4 + 0 x 2 + 0 x 1 =
+4 + 0 + 0 =
+4
+</pre>
+
+<h3 id="_6">Двійкові числа проти десяткових чисел</h3>
+<p>У цій таблиці порівнюються десяткова та двойкова системи числення</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">10-ва система</th>
+<th style="text-align: right;">розрахунок</th>
+<th style="text-align: center;">написання</th>
+<th style="text-align: right;">2-ва система</th>
+<th style="text-align: right;">розрахунок</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0x10<sup>0</sup></td>
+<td style="text-align: center;">нуль</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1x10<sup>0</sup></td>
+<td style="text-align: center;">один</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2x10<sup>0</sup></td>
+<td style="text-align: center;">два</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3x10<sup>0</sup></td>
+<td style="text-align: center;">три</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4x10<sup>0</sup></td>
+<td style="text-align: center;">чотири</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1x2<sup>2</sup>+0x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5x10<sup>0</sup></td>
+<td style="text-align: center;">п'ять</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">1x2<sup>2</sup>+0x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6x10<sup>0</sup></td>
+<td style="text-align: center;">шість</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">1x2<sup>2</sup>+1x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7x10<sup>0</sup></td>
+<td style="text-align: center;">сім</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;">1x2<sup>2</sup>+1x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8x10<sup>0</sup></td>
+<td style="text-align: center;">вісім</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">1x2<sup>3</sup>+0x2<sup>2</sup>+0x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9x10<sup>0</sup></td>
+<td style="text-align: center;">дев'ять</td>
+<td style="text-align: right;">1001</td>
+<td style="text-align: right;">1x2<sup>3</sup>+0x2<sup>2</sup>+0x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1x10<sup>1</sup>+0x10<sup>0</sup></td>
+<td style="text-align: center;">десять</td>
+<td style="text-align: right;">1010</td>
+<td style="text-align: right;">1x2<sup>3</sup>+0x2<sup>2</sup>+1x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">1x10<sup>1</sup>+1x10<sup>0</sup></td>
+<td style="text-align: center;">одинадцять</td>
+<td style="text-align: right;">1011</td>
+<td style="text-align: right;">1x2<sup>3</sup>+0x2<sup>2</sup>+1x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1x10<sup>1</sup>+2x10<sup>0</sup></td>
+<td style="text-align: center;">дванадцять</td>
+<td style="text-align: right;">1100</td>
+<td style="text-align: right;">1x2<sup>3</sup>+1x2<sup>2</sup>+0x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">1x10<sup>1</sup>+3x10<sup>0</sup></td>
+<td style="text-align: center;">тринадцять</td>
+<td style="text-align: right;">1101</td>
+<td style="text-align: right;">1x2<sup>3</sup>+1x2<sup>2</sup>+0x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1x10<sup>1</sup>+4x10<sup>0</sup></td>
+<td style="text-align: center;">чотирнадцять</td>
+<td style="text-align: right;">1110</td>
+<td style="text-align: right;">1x2<sup>3</sup>+1x2<sup>2</sup>+1x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1x10<sup>1</sup>+5x10<sup>0</sup></td>
+<td style="text-align: center;">п'ятнадцять</td>
+<td style="text-align: right;">1111</td>
+<td style="text-align: right;">1x2<sup>3</sup>+1x2<sup>2</sup>+1x2<sup>1</sup>+1x2<sup>0</sup></td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">1x10<sup>1</sup>+6x10<sup>0</sup></td>
+<td style="text-align: center;">шістнадцять</td>
+<td style="text-align: right;">10000</td>
+<td style="text-align: right;">1x2<sup>4</sup>+0x2<sup>3</sup>+0x2<sup>2</sup>+0x2<sup>1</sup>+0x2<sup>0</sup></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_7">Як перетворити двійкову систему у десяткову</h3>
+<p>Необхідно записати основу (2) у степені (цифр):</p>
+<p>як перетворити число з основою 2 <code>1001</code> на число з основою 10 (<code>`9</code>):</p>
+<table>
+<thead>
+<tr>
+<th>число у двійковій системі:</th>
+<th>1</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>степінь:</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>=</td>
+<td>2<sup>3</sup></td>
+<td>2<sup>2</sup></td>
+<td>2<sup>1</sup></td>
+<td>2<sup>0</sup></td>
+</tr>
+<tr>
+<td>=</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>розрахунок:</td>
+<td>8 +</td>
+<td>0 +</td>
+<td>0 +</td>
+<td>1=</td>
+</tr>
+<tr>
+<td>результат: 9</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>У Pyhton ви можете просто написати префікс <code>0b</code> перед числом, щоб вказати, що ви використовуєте двійкову систему. Python миттєво перетворює число на десяткову систему:</p>
+<pre><code class="language-python">&gt;&gt;&gt;0b1001
+9
+</code></pre>
+<h3 id="_8">Як перетворити десяткову систему у двійкову</h3>
+<p>Вам потрібно записати основу (2) у степені (цифри). Потім ви починаєте справа наліво встановлювати піднесення до степеня з основою 2 у порядку зростання, до того моменту поки сума всіх встановлених бітів є меншою або дорівнює числу з основою 10.</p>
+<p>Приклад:</p>
+<p>як перетворити число з основою 10 (<code>37</code>) у число з основою 2 (<code>100101</code>):
+| степінь: | 5 | 4 | 3 | 2 | 1 | 0 |
+| -- | -- | -- | -- | -- | -- | -- |
+|       | 2<sup>5</sup> | 2<sup>4</sup> |  2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+|   | 32 | 16 | 8 | 4 | 2 | 1  |
+| встановлений біт: | 1 | 0 | 0 | 1 | 0 | 1 |
+| 37 =       | 32+|0+|0+|4+|0+|1|
+| двойкова система: <strong>100101</strong> |||||||</p>
+<p>У Python ви просто використовуєте вбудовану функцію <code>bin()</code>, щоб перетворити число з основою 10 у число з основою 2 (з префіксом <code>0b</code>):</p>
+<pre><code class="language-python">&gt;&gt;&gt;bin(37)
+'0b100101'
+</code></pre>
+<h2 id="left-shift-operation">Оператори зсуву вліво на задану кількість біт (англ."left shift operation")</h2>
+<p><em>Дивіться також статтю у Вікіпедії про <a href="https://en.wikipedia.org/wiki/Logical_shift">Logical Shift</a></em></p>
+<p>Операцію зсуву вліво можна виконати лише для двійкового числа (з основою 2). Простіше кажучи, усі числа переміщуються ліворуч, а крайні праві позиції заповнюються нулями. Знаком оператора є <code>&lt;&lt;</code>, і ви можете вказати, на скільки позицій ліворуч мають бути переміщені числа.</p>
+<p>Приклад: виконайте операцію "зрушення вліво на 1" над двійковим числом <code>1001</code> (дев'ять за основою 10). Результат: <code>10010</code> (вісімнадцять за основою 10).</p>
+<p>python код  (left_shift.py):</p>
+<pre><code class="language-python">print(&quot;У двійковій системі:&quot;)
+print(&quot;0b1001&lt;&lt;1&quot;)
+print(&quot;=&quot;)
+print(bin(0b1001&lt;&lt;1))
+print()
+print(&quot;У десятковій системі:&quot;)
+print(0b1001, &quot;&lt;&lt;1 =&quot;, 0b1001&lt;&lt;1)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>У двійковій системі:
+ 0b1001&lt;&lt;1
+=
+0b10010
+
+У десятковій системі:
+9 &lt;&lt;1 = 18
+</code></pre>
+<p>Зображення нижче зі статті у Вікіпедії:</p>
+<p>MSB = старший біт, LSB = молодший значущий біт </p>
+<p>Зауважте, що біт, якби старший біт (MSB, число 7) був би 1, результуюче число було б більшим, як у прикладі вище.</p>
+<p><img alt="rotate left" src="../images/Rotate_left_logically.svg.png" /></p>
+<p><sup>Опис зображення: 0001 0111 (десяткове число 23) логічно зсувається на один біт вліво, результат 0010 1110 (десяткове число 46).
+<br> Image rights: By <a href="https://en.wikipedia.org/wiki/User:Cburnett" class="extiw" title="en:User:Cburnett">en:User:Cburnett</a> - This W3C-unspecified <a href="https://en.wikipedia.org/wiki/Vector_images" class="extiw" title="w:Vector images">vector image</a> was created with <a href="https://en.wikipedia.org/wiki/Inkscape" class="extiw" title="w:Inkscape">Inkscape</a> ., <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1505663">Link</a></sup></p>
+<h2 id="right-shift-operation">Оператори зсуву вправо на задану кількість біт (англ."right shift operation")</h2>
+<p><em>Дивіться також статтю у Вікіпедії про <a href="https://en.wikipedia.org/wiki/Logical_shift">Logical Shift</a></em></p>
+<p>Операція зсуву вправо працює трохи подібно до операції зсуву вліво: усі числа переміщуються праворуч, крайні ліві позиції заповнюються нулями, а числа, які були в крайній правій позиції, просто видаляються. </p>
+<p>Знаком оператора є <code>&gt;&gt;</code>, і ви можете вказати, на скільки позицій праворуч слід перемістити кожне число.</p>
+<p>Приклад: виконайте операцію «зсув праворуч на 1» над двійковим числом <code>1001</code> (дев’ять за основою 10). Результатом є <code>0100</code> і зазвичай записується без нуля на початку як <code>100</code> (чотири за основою 10).</p>
+<p>python код (right_shift.py):</p>
+<pre><code class="language-python">print(&quot;У двійковій системі:&quot;)
+print(&quot;0b1001&gt;&gt;1&quot;)
+print(&quot;=&quot;)
+print(&quot; &quot;+bin(0b1001&gt;&gt;1))
+print()
+print(&quot;У десятковій системі:&quot;)
+print(0b1001, &quot;&gt;&gt;1 =&quot;, 0b1001&gt;&gt;1)
+</code></pre>
+<p>Висновок:</p>
+<pre><code>У двійковій системі:
+0b1001&gt;&gt;1
+=
+ 0b100
+
+У десятковій системі:
+9 &gt;&gt;1 = 4
+</code></pre>
+<p>Зображення нижче зі статті у Вікіпедії:</p>
+<p>MSB = старший біт, LSB = молодший значущий біт </p>
+<p>Зауважте, що на зображенні нижче молодший значущий біт (LSB) знищується
+<img alt="right shift" src="../images/Rotate_right_logically.svg.png" /></p>
+<p><sup>
+Опис зображення: 0001 0111 (десяткове число 23) логічно зсувається на один біт вправо,результат буде: 0000 1011 (десяткове число 11)
+<br>
+Image rights: By <a href="https://en.wikipedia.org/wiki/User:Cburnett" class="extiw" title="en:User:Cburnett">en:User:Cburnett</a> - This W3C-unspecified <a href="https://en.wikipedia.org/wiki/Vector_images" class="extiw" title="w:Vector images">vector image</a> was created with <a href="https://en.wikipedia.org/wiki/Inkscape" class="extiw" title="w:Inkscape">Inkscape</a> ., <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=1505665">Link</a>
+</sup></p>
+<h1 id="python-boolean-operators">Логічні оператори python (boolean operators)</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">значення A</th>
+<th style="text-align: center;">значення B</th>
+<th style="text-align: center;">результат для AND</th>
+<th style="text-align: center;">результат для OR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;"><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="not">Логічне НЕ (NOT)</h2>
+<p>Оператор NOT дає значення інвертування: True стає False, а False стає True.</p>
+<table>
+<thead>
+<tr>
+<th>операція</th>
+<th>результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>not True</code></td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td><code>not False</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="and">Логічне І (AND)</h2>
+<p>Оператор AND повинен бути розміщений між двома логічними значеннями. Результатом буде True, якщо обидва логічні значення True, інакше результат буде False</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">значення A</th>
+<th style="text-align: center;">AND</th>
+<th style="text-align: center;">значення B</th>
+<th style="text-align: center;">результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">AND</td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">= <code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">AND</td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">=<code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">AND</td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">=<code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">AND</td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">=<code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="or">Логічне АБО (OR)</h2>
+<p>Оператор АБО  має бути розміщено між двома логічними значеннями. Результат є True, якщо одне або обидва значення є True. Результатом буде False, якщо обидва значення є False.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">значення A</th>
+<th style="text-align: center;">OR</th>
+<th style="text-align: center;">значення B</th>
+<th style="text-align: center;">результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">OR</td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">= <code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">OR</td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">=<code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">OR</td>
+<td style="text-align: center;"><code>True</code></td>
+<td style="text-align: center;">=<code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">OR</td>
+<td style="text-align: center;"><code>False</code></td>
+<td style="text-align: center;">=<code>False</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="boolean-operations-with-binary-digits">Логічні операції з двійковими цифрами (boolean operations with binary digits)</h2>
+<p>Логічні операції (and, or, xor, not) можуть бути застосовані не лише до логічних значень (True і False), а й безпосередньо до бітів (де 1 означає True, а 0 означає False). </p>
+<p>У Python є логічні команди <code>not or and</code> для логічних значень, але є також спеціальний набір команд для двійкових цифр:</p>
+<pre><code>~  Побітове НЕ (for bitwise inversion)
+|  Побітове АБО (for bitwise OR)
+&amp;  Побітове І (for bitwise AND)
+^  Побітове виключне АБО (for bitwise XOR)
+</code></pre>
+<h3 id="bitwise-inversion">Побітове НЕ (bitwise inversion)</h3>
+<p><code>~</code> (bit-wise invert)
+    - Побітова операція НЕ для числа  x відповідає -(x+1).
+    Значення: до числа додається 0b01 і змінюється знак.</p>
+<pre><code class="language-python">print(&quot;Приклад 1:&quot;)
+print(&quot;Припустимо x становить 1001&quot;)
+print(&quot;Побітове НЕ те саме, що -(x+1)&quot;)
+print(&quot;Обчислювання x+1 наступне : 1001 + 0001&quot;)
+print(&quot;Кінцевий результат є -(1001 + 0001)&quot;)
+print(&quot;~0b1001 = &quot;)
+print(bin(~0b1001))
+print(&quot;=-(x+1)=-(0b1001 + 0b0001) = -0b1010&quot;)
+print(&quot;Приклад 2:&quot;)
+print(&quot;~-0b1111 = &quot;)
+print(&quot;  &quot;+bin(~-0b1111))
+print(&quot;=-(x+1)=-(-0b1111+0b0001)=-0b1110&quot;)
+
+</code></pre>
+<p>Висновок:</p>
+<pre><code>Приклад 1:
+Припустимо x становить 1001
+Побітове НЕ те саме, що -(x+1)
+Обчислювання x+1 наступне : 1001 + 0001
+Кінцевий результат є -(1001 + 0001)
+~0b1001 = 
+-0b1010
+=-(x+1)=-(0b1001 + 0b0001) = -0b1010
+Приклад 2:
+~-0b1111 = 
+  0b1110
+=-(x+1)=-(-0b1111+0b0001)=-0b1110
+
+</code></pre>
+<h3 id="bitwise-and">Побітове І (bitwise and)</h3>
+<ul>
+<li><code>&amp;</code>(побітове І, англ."bit-wise AND")<ul>
+<li>Побітова операція І над числами: якщо обидва біти дорівнюють <code>1</code>, то результат дорівнює <code>1</code>. В іншому випадку це <code>0</code>.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Приклад A</th>
+<th style="text-align: center;">Приклад B</th>
+<th style="text-align: center;">Приклад C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0b1100</td>
+<td style="text-align: center;">0b1111</td>
+<td style="text-align: center;">0b1011</td>
+</tr>
+<tr>
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: center;">&amp;</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b0101</td>
+<td style="text-align: center;">0b0000</td>
+<td style="text-align: center;">0b0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b0100</td>
+<td style="text-align: center;">0b0000</td>
+<td style="text-align: center;">0b0001</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bitwise-or-inclusive-or">Побітне АБО (bitwise or (inclusive OR))</h2>
+<ul>
+<li><code>|</code> (bit-wise OR)<ul>
+<li>Побітова операція АБО над числами: якщо обидва біти дорівнюють <code>0</code>, результат <code>0</code>.  В іншому випадку це <code>1</code>. </li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Приклад A</th>
+<th style="text-align: center;">Приклад B</th>
+<th style="text-align: center;">Приклад C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0b1100</td>
+<td style="text-align: center;">0b1111</td>
+<td style="text-align: center;">0b1011</td>
+</tr>
+<tr>
+<td style="text-align: center;">|</td>
+<td style="text-align: center;">|</td>
+<td style="text-align: center;">|</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b0101</td>
+<td style="text-align: center;">0b0000</td>
+<td style="text-align: center;">0b0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b1101</td>
+<td style="text-align: center;">0b1111</td>
+<td style="text-align: center;">0b1011</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bitwise-xor-exclusive-or">Побітне ВИКЛЮЧНО АБО (bitwise xor (exclusive OR))</h2>
+<ul>
+<li><code>^</code> (bit-wise XOR) <ul>
+<li>Побітова операція виключне АБО над числами: якщо обидва біти (<code>1 або 0</code>) однакові, результат дорівнює <code>0</code>.  В іншому випадку це <code>1</code>. </li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Приклад A</th>
+<th style="text-align: center;">Приклад B</th>
+<th style="text-align: center;">Приклад C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0b1100</td>
+<td style="text-align: center;">0b1111</td>
+<td style="text-align: center;">0b1011</td>
+</tr>
+<tr>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">^</td>
+<td style="text-align: center;">^</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b0101</td>
+<td style="text-align: center;">0b0000</td>
+<td style="text-align: center;">0b0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">=</td>
+</tr>
+<tr>
+<td style="text-align: center;">0b1001</td>
+<td style="text-align: center;">0b1111</td>
+<td style="text-align: center;">0b1010</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
